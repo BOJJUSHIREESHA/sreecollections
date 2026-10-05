@@ -1,0 +1,896 @@
+/* =========================================================
+   CONTACT PAGE
+   FIGMA MASTER WIDTH: 1728px
+========================================================= */
+
+.contact-page {
+  --contact-cream: #fdfaf5;
+  --contact-burgundy: #5d2030;
+  --contact-gold: #bb8e43;
+
+  position: relative;
+
+  width: 1728px;
+  min-height: 2500px;
+
+  margin: 0 auto;
+
+  background: var(--contact-cream);
+
+  overflow: hidden;
+
+  zoom: var(--contact-figma-scale, 1);
+
+  font-family: "Turnkey Lite", sans-serif;
+
+  color: var(--contact-burgundy);
+
+  box-sizing: border-box;
+}
+
+
+/* =========================================================
+   RESET
+========================================================= */
+
+.contact-page *,
+.contact-page *::before,
+.contact-page *::after {
+  box-sizing: border-box;
+}
+
+
+/* =========================================================
+   INTRO
+========================================================= */
+
+.contact-intro {
+  position: absolute;
+
+  width: 993px;
+  height: 110px;
+
+  top: 220px;
+  left: 367px;
+
+  text-align: center;
+
+  color: var(--contact-burgundy);
+}
+
+
+/* =========================================================
+   INTRO HEADING
+========================================================= */
+
+.contact-intro h1 {
+  position: absolute;
+
+  width: 993px;
+  height: 39px;
+
+  top: 0;
+  left: 0;
+
+  margin: 0;
+
+  font-family: "Blacker Display", serif;
+
+  font-size: 35px;
+  font-weight: 700;
+
+  line-height: 100%;
+
+  color: var(--contact-burgundy);
+
+  white-space: nowrap;
+
+  text-align: center;
+}
+
+
+/* =========================================================
+   INTRO PARAGRAPH
+========================================================= */
+
+.contact-intro p {
+  position: absolute;
+
+  width: 572px;
+  height: 47px;
+
+  top: 63px;
+  left: 205.52px;
+
+  margin: 0;
+
+  font-family: "Turnkey Lite", sans-serif;
+
+  font-size: 17px;
+  font-weight: 500;
+
+  line-height: 26px;
+
+  color: #5D2030;
+
+  text-align: center;
+
+  white-space: normal;
+}
+/* =========================================================
+   CONTACT CARDS
+========================================================= */
+
+.contact-cards {
+  position: absolute;
+
+  width: 1300px;
+  height: 330px;
+
+  top: 420px;
+  left: 214px;
+
+  display: flex;
+
+  gap: 35px;
+}
+
+
+/* =========================================================
+   CONTACT CARD
+========================================================= */
+
+.contact-card {
+  position: relative;
+
+  width: 410px;
+  height: 330px;
+
+  flex: 0 0 410px;
+
+  background: var(--contact-cream);
+
+  box-shadow:
+    0 20px 80px rgba(193, 199, 212, 0.30);
+
+  overflow: hidden;
+}
+
+
+/* =========================================================
+   SOCIAL MEDIA FIGMA ICON CONTAINER
+========================================================= */
+
+.social-media-card .social-media-logo {
+  position: absolute;
+
+  width: 62px;
+  height: 62px;
+
+  top: 60px;
+  left: 174px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+}
+
+
+/* =========================================================
+   ACTUAL FIGMA SOCIAL ICON IMAGE
+========================================================= */
+
+.social-media-card .social-media-image {
+  display: block;
+
+  width: 62px;
+  height: 62px;
+
+  min-width: 62px;
+  min-height: 62px;
+
+  max-width: none;
+
+  object-fit: contain;
+}
+
+
+/* =========================================================
+   EMAIL / PHONE CIRCLE
+========================================================= */
+
+.contact-card-icon {
+  position: absolute;
+
+  width: 62px;
+  height: 62px;
+
+  top: 61px;
+  left: 174px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: var(--contact-burgundy);
+}
+
+
+/* =========================================================
+   EMAIL ICON
+========================================================= */
+
+.contact-card:nth-child(2) .contact-card-icon svg {
+  display: block;
+
+  width: 28px;
+  height: 23px;
+
+  color: var(--contact-cream);
+}
+
+
+/* =========================================================
+   PHONE ICON
+========================================================= */
+
+.contact-card:nth-child(3) .contact-card-icon svg {
+  display: block;
+
+  width: 28px;
+  height: 28px;
+
+  color: var(--contact-cream);
+}
+
+
+/* =========================================================
+   CARD HEADINGS
+========================================================= */
+
+.contact-card h2 {
+  position: absolute;
+
+  top: 151px;
+  left: 50%;
+
+  height: 27px;
+
+  margin: 0;
+
+  transform: translateX(-50%);
+
+  font-family: "Blacker Display", serif;
+
+  font-size: 24px;
+  font-weight: 500;
+
+  line-height: 100%;
+
+  color: var(--contact-burgundy);
+
+  text-align: center;
+
+  white-space: nowrap;
+}
+
+
+/* =========================================================
+   SOCIAL HEADING
+========================================================= */
+
+.social-media-card h2 {
+  width: 140px;
+}
+
+
+/* =========================================================
+   EMAIL HEADING
+========================================================= */
+
+.contact-card:nth-child(2) h2 {
+  width: 114px;
+}
+
+
+/* =========================================================
+   PHONE HEADING
+========================================================= */
+
+.contact-card:nth-child(3) h2 {
+  width: 216px;
+}
+
+
+/* =========================================================
+   SOCIAL LINKS
+========================================================= */
+
+.social-links {
+  position: absolute;
+
+  width: 410px;
+  height: 70px;
+
+  top: 199px;
+  left: 0;
+}
+
+
+/* =========================================================
+   SOCIAL LINK
+========================================================= */
+
+.social-links a {
+  position: absolute;
+
+  display: block;
+
+  height: 23px;
+
+  margin: 0;
+  padding: 0;
+
+  font-family: "Turnkey Lite", sans-serif;
+
+  font-size: 19px;
+  font-weight: 400;
+
+  line-height: 100%;
+
+  color: var(--contact-burgundy);
+
+  text-decoration: underline;
+
+  white-space: nowrap;
+}
+
+
+/* WhatsApp */
+
+.social-links a:nth-child(1) {
+  width: 90px;
+
+  left: 106px;
+  top: 0;
+}
+
+
+/* Instagram */
+
+.social-links a:nth-child(2) {
+  width: 84px;
+
+  left: 220px;
+  top: 0;
+}
+
+
+/* Facebook */
+
+.social-links a:nth-child(3) {
+  width: 81px;
+
+  left: 111px;
+  top: 47px;
+}
+
+
+/* YouTube */
+
+.social-links a:nth-child(4) {
+  width: 77px;
+
+  left: 224px;
+  top: 47px;
+}
+
+
+/* =========================================================
+   EMAIL / PHONE LINKS
+========================================================= */
+
+.contact-card-links {
+  position: absolute;
+
+  width: 410px;
+
+  top: 198px;
+  left: 0;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  gap: 3px;
+}
+
+
+/* =========================================================
+   EMAIL / PHONE LINK
+========================================================= */
+
+.contact-card-links a {
+  display: block;
+
+  margin: 0;
+  padding: 0;
+
+  font-family: "Turnkey Lite", sans-serif;
+
+  font-size: 19px;
+  font-weight: 400;
+
+  line-height: 23px;
+
+  color: var(--contact-burgundy);
+
+  text-decoration: underline;
+
+  white-space: nowrap;
+}
+
+
+/* =========================================================
+   FORM SECTION
+========================================================= */
+
+.contact-form-section {
+  position: absolute;
+
+  width: 1300px;
+  height: 733px;
+
+  top: 822px;
+  left: 214px;
+
+  display: flex;
+
+  align-items: flex-start;
+
+  gap: 40px;
+}
+
+
+/* =========================================================
+   FORM IMAGE
+========================================================= */
+
+.contact-form-image {
+  position: relative;
+
+  width: 627px;
+  height: 700px;
+
+  flex: 0 0 627px;
+
+  top: 1px;
+
+  overflow: hidden;
+}
+
+
+/* =========================================================
+   FORM IMAGE
+========================================================= */
+
+.contact-form-image img {
+  display: block;
+
+  width: 627px;
+  height: 700px;
+
+  margin: 0;
+  padding: 0;
+
+  object-fit: cover;
+}
+
+
+/* =========================================================
+   FORM WRAPPER
+========================================================= */
+
+.contact-form-wrapper {
+  position: relative;
+
+  width: 633px;
+  height: 733px;
+
+  flex: 0 0 633px;
+}
+
+
+/* =========================================================
+   FORM HEADING
+========================================================= */
+
+.contact-form-wrapper h2 {
+  position: absolute;
+
+  width: 633px;
+  height: 28px;
+
+  top: 0;
+  left: 0;
+
+  margin: 0;
+
+  font-family: "Blacker Display", serif;
+
+  font-size: 25px;
+  font-weight: 700;
+
+  line-height: 100%;
+
+  color: var(--contact-burgundy);
+
+  white-space: nowrap;
+}
+
+
+/* =========================================================
+   FORM DESCRIPTION
+========================================================= */
+
+.contact-form-description {
+  position: absolute;
+
+  width: 591px;
+  height: 21px;
+
+  top: 65px;
+  left: 0;
+
+  margin: 0;
+
+  font-family: "Turnkey Lite", sans-serif;
+
+  font-size: 17px;
+  font-weight: 500;
+
+  line-height: 100%;
+
+  color: #5D2030;
+
+  white-space: nowrap;
+
+  text-align: left;
+}
+
+/* =========================================================
+   FORM
+========================================================= */
+
+.contact-form-wrapper form {
+  position: absolute;
+
+  width: 633px;
+  height: 550px;
+
+  top: 0;
+  left: 0;
+
+  margin: 0;
+  padding: 0;
+}
+
+
+/* =========================================================
+   FORM FIELD BASE
+========================================================= */
+
+.form-field {
+  position: absolute;
+
+  width: 632px;
+
+  left: 0;
+}
+
+
+/* =========================================================
+   LABEL
+========================================================= */
+
+.form-field label {
+  position: absolute;
+
+  left: 0;
+
+  display: block;
+
+  margin: 0;
+
+  height: 22px;
+
+  font-family: "Turnkey Lite", sans-serif;
+
+  font-size: 18px;
+  font-weight: 500;
+
+  line-height: 22px;
+
+  color: var(--contact-burgundy);
+
+  white-space: nowrap;
+}
+
+
+/* =========================================================
+   INPUT
+========================================================= */
+
+.form-field input {
+  position: absolute;
+
+  left: 0;
+
+  width: 632px;
+  height: 48px;
+
+  margin: 0;
+  padding: 0 16px;
+
+  border: 2px solid var(--contact-gold);
+
+  border-radius: 0;
+
+  outline: none;
+
+  background: rgba(253, 250, 245, 0.5);
+
+  font-family: "Turnkey Lite", sans-serif;
+
+  font-size: 17px;
+
+  line-height: 100%;
+
+  color: var(--contact-burgundy);
+}
+
+
+/* =========================================================
+   PLACEHOLDER
+========================================================= */
+
+.form-field input::placeholder,
+.form-field textarea::placeholder {
+  color: var(--contact-burgundy);
+
+  opacity: 0.5;
+}
+
+
+/* =========================================================
+   NAME
+   Figma-relative position:
+   approximately Y = 155
+========================================================= */
+
+.form-name {
+  top: 155px;
+
+  height: 80px;
+}
+
+
+.form-name label {
+  top: 0;
+}
+
+
+.form-name input {
+  top: 30px;
+}
+
+
+/* =========================================================
+   EMAIL
+   Figma:
+   absolute Y = 1157
+   Form section Y = 822
+   Relative Y = 335
+========================================================= */
+
+.form-email {
+  top: 269px;
+
+  height: 80px;
+}
+
+
+.form-email label {
+  top: 0;
+}
+
+
+.form-email input {
+  top: 30px;
+}
+
+
+/* =========================================================
+   TOPIC
+   Figma:
+   absolute Y = 1271
+   Form section Y = 822
+   Relative Y = 449
+========================================================= */
+
+.form-topic {
+  top: 383px;
+
+  height: 80px;
+}
+
+
+.form-topic label {
+  top: 0;
+}
+
+
+.form-topic input {
+  top: 30px;
+}
+
+
+/* =========================================================
+   MESSAGE
+   Figma:
+   absolute Y = 1377
+   Form section Y = 822
+   Relative Y = 555
+========================================================= */
+
+.form-message {
+  top: 489px;
+
+  width: 632px;
+  height: 148px;
+}
+
+
+.form-message label {
+  top: 0;
+
+  width: 632px;
+}
+
+
+.form-message textarea {
+  position: absolute;
+
+  top: 29px;
+  left: 0;
+
+  width: 632px;
+  height: 119px;
+
+  margin: 0;
+  padding: 12px 16px;
+
+  resize: none;
+
+  border: 2px solid var(--contact-gold);
+
+  border-radius: 0;
+
+  outline: none;
+
+  background: rgba(253, 250, 245, 0.5);
+
+  font-family: "Turnkey Lite", sans-serif;
+
+  font-size: 17px;
+
+  line-height: 1.4;
+
+  color: var(--contact-burgundy);
+}
+
+
+/* =========================================================
+   SUBMIT BUTTON
+   Figma:
+   absolute Y = 1549
+   Form section Y = 822
+   Relative Y = 727
+========================================================= */
+
+.contact-submit-button {
+  position: absolute;
+
+  width: 184px;
+  height: 72px;
+
+  left: 0;
+  top: 661px;
+
+  margin: 0;
+  padding: 0;
+
+  border: none;
+
+  border-radius: 72px;
+
+  background: var(--contact-gold);
+
+  color: var(--contact-cream);
+
+  font-family: "Blacker Display", serif;
+
+  font-size: 16px;
+  font-weight: 700;
+
+  line-height: 100%;
+
+  cursor: pointer;
+
+  text-align: center;
+
+  transition:
+    transform 0.2s ease,
+    opacity 0.2s ease;
+}
+
+
+.contact-submit-button:hover {
+  transform: translateY(-2px);
+
+  opacity: 0.92;
+}
+
+
+.contact-submit-button:active {
+  transform: translateY(0);
+}
+
+
+/* =========================================================
+   IMPORTANT:
+   OLD FONT AWESOME SOCIAL ICONS ARE NOT USED
+========================================================= */
+
+.social-phone,
+.social-icon,
+.social-instagram,
+.social-facebook,
+.social-whatsapp,
+.social-youtube,
+.social-twitter {
+  display: none !important;
+}
+
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 1727px) {
+
+  .contact-page {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 767px) {
+
+  .contact-page {
+    min-height: 2500px;
+  }
+
+}

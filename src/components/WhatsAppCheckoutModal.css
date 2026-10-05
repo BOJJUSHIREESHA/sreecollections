@@ -1,0 +1,612 @@
+/* =========================================================
+   WHATSAPP CHECKOUT MODAL
+   EXACT FIGMA RESPONSIVE IMPLEMENTATION
+
+   FIGMA CANVAS
+   1728 × 3481
+
+   MODAL
+   987 × 489
+   LEFT: 371
+   TOP: 419
+========================================================= */
+
+
+/* =========================================================
+   SCROLL LOCK
+========================================================= */
+
+.whatsapp-modal-open {
+  overflow: hidden;
+}
+
+
+/* =========================================================
+   OVERLAY
+========================================================= */
+
+.whatsapp-checkout-overlay {
+  position: fixed;
+  inset: 0;
+
+  z-index: 2000;
+
+  box-sizing: border-box;
+
+  /*
+    Figma canvas coordinates are used as the reference.
+    The modal is positioned at:
+      left = 371px
+      top  = 419px
+
+    The entire design scales using
+    --whatsapp-figma-scale.
+  */
+
+  background: rgba(93, 32, 48, 0.18);
+
+  overflow: hidden;
+}
+
+
+/* =========================================================
+   MODAL
+   FIGMA:
+   987 × 489
+========================================================= */
+
+.whatsapp-checkout-modal {
+  position: absolute;
+
+  /*
+    Figma position
+  */
+  left: calc(
+    371px * var(--whatsapp-figma-scale, 1)
+  );
+
+  top: calc(
+    419px * var(--whatsapp-figma-scale, 1)
+  );
+
+  /*
+    Figma size
+  */
+  width: 987px;
+  height: 489px;
+
+  min-width: 987px;
+  min-height: 489px;
+
+  /*
+    Scale the COMPLETE Figma frame.
+  */
+  transform: scale(
+    var(--whatsapp-figma-scale, 1)
+  );
+
+  transform-origin: top left;
+
+  /*
+    Figma
+  */
+  box-sizing: border-box;
+
+  padding: 10px;
+
+  background: #FDFAF5;
+
+  color: #5D2030;
+
+  border: none;
+
+  box-shadow: none;
+
+  overflow: hidden;
+}
+
+
+/* =========================================================
+   HEADER
+   FIGMA:
+   967 × 75
+
+   padding:
+   20 24 20 24
+========================================================= */
+
+.whatsapp-checkout-header {
+  width: 967px;
+  height: 75px;
+
+  min-width: 967px;
+  min-height: 75px;
+
+  box-sizing: border-box;
+
+  padding: 20px 24px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  flex-shrink: 0;
+
+  background: #FDFAF5;
+
+  border-bottom:
+    1px solid #5D20300F;
+}
+
+
+/* =========================================================
+   CHECKOUT HEADING
+========================================================= */
+
+.whatsapp-checkout-header h2 {
+  width: 82px;
+  height: 28px;
+
+  margin: 0;
+  padding: 0;
+
+  box-sizing: border-box;
+
+  font-family:
+    "Blacker Display",
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-size: 18px;
+
+  line-height: 28px;
+
+  font-weight: 700;
+
+  font-style: Bold;
+
+  letter-spacing: 0;
+
+  color: #5D2030;
+
+  white-space: nowrap;
+}
+
+
+/* =========================================================
+   CLOSE BUTTON
+   FIGMA:
+   34 × 34
+   padding: 8
+========================================================= */
+
+.whatsapp-checkout-close {
+  width: 34px;
+  height: 34px;
+
+  min-width: 34px;
+  min-height: 34px;
+
+  padding: 8px;
+
+  margin: 0;
+
+  box-sizing: border-box;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border: none;
+
+  border-radius: 16777200px;
+
+  background: transparent;
+
+  color: #5D2030;
+
+  cursor: pointer;
+
+  appearance: none;
+
+  outline: none;
+}
+
+
+/* =========================================================
+   CLOSE ICON
+   FIGMA:
+   18 × 18
+========================================================= */
+
+.whatsapp-checkout-close svg {
+  width: 18px;
+  height: 18px;
+
+  display: block;
+
+  color: #5D2030;
+
+  stroke: #5D2030;
+
+  stroke-width: 1.5px;
+}
+
+
+/* =========================================================
+   NO EXTRA DIVIDER
+========================================================= */
+
+.whatsapp-checkout-divider {
+  display: none;
+}
+
+
+/* =========================================================
+   MAIN FORM AREA
+
+   FIGMA:
+   967 × 384
+
+   padding:
+   16px 24px
+========================================================= */
+
+.whatsapp-checkout-form {
+  width: 967px;
+  height: 384px;
+
+  min-width: 967px;
+  min-height: 384px;
+
+  box-sizing: border-box;
+
+  padding:
+    16px 24px;
+
+  margin: 0;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  /*
+    Figma Frame 1000003939:
+    gap = 35px
+  */
+
+  gap: 35px;
+
+  background: #FDFAF5;
+
+  flex-shrink: 0;
+}
+
+
+/* =========================================================
+   QUESTION
+
+   FIGMA:
+   587 × 27
+
+   24px
+   Blacker Display
+   Weight 500
+   Line-height 100%
+========================================================= */
+
+.whatsapp-checkout-question {
+  width: 587px;
+  height: 27px;
+
+  min-width: 587px;
+  min-height: 27px;
+
+  box-sizing: border-box;
+
+  margin: 34px 0 0;
+  padding: 0;
+
+  text-align: center;
+
+  font-family:
+    "Blacker Display",
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-size: 24px;
+
+  line-height: 27px;
+
+  font-weight: 500;
+
+  font-style: Medium;
+
+  letter-spacing: 0;
+
+  color: #5D2030;
+
+  white-space: nowrap;
+}
+
+
+/* =========================================================
+   WHATSAPP NUMBER INPUT
+
+   FIGMA:
+   400 × 72
+
+   border: 4px
+   radius: 64px
+
+   padding:
+   24px 48px
+========================================================= */
+
+.whatsapp-number-input {
+  width: 400px;
+  height: 72px;
+
+  min-width: 400px;
+  min-height: 72px;
+
+  box-sizing: border-box;
+
+  margin: 0;
+
+  padding:
+    24px 48px;
+
+  border:
+    4px solid #5D2030;
+
+  border-radius: 64px;
+
+  outline: none;
+
+  background: #FDFAF5;
+
+  color: #5d2030 75%;
+
+  font-family:
+    "Blacker Display",
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-size: 16px;
+
+  line-height: 24px;
+
+  font-weight: 500;
+
+  font-style: Medium;
+
+  letter-spacing: 0.15px;
+
+  vertical-align: middle;
+
+  text-align: left;
+
+  appearance: none;
+
+  box-shadow: none;
+}
+
+
+/* =========================================================
+   PLACEHOLDER
+========================================================= */
+
+.whatsapp-number-input::placeholder {
+  color: #5D2030BF;
+
+  opacity: 1;
+
+  font-family:
+    "Blacker Display",
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-size: 16px;
+
+  line-height: 24px;
+
+  font-weight: 500;
+
+  letter-spacing: 0.15px;
+}
+
+
+/* =========================================================
+   INPUT FOCUS
+========================================================= */
+
+.whatsapp-number-input:focus {
+  outline: none;
+
+  border-color: #5D2030;
+
+  box-shadow: none;
+}
+
+
+/* =========================================================
+   ERROR STATE
+========================================================= */
+
+.whatsapp-number-input.has-error {
+  border-color: #5D2030;
+}
+
+
+/* =========================================================
+   ERROR MESSAGE
+========================================================= */
+
+.whatsapp-checkout-error {
+  width: 400px;
+
+  margin:
+    -20px 0 0;
+
+  padding: 0;
+
+  box-sizing: border-box;
+
+  color: #5D2030;
+
+  font-family:
+    "Blacker Display",
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-size: 12px;
+
+  line-height: 16px;
+
+  text-align: left;
+}
+
+
+/* =========================================================
+   PROCEED BUTTON
+
+   FIGMA:
+   400 × 72
+
+   border:
+   4px solid #FDFAF5
+
+   background:
+   #BB8E43
+
+   radius:
+   64px
+========================================================= */
+
+.whatsapp-proceed-button {
+  width: 400px;
+  height: 72px;
+
+  min-width: 400px;
+  min-height: 72px;
+
+  box-sizing: border-box;
+
+  margin: 0;
+
+  padding:
+    24px 48px;
+
+  border:
+    4px solid #FDFAF5;
+
+  border-radius: 64px;
+
+  background: #BB8E43;
+
+  color: #FDFAF5;
+
+  font-family:
+    "Blacker Display",
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-size: 18px;
+
+  line-height: 24px;
+
+  font-weight: 500;
+
+  font-style: Medium;
+
+  letter-spacing: 0.15px;
+
+  vertical-align: middle;
+
+  text-align: center;
+
+  cursor: pointer;
+
+  appearance: none;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  box-shadow: none;
+}
+
+
+/* =========================================================
+   HOVER
+   Do not change the Figma appearance.
+========================================================= */
+
+.whatsapp-proceed-button:hover:not(:disabled) {
+  background: #BB8E43;
+
+  transform: none;
+
+  box-shadow: none;
+}
+
+
+/* =========================================================
+   FOCUS
+========================================================= */
+
+.whatsapp-proceed-button:focus {
+  outline: none;
+
+  box-shadow: none;
+}
+
+
+/* =========================================================
+   DISABLED
+========================================================= */
+
+.whatsapp-proceed-button:disabled {
+  opacity: 0.65;
+
+  cursor: wait;
+
+  transform: none;
+}
+
+
+/* =========================================================
+   ACCESSIBILITY
+========================================================= */
+
+.sr-only {
+  position: absolute;
+
+  width: 1px;
+  height: 1px;
+
+  padding: 0;
+  margin: -1px;
+
+  overflow: hidden;
+
+  clip: rect(0, 0, 0, 0);
+
+  white-space: nowrap;
+
+  border: 0;
+}

@@ -1,0 +1,1165 @@
+/* =========================================================
+   SREE COLLECTIONS — SEARCH PAGE
+
+   FIGMA MASTER:
+   Width  : 1728px
+   Height : 3993px
+
+   The page is designed in the Figma coordinate system
+   and proportionally scales with the viewport.
+
+   No independent mobile redesign.
+   No product reordering at breakpoints.
+   No arbitrary cropping.
+========================================================= */
+
+
+/* =========================================================
+   PAGE
+========================================================= */
+
+.search-page {
+  position: relative;
+
+  width: 1728px;
+  min-height: 3470px;
+
+  margin: 0 auto;
+  padding: 0;
+
+  box-sizing: border-box;
+
+  background: #fdfaf5;
+
+  color: #5d2030;
+
+  overflow: hidden;
+
+  zoom: var(--search-figma-scale, 1);
+}
+
+
+/* =========================================================
+   RESET
+========================================================= */
+
+.search-page *,
+.search-page *::before,
+.search-page *::after {
+  box-sizing: border-box;
+}
+
+
+/* =========================================================
+   FIGMA CANVAS
+========================================================= */
+
+.search-page-canvas {
+  position: relative;
+
+  width: 1728px;
+  height: 3993px;
+
+  margin: 0;
+  padding: 0;
+
+
+  transform: translateY(-200px);
+}
+
+
+/* =========================================================
+   INTRO
+========================================================= */
+
+.search-intro {
+  position: absolute;
+
+  width: 1155px;
+  height: 86px;
+
+  top: 286px;
+  left: 287px;
+
+  margin: 0;
+  padding: 0;
+
+  text-align: center;
+}
+
+
+/* =========================================================
+   INTRO HEADING
+
+   FIGMA:
+   width  = 1155px
+   height = 39px
+   top    = 286px
+   left   = 287px
+========================================================= */
+
+.search-intro h1 {
+  position: absolute;
+
+  width: 1155px;
+  height: 39px;
+
+  top: 0;
+  left: 0;
+
+  margin: 0;
+  padding: 0;
+
+  color: #5d2030;
+
+  font-family:
+    "Blacker Display",
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-size: 35px;
+  font-weight: 700;
+
+  line-height: 100%;
+
+  letter-spacing: 0;
+
+  white-space: nowrap;
+
+  text-align: center;
+}
+
+
+/* =========================================================
+   SEARCH INTRO DESCRIPTION — ONE LINE
+========================================================= */
+
+.search-intro p {
+  position: absolute;
+
+  width: 1155px;
+  height: 21px;
+
+  top: 63px;
+  left: 0;
+
+  margin: 0;
+  padding: 0;
+
+  color: #5d2030;
+
+  font-family:
+    "Turnkey Lite",
+    Arial,
+    Helvetica,
+    sans-serif;
+
+  font-size: 17px;
+  font-weight: 500;
+
+  line-height: 100%;
+  letter-spacing: 0;
+
+  text-align: center;
+
+  white-space: nowrap;
+}
+
+
+/* Both parts must stay on the SAME line */
+.search-intro p span:first-child,
+.search-intro p span:last-child {
+  display: inline;
+  width: auto;
+  height: auto;
+  margin: 0;
+}
+
+/* =========================================================
+   SECOND DESCRIPTION LINE
+========================================================= */
+
+.search-intro p span:last-child {
+  display: block;
+
+  width: 306px;
+  height: 21px;
+
+  margin: 5px auto 0;
+}
+
+
+/* =========================================================
+   SEARCH CONTROLS
+
+   FIGMA SEARCH BAR:
+   width  = 1024px
+   height = 96px
+   top    = 432px
+   left   = 352px
+========================================================= */
+
+.search-controls {
+  position: absolute;
+
+  width: 1024px;
+
+  height: 164px;
+
+  top: 432px;
+  left: 352px;
+
+  margin: 0;
+  padding: 0;
+}
+
+
+/* =========================================================
+   SEARCH FORM
+========================================================= */
+
+.search-form {
+  position: absolute;
+
+  width: 1024px;
+  height: 96px;
+
+  top: 0;
+  left: 0;
+
+  display: flex;
+
+  margin: 0;
+  padding: 0;
+
+  border: 1px solid #5d2030;
+
+  border-radius: 18px;
+
+  background: #fdfaf5;
+
+  overflow: hidden;
+}
+
+
+/* =========================================================
+   SEARCH INPUT
+========================================================= */
+
+.search-form input {
+  width: 840px;
+  height: 96px;
+
+  flex: 0 0 840px;
+
+  margin: 0;
+  padding: 0 36px;
+
+  border: 0;
+  outline: 0;
+
+  background: transparent;
+
+  color: #5d2030;
+
+  font-family:
+    "Turnkey Lite",
+    Arial,
+    Helvetica,
+    sans-serif;
+
+  font-size: 24px;
+  font-weight: 500;
+
+  line-height: 100%;
+
+  letter-spacing: 0;
+}
+
+
+/* =========================================================
+   SEARCH PLACEHOLDER
+========================================================= */
+
+.search-form input::placeholder {
+  color: #9e7983;
+
+  opacity: 1;
+}
+
+
+/* =========================================================
+   SEARCH BUTTON
+
+   FIGMA:
+   width = 184px
+========================================================= */
+
+.search-form button {
+  width: 184px;
+  height: 96px;
+
+  flex: 0 0 184px;
+
+  margin: 0;
+  padding: 0;
+
+  border: 0;
+
+  border-top-right-radius: 18px;
+  border-bottom-right-radius: 18px;
+
+  background: #bb8e43;
+
+  color: #fdfaf5;
+
+  font-family:
+    "Blacker Display",
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-size: 18px;
+  font-weight: 700;
+
+  line-height: 100%;
+
+  text-transform: uppercase;
+
+  cursor: pointer;
+}
+
+
+/* =========================================================
+   CATEGORY TAGS
+
+   FIGMA:
+   top = 552px
+   left = 569px
+   width = 590px
+========================================================= */
+
+.search-category-pills {
+  position: absolute;
+
+  width: 590px;
+  height: 44px;
+
+  top: 120px;
+  left: 217px;
+
+  display: flex;
+
+  align-items: flex-start;
+  justify-content: flex-start;
+
+  gap: 16px;
+
+  margin: 0;
+  padding: 0;
+}
+
+
+/* =========================================================
+   CATEGORY TAG
+========================================================= */
+
+.search-category-pills button {
+  height: 44px;
+
+  flex: 0 0 auto;
+
+  margin: 0;
+  padding: 12px 20px;
+
+  border: 1px solid #9e7983;
+
+  border-radius: 18px;
+
+  background: rgba(158, 121, 131, 0.10);
+
+  color: rgba(93, 32, 48, 0.40);
+
+  font-family:
+    "Turnkey Lite",
+    Arial,
+    Helvetica,
+    sans-serif;
+
+  font-size: 16px;
+  font-weight: 400;
+
+  line-height: 100%;
+
+  letter-spacing: -0.04em;
+
+  white-space: nowrap;
+
+  text-align: center;
+
+  cursor: pointer;
+}
+
+
+/* =========================================================
+   EXACT TAG WIDTHS
+========================================================= */
+
+.search-category-pills button:nth-child(1) {
+  width: 124px;
+}
+
+.search-category-pills button:nth-child(2) {
+  width: 87px;
+}
+
+.search-category-pills button:nth-child(3) {
+  width: 181px;
+}
+
+.search-category-pills button:nth-child(4) {
+  width: 150px;
+}
+
+
+/* =========================================================
+   TAG HOVER
+========================================================= */
+
+.search-category-pills button:hover {
+  border-color: #bb8e43;
+
+  background: #bb8e43;
+
+  color: #fdfaf5;
+}
+
+
+/* =========================================================
+   RESULTS GROUP
+
+   FIGMA:
+   width  = 1262.8px
+   height = 2317.2px
+   top    = 692px
+   left   = 233px
+========================================================= */
+
+.search-results {
+  position: absolute;
+
+  width: 1262.8px;
+  height: 2317.2px;
+
+  top: 692px;
+  left: 233px;
+
+  margin: 0;
+  padding: 0;
+}
+
+
+/* =========================================================
+   PRODUCT COLUMNS
+
+   Figma card positions:
+
+   Left:
+   x = 279.8
+   width = 306
+
+   Center:
+   x = 664.6
+   width = 399.6
+
+   Right:
+   x = 1143
+   width = 306
+========================================================= */
+
+.search-product-columns {
+  position: absolute;
+
+  width: 1169.2px;
+  height: 2317.2px;
+
+  top: 0;
+  left: 46.6px;
+
+  display: grid;
+
+  grid-template-columns:
+    306px
+    399.6px
+    306px;
+
+  column-gap: 78.8px;
+
+  align-items: start;
+
+  margin: 0;
+  padding: 0;
+}
+
+
+/* =========================================================
+   PRODUCT COLUMN
+========================================================= */
+
+.search-product-column {
+  min-width: 0;
+
+  width: 100%;
+
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 48.6px;
+
+  margin: 0;
+  padding: 0;
+}
+
+
+/* =========================================================
+   PRODUCT CARD
+========================================================= */
+
+.search-product-card {
+  position: relative;
+
+  width: 100%;
+
+  flex: 0 0 auto;
+
+  margin: 0;
+  padding: 0;
+
+  border:
+    0.9px solid #bb8e43;
+
+  border-radius: 14.4px;
+
+  background: #fdfaf5;
+
+  overflow: hidden;
+
+  box-sizing: border-box;
+
+  transition: none;
+}
+
+
+/* =========================================================
+   LEFT / RIGHT CARD HEIGHT
+
+   Formal + Yellow:
+   306 × 461.7
+========================================================= */
+
+.search-product-card.product-formal-shirt,
+.search-product-card.product-yellow-jacket {
+  width: 306px;
+  height: 461.7px;
+}
+
+
+/* =========================================================
+   CENTER CARD HEIGHT
+
+   Exercise:
+   399.6 × 621.9
+========================================================= */
+
+.search-product-card.product-exercise-outfit {
+  width: 399.6px;
+  height: 621.9px;
+}
+
+
+/* =========================================================
+   LINK
+========================================================= */
+
+.search-product-link {
+  display: block;
+
+  width: 100%;
+  height: 100%;
+
+  margin: 0;
+  padding: 0;
+
+  color: inherit;
+
+  text-decoration: none;
+}
+
+
+/* =========================================================
+   PRODUCT IMAGE AREA
+========================================================= */
+
+.search-product-image {
+  position: absolute;
+
+  top: 19.8px;
+  left: 19.8px;
+
+  margin: 0;
+  padding: 0;
+
+  overflow: hidden;
+
+  background: transparent;
+
+  border-radius: 16px;
+}
+
+
+/* =========================================================
+   FORMAL / YELLOW IMAGE
+
+   Figma:
+   width  = 264.6
+   height = 314.1
+========================================================= */
+
+.search-product-card.product-formal-shirt
+.search-product-image,
+
+.search-product-card.product-yellow-jacket
+.search-product-image {
+  width: 264.6px;
+  height: 314.1px;
+}
+
+
+/* =========================================================
+   EXERCISE IMAGE
+
+   Figma:
+   width  = 360
+   height = 472.5
+========================================================= */
+
+.search-product-card.product-exercise-outfit
+.search-product-image {
+  width: 360px;
+  height: 472.5px;
+}
+
+
+/* =========================================================
+   IMAGE ITSELF
+========================================================= */
+
+.search-product-image img {
+  display: block;
+
+  width: 100%;
+  height: 100%;
+
+  margin: 0;
+  padding: 0;
+
+  object-fit: cover;
+
+  object-position: center;
+
+  border-radius: 14.4px;
+
+  background: transparent;
+
+  transform: none;
+
+  transition: none;
+}
+
+
+/* =========================================================
+   PRODUCT INFO
+========================================================= */
+
+.search-product-info {
+  position: absolute;
+
+  left: 20.7px;
+
+  margin: 0;
+  padding: 0;
+}
+
+
+/* =========================================================
+   FORMAL / YELLOW INFO
+========================================================= */
+
+.search-product-card.product-formal-shirt
+.search-product-info,
+
+.search-product-card.product-yellow-jacket
+.search-product-info {
+  top: 361.8px;
+
+  width: 264.6px;
+
+  height: 81px;
+}
+
+
+/* =========================================================
+   EXERCISE INFO
+========================================================= */
+
+.search-product-card.product-exercise-outfit
+.search-product-info {
+  top: 520.2px;
+
+  left: 21.6px;
+
+  width: 356px;
+
+  height: 82px;
+}
+
+
+/* =========================================================
+   PRODUCT TITLE
+========================================================= */
+
+.search-product-info h3 {
+  margin: 0;
+
+  padding: 0;
+
+  color: #5d2030;
+
+  font-family:
+    "Blacker Display",
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-size: 24px;
+  font-weight: 500;
+
+  line-height: 100%;
+
+  letter-spacing: 0;
+
+  white-space: nowrap;
+}
+
+
+/* =========================================================
+   PRODUCT BOTTOM
+========================================================= */
+
+.search-product-bottom {
+  position: absolute;
+
+  left: 0;
+
+  bottom: 0;
+
+  width: 100%;
+
+  height: 24px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: flex-start;
+
+  margin: 0;
+  padding: 0;
+}
+
+
+/* =========================================================
+   PRICE
+========================================================= */
+
+.search-product-bottom p {
+  margin: 0;
+  padding: 0;
+
+  color: #5d2030;
+
+  font-family:
+    "Turnkey Lite",
+    Arial,
+    Helvetica,
+    sans-serif;
+
+  font-size: 14px;
+  font-weight: 400;
+
+  line-height: 100%;
+
+  white-space: nowrap;
+}
+
+
+/* =========================================================
+   PRICE VALUE
+========================================================= */
+
+.search-product-bottom p span {
+  margin-left: 7px;
+
+  font-family:
+    "Turnkey Lite",
+    Arial,
+    Helvetica,
+    sans-serif;
+
+  font-size: 16px;
+  font-weight: 500;
+
+  line-height: 100%;
+}
+
+
+/* =========================================================
+   CART ACTION
+========================================================= */
+
+.search-card-action {
+  position: absolute;
+
+  right: 20px;
+  bottom: 18px;
+
+  z-index: 5;
+
+  margin: 0;
+  padding: 0;
+}
+
+
+/* =========================================================
+   CART BUTTON
+
+   Figma shopping bag:
+   24 × 24
+========================================================= */
+
+.search-cart-button {
+  width: 24px;
+  height: 24px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  margin: 0;
+  padding: 0;
+
+  border: 0;
+
+  background: transparent;
+
+  color: #bb8e43;
+
+  font-size: 19px;
+
+  line-height: 1;
+
+  cursor: pointer;
+}
+
+
+/* =========================================================
+   QUANTITY CONTROL
+
+   Figma:
+   width  = 95.2
+   height = 33.6
+========================================================= */
+
+.search-quantity-control {
+  width: 95.2px;
+  height: 33.6px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  overflow: hidden;
+
+  border-radius: 50.4px;
+
+  background: #bb8e43;
+
+  color: #fdfaf5;
+}
+
+
+/* =========================================================
+   QUANTITY BUTTON
+========================================================= */
+
+.search-quantity-control button {
+  width: 27px;
+  height: 33.6px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  margin: 0;
+  padding: 0;
+
+  border: 0;
+
+  background: transparent;
+
+  color: #fdfaf5;
+
+  cursor: pointer;
+
+  font-size: 9px;
+}
+
+
+/* =========================================================
+   QUANTITY NUMBER
+========================================================= */
+
+.search-quantity-control span {
+  width: 21px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  margin: 0;
+
+  color: #fdfaf5;
+
+  font-family:
+    "Turnkey Lite",
+    Arial,
+    Helvetica,
+    sans-serif;
+
+  font-size: 16.8px;
+  font-weight: 500;
+
+  line-height: 100%;
+
+  text-align: center;
+}
+
+
+/* =========================================================
+   EMPTY STATE
+========================================================= */
+
+.search-empty-state {
+  width: 100%;
+
+  padding: 100px 20px;
+
+  text-align: center;
+}
+
+
+.search-empty-state h2 {
+  margin: 0;
+
+  color: #5d2030;
+
+  font-family:
+    "Blacker Display",
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-size: 30px;
+}
+
+
+.search-empty-state p {
+  margin: 12px 0 0;
+
+  color: #765764;
+
+  font-family:
+    "Turnkey Lite",
+    Arial,
+    Helvetica,
+    sans-serif;
+
+  font-size: 17px;
+}
+
+
+/* =========================================================
+   RESPONSIVE SCALING
+
+   IMPORTANT:
+   There is intentionally NO separate mobile layout.
+
+   The JavaScript sets:
+
+   --search-figma-scale
+
+   based on:
+
+   viewport / 1728
+
+   Therefore the complete Figma composition
+   scales proportionally on every device.
+========================================================= */
+
+
+/* =========================================================
+   LARGE DESKTOP
+========================================================= */
+
+@media (min-width: 1729px) {
+  .search-page {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+
+/* =========================================================
+   BELOW FIGMA WIDTH
+
+   Keep the 1728px composition.
+   `zoom` performs the proportional scaling.
+========================================================= */
+
+@media (max-width: 1728px) {
+  .search-page {
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+
+
+/* =========================================================
+   SMALL DEVICES
+
+   Do NOT change:
+   - product order
+   - card proportions
+   - font proportions
+   - column proportions
+   - image proportions
+   - spacing
+
+   Everything follows the Figma scale.
+========================================================= */
+
+@media (max-width: 767px) {
+  .search-page {
+    overflow: hidden;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* =========================================================
+   PRODUCT COLUMNS
+   FINAL CARD SEPARATION
+========================================================= */
+
+.search-product-columns {
+  position: absolute;
+
+  width: 1245px;
+  height: 2317.2px;
+
+  top: 0;
+  left: 46.6px;
+
+  display: grid;
+
+  grid-template-columns:
+    306px
+    399.6px
+    306px;
+
+  column-gap: 117.5px;
+
+  align-items: start;
+
+  margin: 0;
+  padding: 0;
+}
+
+
+
+
+/* =========================================================
+   INDIVIDUAL PRODUCT CARD POSITIONING
+========================================================= */
+
+/* FIRST COLUMN — 3rd card: Black & Gray Exercise Outfit
+   Move slightly LEFT
+*/
+.search-product-columns
+  > .search-product-column:nth-child(1)
+  > .search-product-card:nth-child(3) {
+  position: relative;
+  left: -40px;
+}
+
+
+/* MIDDLE COLUMN — 2nd card: Formal Shirt For Woman
+   Move slightly RIGHT
+*/
+.search-product-columns
+  > .search-product-column:nth-child(2)
+  > .search-product-card:nth-child(2) {
+  position: relative;
+  left:40px;
+}
+
+
+/* MIDDLE COLUMN — 3rd card: Yellow Jacket For Winter
+   Move slightly RIGHT
+*/
+.search-product-columns
+  > .search-product-column:nth-child(2)
+  > .search-product-card:nth-child(3) {
+  position: relative;
+  left: 40px;
+}
+
+
+
+/* 3rd column — 2nd product
+   Black & Gray Exercise Outfit → RIGHT
+*/
+.search-product-columns
+  > .search-product-column:nth-child(3)
+  > .search-product-card:nth-child(2) {
+  position: relative;
+ right: 40px;
+}

@@ -1,0 +1,1009 @@
+/* =========================================================
+   SREE COLLECTIONS
+   FOOTER
+   REFERENCE BASE: 1728 × 543
+========================================================= */
+
+.site-footer {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  background: #FDFAF5;
+  color: #5D2030;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+.site-footer *,
+.site-footer *::before,
+.site-footer *::after {
+  box-sizing: border-box;
+}
+
+
+/* =========================================================
+   FOOTER CANVAS
+   ALWAYS SCALES FROM THE REFERENCE
+========================================================= */
+
+.site-footer-container {
+  position: relative;
+
+  width: 100%;
+  max-width: 1728px;
+
+  margin: 0 auto;
+  padding: 0;
+
+  aspect-ratio: 1728 / 543;
+
+  background: #FDFAF5;
+
+  overflow: hidden;
+}
+
+
+/* =========================================================
+   TOP LINE
+   Reference: y ≈ 100 / 543
+========================================================= */
+
+.site-footer-container::before {
+  content: "";
+
+  position: absolute;
+
+  left: 12.6736%;
+  top: 18.4162%;
+
+  width: 74.5833%;
+  height: 0.18%;
+
+  height: 1px;
+background: rgba(93, 32, 48, 0.35);
+}
+
+
+/* =========================================================
+   MAIN FOOTER
+========================================================= */
+
+.site-footer-main {
+  position: absolute;
+
+  left: 13.4838%;
+  top: 36.4641%;
+
+  width: 73.7847%;
+  height: 26.8877%;
+
+  margin: 0;
+  padding: 0;
+}
+
+
+/* =========================================================
+   LEFT BRAND
+========================================================= */
+
+.site-footer-brand {
+  position: absolute;
+
+  left: 0;
+  top: 0;
+
+  width: 45.8824%;
+  height: 100%;
+
+  display: flex;
+  align-items: center;
+
+  margin: 0;
+  padding: 0;
+
+  text-decoration: none;
+
+  overflow: visible;
+}
+
+
+/* =========================================================
+   LOGO
+========================================================= */
+
+.site-footer-logo-icon {
+  display: block;
+
+  width: 33.3333%;
+  height: 100%;
+
+  margin: 0;
+  padding: 0;
+
+  object-fit: contain;
+
+  flex: 0 0 33.3333%;
+}
+
+
+/* =========================================================
+   WORDMARK
+========================================================= */
+
+.site-footer-logo-wordmark {
+  display: block;
+
+  width: 50.5983%;
+  height: 50%;
+
+  margin: 0;
+  padding: 0;
+
+  object-fit: contain;
+
+  flex: 0 0 50.5983%;
+}
+
+
+/* =========================================================
+   RIGHT INFORMATION AREA
+
+   IMPORTANT:
+   Keep this at the same position as the reference.
+========================================================= */
+
+.site-footer-info {
+  position: absolute;
+
+  left: 70.3529%;
+  top: 8.9041%;
+
+  width: 29.6471%;
+  height: 82.1918%;
+
+  margin: 0;
+  padding: 0;
+}
+
+
+/* =========================================================
+   LOCATION
+========================================================= */
+
+.site-footer-info-row:first-child {
+  position: absolute;
+
+  left: 0;
+  top: 0;
+
+  width: 100%;
+  height: 20%;
+
+  display: flex;
+  align-items: center;
+
+  margin: 0;
+  padding: 0;
+
+  color: #5D2030;
+
+  font-family: "Turnkey Lite", Arial, sans-serif;
+
+  font-size: clamp(4px, 0.810185vw, 14px);
+
+  line-height: 1;
+
+  white-space: nowrap;
+}
+
+.site-footer-info-row:first-child > svg {
+  width: 0.810185vw;
+  height: 1.126736vw;
+
+  min-width: 5px;
+  min-height: 7px;
+
+  max-width: 14px;
+  max-height: 19px;
+
+  flex: 0 0 auto;
+
+  margin-left: 1.3228%;
+  margin-right: 5.8201%;
+
+  color: #5D2030;
+}
+
+.site-footer-info-row:first-child > span {
+  white-space: nowrap;
+}
+
+
+/* =========================================================
+   PHONE + EMAIL
+========================================================= */
+
+.site-footer-info-row:nth-child(2) {
+  position: absolute;
+
+  left: 0;
+  top: 40%;
+
+  width: 100%;
+  height: 20%;
+
+  display: flex;
+  align-items: center;
+
+  margin: 0;
+  padding: 0;
+
+  white-space: nowrap;
+}
+
+.site-footer-info-row:nth-child(2) > a:first-child {
+  width: 1.388889vw;
+  height: 1.388889vw;
+
+  min-width: 6px;
+  min-height: 6px;
+
+  max-width: 24px;
+  max-height: 24px;
+
+  flex: 0 0 auto;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin-right: 3.1746%;
+
+  color: #5D2030;
+
+  text-decoration: none;
+}
+
+.site-footer-info-row:nth-child(2) > a:first-child svg {
+  width: 100%;
+  height: 100%;
+}
+
+
+/* PHONE TEXT */
+
+.site-footer-info-row:nth-child(2) > a:nth-child(2) {
+  flex: 0 0 auto;
+
+  margin-right: 5.0265%;
+
+  color: #5D2030;
+
+  font-family: "Turnkey Lite", Arial, sans-serif;
+
+  font-size: clamp(4px, 0.810185vw, 14px);
+
+  line-height: 1;
+
+  text-decoration: none;
+
+  white-space: nowrap;
+}
+
+
+/* EMAIL ICON */
+
+.site-footer-info-row:nth-child(2) > a:nth-child(3) {
+  width: 1.157407vw;
+  height: 0.925926vw;
+
+  min-width: 5px;
+  min-height: 4px;
+
+  max-width: 20px;
+  max-height: 16px;
+
+  flex: 0 0 auto;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin-right: 3.7037%;
+
+  color: #5D2030;
+
+  text-decoration: none;
+}
+
+.site-footer-info-row:nth-child(2) > a:nth-child(3) svg {
+  width: 100%;
+  height: 100%;
+}
+
+
+/* EMAIL TEXT */
+
+.site-footer-info-row:nth-child(2) > a:last-child {
+  flex: 0 0 auto;
+
+  color: #5D2030;
+
+  font-family: "Turnkey Lite", Arial, sans-serif;
+
+  font-size: clamp(4px, 0.810185vw, 14px);
+
+  line-height: 1;
+
+  text-decoration: none;
+
+  white-space: nowrap;
+}
+
+
+/* =========================================================
+   SOCIAL MEDIA
+========================================================= */
+
+.site-footer-social {
+  position: absolute;
+
+  left: 0;
+  top: 80%;
+
+  width: 100%;
+  height: 20%;
+
+  display: flex;
+  align-items: center;
+
+  margin: 0;
+  padding: 0;
+
+  white-space: nowrap;
+}
+
+.site-footer-social > span {
+  flex: 0 0 auto;
+
+  margin-right: 3.8961%;
+
+  color: #5D2030;
+
+  font-family: "Turnkey Lite", Arial, sans-serif;
+
+  font-size: clamp(4px, 0.810185vw, 14px);
+
+  line-height: 1;
+
+  white-space: nowrap;
+}
+
+
+/* SOCIAL ICONS */
+
+.site-footer-social a {
+  width: 1.388889vw;
+  height: 1.388889vw;
+
+  min-width: 6px;
+  min-height: 6px;
+
+  max-width: 24px;
+  max-height: 24px;
+
+  flex: 0 0 auto;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin-right: 1.388889vw;
+
+  color: #5D2030;
+
+  text-decoration: none;
+}
+
+.site-footer-social a:last-child {
+  margin-right: 0;
+}
+
+.site-footer-social a svg {
+  width: 100%;
+  height: 100%;
+}
+
+
+/* =========================================================
+   BOTTOM SECTION
+   THIS MUST STAY AT THE SAME POSITION
+   AS THE REFERENCE
+========================================================= */
+
+.site-footer-bottom {
+  position: absolute;
+
+  left: 12.7083%;
+  top: 73.6648%;
+
+  width: 74.5833%;
+  height: 9.2%;
+
+  margin: 0;
+  padding: 0;
+
+  /*
+    Same thin line on every device.
+  */
+  border-top: 1px solid rgba(93, 32, 48, 0.30);
+
+  display: flex;
+  align-items: flex-start;
+
+  overflow: visible;
+}
+
+
+/* =========================================================
+   BOTTOM LEFT NAVIGATION
+
+   The complete navigation stays on the LEFT.
+========================================================= */
+
+.site-footer-links {
+  width: 68%;
+
+  height: 100%;
+
+  display: flex;
+  align-items: flex-start;
+
+  justify-content: flex-start;
+
+  margin: 0;
+  padding-top: 5.7%;
+  padding-right: 0;
+
+  white-space: nowrap;
+
+  overflow: visible;
+}
+
+
+/* =========================================================
+   BOTTOM LINKS
+========================================================= */
+
+.site-footer-links a,
+.site-footer-links span {
+  position: static;
+
+  flex: 0 0 auto;
+
+  margin: 0;
+  padding: 0;
+
+  color: #5D2030;
+
+  font-family: "Turnkey Lite", Arial, sans-serif;
+
+  /*
+    All bottom text uses exactly the same
+    scaling rule.
+  */
+  font-size: clamp(4px, 0.810185vw, 14px);
+
+  font-weight: 400;
+
+  line-height: 1;
+
+  text-decoration: none;
+
+  text-transform: uppercase;
+
+  white-space: nowrap;
+}
+
+
+/* =========================================================
+   GAP BETWEEN BOTTOM LINKS
+========================================================= */
+
+.site-footer-links a:nth-child(1) {
+  margin-right: 5.2%;
+}
+
+.site-footer-links a:nth-child(2) {
+  margin-right: 5.35%;
+}
+
+.site-footer-links a:nth-child(3) {
+  margin-right: 5.3%;
+}
+
+.site-footer-links span:nth-child(4) {
+  margin-right: 5.45%;
+}
+
+
+/* =========================================================
+   COPYRIGHT
+
+   IMPORTANT:
+   Same font size as Terms & Conditions.
+   Positioned separately on RIGHT.
+========================================================= */
+
+.site-footer-bottom > p {
+  width: 32%;
+
+  height: 100%;
+
+  flex: 0 0 32%;
+
+  margin: 0;
+
+  /*
+    SAME vertical position as bottom links.
+  */
+  padding-top: 5.7%;
+
+  /*
+    This creates the visual gap after
+    TERMS & CONDITIONS.
+  */
+  padding-left: 8%;
+
+  color: #5D2030;
+
+  font-family: "Turnkey Lite", Arial, sans-serif;
+
+  /*
+    EXACTLY SAME SIZE AS BOTTOM LINKS.
+  */
+  font-size: clamp(4px, 0.810185vw, 14px);
+
+  font-weight: 400;
+
+  line-height: 1;
+
+  text-align: right;
+
+  white-space: nowrap;
+
+  overflow: visible;
+}
+
+
+/* =========================================================
+   HOVER
+========================================================= */
+
+.site-footer a:hover {
+  opacity: 0.7;
+}
+
+
+/* =========================================================
+   DESKTOP REFERENCE — 1728px
+========================================================= */
+
+@media (min-width: 1728px) {
+
+  .site-footer-container {
+    width: 1728px;
+    height: 543px;
+  }
+
+
+  /* TOP LINE */
+
+  .site-footer-container::before {
+    left: 219px;
+    top: 100px;
+
+    width: 1288px;
+    height: 2px;
+  }
+
+
+  /* MAIN */
+
+  .site-footer-main {
+    left: 233px;
+    top: 198px;
+
+    width: 1275px;
+    height: 146px;
+  }
+
+
+  /* LOGO */
+
+  .site-footer-logo-icon {
+    width: 195px;
+    height: 146px;
+  }
+
+  .site-footer-logo-wordmark {
+    width: 296px;
+    height: 73px;
+  }
+
+
+  /* RIGHT INFORMATION */
+
+  .site-footer-info {
+    left: 70.3529%;
+    top: 8.9041%;
+
+    width: 29.6471%;
+    height: 82.1918%;
+  }
+
+
+  /* INFORMATION TEXT */
+
+  .site-footer-info-row:first-child {
+    font-size: 14px;
+  }
+
+  .site-footer-info-row:first-child > svg {
+    width: 14px;
+    height: 19.47px;
+  }
+
+  .site-footer-info-row:nth-child(2) > a:first-child {
+    width: 24px;
+    height: 24px;
+  }
+
+  .site-footer-info-row:nth-child(2) > a:nth-child(2),
+  .site-footer-info-row:nth-child(2) > a:last-child {
+    font-size: 14px;
+  }
+
+  .site-footer-info-row:nth-child(2) > a:nth-child(3) {
+    width: 20px;
+    height: 16px;
+  }
+
+
+  /* SOCIAL */
+
+  .site-footer-social > span {
+    font-size: 14px;
+  }
+
+  .site-footer-social a {
+    width: 24px;
+    height: 24px;
+
+    margin-right: 24px;
+  }
+
+
+  /* BOTTOM */
+
+  .site-footer-bottom {
+    left: 219px;
+    top: 400px;
+
+    width: 1289px;
+
+    height: 50px;
+
+    border-top-width: 1px;
+  }
+
+  .site-footer-links {
+    width: 68%;
+
+    padding-top: 12px;
+  }
+
+  .site-footer-bottom > p {
+    width: 32%;
+
+    flex-basis: 32%;
+
+    padding-top: 12px;
+    padding-left: 8%;
+
+    font-size: 14px;
+  }
+}
+
+
+/* =========================================================
+   ALL SMALLER SCREENS
+
+   NO MOBILE HEIGHT.
+   NO MOBILE REPOSITIONING.
+   EVERYTHING SCALES FROM THE SAME REFERENCE.
+========================================================= */
+
+@media (max-width: 1727px) {
+
+  .site-footer-container {
+    width: 100%;
+    aspect-ratio: 1728 / 543;
+  }
+}
+
+
+/* =========================================================
+   SMALL SCREENS
+========================================================= */
+
+@media (max-width: 700px) {
+
+  /*
+    Keep the exact reference coordinates.
+    Do NOT move the bottom section downward.
+  */
+
+  .site-footer-main {
+    left: 13.4838%;
+    top: 36.4641%;
+
+    width: 73.7847%;
+    height: 26.8877%;
+  }
+
+
+  .site-footer-info {
+    left: 70.3529%;
+    top: 8.9041%;
+
+    width: 29.6471%;
+  }
+
+
+  /*
+    TOP LINE:
+    exactly same thickness as bottom line.
+  */
+
+  .site-footer-container::before {
+    height: 1px;
+    min-height: 1px;
+    max-height: 1px;
+  }
+
+
+  /*
+    BOTTOM LINE:
+    always visible.
+  */
+
+  .site-footer-bottom {
+    left: 12.7083%;
+    top: 73.6648%;
+
+    width: 74.5833%;
+
+    height: 9.2%;
+
+    border-top: 1px solid rgba(93, 32, 48, 0.30);
+  }
+
+
+  /*
+    Keep navigation LEFT.
+  */
+
+  .site-footer-links {
+    width: 68%;
+
+    padding-top: 5.7%;
+  }
+
+
+  /*
+    Keep copyright RIGHT.
+  */
+
+  .site-footer-bottom > p {
+    width: 32%;
+    flex-basis: 32%;
+
+    padding-top: 5.7%;
+    padding-left: 8%;
+  }
+}
+
+
+/* =========================================================
+   500px AND BELOW
+========================================================= */
+
+@media (max-width: 500px) {
+
+  /*
+    DO NOT alter footer height.
+    DO NOT alter line position.
+    DO NOT move bottom section.
+  */
+
+  .site-footer-container {
+    aspect-ratio: 1728 / 543;
+  }
+
+
+  /*
+    Both lines remain exactly 1px.
+  */
+
+  .site-footer-container::before,
+  .site-footer-bottom {
+    border-top-width: 1px;
+  }
+
+
+  /*
+    Right information becomes smaller
+    with the screen.
+  */
+
+  .site-footer-info-row:first-child,
+  .site-footer-info-row:nth-child(2) > a:nth-child(2),
+  .site-footer-info-row:nth-child(2) > a:last-child,
+  .site-footer-social > span {
+    font-size: clamp(3.5px, 1.1vw, 6px);
+  }
+
+
+  /*
+    Bottom text remains equal.
+  */
+
+  .site-footer-links a,
+  .site-footer-links span,
+  .site-footer-bottom > p {
+    font-size: clamp(3.5px, 1.1vw, 6px);
+  }
+}
+
+
+/* =========================================================
+   375px AND BELOW
+========================================================= */
+
+@media (max-width: 375px) {
+
+  /*
+    Same reference.
+    No new footer height.
+    No new vertical position.
+  */
+
+  .site-footer-container {
+    aspect-ratio: 1728 / 543;
+  }
+
+
+  /*
+    Lines stay visible and equally thin.
+  */
+
+  .site-footer-container::before {
+    height: 1px;
+  }
+
+  .site-footer-bottom {
+    border-top: 1px solid rgba(93, 32, 48, 0.30);
+  }
+
+
+  /*
+    SAME FONT SIZE for:
+    TERMS & CONDITIONS
+    COPYRIGHT
+  */
+
+  .site-footer-links a,
+  .site-footer-links span,
+  .site-footer-bottom > p {
+    font-size: 4px;
+  }
+
+
+  /*
+    Keep a visible horizontal gap.
+  */
+
+  .site-footer-links {
+    width: 67%;
+  }
+
+  .site-footer-bottom > p {
+    width: 33%;
+    flex-basis: 33%;
+
+    padding-left: 8%;
+  }
+}
+
+
+/* =========================================================
+   320px AND BELOW
+========================================================= */
+
+@media (max-width: 320px) {
+
+  .site-footer-links {
+    width: 66%;
+  }
+
+  .site-footer-bottom > p {
+    width: 34%;
+    flex-basis: 34%;
+
+    padding-left: 7%;
+  }
+
+
+  .site-footer-links a,
+  .site-footer-links span,
+  .site-footer-bottom > p {
+    font-size: 3.5px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+/* =========================================================
+   SMALL-SCREEN ICON CLIPPING FIX
+   Do not change the existing footer layout.
+   ========================================================= */
+
+@media (max-width: 700px) {
+
+  /* Keep the right information visible */
+  .site-footer-info {
+    overflow: visible !important;
+  }
+
+  /* Keep every information row vertically centered */
+  .site-footer-info-row:first-child,
+  .site-footer-info-row:nth-child(2),
+  .site-footer-social {
+    overflow: visible !important;
+    align-items: center !important;
+  }
+
+  /* Prevent icons from being clipped by their row */
+  .site-footer-info-row svg,
+  .site-footer-social a,
+  .site-footer-social a svg {
+    overflow: visible !important;
+  }
+
+  /* Keep icon and text on the same vertical center */
+  .site-footer-info-row:first-child svg,
+  .site-footer-info-row:nth-child(2) > svg,
+  .site-footer-info-row:nth-child(2) > a,
+  .site-footer-social > span,
+  .site-footer-social a {
+    vertical-align: middle;
+  }
+}
+
+
+
+
+
+
+
+
+
+

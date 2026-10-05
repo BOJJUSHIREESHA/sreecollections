@@ -1,0 +1,2417 @@
+/* =========================================================
+   SREE COLLECTIONS — PRODUCT DETAILS
+   FIGMA MASTER: 1728 × 3481
+
+   IMPORTANT:
+   The complete page is kept as one 1728px Figma composition.
+
+   The JSX sets:
+   --figma-scale
+
+   The complete composition is then uniformly scaled
+   for smaller screens.
+
+   NO MOBILE REFLOW
+   NO COLUMN STACKING
+   NO HORIZONTAL SCROLLING
+========================================================= */
+
+
+/* =========================================================
+   ROOT
+========================================================= */
+
+:root {
+  --cream: #FDFAF5;
+  --maroon: #5D2030;
+  --gold: #BB8E43;
+  --panel: #EFE1BC;
+
+  --green: #22AD5C;
+  --star: #F59E0B;
+
+  --figma-scale: 1;
+}
+
+
+/* =========================================================
+   GLOBAL
+========================================================= */
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+
+  background: var(--cream);
+
+  overflow-x: hidden;
+}
+
+
+* {
+  box-sizing: border-box;
+}
+
+
+/* =========================================================
+   FIGMA MASTER SCALE
+
+   Original Figma:
+   1728 × 3481
+
+   The contents inside remain exactly 1728px wide.
+========================================================= */
+
+.product-details-scale {
+  width: 1728px;
+  min-width: 1728px;
+
+  margin: 0;
+  padding: 0;
+
+  transform-origin: top left;
+
+  /*
+    zoom is used instead of transform: scale()
+    so the complete page participates in layout.
+  */
+  zoom: var(--figma-scale);
+
+  overflow: visible;
+}
+
+
+/* =========================================================
+   MAIN PAGE
+
+   Figma:
+   1728px wide
+   Content begins at x = 126px
+========================================================= */
+
+.product-details-page {
+  width: 1728px;
+  min-height: 3481px;
+
+  margin: 0;
+  padding: 198px 125px 100px 126px;
+
+  background: var(--cream);
+
+  color: var(--maroon);
+
+  box-sizing: border-box;
+
+  overflow: visible;
+}
+
+
+.product-details-page,
+.product-details-page * {
+  box-sizing: border-box;
+}
+
+
+/* =========================================================
+   BREADCRUMB
+
+   Figma:
+   x = 126
+   y = 198
+   width = 577
+   height = 40
+========================================================= */
+
+.product-breadcrumb {
+  width: 577px;
+  height: 40px;
+
+  display: flex;
+
+  align-items: center;
+
+  flex-wrap: nowrap;
+
+  gap: 14px;
+
+  margin: 0 0 48px 0;
+  padding: 0;
+
+  color: rgba(93, 32, 48, 0.5);
+
+  font-family:
+    "Turnkey Lite",
+    Arial,
+    sans-serif;
+
+  font-size: 18px;
+
+  font-weight: 400;
+
+  line-height: 180%;
+
+  white-space: nowrap;
+
+  overflow: hidden;
+}
+
+
+.product-breadcrumb a {
+  flex: 0 0 auto;
+
+  color: rgba(93, 32, 48, 0.5);
+
+  text-decoration: none;
+}
+
+
+.product-breadcrumb a:hover {
+  color: var(--maroon);
+}
+
+
+.product-breadcrumb span {
+  flex: 0 0 auto;
+}
+
+
+.product-breadcrumb span:last-child {
+  color: var(--maroon);
+}
+
+
+/* =========================================================
+   MAIN PRODUCT AREA
+
+   Figma:
+   width = 1477
+   left column = 776
+   gap = 72
+   right column = 629
+========================================================= */
+
+.product-main {
+  width: 1477px;
+  height: 1028px;
+
+  display: grid;
+
+  grid-template-columns:
+    776px
+    629px;
+
+  column-gap: 72px;
+
+  align-items: start;
+
+  margin: 0;
+  padding: 0;
+}
+
+
+/* =========================================================
+   PRODUCT GALLERY
+========================================================= */
+
+.product-gallery {
+  width: 776px;
+  height: 1028px;
+
+  margin: 0;
+  padding: 0;
+}
+
+
+/* =========================================================
+   MAIN PRODUCT IMAGE
+
+   Figma:
+   774 × 768
+========================================================= */
+
+.product-main-image-wrapper {
+  width: 774px;
+  height: 768px;
+
+  margin: 0;
+  padding: 0;
+
+  overflow: hidden;
+
+  border-radius: 8px;
+
+  background: #eee8df;
+}
+
+
+.product-main-image {
+  width: 774px;
+  height: 1016px;
+
+  display: block;
+
+  margin-top: -30px;
+
+  object-fit: cover;
+
+  object-position: center;
+
+  border: 0;
+
+  transform: none;
+}
+
+
+/* =========================================================
+   THUMBNAILS
+
+   Figma:
+   3 × 224
+   gap = 52
+========================================================= */
+
+.product-thumbnails {
+  width: 776px;
+  height: 224px;
+
+  display: grid;
+
+  grid-template-columns:
+    224px
+    224px
+    224px;
+
+  column-gap: 52px;
+
+  margin: 36px 0 0 0;
+  padding: 0;
+}
+
+
+.product-thumbnail {
+  width: 224px;
+  height: 224px;
+
+  display: block;
+
+  margin: 0;
+  padding: 0;
+
+  border: 1px solid transparent;
+
+  border-radius: 6px;
+
+  overflow: hidden;
+
+  background: #eee8df;
+
+  cursor: pointer;
+}
+
+
+.product-thumbnail img {
+  width: 224px;
+  height: 224px;
+
+  display: block;
+
+  object-fit: cover;
+
+  object-position: center;
+
+  border-radius: 6px;
+
+  transform: none;
+
+  transition: none;
+}
+
+
+.product-thumbnail:hover img {
+  transform: none;
+}
+
+
+.product-thumbnail.active {
+  border-color: var(--gold);
+}
+
+
+/* =========================================================
+   PRODUCT INFORMATION
+
+   Figma:
+   x = 974
+   width = 629
+   top = 358
+========================================================= */
+
+.product-information {
+  width: 629px;
+  height: auto;
+
+  margin: 0;
+  padding: 72px 0 0 0;
+}
+
+
+/* =========================================================
+   PRODUCT TITLE
+========================================================= */
+
+.product-information h1 {
+  width: 449px;
+  height: 36px;
+
+  margin: 0 0 26.4px 0;
+  padding: 0;
+
+  color: var(--maroon);
+
+  font-family:
+    "Blacker Display",
+    Georgia,
+    serif;
+
+  font-size: 32px;
+
+  font-weight: 700;
+
+  line-height: 100%;
+
+  letter-spacing: 0;
+
+  white-space: nowrap;
+}
+
+
+/* =========================================================
+   RATING + STOCK
+========================================================= */
+
+.rating-stock-row {
+  width: 369.2px;
+  height: 24px;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 30px;
+
+  margin: 0 0 30px 0;
+}
+
+
+.rating-area {
+  display: flex;
+
+  align-items: center;
+
+  gap: 9.6px;
+
+  flex: 0 0 auto;
+
+  color: var(--maroon);
+
+  font-family:
+    "Bitter",
+    Georgia,
+    serif;
+
+  font-size: 18px;
+
+  font-weight: 500;
+
+  line-height: 100%;
+}
+
+
+.star-row {
+  height: 24px;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 6px;
+
+  color: var(--star);
+
+  font-size: 21.6px;
+
+  line-height: 1;
+}
+
+
+.star-row svg {
+  width: 21.6px;
+  height: 21.6px;
+
+  flex: 0 0 21.6px;
+}
+
+
+.stock-area {
+  display: flex;
+
+  align-items: center;
+
+  gap: 9.6px;
+
+  flex: 0 0 auto;
+
+  color: var(--maroon);
+
+  font-family:
+    "Bitter",
+    Georgia,
+    serif;
+
+  font-size: 18px;
+
+  font-weight: 500;
+
+  line-height: 100%;
+
+  white-space: nowrap;
+}
+
+
+.stock-check {
+  width: 24px;
+  height: 24px;
+
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  flex: 0 0 24px;
+
+  border: 1px solid var(--green);
+
+  border-radius: 50%;
+
+  color: var(--green);
+
+  font-size: 13px;
+
+  line-height: 1;
+}
+
+
+/* =========================================================
+   DESCRIPTION
+
+   IMPORTANT:
+   No fixed overflow clipping.
+========================================================= */
+
+.product-description {
+  width: 564px;
+
+  min-height: 48px;
+
+  height: auto;
+
+  margin: 0 0 33.6px 0;
+  padding: 0;
+
+  overflow: visible;
+
+  color: var(--maroon);
+
+  font-family:
+    "Turnkey Lite",
+    Arial,
+    sans-serif;
+
+  font-size: 16px;
+
+  font-weight: 500;
+
+  line-height: 24px;
+
+  letter-spacing: 0.15px;
+}
+
+
+/* =========================================================
+   QUANTITY + PRICE
+========================================================= */
+
+.quantity-price-row {
+  width: 564px;
+  height: 85.6px;
+
+  display: flex;
+
+  align-items: flex-start;
+
+  justify-content: space-between;
+
+  margin: 0 0 36px 0;
+
+  padding: 0;
+}
+
+
+.quantity-area {
+  width: 136.8px;
+  height: 85.6px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 14.4px;
+}
+
+
+.quantity-title {
+  width: 88px;
+  height: 28px;
+
+  color: var(--maroon);
+
+  font-family:
+    "Blacker Display",
+    Georgia,
+    serif;
+
+  font-size: 22px;
+
+  font-weight: 400;
+
+  line-height: 28px;
+}
+
+
+.quantity-control {
+  width: 136.8px;
+  height: 43.2px;
+
+  display: grid;
+
+  grid-template-columns:
+    40.8px
+    55.2px
+    40.8px;
+
+  border: 1.2px solid var(--maroon);
+
+  border-radius: 6px;
+
+  overflow: hidden;
+}
+
+
+.quantity-control button {
+  width: 40.8px;
+  height: 43.2px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  margin: 0;
+  padding: 0;
+
+  border: 0;
+
+  background: transparent;
+
+  color: var(--maroon);
+
+  cursor: pointer;
+}
+
+
+.quantity-control button:hover {
+  background: rgba(187, 142, 67, 0.08);
+}
+
+
+.quantity-control button svg {
+  width: 14.4px;
+  height: 14.4px;
+}
+
+
+.quantity-control span {
+  width: 55.2px;
+  height: 43.2px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border-left: 1.2px solid var(--maroon);
+
+  border-right: 1.2px solid var(--maroon);
+
+  color: var(--maroon);
+
+  font-family:
+    "Turnkey Lite",
+    Arial,
+    sans-serif;
+
+  font-size: 18px;
+
+  font-weight: 500;
+
+  line-height: 100%;
+}
+
+
+/* =========================================================
+   PRICE
+========================================================= */
+
+.price-area {
+  width: 139px;
+  height: 62px;
+
+  text-align: right;
+}
+
+
+.product-price {
+  width: 139px;
+
+  margin: 0;
+
+  color: var(--maroon);
+
+  font-family:
+    "Turnkey Lite",
+    Arial,
+    sans-serif;
+
+  font-size: 32px;
+
+  font-weight: 400;
+
+  line-height: 40px;
+
+  text-align: right;
+
+  white-space: nowrap;
+}
+
+
+.vat-text {
+  width: 139px;
+
+  margin: 0;
+
+  color: var(--maroon);
+
+  font-family:
+    "Turnkey Lite",
+    Arial,
+    sans-serif;
+
+  font-size: 18px;
+
+  font-weight: 500;
+
+  line-height: 100%;
+
+  text-align: right;
+
+  white-space: nowrap;
+}
+
+
+/* =========================================================
+   ADD TO CART
+
+   IMPORTANT:
+   The JSX adds the product to localStorage.
+   It does NOT open the CartDrawer.
+========================================================= */
+
+.add-to-cart-button {
+  width: 564px;
+  height: 72px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  margin: 0;
+
+  padding: 24px 48px;
+
+  border: 4px solid var(--cream);
+
+  border-radius: 64px;
+
+  background: var(--gold);
+
+  color: var(--cream);
+
+  font-family:
+    "Blacker Display",
+    Georgia,
+    serif;
+
+  font-size: 18px;
+
+  font-weight: 500;
+
+  line-height: 24px;
+
+  letter-spacing: 0.15px;
+
+  cursor: pointer;
+
+  transform: none;
+
+  transition: none;
+}
+
+
+.add-to-cart-button:hover {
+  background: var(--gold);
+
+  color: var(--cream);
+
+  transform: none;
+}
+
+
+/* =========================================================
+   PRODUCT OPTIONS
+========================================================= */
+
+.product-option {
+  width: 629px;
+
+  margin: 42px 0 0 0;
+
+  padding: 0;
+}
+
+
+.product-option h3 {
+  width: 629px;
+  height: 36px;
+
+  margin: 0 0 30px 0;
+
+  padding: 0;
+
+  color: var(--maroon);
+
+  font-family:
+    "Blacker Display",
+    Georgia,
+    serif;
+
+  font-size: 28px;
+
+  font-weight: 400;
+
+  line-height: 36px;
+}
+
+
+/* =========================================================
+   SIZE OPTIONS
+
+   Figma:
+   5 horizontal pills
+========================================================= */
+
+.size-options {
+  width: 629px;
+  height: 72px;
+
+  display: grid !important;
+
+  grid-template-columns:
+    108px
+    112px
+    105px
+    118px
+    130px;
+
+  grid-template-rows: 72px;
+
+  column-gap: 14px;
+
+  margin: 0;
+
+  padding: 0;
+
+  overflow: visible;
+}
+
+
+.size-options button {
+  height: 72px !important;
+
+  display: flex !important;
+
+  align-items: center;
+  justify-content: center;
+
+  margin: 0 !important;
+
+  padding: 24px 48px !important;
+
+  border: 4px solid transparent;
+
+  border-radius: 64px;
+
+  background: transparent;
+
+  color: var(--maroon);
+
+  font-family:
+    "Turnkey Lite",
+    Arial,
+    sans-serif;
+
+  font-size: 18px;
+
+  font-weight: 500;
+
+  line-height: 24px;
+
+  letter-spacing: 0.15px;
+
+  text-align: center;
+
+  white-space: nowrap;
+
+  cursor: pointer;
+
+  transform: none !important;
+
+  transition: none;
+}
+
+
+.size-options button.selected {
+  background: var(--gold) !important;
+
+  border: 4px solid var(--cream) !important;
+
+  color: var(--cream) !important;
+}
+
+
+.size-options button:hover {
+  background: transparent;
+
+  color: var(--maroon);
+
+  transform: none !important;
+}
+
+
+.size-options button.selected:hover {
+  background: var(--gold) !important;
+
+  color: var(--cream) !important;
+}
+
+
+/* =========================================================
+   COLOURS
+
+   Figma colour controls:
+   112 × 72
+   120 × 72
+   112 × 72
+   112 × 72
+   112 × 72
+========================================================= */
+
+.color-options {
+  width: 624px;
+  height: 72px;
+
+  display: flex !important;
+
+  flex-direction: row !important;
+
+  align-items: center;
+
+  flex-wrap: nowrap !important;
+
+  gap: 14px;
+
+  margin: 0;
+
+  padding: 0;
+
+  overflow: visible;
+}
+
+
+.color-circle {
+  height: 72px !important;
+
+  display: flex !important;
+
+  align-items: center;
+  justify-content: center;
+
+  flex: 0 0 auto !important;
+
+  margin: 0 !important;
+
+  padding: 24px 48px !important;
+
+  border: 0;
+
+  border-radius: 64px;
+
+  color: #fff;
+
+  font-family: Arial, sans-serif;
+
+  font-size: 18px;
+
+  line-height: 1;
+
+  cursor: pointer;
+
+  transform: none !important;
+
+  transition: none;
+
+  box-sizing: border-box;
+}
+
+
+/* RED */
+
+.color-circle:nth-child(1) {
+  width: 112px !important;
+  min-width: 112px !important;
+
+  background: #873434 !important;
+}
+
+
+/* BLACK */
+
+.color-circle:nth-child(2) {
+  width: 120px !important;
+  min-width: 120px !important;
+
+  background: #1C1C1C !important;
+}
+
+
+/* OLIVE */
+
+.color-circle:nth-child(3) {
+  width: 112px !important;
+  min-width: 112px !important;
+
+  background: #9C8E3F !important;
+}
+
+
+/* BLUE */
+
+.color-circle:nth-child(4) {
+  width: 112px !important;
+  min-width: 112px !important;
+
+  background: #2C6F85 !important;
+}
+
+
+/* PINK */
+
+.color-circle:nth-child(5) {
+  width: 112px !important;
+  min-width: 112px !important;
+
+  background: #B34495 !important;
+}
+
+
+/* SELECTED COLOUR */
+
+.color-circle.selected {
+  border: 6px solid var(--gold) !important;
+
+  color: var(--cream);
+
+  box-shadow: none;
+}
+
+
+.color-circle:hover {
+  transform: none !important;
+}
+
+
+/* =========================================================
+   PRODUCT ACTIONS
+========================================================= */
+
+.product-actions {
+  width: 627px;
+  height: 64px;
+
+  display: flex !important;
+
+  flex-direction: row !important;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  margin: 40px 0 0 0;
+
+  padding: 0;
+}
+
+
+/* =========================================================
+   EASY RETURN
+
+   Figma:
+   small truck icon + Easy Return
+========================================================= */
+
+.easy-return {
+  width: 110px;
+  height: 40px;
+
+  display: inline-flex;
+
+  align-items: center;
+
+  justify-content: flex-start;
+
+  gap: 6px;
+
+  margin: 0;
+
+  padding: 0 4px;
+
+  color: var(--maroon);
+
+  font-family:
+    "Turnkey Lite",
+    Arial,
+    sans-serif;
+
+  font-size: 14px;
+
+  font-weight: 400;
+
+  line-height: 24px;
+
+  white-space: nowrap;
+}
+
+
+/* Truck icon */
+
+.easy-return-truck {
+  width: 18px;
+  height: 18px;
+
+  flex: 0 0 18px;
+
+  color: var(--maroon);
+}
+
+
+/* =========================================================
+   WISHLIST
+========================================================= */
+
+.wishlist-button {
+  width: 135px;
+  height: 64px;
+
+  display: inline-flex !important;
+
+  align-items: center;
+
+  justify-content: center;
+
+  flex-direction: row !important;
+
+  gap: 6px;
+
+  margin: 0;
+
+  padding: 16px 4px;
+
+  border: 0;
+
+  background: transparent;
+
+  color: var(--maroon);
+
+  font-family:
+    "Turnkey Lite",
+    Arial,
+    sans-serif;
+
+  font-size: 14px;
+
+  font-weight: 400;
+
+  line-height: 24px;
+
+  white-space: nowrap;
+
+  cursor: pointer;
+
+  transform: none !important;
+}
+
+
+.wishlist-button svg {
+  width: 20px;
+  height: 20px;
+
+  flex: 0 0 20px;
+
+  color: var(--maroon);
+}
+
+
+/* =========================================================
+   WISHLIST SELECTED
+
+   Clicked:
+   filled heart becomes RED
+========================================================= */
+
+.wishlist-button.wishlisted svg {
+  color: #E32636;
+}
+
+
+.wishlist-button.wishlisted span {
+  color: var(--maroon);
+}
+
+
+.wishlist-button:hover {
+  background: transparent;
+
+  color: var(--maroon);
+
+  transform: none !important;
+}
+
+
+.wishlist-button.wishlisted:hover {
+  color: var(--maroon);
+}
+
+
+/* =========================================================
+   INFORMATION SECTION
+
+   Figma:
+   x = 126
+   y = 1362
+   width = 1477
+========================================================= */
+
+.product-information-section {
+  width: 1477px;
+
+  margin: 48px 0 0 0;
+
+  padding: 0;
+}
+
+
+.information-grid {
+  width: 1477px;
+
+  display: grid;
+
+  grid-template-columns:
+    716px
+    716px;
+
+  column-gap: 45px;
+
+  align-items: start;
+}
+
+
+/* =========================================================
+   LEFT INFORMATION ACCORDION
+
+   Figma:
+   716 × 671
+========================================================= */
+
+.information-left {
+  width: 716px;
+
+  min-height: 671px;
+
+  height: auto;
+
+  border: 1px solid rgba(93, 32, 48, 0.38);
+
+  border-radius: 12px;
+
+  overflow: visible;
+
+  background: var(--panel);
+}
+
+
+/* =========================================================
+   ACCORDION BOX
+========================================================= */
+
+.details-accordion-box {
+  width: 716px;
+
+  margin: 0;
+
+  padding: 0;
+
+  border-bottom:
+    1px solid rgba(93, 32, 48, 0.38);
+
+  background: var(--panel);
+}
+
+
+.details-accordion-box:last-child {
+  border-bottom: 0;
+}
+
+
+/* =========================================================
+   ACCORDION HEADER
+
+   Figma:
+   716 × 76
+========================================================= */
+
+.details-accordion-header {
+  width: 716px;
+  height: 76px;
+
+  min-height: 76px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  gap: 8px;
+
+  margin: 0;
+
+  padding: 24px;
+
+  border: 0;
+
+  background: var(--panel);
+
+  color: var(--maroon);
+
+  font-family:
+    "Blacker Display",
+    Georgia,
+    serif;
+
+  font-size: 20px;
+
+  font-weight: 700;
+
+  line-height: 140%;
+
+  text-align: left;
+
+  cursor: pointer;
+}
+
+
+.details-accordion-header:hover {
+  background: var(--panel);
+}
+
+
+/* =========================================================
+   PLUS / MINUS
+========================================================= */
+
+.accordion-symbol {
+  width: 24px;
+  height: 24px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  flex: 0 0 24px;
+
+  color: var(--maroon);
+
+  font-family: Arial, sans-serif;
+
+  font-size: 24px;
+
+  font-weight: 400;
+
+  line-height: 1;
+}
+
+
+/* =========================================================
+   ACCORDION CONTENT
+========================================================= */
+
+.details-accordion-content {
+  width: 668px;
+
+  margin: 0 24px;
+
+  padding: 0 0 24px 0;
+
+  color: var(--maroon);
+
+  font-family:
+    "Turnkey Lite",
+    Arial,
+    sans-serif;
+
+  font-size: 16px;
+
+  font-weight: 400;
+
+  line-height: 180%;
+
+  text-transform: capitalize;
+}
+
+
+.details-accordion-content p {
+  width: 668px;
+
+  margin: 0 0 12px 0;
+
+  padding: 0;
+}
+
+
+/* =========================================================
+   IMPORTANT:
+   FABRIC / CARE / SHIPPING / RETURNS
+   HAVE NO BULLET DOTS
+========================================================= */
+
+.details-accordion-content ul {
+  margin: 0;
+
+  padding: 0;
+
+  list-style: none;
+}
+
+
+.details-accordion-content li {
+  margin: 0;
+
+  padding: 0;
+
+  list-style: none;
+}
+
+
+.details-accordion-content li::before {
+  display: none;
+
+  content: none;
+}
+
+
+/* =========================================================
+   PLAIN INFORMATION LIST
+
+   Used by:
+   Fabric
+   Care
+   Shipping
+   Returns
+========================================================= */
+
+.info-plain-list {
+  width: 668px;
+
+  margin: 0;
+
+  padding: 0;
+
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 4px;
+
+  list-style: none;
+}
+
+
+.info-plain-list p {
+  width: 668px;
+
+  margin: 0;
+
+  padding: 0;
+
+  list-style: none;
+
+  color: var(--maroon);
+
+  font-family:
+    "Turnkey Lite",
+    Arial,
+    sans-serif;
+
+  font-size: 16px;
+
+  font-weight: 400;
+
+  line-height: 180%;
+}
+
+
+.info-subsection {
+  width: 668px;
+
+  margin: 0 0 16px 0;
+}
+
+
+.info-subsection:last-child {
+  margin-bottom: 0;
+}
+
+
+.info-subsection h4 {
+  width: 668px;
+
+  margin: 0;
+
+  padding: 0;
+
+  color: var(--maroon);
+
+  font-family:
+    "Turnkey Lite",
+    Arial,
+    sans-serif;
+
+  font-size: 16px;
+
+  font-weight: 400;
+
+  line-height: 180%;
+}
+
+
+/* =========================================================
+   RIGHT INFORMATION
+========================================================= */
+
+.information-right {
+  width: 716px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 24px;
+}
+
+
+/* =========================================================
+   MATERIAL BOX
+
+   Figma:
+   716 × 300
+========================================================= */
+
+.silk-box {
+  width: 716px;
+  height: 300px;
+
+  margin: 0;
+
+  padding: 16px;
+
+  border:
+    1px solid rgba(93, 32, 48, 0.38);
+
+  border-radius: 12px;
+
+  background: var(--panel);
+
+  color: var(--maroon);
+}
+
+
+.silk-box h3 {
+  width: 684px;
+  height: 52px;
+
+  display: flex;
+
+  align-items: center;
+
+  margin: 0;
+
+  padding: 8px 16px;
+
+  border-bottom:
+    1px solid rgba(93, 32, 48, 0.38);
+
+  color: var(--maroon);
+
+  font-family:
+    "Blacker Display",
+    Georgia,
+    serif;
+
+  font-size: 20px;
+
+  font-weight: 400;
+
+  line-height: 180%;
+}
+
+
+.silk-box p {
+  width: 684px;
+
+  min-height: 96px;
+
+  margin: 24px 0 0 0;
+
+  padding: 0;
+
+  color: var(--maroon);
+
+  font-family:
+    "Turnkey Lite",
+    Arial,
+    sans-serif;
+
+  font-size: 18px;
+
+  font-weight: 400;
+
+  line-height: 180%;
+
+  text-transform: capitalize;
+}
+
+
+/* =========================================================
+   MATERIAL TAGS
+========================================================= */
+
+.material-tags {
+  width: 684px;
+  height: 72px;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 12px;
+
+  margin: 16px 0 0 0;
+
+  padding: 0;
+}
+
+
+.material-tags span {
+  height: 40px;
+
+  display: inline-flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  padding: 0 8px;
+
+  border-radius: 8px;
+
+  background: var(--cream);
+
+  color: var(--maroon);
+
+  font-family:
+    Montserrat,
+    Arial,
+    sans-serif;
+
+  font-size: 14px;
+
+  font-weight: 400;
+
+  line-height: 180%;
+
+  white-space: nowrap;
+}
+
+
+/* =========================================================
+   RETURN POLICY
+
+   Figma:
+   716 × 268
+========================================================= */
+
+.return-box {
+  width: 716px;
+  height: 268px;
+
+  margin: 0;
+
+  padding: 16px;
+
+  border:
+    1px solid rgba(93, 32, 48, 0.38);
+
+  border-radius: 12px;
+
+  background: var(--panel);
+
+  color: var(--maroon);
+
+  overflow: visible;
+}
+
+
+.return-box h3 {
+  width: 684px;
+  height: 52px;
+
+  display: flex;
+
+  align-items: center;
+
+  margin: 0;
+
+  padding: 8px 16px;
+
+  border-bottom:
+    1px solid rgba(93, 32, 48, 0.38);
+
+  color: var(--maroon);
+
+  font-family:
+    "Blacker Display",
+    Georgia,
+    serif;
+
+  font-size: 20px;
+
+  font-weight: 400;
+
+  line-height: 180%;
+}
+
+
+.return-divider {
+  display: none;
+}
+
+
+.return-box ul {
+  width: 684px;
+
+  min-height: 160px;
+
+  margin: 24px 0 0 0;
+
+  padding: 0;
+
+  list-style: none;
+
+  color: var(--maroon);
+
+  font-family:
+    "Turnkey Lite",
+    Arial,
+    sans-serif;
+
+  font-size: 18px;
+
+  font-weight: 400;
+
+  line-height: 180%;
+
+  text-transform: capitalize;
+}
+
+
+.return-box li {
+  margin: 0 0 4px 0;
+
+  padding: 0;
+
+  list-style: none;
+}
+
+
+.return-box li::before {
+  display: none;
+
+  content: none;
+}
+
+
+/* =========================================================
+   YOU MAY ALSO LIKE
+========================================================= */
+
+.you-may-like {
+  width: 1477px;
+
+  margin: 72px 0 0 0;
+
+  padding: 0;
+}
+
+
+.you-may-like h2 {
+  width: 551px;
+  height: 72px;
+
+  margin: 0 0 48px 0;
+
+  padding: 0;
+
+  color: var(--maroon);
+
+  font-family:
+    "Blacker Display",
+    Georgia,
+    serif;
+
+  font-size: 64px;
+
+  font-weight: 700;
+
+  line-height: 100%;
+
+  letter-spacing: 0;
+
+  white-space: nowrap;
+}
+
+
+/* =========================================================
+   RELATED PRODUCTS
+
+   Figma:
+   4 cards
+   306px wide
+   gap ≈ 84.33px
+========================================================= */
+
+.related-products {
+  width: 1477px;
+
+  display: grid;
+
+  grid-template-columns:
+    306px
+    306px
+    306px
+    306px;
+
+  column-gap: 84.33px;
+
+  align-items: start;
+
+  margin: 0;
+
+  padding: 0;
+}
+
+
+/* =========================================================
+   RELATED CARD
+========================================================= */
+
+.related-card {
+  width: 306px;
+  height: 461.7px;
+
+  display: block;
+
+  margin: 0;
+
+  padding: 19.8px;
+
+  border:
+    0.9px solid var(--gold);
+
+  border-radius: 14.4px;
+
+  background: var(--cream);
+
+  color: var(--maroon);
+
+  text-decoration: none;
+
+  overflow: hidden;
+
+  transition: none;
+}
+
+
+.related-card:hover {
+  transform: none;
+
+  box-shadow: none;
+}
+
+
+/* =========================================================
+   RELATED IMAGE
+========================================================= */
+
+.related-image {
+  width: 264.6px;
+  height: 314.1px;
+
+  overflow: hidden;
+
+  border-radius: 16px;
+
+  background: var(--cream);
+}
+
+
+.related-image img {
+  width: 264.6px;
+  height: 314.1px;
+
+  display: block;
+
+  object-fit: cover;
+
+  object-position: center;
+
+  margin: 0;
+
+  padding: 0;
+
+  transform: none;
+
+  transition: none;
+}
+
+
+/* =========================================================
+   RELATED CARD CONTENT
+========================================================= */
+
+.related-card-content {
+  width: 264.6px;
+
+  padding: 27.9px 0 0 0;
+}
+
+
+.related-card-content h3 {
+  width: 264.6px;
+  height: 27px;
+
+  margin: 0 0 36px 0;
+
+  padding: 0;
+
+  color: var(--maroon);
+
+  font-family:
+    "Blacker Display",
+    Georgia,
+    serif;
+
+  font-size: 24px;
+
+  font-weight: 500;
+
+  line-height: 100%;
+
+  letter-spacing: 0;
+
+  white-space: nowrap;
+
+  overflow: hidden;
+
+  text-overflow: ellipsis;
+}
+
+
+/* =========================================================
+   RELATED BOTTOM
+========================================================= */
+
+.related-bottom {
+  width: 264.6px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  gap: 8px;
+
+  color: var(--maroon);
+
+  font-family:
+    "Turnkey Lite",
+    Arial,
+    sans-serif;
+
+  font-size: 14px;
+
+  font-weight: 400;
+
+  line-height: 100%;
+}
+
+
+.related-price {
+  white-space: nowrap;
+}
+
+
+.related-cart-action {
+  flex: 0 0 auto;
+}
+
+
+/* =========================================================
+   RELATED CART ICON
+========================================================= */
+
+.related-cart-icon {
+  width: 24px;
+  height: 24px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  margin: 0;
+
+  padding: 0;
+
+  border: 0;
+
+  background: transparent;
+
+  color: var(--gold);
+
+  font-size: 24px;
+
+  cursor: pointer;
+}
+
+
+/* =========================================================
+   RELATED CART QUANTITY
+========================================================= */
+
+.related-cart-control {
+  min-width: 70px;
+  height: 28px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 5px;
+}
+
+
+.related-qty-button {
+  width: 20px;
+  height: 20px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  margin: 0;
+
+  padding: 0;
+
+  border: 0;
+
+  background: transparent;
+
+  color: var(--gold);
+
+  font-size: 10px;
+
+  cursor: pointer;
+}
+
+
+.related-quantity {
+  min-width: 18px;
+
+  color: var(--maroon);
+
+  font-family:
+    "Turnkey Lite",
+    Arial,
+    sans-serif;
+
+  font-size: 12px;
+
+  text-align: center;
+}
+
+
+/* =========================================================
+   EXPLORE MORE
+========================================================= */
+
+.explore-more-wrapper {
+  width: 1477px;
+
+  display: flex;
+
+  justify-content: flex-end;
+
+  margin-top: 72px;
+
+  padding: 0;
+}
+
+
+.explore-more-button {
+  min-width: 140px;
+  height: 48px;
+
+  display: inline-flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  padding: 0 25px;
+
+  border-radius: 25px;
+
+  background: var(--gold);
+
+  color: #fff;
+
+  font-family:
+    "Blacker Display",
+    Georgia,
+    serif;
+
+  font-size: 10px;
+
+  text-decoration: none;
+}
+
+
+/* =========================================================
+   PRODUCT NOT FOUND
+========================================================= */
+
+.product-not-found {
+  min-height: 60vh;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 20px;
+
+  color: var(--maroon);
+}
+
+
+.product-not-found h2 {
+  margin: 0;
+
+  font-family:
+    "Blacker Display",
+    Georgia,
+    serif;
+}
+
+
+.product-not-found a {
+  padding: 12px 25px;
+
+  border-radius: 25px;
+
+  background: var(--gold);
+
+  color: #fff;
+
+  text-decoration: none;
+}
+
+
+/* =========================================================
+   FOOTER
+   Existing footer styles retained
+========================================================= */
+
+.product-footer {
+  width: 1477px;
+
+  margin: 0 auto;
+
+  padding-bottom: 30px;
+
+  color: var(--maroon);
+}
+
+
+.footer-divider {
+  width: 82%;
+
+  height: 1px;
+
+  margin: 0 auto 70px;
+
+  background: #8c4350;
+}
+
+
+.footer-main {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  gap: 50px;
+
+  padding: 0 30px 55px;
+}
+
+
+.footer-logo {
+  display: flex;
+
+  align-items: center;
+
+  gap: 12px;
+}
+
+
+.footer-logo img:first-child {
+  width: 90px;
+  height: 90px;
+
+  object-fit: contain;
+}
+
+
+.footer-logo img:last-child {
+  width: 190px;
+  height: auto;
+}
+
+
+.footer-contact {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 13px;
+
+  font-family: Arial, sans-serif;
+
+  font-size: 8px;
+}
+
+
+.footer-contact p {
+  display: flex;
+
+  align-items: center;
+
+  gap: 8px;
+
+  margin: 0;
+}
+
+
+.footer-contact svg {
+  flex-shrink: 0;
+
+  color: var(--maroon);
+}
+
+
+.footer-contact-row {
+  display: flex;
+
+  align-items: center;
+
+  gap: 25px;
+}
+
+
+.footer-contact-row span {
+  display: flex;
+
+  align-items: center;
+
+  gap: 5px;
+}
+
+
+.social-row {
+  display: flex;
+
+  align-items: center;
+
+  gap: 8px;
+}
+
+
+.social-row a {
+  width: 17px;
+  height: 17px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  color: var(--maroon);
+
+  text-decoration: none;
+}
+
+
+.footer-bottom {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  padding: 19px 30px 0;
+
+  border-top: 1px solid #eadfd7;
+
+  font-family: Arial, sans-serif;
+
+  font-size: 7px;
+}
+
+
+.footer-links {
+  display: flex;
+
+  align-items: center;
+
+  gap: 36px;
+}
+
+
+.footer-links a,
+.copyright {
+  color: var(--maroon);
+
+  text-decoration: none;
+}
+
+
+/* =========================================================
+   IMPORTANT — NO MOBILE MEDIA QUERIES
+
+   Do NOT add:
+
+   @media (max-width: ...)
+   grid-template-columns: 1fr
+   flex-direction: column
+   width: 100vw
+   transform: scale(...)
+
+   The JSX scaling effect handles the complete Figma
+   composition on smaller screens.
+========================================================= */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

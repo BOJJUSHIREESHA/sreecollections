@@ -1,0 +1,1326 @@
+/* ============================================================
+   SREE COLLECTIONS
+   CART DRAWER — EXACT FIGMA COMPOSITION
+
+   FIGMA CANVAS
+   1728 × 3481
+
+   CART DRAWER
+   X = 1155
+   Y = 198
+   WIDTH = 448
+   HEIGHT = 762
+
+   IMPORTANT
+   ------------------------------------------------------------
+   The drawer is ONE fixed Figma composition.
+
+   It does NOT:
+   - stack on mobile
+   - change its internal layout
+   - change individual font sizes
+   - change individual element sizes
+
+   The COMPLETE drawer scales uniformly.
+============================================================ */
+
+
+/* ============================================================
+   OVERLAY
+============================================================ */
+
+.cart-drawer-overlay {
+  position: fixed;
+  inset: 0;
+
+  width: 100vw;
+  height: 100vh;
+
+  z-index: 9999;
+
+  pointer-events: auto;
+
+  /*
+    The Figma export does not specify the overlay color.
+    This is the dimming layer required when the drawer opens.
+  */
+  background: rgba(93, 32, 48, 0.14);
+}
+
+
+/* ============================================================
+   CART DRAWER
+============================================================ */
+
+.cart-drawer {
+  position: fixed;
+
+  /*
+    Figma right position:
+
+    Canvas width = 1728
+    Drawer left   = 1155
+    Drawer width  = 448
+
+    Therefore:
+
+    1728 - 1155 - 448 = 125px
+
+    We scale the Figma RIGHT distance instead of
+    independently moving the drawer from the left.
+
+    This keeps the drawer attached to the right side
+    at every viewport width.
+  */
+
+  top: var(--cart-drawer-top, 198px);
+
+  right: calc(
+    125px * var(--cart-figma-scale, 1)
+  );
+
+  width: 448px;
+  height: 762px;
+
+  min-width: 448px;
+  min-height: 762px;
+
+  max-width: none;
+  max-height: none;
+
+  box-sizing: border-box;
+
+  overflow: hidden;
+
+  display: flex;
+  flex-direction: column;
+
+  flex: 0 0 448px;
+
+  background: #FDFAF5;
+
+  box-shadow:
+    0px 25px 50px -12px #00000040;
+
+  /*
+    Entire Figma composition scales together.
+  */
+  transform:
+    scale(var(--cart-figma-scale, 1));
+
+  /*
+    Figma drawer is anchored from the TOP-RIGHT.
+  */
+  transform-origin: top right;
+}
+
+
+/* ============================================================
+   HEADER
+   FIGMA:
+   448 × 75
+   padding:
+   20px 24px
+============================================================ */
+
+.cart-drawer-header {
+  width: 448px;
+  height: 75px;
+
+  min-width: 448px;
+  min-height: 75px;
+
+  flex: 0 0 75px;
+
+  box-sizing: border-box;
+
+  padding:
+    20px
+    24px
+    20px
+    24px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  border-bottom:
+    1px solid #5D20300F;
+
+  background: #FDFAF5;
+}
+
+
+/* ============================================================
+   HEADER TITLE
+============================================================ */
+
+.cart-drawer-header h2 {
+  width: 105px;
+  height: 28px;
+  min-width: 105px;
+  min-height: 28px;
+
+  margin: 0;
+  padding: 0;
+
+  box-sizing: border-box;
+
+  display: block;
+
+  overflow: visible;
+  white-space: nowrap;
+
+  font-family: "Blacker Display", serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 18px;
+  line-height: 28px;
+  letter-spacing: 0;
+
+  color: #5D2030;
+}
+
+/* ============================================================
+   CLOSE BUTTON
+   FIGMA:
+   34 × 34
+   padding 8
+============================================================ */
+
+.cart-drawer-close {
+  width: 34px;
+  height: 34px;
+
+  min-width: 34px;
+  min-height: 34px;
+
+  flex: 0 0 34px;
+
+  padding: 8px;
+
+  margin: 0;
+
+  box-sizing: border-box;
+
+  border: 0;
+
+  border-radius: 16777200px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  background: transparent;
+
+  color: #5D2030;
+
+  cursor: pointer;
+}
+
+.cart-drawer-close svg {
+  width: 18px;
+  height: 18px;
+
+  display: block;
+}
+
+
+/* ============================================================
+   MAIN CART CONTENT
+   FIGMA:
+   448 × 395
+   padding:
+   16px 24px
+============================================================ */
+
+.cart-drawer-content {
+  width: 448px;
+  height: 395px;
+  min-height: 395px;
+  flex: 0 0 395px;
+
+  box-sizing: border-box;
+  padding: 16px 24px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+
+  overflow-y: auto;
+  overflow-x: hidden;
+
+  background: #FDFAF5;
+}
+
+
+/* ============================================================
+   PRODUCT CONTAINER
+   FIGMA:
+   400 × 96
+   gap = 16
+============================================================ */
+
+.cart-drawer-item {
+  width: 400px;
+  height: 96px;
+  min-height: 96px;
+  flex: 0 0 96px;
+
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+
+  box-sizing: border-box;
+}
+
+/* ============================================================
+   PRODUCT IMAGE
+   FIGMA CONTAINER:
+   80 × 96
+   radius = 12
+
+   Figma image itself:
+   80 × 105
+============================================================ */
+
+.cart-drawer-item-image {
+  width: 80px;
+  height: 96px;
+
+  min-width: 80px;
+  min-height: 96px;
+
+  flex: 0 0 80px;
+
+  box-sizing: border-box;
+
+  overflow: hidden;
+
+  border-radius: 12px;
+
+  background: #FDFAF5;
+}
+
+.cart-drawer-item-image img {
+  width: 80px;
+  height: 105px;
+
+  display: block;
+
+  object-fit: cover;
+
+  object-position: center;
+}
+
+
+/* ============================================================
+   PRODUCT DETAILS
+   FIGMA:
+   304 × 96
+============================================================ */
+
+.cart-drawer-item-details {
+  width: 304px;
+  height: 96px;
+
+  min-width: 304px;
+  min-height: 96px;
+
+  flex: 0 0 304px;
+
+  box-sizing: border-box;
+
+  display: flex;
+
+  flex-direction: column;
+}
+
+
+/* ============================================================
+   PRODUCT NAME
+   FIGMA:
+   container 304 × 22
+   text 194 × 20
+   padding-top 2
+============================================================ */
+
+.cart-drawer-item-details h3 {
+  width: 304px;
+  height: 22px;
+
+  min-width: 304px;
+  min-height: 22px;
+
+  margin: 0;
+
+  padding:
+    2px
+    0
+    0
+    0;
+
+  box-sizing: border-box;
+
+  overflow: hidden;
+
+  white-space: nowrap;
+
+  text-overflow: ellipsis;
+
+  font-family:
+    "Blacker Display",
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-weight: 500;
+
+  font-style: normal;
+
+  font-size: 14px;
+
+  line-height: 20px;
+
+  letter-spacing: 0;
+
+  color: #5D2030;
+}
+
+
+/* ============================================================
+   SIZE + COLOUR
+   SAME ROW
+
+   FIGMA:
+   304 × 20
+   gap = 8
+   padding-top = 4
+============================================================ */
+
+.cart-item-meta-row {
+  width: 304px;
+  height: 20px;
+
+  min-width: 304px;
+  min-height: 20px;
+
+  flex: 0 0 20px;
+
+  box-sizing: border-box;
+
+  padding-top: 4px;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 8px;
+}
+
+
+/* ============================================================
+   SIZE
+============================================================ */
+
+.cart-item-size {
+  height: 16px;
+
+  min-height: 16px;
+
+  display: inline-flex;
+
+  align-items: center;
+
+  margin: 0;
+  padding: 0;
+
+  font-family:
+    "Turnkey Lite",
+    Arial,
+    sans-serif;
+
+  font-weight: 400;
+
+  font-style: normal;
+
+  font-size: 12px;
+
+  line-height: 16px;
+
+  letter-spacing: 0;
+
+  color: #5D2030;
+}
+
+
+/* ============================================================
+   COLOUR CIRCLE
+   FIGMA:
+   12 × 12
+============================================================ */
+
+.cart-item-color {
+  width: 12px;
+  height: 12px;
+
+  min-width: 12px;
+  min-height: 12px;
+
+  flex: 0 0 12px;
+
+  display: inline-block;
+
+  box-sizing: border-box;
+
+  border-radius: 16777200px;
+
+  box-shadow:
+    0px 0px 0px 1px #0000001A;
+}
+
+
+/* ============================================================
+   QUANTITY + PRICE
+   FIGMA:
+   304 × 36
+   padding-top = 10
+============================================================ */
+
+.cart-item-bottom {
+  width: 304px;
+  height: 36px;
+
+  min-width: 304px;
+  min-height: 36px;
+
+  flex: 0 0 36px;
+
+  box-sizing: border-box;
+
+  padding-top: 10px;
+
+  display: flex;
+
+  align-items: flex-start;
+
+  justify-content: space-between;
+}
+
+
+/* ============================================================
+   QUANTITY CONTROL
+   FIGMA:
+   80 × 26
+   radius = 12
+   gap = 8
+   padding = 4 8
+============================================================ */
+
+.cart-item-quantity {
+  width: 80px;
+  height: 26px;
+
+  min-width: 80px;
+  min-height: 26px;
+
+  flex: 0 0 80px;
+
+  box-sizing: border-box;
+
+  padding:
+    4px
+    8px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  gap: 8px;
+
+  border:
+    1px solid #5D20301A;
+
+  border-radius: 12px;
+
+  background: transparent;
+}
+
+
+/* ============================================================
+   QUANTITY BUTTONS
+============================================================ */
+
+.cart-item-quantity button {
+  width: 15px;
+  height: 15px;
+
+  min-width: 15px;
+  min-height: 15px;
+
+  flex: 0 0 15px;
+
+  padding: 2px;
+
+  margin: 0;
+
+  box-sizing: border-box;
+
+  border: 0;
+
+  background: transparent;
+
+  color: #5D2030;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  cursor: pointer;
+}
+
+.cart-item-quantity button svg {
+  width: 11px;
+  height: 11px;
+
+  display: block;
+}
+
+
+/* ============================================================
+   QUANTITY NUMBER
+============================================================ */
+
+.cart-item-quantity span {
+  width: 16px;
+  height: 16px;
+
+  min-width: 16px;
+  min-height: 16px;
+
+  flex: 0 0 16px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  margin: 0;
+  padding: 0;
+
+  font-family:
+    "Turnkey Lite",
+    Arial,
+    sans-serif;
+
+  font-weight: 600;
+
+  font-style: normal;
+
+  font-size: 12px;
+
+  line-height: 16px;
+
+  letter-spacing: 0;
+
+  text-align: center;
+
+  color: #5D2030;
+}
+
+
+/* ============================================================
+   ITEM PRICE
+   FIGMA:
+   55 × 20
+============================================================ */
+
+.cart-item-bottom > strong {
+  width: 55px;
+  height: 20px;
+
+  min-width: 55px;
+  min-height: 20px;
+
+  flex: 0 0 55px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: flex-end;
+
+  margin: 0;
+  padding: 0;
+
+  font-family:
+    "Turnkey Lite",
+    Arial,
+    sans-serif;
+
+  font-weight: 700;
+
+  font-style: normal;
+
+  font-size: 14px;
+
+  line-height: 20px;
+
+  letter-spacing: 0;
+
+  white-space: nowrap;
+
+  color: #5D2030;
+}
+
+
+/* =========================================================
+   CART DRAWER — BOTTOM SECTION
+   EXACT FIGMA
+   448 × 292
+   ========================================================= */
+
+.cart-drawer-bottom {
+  position: relative;
+
+  width: 448px;
+  height: 292px;
+  min-width: 448px;
+  min-height: 292px;
+
+  flex: 0 0 292px;
+
+  box-sizing: border-box;
+
+  padding: 0;
+
+  border-top: 1px solid #5D20300F;
+
+  background: #FDFAF5;
+
+  overflow: hidden;
+}
+
+
+/* =========================================================
+   PROMO ROW
+   FIGMA:
+   x = 24
+   y = 20
+   width = 400
+   height = 38
+   ========================================================= */
+
+.cart-drawer-bottom .promo-row {
+  position: absolute;
+
+  left: 24px;
+  top: 20px;
+
+  width: 400px;
+  height: 38px;
+  min-width: 400px;
+  min-height: 38px;
+
+  display: flex;
+  align-items: center;
+
+  gap: 8px;
+
+  box-sizing: border-box;
+
+  margin: 0;
+  padding: 0;
+}
+
+
+/* =========================================================
+   PROMO INPUT
+   FIGMA: 318 × 38
+   ========================================================= */
+
+.cart-drawer-bottom .promo-row input {
+  width: 318px;
+  height: 38px;
+  min-width: 318px;
+  min-height: 38px;
+
+  flex: 0 0 318px;
+
+  box-sizing: border-box;
+
+  margin: 0;
+  padding: 10px 16px;
+
+  border: 1px solid #5D203026;
+  border-radius: 16777200px;
+
+  outline: none;
+
+  background: transparent;
+
+  color: #5D2030;
+
+  font-family: "Turnkey Lite", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+
+  font-size: 12px;
+  line-height: 100%;
+  letter-spacing: 0;
+}
+
+.cart-drawer-bottom .promo-row input::placeholder {
+  color: #5D203080;
+  opacity: 1;
+}
+
+
+/* =========================================================
+   APPLY BUTTON
+   FIGMA: 74 × 38
+   ========================================================= */
+
+.cart-drawer-bottom .promo-row button {
+  width: 74px;
+  height: 38px;
+  min-width: 74px;
+  min-height: 38px;
+
+  flex: 0 0 74px;
+
+  box-sizing: border-box;
+
+  margin: 0;
+  padding: 10px 20px;
+
+  border: 0;
+  border-radius: 16777200px;
+
+  background: #BB8E43;
+  color: #FDFAF5;
+
+  font-family: "Blacker Display", serif;
+  font-weight: 700;
+  font-style: normal;
+
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: 0;
+
+  text-align: center;
+
+  cursor: pointer;
+}
+
+
+/* =========================================================
+   CART DRAWER BOTTOM
+   EXACT FIGMA
+   448 × 292
+   ========================================================= */
+
+.cart-drawer-bottom {
+  position: relative;
+
+  width: 448px;
+  height: 292px;
+  min-width: 448px;
+  min-height: 292px;
+
+  flex: 0 0 292px;
+
+  box-sizing: border-box;
+
+  padding: 20px 24px;
+
+  border-top: 1px solid #5D20300F;
+
+  background: #FDFAF5;
+
+  overflow: hidden;
+}
+
+
+/* =========================================================
+   PROMO ROW
+   Figma: 400 × 38
+   ========================================================= */
+
+.cart-drawer-bottom .promo-row {
+  position: absolute;
+
+  left: 24px;
+  top: 20px;
+
+  width: 400px;
+  height: 38px;
+
+  box-sizing: border-box;
+
+  display: flex;
+  align-items: center;
+
+  gap: 8px;
+
+  margin: 0;
+  padding: 0;
+}
+
+
+/* =========================================================
+   PROMO INPUT
+   Figma: 318 × 38
+   ========================================================= */
+
+.cart-drawer-bottom .promo-row input {
+  width: 318px;
+  height: 38px;
+
+  min-width: 318px;
+  min-height: 38px;
+
+  flex: 0 0 318px;
+
+  box-sizing: border-box;
+
+  margin: 0;
+  padding: 10px 16px;
+
+  border: 1px solid #5D203026;
+  border-radius: 16777200px;
+
+  outline: none;
+
+  background: transparent;
+
+  font-family: "Turnkey Lite", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 12px;
+  line-height: 100%;
+  letter-spacing: 0;
+
+  color: #5D2030;
+}
+
+.cart-drawer-bottom .promo-row input::placeholder {
+  color: #5D203080;
+  opacity: 1;
+}
+
+
+/* =========================================================
+   APPLY
+   Figma: 74 × 38
+   ========================================================= */
+
+.cart-drawer-bottom .promo-row button {
+  width: 74px;
+  height: 38px;
+
+  min-width: 74px;
+  min-height: 38px;
+
+  flex: 0 0 74px;
+
+  box-sizing: border-box;
+
+  margin: 0;
+  padding: 10px 20px;
+
+  border: 0;
+  border-radius: 16777200px;
+
+  background: #BB8E43;
+  color: #FDFAF5;
+
+  font-family: "Blacker Display", serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: 0;
+
+  text-align: center;
+
+  cursor: pointer;
+}
+
+
+/* =========================================================
+   SUMMARY — NO BOXES / NO ROW BORDERS
+   ========================================================= */
+
+.cart-drawer-bottom .cart-summary {
+  position: absolute;
+
+  left: 24px;
+  top: 58px;
+
+  width: 400px;
+  height: 121px;
+
+  min-width: 400px;
+  min-height: 121px;
+
+  box-sizing: border-box;
+
+  margin: 0;
+  padding: 16px 0;
+
+  background: transparent;
+  border: none;
+
+  color: #5D2030;
+}
+
+
+/* =========================================================
+   SUBTOTAL
+   ========================================================= */
+
+.cart-drawer-bottom .cart-summary > div:first-child {
+  position: absolute;
+
+  left: 0;
+  top: 16px;
+
+  width: 400px;
+  height: 20px;
+
+  box-sizing: border-box;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  margin: 0;
+  padding: 0;
+
+  background: transparent;
+  border: none;
+}
+
+
+/* =========================================================
+   SHIPPING
+   ========================================================= */
+
+.cart-drawer-bottom .cart-summary > div:nth-child(2) {
+  position: absolute;
+
+  left: 0;
+  top: 36px;
+
+  width: 400px;
+  height: 41px;
+
+  box-sizing: border-box;
+
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+
+  margin: 0;
+  padding: 8px 0 0;
+
+  background: transparent;
+  border: none;
+}
+
+
+/* =========================================================
+   TOTAL
+   ONLY THIS DIVIDER EXISTS IN FIGMA
+   ========================================================= */
+
+.cart-drawer-bottom .cart-summary > .cart-total {
+  position: absolute;
+
+  left: 0;
+  top: 77px;
+
+  width: 400px;
+  height: 41px;
+
+  box-sizing: border-box;
+
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+
+  margin: 0;
+  padding: 8px 0 0;
+
+  background: transparent;
+
+  border: none;
+  border-top: 1px solid #5D20300F;
+}
+
+
+/* =========================================================
+   SUBTOTAL TYPOGRAPHY
+   ========================================================= */
+
+.cart-drawer-bottom .cart-summary > div:first-child span {
+  width: 53px;
+  height: 20px;
+
+  margin: 0;
+  padding: 0;
+
+  font-family: "Turnkey Lite", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 0;
+
+  color: #5D2030;
+}
+
+.cart-drawer-bottom .cart-summary > div:first-child strong {
+  width: 50px;
+  height: 20px;
+
+  margin: 0;
+  padding: 0;
+
+  font-family: "Turnkey Lite", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 0;
+
+  color: #5D2030;
+}
+
+
+/* =========================================================
+   SHIPPING TYPOGRAPHY
+   ========================================================= */
+
+.cart-drawer-bottom .cart-summary > div:nth-child(2) span {
+  width: 55px;
+  height: 20px;
+
+  margin: 0;
+  padding: 0;
+
+  font-family: "Turnkey Lite", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 0;
+
+  color: #5D2030;
+}
+
+.cart-drawer-bottom .cart-summary > div:nth-child(2) strong {
+  width: 27px;
+  height: 20px;
+
+  margin: 0;
+  padding: 0;
+
+  font-family: "Turnkey Lite", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 0;
+
+  color: #5D2030;
+}
+
+
+/* =========================================================
+   TOTAL TYPOGRAPHY
+   ========================================================= */
+
+.cart-drawer-bottom .cart-summary > .cart-total span {
+  width: 39px;
+  height: 24px;
+
+  margin: 0;
+  padding: 0;
+
+  font-family: "Turnkey Lite", sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0;
+
+  color: #5D2030;
+}
+
+.cart-drawer-bottom .cart-summary > .cart-total strong {
+  width: 63px;
+  height: 24px;
+
+  margin: 0;
+  padding: 0;
+
+  font-family: "Turnkey Lite", sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0;
+
+  color: #5D2030;
+}
+/* =========================================================
+   CHECKOUT
+   Figma: 400 × 52
+   top = 195.5px
+   ========================================================= */
+
+.cart-drawer-bottom .drawer-checkout-button {
+  position: absolute;
+
+  left: 24px;
+  top: 195.5px;
+
+  width: 400px;
+  height: 52px;
+
+  min-width: 400px;
+  min-height: 52px;
+
+  box-sizing: border-box;
+
+  margin: 0;
+  padding: 0;
+
+  border: 0;
+  border-radius: 16px;
+
+  background: #BB8E43;
+  color: #FDFAF5;
+
+  font-family: "Blacker Display", serif;
+  font-weight: 700;
+  font-style: Bold;
+
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 0.35px;
+
+  text-align: center;
+
+  cursor: pointer;
+}
+
+
+/* =========================================================
+   CONTINUE SHOPPING
+   Figma: 400 × 16
+   top = 252.5px
+   ========================================================= */
+
+.cart-drawer-bottom .drawer-continue-button {
+  position: absolute;
+
+  left: 24px;
+  top: 252.5px;
+
+  width: 400px;
+  height: 16px;
+
+  min-width: 400px;
+  min-height: 16px;
+
+  box-sizing: border-box;
+
+  margin: 0;
+  padding: 0;
+
+  border: 0;
+
+  background: transparent;
+  color: #5D2030;
+
+  font-family: "Blacker Display", serif;
+  font-weight: 500;
+  font-style: normal;
+
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: 0;
+
+  text-align: center;
+
+  cursor: pointer;
+}
+/* ============================================================
+   EMPTY CART
+============================================================ */
+
+.empty-cart-drawer {
+  width: 400px;
+  height: 363px;
+
+  box-sizing: border-box;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 16px;
+
+  color: #5D2030;
+}
+
+.empty-cart-drawer p {
+  margin: 0;
+
+  font-family:
+    "Turnkey Lite",
+    Arial,
+    sans-serif;
+
+  font-size: 14px;
+
+  line-height: 20px;
+
+  color: #5D2030;
+}
+
+.empty-cart-drawer a {
+  color: #5D2030;
+
+  font-family:
+    "Blacker Display",
+    Georgia,
+    serif;
+
+  font-size: 12px;
+
+  line-height: 16px;
+
+  text-decoration: none;
+}
+
+
+/* ============================================================
+   ACCESSIBILITY
+============================================================ */
+
+@media (prefers-reduced-motion: reduce) {
+  .cart-drawer {
+    transition: none;
+  }
+}

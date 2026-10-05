@@ -1,0 +1,595 @@
+/* =========================================================
+   SREE COLLECTIONS NAVBAR
+   SAME LAPTOP DESIGN ON ALL DEVICES
+   ONE ROW — NO HAMBURGER
+========================================================= */
+
+.site-header {
+  width: 100%;
+  margin-top: 24px;
+
+  background: #FDFAF5;
+
+  position: relative;
+  z-index: 1000;
+
+  box-sizing: border-box;
+}
+
+
+/* =========================================================
+   NAVBAR
+========================================================= */
+
+.navbar {
+  width: min(1535px, calc(100% - 80px));
+
+  height: clamp(60px, 9.8vw, 150px);
+  min-height: 60px;
+
+  margin: 0 auto;
+
+  display: flex;
+  align-items: center;
+
+  background: #FDFAF5;
+
+  box-sizing: border-box;
+}
+
+
+/* =========================================================
+   LEFT LOGO AREA
+========================================================= */
+
+.navbar-logo-area {
+  flex: 0 1 auto;
+
+  width: auto;
+  min-width: 0;
+
+  height: 100%;
+
+  display: flex;
+  align-items: center;
+
+  box-sizing: border-box;
+}
+
+
+.navbar-brand {
+  width: auto;
+  min-width: 0;
+
+  height: 100%;
+
+  display: flex;
+  align-items: center;
+
+  gap: 0;
+
+  flex: 0 1 auto;
+
+  text-decoration: none;
+
+  box-sizing: border-box;
+}
+
+
+/* =========================================================
+   LOGO
+========================================================= */
+
+.navbar-logo {
+  width: clamp(42px, 9vw, 150px);
+  height: clamp(42px, 9vw, 150px);
+
+  min-width: 42px;
+  max-width: 150px;
+
+  flex: 0 1 auto;
+
+  display: block;
+
+  object-fit: contain;
+
+  box-sizing: border-box;
+}
+
+
+/* =========================================================
+   WORDMARK
+========================================================= */
+
+.navbar-wordmark {
+  width: clamp(70px, 14vw, 245px);
+
+  min-width: 70px;
+  max-width: 245px;
+
+  height: auto;
+
+  flex: 0 1 auto;
+
+  display: block;
+
+  object-fit: contain;
+
+  box-sizing: border-box;
+}
+
+
+/* =========================================================
+   RIGHT SIDE
+   THIS CREATES THE LAPTOP-STYLE GAP
+========================================================= */
+
+.navbar-right {
+  flex: 1 1 auto;
+
+  width: auto;
+  min-width: 0;
+
+  margin-left: auto;
+
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+
+  box-sizing: border-box;
+}
+
+
+/* =========================================================
+   NAVIGATION LINKS
+========================================================= */
+
+.navbar-links {
+  flex: 0 1 auto;
+
+  width: auto;
+  min-width: 0;
+
+  display: flex;
+  align-items: center;
+
+  gap: clamp(6px, 2.1vw, 32px);
+
+  box-sizing: border-box;
+}
+
+
+.navbar-link {
+  position: relative;
+
+  flex: 0 1 auto;
+
+  width: auto;
+  min-width: 0;
+
+  height: clamp(30px, 4vw, 61px);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 0;
+
+  color: #5D2030;
+
+  font-family:
+    "Blacker Display",
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-size: clamp(8px, 1.05vw, 19px);
+
+  font-weight: 700;
+
+  line-height: 1;
+
+  letter-spacing: 0.1px;
+
+  white-space: nowrap;
+
+  text-decoration: none;
+
+  box-sizing: border-box;
+}
+
+
+/* =========================================================
+   ACTIVE UNDERLINE
+   SAME STYLE ON ALL DEVICES
+========================================================= */
+
+.navbar-link-active::after {
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+  right: 0;
+
+  bottom: clamp(-7px, -0.6vw, -10px);
+
+  width: 100%;
+
+  height: clamp(1.5px, 0.22vw, 4px);
+
+  background: #5D2030;
+
+  border-radius: 999px;
+}
+
+
+/* =========================================================
+   CONTACT BUTTON
+========================================================= */
+
+.navbar-contact {
+  flex: 0 1 auto;
+
+  width: clamp(58px, 9vw, 155px);
+
+  min-width: 58px;
+  max-width: 155px;
+
+  height: clamp(25px, 3.2vw, 52px);
+
+  margin-left: clamp(7px, 2vw, 30px);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 0 clamp(2px, 0.7vw, 10px);
+
+  border: 0;
+
+  border-radius: 999px;
+
+  background: #BB8E43;
+
+  color: #FDFAF5;
+
+  font-family:
+    "Blacker Display",
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-size: clamp(5.5px, 0.9vw, 15px);
+
+  font-weight: 700;
+
+  line-height: 1;
+
+  text-transform: uppercase;
+
+  white-space: nowrap;
+
+  text-decoration: none;
+
+  box-sizing: border-box;
+}
+
+
+/* =========================================================
+   SEARCH + CART
+========================================================= */
+
+.navbar-actions {
+  flex: 0 1 auto;
+
+  width: auto;
+  min-width: 0;
+
+  display: flex;
+  align-items: center;
+
+  gap: clamp(6px, 2vw, 32px);
+
+  margin-left: clamp(7px, 2vw, 32px);
+
+  white-space: nowrap;
+
+  box-sizing: border-box;
+}
+
+
+.navbar-action-icon {
+  width: clamp(17px, 2.3vw, 36px);
+  height: clamp(17px, 2.3vw, 36px);
+
+  min-width: 17px;
+  max-width: 36px;
+
+  flex: 0 1 auto;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 0;
+
+  border: 0;
+
+  background: transparent;
+
+  color: #5D2030;
+
+  line-height: 1;
+
+  text-decoration: none;
+
+  cursor: pointer;
+
+  box-sizing: border-box;
+}
+
+
+.navbar-action-icon svg {
+  width: clamp(10px, 1.7vw, 25px);
+  height: clamp(10px, 1.7vw, 25px);
+
+  display: block;
+
+  flex-shrink: 0;
+}
+
+
+/* =========================================================
+   CART
+========================================================= */
+
+.navbar-cart-wrapper {
+  position: relative;
+
+  width: clamp(17px, 2.3vw, 36px);
+  height: clamp(17px, 2.3vw, 36px);
+
+  min-width: 17px;
+  max-width: 36px;
+
+  flex: 0 1 auto;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.navbar-cart-button {
+  width: 100%;
+  height: 100%;
+}
+
+
+.navbar-cart-button svg {
+  width: clamp(13px, 2vw, 30px);
+  height: clamp(11px, 1.8vw, 25px);
+}
+
+
+/* =========================================================
+   CART COUNT
+========================================================= */
+
+.navbar-cart-count {
+  position: absolute;
+
+  top: clamp(-5px, -0.5vw, -8px);
+  right: clamp(-5px, -0.5vw, -8px);
+
+  min-width: clamp(8px, 1.1vw, 18px);
+  height: clamp(8px, 1.1vw, 18px);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 0 3px;
+
+  border-radius: 999px;
+
+  background: #D10303;
+
+  color: #fff;
+
+  font-family: Arial, sans-serif;
+
+  font-size: clamp(4px, 0.55vw, 9px);
+
+  font-weight: 700;
+
+  line-height: 1;
+
+  z-index: 20;
+
+  box-sizing: border-box;
+}
+
+
+/* =========================================================
+   SMALL DEVICES
+   ONLY REMOVE OUTER MARGIN.
+   DO NOT CREATE A DIFFERENT NAVBAR.
+========================================================= */
+
+@media (max-width: 700px) {
+
+  .site-header {
+    margin-top: 0;
+  }
+
+  .navbar {
+    width: 100%;
+    max-width: 100%;
+
+    margin: 0;
+
+    padding-left: 4px;
+    padding-right: 4px;
+  }
+}
+
+
+/* =========================================================
+   VERY SMALL DEVICES
+   KEEP SAME DESIGN, JUST SCALE SLIGHTLY
+========================================================= */
+
+@media (max-width: 375px) {
+
+  .navbar {
+    width: 100%;
+    max-width: 100%;
+
+    padding-left: 3px;
+    padding-right: 3px;
+  }
+
+  .navbar-logo {
+    width: 38px;
+    height: 38px;
+  }
+
+  .navbar-wordmark {
+    width: 62px;
+  }
+
+  .navbar-links {
+    gap: 3px;
+  }
+
+  .navbar-link {
+    font-size: 6px;
+    height: 30px;
+  }
+
+  .navbar-contact {
+    width: 43px;
+    min-width: 43px;
+
+    height: 20px;
+
+    margin-left: 3px;
+
+    font-size: 4px;
+  }
+
+  .navbar-actions {
+    gap: 3px;
+    margin-left: 4px;
+  }
+
+  .navbar-action-icon {
+    width: 14px;
+    height: 14px;
+  }
+
+  .navbar-action-icon svg {
+    width: 9px;
+    height: 9px;
+  }
+
+  .navbar-cart-wrapper {
+    width: 14px;
+    height: 14px;
+  }
+
+  .navbar-cart-button svg {
+    width: 12px;
+    height: 9px;
+  }
+
+  .navbar-link-active::after {
+    bottom: -3px;
+    height: 1.5px;
+  }
+}
+
+
+/* =========================================================
+   320px AND BELOW
+   SAME LAPTOP-STYLE UNDERLINE
+========================================================= */
+
+@media (max-width: 320px) {
+
+  .navbar-logo {
+    width: 34px;
+    height: 34px;
+  }
+
+  .navbar-wordmark {
+    width: 55px;
+  }
+
+  .navbar-links {
+    gap: 2px;
+  }
+
+  .navbar-link {
+    font-size: 5px;
+    height: 28px;
+  }
+
+  .navbar-contact {
+    width: 39px;
+    min-width: 39px;
+
+    height: 18px;
+
+    margin-left: 2px;
+
+    font-size: 3.6px;
+  }
+
+  .navbar-actions {
+    gap: 2px;
+    margin-left: 3px;
+  }
+
+  .navbar-action-icon {
+    width: 13px;
+    height: 13px;
+  }
+
+  .navbar-action-icon svg {
+    width: 8px;
+    height: 8px;
+  }
+
+  .navbar-cart-wrapper {
+    width: 13px;
+    height: 13px;
+  }
+
+  .navbar-cart-button svg {
+    width: 11px;
+    height: 8px;
+  }
+
+  .navbar-link-active::after {
+    bottom: -3px;
+    height: 1.5px;
+  }
+}
+
+
+/* =========================================================
+   PREVENT PAGE HORIZONTAL SCROLL
+========================================================= */
+
+html,
+body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+.navbar img {
+  max-width: 100%;
+}

@@ -1,0 +1,1755 @@
+/* =========================================================
+   SREE COLLECTIONS — CATEGORIES PAGE
+   FIGMA REFERENCE BASED CSS
+========================================================= */
+
+.categories-page {
+  width: 100%;
+  min-height: min(231.077vw, 3993px);
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow-x: hidden;
+
+  background: #FDFAF5;
+  color: #5D2030;
+
+  font-family:
+    "Playfair Display",
+    Georgia,
+    "Times New Roman",
+    serif;
+}
+
+.categories-page *,
+.categories-page *::before,
+.categories-page *::after {
+  box-sizing: border-box;
+}
+
+
+/* =========================================================
+   TOP HEADING
+========================================================= */
+
+.categories-heading {
+  width: 88.83vw;
+  height: 3.704vw;
+
+  margin: 1.62vw 5.61vw 0;
+  padding: 0;
+
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+
+  gap: 0;
+}
+
+.categories-heading-left {
+  position: relative;
+
+  width: 600px;
+  max-width: 100%;
+
+  height: 100%;
+
+  display: flex;
+  align-items: center;
+
+  gap: 28px;
+
+  flex-shrink: 0;
+}
+
+.categories-heading h1 {
+  margin: 0;
+  padding: 0;
+
+  color: #5D2030;
+
+  font-family:
+    "Playfair Display",
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-size: 2.778vw;
+  line-height: 1;
+  font-weight: 700;
+
+  white-space: nowrap;
+}
+
+.categories-heading-left span {
+  position: static;
+
+  flex-shrink: 0;
+
+  margin: 0;
+  padding: 0;
+
+  white-space: nowrap;
+
+  color: #5D2030;
+
+  font-family:
+    "Playfair Display",
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-size: 24px;
+  line-height: 1.25;
+
+  font-weight: 400;
+}
+
+/* =========================================================
+   FEATURED DROPDOWN
+========================================================= */
+
+.featured-select {
+  flex: 0 0 auto;
+
+  width: 12.963vw;
+  height: 3.472vw;
+
+  margin: 0;
+  padding: 0 0.58vw;
+
+  border: 0.116vw solid #BB8E43;
+  border-radius: 0.926vw;
+
+  outline: none;
+
+  background: #FDFAF5;
+  color: #BB8E43;
+
+  font-family:
+    "Playfair Display",
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-size: 1.389vw;
+  line-height: 1;
+
+  text-align: center;
+
+  cursor: pointer;
+}
+
+
+/* =========================================================
+   MAIN CONTENT
+========================================================= */
+
+.categories-main {
+  width: 88.82vw;
+
+  margin: 1.97vw 5.61vw 0;
+  padding: 0;
+
+  display: grid;
+
+  grid-template-columns:
+    15.567vw 73.079vw;
+
+  column-gap: 0.174vw;
+
+  align-items: start;
+}
+
+
+/* =========================================================
+   SIDEBAR
+========================================================= */
+
+.category-sidebar {
+  width: 15.567vw;
+  min-width: 0;
+
+  margin: 0;
+  padding: 0;
+}
+
+.sidebar-section {
+  width: 100%;
+
+  margin: 0 0 2.20vw;
+  padding: 0;
+}
+
+.sidebar-section h2 {
+  margin: 0 0 1.10vw;
+  padding: 0;
+
+  color: #5D2030;
+
+  font-family:
+    "Blacker Display",
+    "Playfair Display",
+    Georgia,
+    serif;
+
+  font-size: 2.083vw;
+  line-height: 1.11;
+  font-weight: 700;
+}
+
+
+/* =========================================================
+   CATEGORY BUTTONS
+========================================================= */
+
+.category-options,
+.size-options {
+  display: flex;
+
+  flex-direction: column;
+  align-items: flex-start;
+
+  width: 100%;
+
+  gap: 0.694vw;
+}
+
+.category-options button,
+.size-options button {
+  flex: 0 0 auto;
+
+  height: 3.414vw;
+
+  margin: 0;
+  padding: 0 1.389vw;
+
+  border: 0;
+  border-radius: 2.083vw;
+
+  outline: none;
+
+  background: transparent;
+  color: #5D2030;
+
+  font-family:
+    "Blacker Display",
+    "Playfair Display",
+    Georgia,
+    serif;
+
+  font-size: 1.389vw;
+  line-height: 1;
+  font-weight: 500;
+
+  text-align: center;
+  white-space: nowrap;
+
+  cursor: pointer;
+}
+
+
+/* Exact category widths */
+
+.category-options button:nth-child(1) {
+  width: 10.764vw;
+}
+
+.category-options button:nth-child(2) {
+  width: 10.475vw;
+}
+
+.category-options button:nth-child(3) {
+  width: 6.887vw;
+}
+
+.category-options button:nth-child(4) {
+  width: 15.567vw;
+}
+
+.category-options button:nth-child(5) {
+  width: 13.542vw;
+}
+
+
+/* Active category */
+
+.category-options button.active,
+.size-options button.active {
+  background: #BB8E43;
+  color: #FDFAF5;
+}
+
+
+/* =========================================================
+   PRICE RANGE
+========================================================= */
+
+.price-section {
+  margin-top: 2.20vw;
+  margin-bottom: 2.20vw;
+}
+
+.price-section h2 {
+  margin-bottom: 1.45vw;
+}
+
+.price-checkbox {
+  width: 100%;
+  min-height: 2.431vw;
+
+  margin: 0 0 0.81vw;
+  padding: 0;
+
+  display: flex;
+  align-items: center;
+
+  gap: 0.52vw;
+
+  color: #5D2030;
+
+  font-family:
+    "Blacker Display",
+    "Playfair Display",
+    Georgia,
+    serif;
+
+  font-size: 1.389vw;
+  line-height: 1.1;
+
+  white-space: nowrap;
+
+  cursor: pointer;
+}
+
+
+/* Custom checkbox */
+
+.price-checkbox input {
+  appearance: none;
+  -webkit-appearance: none;
+
+  flex: 0 0 1.389vw;
+
+  width: 1.389vw;
+  height: 1.389vw;
+
+  margin: 0;
+  padding: 0;
+
+  border:
+    0.116vw solid
+    rgba(93, 32, 48, 0.55);
+
+  border-radius: 0.12vw;
+
+  background: transparent;
+
+  display: grid;
+  place-items: center;
+
+  cursor: pointer;
+}
+
+
+/* Checked checkbox */
+
+.price-checkbox input:checked {
+  border-color: #BB8E43;
+  background: #BB8E43;
+}
+
+.price-checkbox input:checked::after {
+  content: "";
+
+  width: 0.70vw;
+  height: 0.38vw;
+
+  border-left:
+    0.12vw solid
+    #FDFAF5;
+
+  border-bottom:
+    0.12vw solid
+    #FDFAF5;
+
+  transform:
+    rotate(-45deg)
+    translateY(-0.05vw);
+}
+
+.price-checkbox span {
+  display: block;
+}
+
+
+/* =========================================================
+   SIZE
+========================================================= */
+
+.size-section {
+  margin-top: 2.20vw;
+}
+
+.size-section .size-options {
+  display: flex !important;
+
+  flex-direction: column !important;
+
+  align-items: flex-start !important;
+
+  justify-content: flex-start !important;
+
+  flex-wrap: nowrap !important;
+
+  width: 100% !important;
+
+  height: auto !important;
+
+  gap: 0.69vw !important;
+
+  margin: 0 !important;
+
+  padding: 0 !important;
+}
+
+.size-section .size-options button {
+  display: block !important;
+
+  flex: 0 0 auto !important;
+
+  position: static !important;
+
+  margin: 0 !important;
+
+  padding: 0 !important;
+}
+
+
+/* =========================================================
+   SIZE WIDTHS
+========================================================= */
+
+.size-section .size-options button:nth-child(1) {
+  width: 3.588vw !important;
+}
+
+.size-section .size-options button:nth-child(2) {
+  width: 4.051vw !important;
+}
+
+.size-section .size-options button:nth-child(3) {
+  width: 3.588vw !important;
+}
+
+.size-section .size-options button:nth-child(4) {
+  width: 4.572vw !important;
+}
+
+.size-section .size-options button:nth-child(5) {
+  width: 5.556vw !important;
+}
+/* =========================================================
+   PRODUCT AREA
+========================================================= */
+
+.category-products {
+  width: 73.079vw;
+  min-width: 0;
+
+  margin: 0;
+  padding: 0;
+}
+
+
+/* =========================================================
+   THREE PRODUCT COLUMNS
+========================================================= */
+
+.category-product-columns {
+  width: 73.079vw;
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(3, 23.125vw);
+
+  column-gap: 1.852vw;
+
+  align-items: start;
+
+  margin: 0;
+  padding: 0;
+}
+
+.product-column {
+  width: 23.125vw;
+  min-width: 0;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  /* Same gap as the horizontal row gap */
+  gap: 1.852vw;
+
+  margin: 0;
+  padding: 0;
+}
+
+/* =========================================================
+   PRODUCT CARD
+========================================================= */
+
+.category-product-card {
+  position: relative;
+
+  flex: 0 0 auto;
+
+  width: 23.125vw;
+  height: 35.995vw;
+
+  margin: 0;
+  padding: 0;
+
+  border:
+    0.052vw solid
+    #BB8E43;
+
+  border-radius: 0.833vw;
+
+  background: #FDFAF5;
+
+  overflow: hidden;
+
+  box-shadow: none;
+
+  transition: none;
+}
+
+
+/* Small cards */
+
+.category-product-card.product-formal-shirt,
+.category-product-card.product-yellow-jacket {
+  width: 17.708vw;
+  height: 26.719vw;
+}
+
+
+/* =========================================================
+   PRODUCT IMAGE
+========================================================= */
+
+.category-product-image {
+  position: absolute;
+
+  top: 1.198vw;
+  left: 1.25vw;
+
+  width: 20.833vw;
+  height: 27.344vw;
+
+  margin: 0;
+  padding: 0;
+
+  overflow: hidden;
+
+  border-radius: 0.926vw;
+
+  background: #FDFAF5;
+}
+
+
+/* Small-card image */
+
+.product-formal-shirt .category-product-image,
+.product-yellow-jacket .category-product-image {
+  top: 1.146vw;
+  left: 1.198vw;
+
+  width: 15.313vw;
+  height: 18.177vw;
+}
+
+
+/* Actual product image */
+
+.category-product-image img {
+  display: block;
+
+  width: 100%;
+  height: 100%;
+
+  margin: 0;
+  padding: 0;
+
+  object-fit: contain;
+  object-position: center;
+
+  border-radius: 0.926vw;
+}
+
+
+/* =========================================================
+   PRODUCT INFORMATION
+========================================================= */
+
+.category-product-info {
+  position: absolute;
+
+  left: 1.25vw;
+  top: 30.104vw;
+
+  width: 18.981vw;
+  height: 4.8vw;
+
+  margin: 0;
+  padding: 0;
+}
+
+
+/* Small-card information */
+
+.product-formal-shirt .category-product-info,
+.product-yellow-jacket .category-product-info {
+  left: 1.198vw;
+  top: 20.938vw;
+
+  width: 15.799vw;
+  height: 5vw;
+}
+
+
+/* Product name */
+
+.category-product-info h3 {
+  position: absolute;
+
+  left: 0;
+  top: 0;
+
+  width: 100%;
+
+  margin: 0;
+  padding: 0;
+
+  color: #5D2030;
+
+  font-family:
+    "Playfair Display",
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-size: 1.389vw;
+  line-height: 1.12;
+  font-weight: 500;
+
+  white-space: nowrap;
+
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+
+/* Price */
+
+.category-product-info p {
+  position: absolute;
+
+  left: 0;
+  top: 3.70vw;
+
+  margin: 0;
+  padding: 0;
+
+  color: #5D2030;
+
+  font-family:
+    "Playfair Display",
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-size: 0.810vw;
+  line-height: 1;
+  font-weight: 400;
+
+  white-space: nowrap;
+}
+
+.category-product-info p span {
+  margin-left: 0.35vw;
+
+  font-size: 0.926vw;
+  font-weight: 600;
+}
+
+
+/* =========================================================
+   CART BUTTON
+========================================================= */
+
+.category-card-action {
+  position: absolute;
+
+  right: 1.389vw;
+  bottom: 0.91vw;
+
+  z-index: 3;
+
+  margin: 0;
+  padding: 0;
+}
+
+.category-cart-button {
+  width: 1.389vw;
+  height: 1.389vw;
+
+  min-width: 1.389vw;
+  min-height: 1.389vw;
+
+  padding: 0;
+  margin: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border:
+    0.08vw solid
+    #BB8E43;
+
+  border-radius: 0.25vw;
+
+  outline: none;
+
+  background: #FDFAF5;
+  color: #BB8E43;
+
+  font-size: 0.65vw;
+  line-height: 1;
+
+  cursor: pointer;
+}
+
+
+/* =========================================================
+   QUANTITY CONTROL
+========================================================= */
+
+.category-quantity-control {
+  height: 1.389vw;
+  min-width: 4.40vw;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 0.35vw;
+
+  padding: 0 0.55vw;
+
+  border-radius: 0.80vw;
+
+  background: #BB8E43;
+  color: #FDFAF5;
+
+  font-family: Arial, sans-serif;
+
+  font-size: 0.694vw;
+  line-height: 1;
+}
+
+.category-quantity-control button {
+  width: 0.70vw;
+  height: 1.10vw;
+
+  padding: 0;
+  margin: 0;
+
+  border: 0;
+
+  background: transparent;
+  color: #FDFAF5;
+
+  font-size: 0.75vw;
+  line-height: 1;
+
+  cursor: pointer;
+}
+
+.category-quantity-control span {
+  min-width: 0.70vw;
+
+  text-align: center;
+}
+
+
+/* =========================================================
+   REMOVE HOVER MOVEMENT
+========================================================= */
+
+.category-product-card:hover {
+  transform: none;
+  box-shadow: none;
+}
+
+
+/* =========================================================
+   NO PRODUCTS
+========================================================= */
+
+.no-products {
+  width: 100%;
+  min-height: 20vw;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border:
+    0.052vw dashed
+    #BB8E43;
+
+  color: #5D2030;
+
+  font-family:
+    "Playfair Display",
+    Georgia,
+    serif;
+
+  font-size: 1.389vw;
+}
+
+
+/* =========================================================
+   LOAD MORE
+========================================================= */
+
+.category-load-more-area {
+  width: 100%;
+
+  min-height: 4vw;
+
+  margin: 1.50vw 0 0;
+  padding: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.category-load-more {
+  width: 5.51vw;
+  height: 1.944vw;
+
+  padding: 0;
+  margin: 0;
+
+  border: 0;
+  border-radius: 2.917vw;
+
+  background: #BB8E43;
+  color: #FDFAF5;
+
+  font-family:
+    "Playfair Display",
+    Georgia,
+    serif;
+
+  font-size: 0.694vw;
+  line-height: 1;
+
+  cursor: pointer;
+}
+
+.all-products-loaded {
+  margin: 0;
+
+  color: #5D2030;
+
+  font-family:
+    "Playfair Display",
+    Georgia,
+    serif;
+
+  font-size: 0.70vw;
+}
+
+
+/* =========================================================
+   RESPONSIVE SAFETY
+========================================================= */
+
+@media (max-width: 480px) {
+
+  .categories-page {
+    min-height: 231.077vw;
+  }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 900px) {
+  .categories-heading-left {
+    width: auto;
+    flex: 1 1 auto;
+    min-width: 0;
+
+    gap: 12px;
+  }
+
+  .categories-heading h1 {
+    font-size: clamp(24px, 4vw, 36px);
+  }
+
+  .categories-heading-left span {
+    font-size: clamp(11px, 1.8vw, 16px);
+  }
+}
+
+@media (max-width: 600px) {
+  .categories-heading-left {
+    gap: 8px;
+  }
+
+  .categories-heading h1 {
+    font-size: clamp(19px, 5vw, 28px);
+  }
+
+  .categories-heading-left span {
+    font-size: clamp(9px, 2vw, 13px);
+  }
+}
+
+
+
+
+
+
+
+
+/* =========================================================
+   FINAL MOBILE FEATURED BUTTON FIX
+========================================================= */
+
+@media (max-width: 600px) {
+
+  .categories-heading {
+    position: relative !important;
+
+    width: 96% !important;
+
+    min-height: 32px !important;
+
+    margin: 12px auto 18px !important;
+
+    padding: 0 !important;
+
+    display: block !important;
+
+    overflow: visible !important;
+  }
+
+
+  /* LEFT CONTENT */
+
+  .categories-heading-left {
+    width: calc(100% - 90px) !important;
+
+    min-width: 0 !important;
+
+    height: 32px !important;
+
+    display: flex !important;
+
+    align-items: center !important;
+
+    gap: 4px !important;
+
+    overflow: hidden !important;
+  }
+
+
+  /* ALL PRODUCTS */
+
+  .categories-heading h1 {
+    flex: 0 1 auto !important;
+
+    width: auto !important;
+
+    min-width: 0 !important;
+
+    margin: 0 !important;
+
+    padding: 0 !important;
+
+    font-size: 16px !important;
+
+    line-height: 1 !important;
+
+    white-space: nowrap !important;
+  }
+
+
+  /* SHOWING RESULTS */
+
+  .categories-heading-left span {
+    flex: 0 1 auto !important;
+
+    width: auto !important;
+
+    min-width: 0 !important;
+
+    margin: 0 !important;
+
+    padding: 0 !important;
+
+    font-size: 7px !important;
+
+    line-height: 1 !important;
+
+    white-space: nowrap !important;
+  }
+
+
+  /* =======================================================
+     FEATURED
+  ======================================================= */
+
+  .categories-heading > .featured-select {
+    position: absolute !important;
+
+    top: 0 !important;
+
+    right: 0 !important;
+
+    z-index: 100 !important;
+
+    display: block !important;
+
+    width: 82px !important;
+
+    min-width: 82px !important;
+
+    max-width: 82px !important;
+
+    height: 30px !important;
+
+    min-height: 30px !important;
+
+    max-height: 30px !important;
+
+    margin: 0 !important;
+
+    padding: 0 20px 0 7px !important;
+
+    box-sizing: border-box !important;
+
+    flex: none !important;
+
+    border: 1px solid #c99a45 !important;
+
+    border-radius: 7px !important;
+
+    background-color: #fffdf9 !important;
+
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6' viewBox='0 0 10 6'%3E%3Cpath d='M1 1l4 4 4-4' fill='none' stroke='%23c99a45' stroke-width='1.4' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") !important;
+
+    background-repeat: no-repeat !important;
+
+    background-position: right 7px center !important;
+
+    background-size: 9px 5px !important;
+
+    color: #c99a45 !important;
+
+    font-family: Georgia, "Times New Roman", serif !important;
+
+    font-size: 8px !important;
+
+    line-height: 1 !important;
+
+    text-align: left !important;
+
+    white-space: nowrap !important;
+
+    appearance: none !important;
+
+    -webkit-appearance: none !important;
+
+    outline: none !important;
+
+    overflow: hidden !important;
+  }
+}
+
+
+/* =========================================================
+   VERY SMALL PHONES
+========================================================= */
+
+@media (max-width: 380px) {
+
+  .categories-heading {
+    min-height: 29px !important;
+  }
+
+  .categories-heading-left {
+    width: calc(100% - 80px) !important;
+
+    height: 29px !important;
+
+    gap: 3px !important;
+  }
+
+  .categories-heading h1 {
+    font-size: 14px !important;
+  }
+
+  .categories-heading-left span {
+    font-size: 6px !important;
+  }
+
+  .categories-heading > .featured-select {
+    width: 72px !important;
+
+    min-width: 72px !important;
+
+    max-width: 72px !important;
+
+    height: 27px !important;
+
+    min-height: 27px !important;
+
+    max-height: 27px !important;
+
+    padding: 0 17px 0 6px !important;
+
+    background-position: right 6px center !important;
+
+    background-size: 8px 5px !important;
+
+    font-size: 7px !important;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* =========================================================
+   CUSTOM FEATURED DROPDOWN
+========================================================= */
+
+.featured-dropdown {
+  position: relative;
+
+  flex: 0 0 126px;
+
+  width: 126px;
+
+  z-index: 100;
+}
+
+
+/* =========================================================
+   BUTTON
+========================================================= */
+
+.featured-dropdown-button {
+  width: 100%;
+  height: 38px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 6px;
+
+  margin: 0;
+  padding: 0 10px;
+
+  border: 1px solid #c99a45;
+
+  border-radius: 9px;
+
+  background: #fffdf9;
+
+  color: #c99a45;
+
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-size: 14px;
+
+  line-height: 1;
+
+  cursor: pointer;
+
+  box-sizing: border-box;
+}
+
+
+.featured-dropdown-button:hover {
+  background: #fffdf9;
+}
+
+
+.featured-dropdown-arrow {
+  flex: 0 0 auto;
+
+  font-size: 14px;
+
+  line-height: 1;
+
+  color: #c99a45;
+}
+
+
+/* =========================================================
+   OPEN MENU
+========================================================= */
+
+.featured-dropdown-menu {
+  position: absolute;
+
+  top: calc(100% + 5px);
+
+  right: 0;
+
+  width: 180px;
+
+  max-width: calc(100vw - 20px);
+
+  padding: 4px;
+
+  border: 1px solid #c99a45;
+
+  border-radius: 8px;
+
+  background: #fffdf9;
+
+  box-shadow:
+    0 5px 16px rgba(104, 34, 56, 0.15);
+
+  z-index: 1000;
+
+  overflow: hidden;
+}
+
+
+/* =========================================================
+   OPTIONS
+========================================================= */
+
+.featured-dropdown-menu button {
+  display: block;
+
+  width: 100%;
+
+  min-height: 34px;
+
+  margin: 0;
+
+  padding: 7px 10px;
+
+  border: 0;
+
+  border-radius: 5px;
+
+  background: transparent;
+
+  color: #682238;
+
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-size: 13px;
+
+  line-height: 1.2;
+
+  text-align: left;
+
+  white-space: nowrap;
+
+  cursor: pointer;
+}
+
+
+.featured-dropdown-menu button:hover {
+  background: rgba(201, 154, 69, 0.12);
+}
+
+
+.featured-dropdown-menu button.active {
+  background: #c99a45;
+
+  color: #ffffff;
+}
+
+
+/* =========================================================
+   TABLETS
+========================================================= */
+
+@media (min-width: 601px) and (max-width: 1024px) {
+
+  .featured-dropdown {
+    flex: 0 0 110px;
+
+    width: 110px;
+  }
+
+  .featured-dropdown-button {
+    height: 34px;
+
+    padding: 0 8px;
+
+    font-size: 11px;
+  }
+
+  .featured-dropdown-menu {
+    width: 170px;
+
+    max-width: calc(100vw - 20px);
+  }
+
+  .featured-dropdown-menu button {
+    font-size: 11px;
+
+    min-height: 32px;
+
+    padding: 7px 8px;
+  }
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+
+  .featured-dropdown {
+    position: absolute;
+
+    top: 0;
+
+    right: 0;
+
+    width: 82px;
+
+    min-width: 82px;
+
+    max-width: 82px;
+
+    z-index: 100;
+  }
+
+  .featured-dropdown-button {
+    width: 82px;
+
+    height: 30px;
+
+    padding: 0 7px;
+
+    border-radius: 7px;
+
+    font-size: 8px;
+  }
+
+  .featured-dropdown-arrow {
+    font-size: 10px;
+  }
+
+  .featured-dropdown-menu {
+    top: calc(100% + 4px);
+
+    right: 0;
+
+    width: 160px;
+
+    max-width: calc(100vw - 10px);
+
+    padding: 3px;
+
+    border-radius: 7px;
+  }
+
+  .featured-dropdown-menu button {
+    min-height: 29px;
+
+    padding: 6px 7px;
+
+    font-size: 9px;
+  }
+}
+
+
+/* =========================================================
+   VERY SMALL PHONES
+========================================================= */
+
+@media (max-width: 380px) {
+
+  .featured-dropdown {
+    width: 72px;
+
+    min-width: 72px;
+
+    max-width: 72px;
+  }
+
+  .featured-dropdown-button {
+    width: 72px;
+
+    height: 27px;
+
+    font-size: 7px;
+  }
+
+  .featured-dropdown-menu {
+    width: 145px;
+
+    max-width: calc(100vw - 8px);
+  }
+
+  .featured-dropdown-menu button {
+    font-size: 8px;
+
+    min-height: 27px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* =========================================================
+   CATEGORIES - SIZE FILTER
+   Responsive sizing: LARGE SCREEN > TABLET > MOBILE
+========================================================= */
+
+.categories-page
+.category-sidebar
+.size-section
+.size-options {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: flex-start !important;
+  justify-content: flex-start !important;
+  flex-wrap: nowrap !important;
+
+  width: 100% !important;
+
+  gap: 4px !important;
+
+  margin-top: 0 !important;
+  margin-left: -4px !important;
+  padding: 0 !important;
+}
+
+
+/* =========================================================
+   LARGE DESKTOP
+   1440px and above
+========================================================= */
+
+.categories-page
+.category-sidebar
+.size-section
+.size-options
+button {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+
+  width: 32px !important;
+  height: 32px !important;
+
+  min-width: 32px !important;
+  min-height: 32px !important;
+
+  padding: 0 !important;
+  margin: 0 !important;
+
+  border: 0 !important;
+  border-radius: 50% !important;
+
+  background: transparent !important;
+
+  color: #5D2030 !important;
+
+  font-family:
+    "Blacker Display",
+    "Playfair Display",
+    Georgia,
+    serif !important;
+
+  font-size: 15px !important;
+  font-weight: 500 !important;
+
+  line-height: 1 !important;
+  text-align: center !important;
+
+  white-space: nowrap !important;
+
+  cursor: pointer !important;
+  box-sizing: border-box !important;
+
+  transition:
+    background 0.18s ease,
+    color 0.18s ease !important;
+}
+
+
+/* =========================================================
+   MEDIUM DESKTOP / LAPTOP
+   1025px - 1439px
+========================================================= */
+
+@media (max-width: 1439px) {
+
+  .categories-page
+  .category-sidebar
+  .size-section
+  .size-options {
+    gap: 3px !important;
+    margin-left: -3px !important;
+  }
+
+  .categories-page
+  .category-sidebar
+  .size-section
+  .size-options
+  button {
+    width: 28px !important;
+    height: 28px !important;
+
+    min-width: 28px !important;
+    min-height: 28px !important;
+
+    font-size: 13px !important;
+  }
+}
+
+
+/* =========================================================
+   TABLET / SMALL LAPTOP
+   769px - 1024px
+========================================================= */
+
+@media (max-width: 1024px) {
+
+  .categories-page
+  .category-sidebar
+  .size-section
+  .size-options {
+    gap: 2px !important;
+    margin-left: -2px !important;
+  }
+
+  .categories-page
+  .category-sidebar
+  .size-section
+  .size-options
+  button {
+    width: 24px !important;
+    height: 24px !important;
+
+    min-width: 24px !important;
+    min-height: 24px !important;
+
+    font-size: 11px !important;
+  }
+}
+
+
+/* =========================================================
+   MOBILE
+   481px - 768px
+========================================================= */
+
+@media (max-width: 768px) {
+
+  .categories-page
+  .category-sidebar
+  .size-section
+  .size-options {
+    gap: 1px !important;
+    margin-left: -2px !important;
+  }
+
+  .categories-page
+  .category-sidebar
+  .size-section
+  .size-options
+  button {
+    width: 20px !important;
+    height: 20px !important;
+
+    min-width: 20px !important;
+    min-height: 20px !important;
+
+    font-size: 9px !important;
+  }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+   360px - 480px
+========================================================= */
+
+@media (max-width: 480px) {
+
+  .categories-page
+  .category-sidebar
+  .size-section
+  .size-options {
+    gap: 0 !important;
+    margin-left: -3px !important;
+  }
+
+  .categories-page
+  .category-sidebar
+  .size-section
+  .size-options
+  button {
+    width: 17px !important;
+    height: 17px !important;
+
+    min-width: 17px !important;
+    min-height: 17px !important;
+
+    font-size: 8px !important;
+  }
+}
+
+
+/* =========================================================
+   VERY SMALL MOBILE
+   359px and below
+========================================================= */
+
+@media (max-width: 359px) {
+
+  .categories-page
+  .category-sidebar
+  .size-section
+  .size-options
+  button {
+    width: 15px !important;
+    height: 15px !important;
+
+    min-width: 15px !important;
+    min-height: 15px !important;
+
+    font-size: 7px !important;
+  }
+}
+
+
+/* =========================================================
+   HOVER
+========================================================= */
+
+.categories-page
+.category-sidebar
+.size-section
+.size-options
+button:hover {
+  background: rgba(187, 142, 67, 0.15) !important;
+  color: #5D2030 !important;
+}
+
+
+/* =========================================================
+   SELECTED
+========================================================= */
+
+.categories-page
+.category-sidebar
+.size-section
+.size-options
+button.active {
+  background: #BB8E43 !important;
+  color: #FDFAF5 !important;
+}
+
+
+/* =========================================================
+   SELECTED + HOVER
+========================================================= */
+
+.categories-page
+.category-sidebar
+.size-section
+.size-options
+button.active:hover {
+  background: #BB8E43!important;
+  color: #FDFAF5 !important;
+}

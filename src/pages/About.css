@@ -1,0 +1,944 @@
+/* =========================================================
+   SREE COLLECTIONS — ABOUT PAGE
+   =========================================================
+
+   FIGMA MASTER:
+   1728px × 5200px
+
+   BACKGROUND:
+   #FDFAF5
+
+   The complete desktop Figma composition is maintained
+   at 1728px and proportionally scaled on smaller screens.
+
+   No independent mobile redesign.
+   No typography shrinking.
+   No stacked mobile redesign.
+   ========================================================= */
+
+
+/* =========================================================
+   PAGE
+   ========================================================= */
+
+.about-page {
+  position: relative;
+
+  width: 1728px;
+  min-height: auto;
+
+  margin: 0 auto;
+  padding: 0;
+
+  box-sizing: border-box;
+
+  background: #FDFAF5;
+  color: #5D2030;
+
+  overflow: visible;
+
+  /*
+    IMPORTANT:
+    Use zoom instead of transform so the scaled
+    composition remains part of the document flow.
+  */
+  zoom: var(--about-figma-scale, 1);
+}
+
+
+/* =========================================================
+   GLOBAL BOX SIZING
+   ========================================================= */
+
+.about-page *,
+.about-page *::before,
+.about-page *::after {
+  box-sizing: border-box;
+}
+
+
+/* =========================================================
+   ABOUT CONTENT CONTAINER
+
+   FIGMA:
+   X = 136px
+   WIDTH = 1456px
+   RIGHT = 136px
+   ========================================================= */
+
+.about-container {
+  width: 1456px;
+
+  margin-left: 136px;
+  margin-right: 136px;
+
+  box-sizing: border-box;
+}
+
+
+/* =========================================================
+   ABOUT INTRO
+   ========================================================= */
+
+.about-intro {
+  padding-top: 70px;
+}
+
+
+/* =========================================================
+   ABOUT TITLE
+   ========================================================= */
+
+.about-title {
+  width: 464px;
+
+  margin: 0;
+
+  color: #5D2030;
+}
+
+
+/* =========================================================
+   MAIN TITLE
+   ========================================================= */
+
+.about-title h1 {
+  width: 464px;
+  height: 72px;
+
+  margin: 0;
+  padding: 0;
+
+  display: flex;
+  align-items: baseline;
+
+  white-space: nowrap;
+
+  color: #5D2030;
+
+  font-family:
+    "Blacker Display",
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-size: 64px;
+  line-height: 64px;
+  font-weight: 500;
+  font-style: normal;
+
+  letter-spacing: 0;
+}
+
+
+/* =========================================================
+   SREE COLLECTIONS TITLE
+   ========================================================= */
+
+.about-title h1 span {
+  margin-left: 10px;
+
+  font-family:
+    "Blacker Display",
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-size: 36px;
+  line-height: 36px;
+  font-weight: 500;
+
+  color: #5D2030;
+
+  white-space: nowrap;
+}
+
+
+/* =========================================================
+   TITLE LINE
+   ========================================================= */
+
+.about-title-line {
+  width: 439px;
+  height: 1px;
+
+  margin-top: 27px;
+
+  background: #5D2030;
+}
+
+
+/* =========================================================
+   SUBTITLE
+   ========================================================= */
+
+.about-title p {
+  width: 439px;
+  height: 25px;
+
+  margin: 17px 0 0;
+  padding: 0;
+
+  color: #5D2030;
+
+  font-family:
+    "Turnkey Lite",
+    Arial,
+    Helvetica,
+    sans-serif;
+
+  font-size: 24px;
+  line-height: 25px;
+  font-weight: 400;
+
+  text-align: left;
+
+  white-space: nowrap;
+}
+
+
+/* =========================================================
+   INTRO LAYOUT
+
+   LEFT:
+   600px
+
+   RIGHT:
+   789px
+
+   GAP:
+   67px
+   ========================================================= */
+
+.intro-layout {
+  width: 1456px;
+
+  margin-top: 40px;
+
+  display: grid;
+
+  grid-template-columns:
+    600px
+    789px;
+
+  column-gap: 67px;
+
+  align-items: start;
+}
+
+
+/* =========================================================
+   LEFT INTRO COLUMN
+   ========================================================= */
+
+.intro-left {
+  width: 600px;
+
+  min-width: 0;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: flex-start;
+
+  padding-top: 276px;
+}
+
+
+/* =========================================================
+   RIGHT INTRO COLUMN
+   ========================================================= */
+
+.intro-right {
+  width: 789px;
+
+  min-width: 0;
+
+  position: relative;
+}
+
+
+/* =========================================================
+   WELCOME TEXT
+   ========================================================= */
+
+.welcome-text {
+  width: 789px;
+  height: 195px;
+
+  margin: 0;
+  padding: 0;
+
+  color: #5D2030;
+
+  font-family:
+    "Turnkey Lite",
+    Arial,
+    Helvetica,
+    sans-serif;
+
+  font-size: 32px;
+  line-height: 32px;
+  font-weight: 400;
+
+  letter-spacing: 0;
+}
+
+
+/* =========================================================
+   CONTACT BUTTON
+   ========================================================= */
+
+.contact-button {
+  width: 243px;
+  height: 60px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: flex-start;
+
+  position: relative;
+
+  padding: 0;
+
+  border: 2px solid #BB8E43;
+  border-radius: 16px;
+
+  background: transparent;
+
+  color: #BB8E43;
+
+  font-family:
+    "Blacker Display",
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-size: 24px;
+  line-height: 24px;
+  font-weight: 400;
+
+  text-decoration: none;
+
+  box-sizing: border-box;
+
+  overflow: visible;
+
+  transition: none;
+}
+
+
+/* =========================================================
+   CONTACT BUTTON TEXT
+   ========================================================= */
+
+.contact-button span {
+  margin-left: 40px;
+
+  white-space: nowrap;
+}
+
+
+/* =========================================================
+   CONTACT ARROW
+   ========================================================= */
+
+.contact-button svg {
+  position: absolute;
+
+  width: 34px;
+  height: 14px;
+
+  left: 170px;
+  top: 21px;
+
+  color: #BB8E43;
+
+  stroke: #BB8E43;
+  stroke-width: 2px;
+
+  fill: none;
+}
+
+
+/* =========================================================
+   CONTACT HOVER
+   ========================================================= */
+
+.contact-button:hover {
+  background: transparent;
+  color: #BB8E43;
+
+  transform: none;
+}
+
+
+/* =========================================================
+   INTRO DESCRIPTION
+   ========================================================= */
+
+.intro-description {
+  width: 600px;
+
+  margin: 60px 0 0;
+  padding: 0;
+
+  color: #5D2030;
+
+  font-family:
+    "Turnkey Lite",
+    Arial,
+    Helvetica,
+    sans-serif;
+
+  font-size: 24px;
+  line-height: 25px;
+  font-weight: 400;
+}
+
+
+/* =========================================================
+   INTRO IMAGE AREA
+   ========================================================= */
+
+.intro-image-area {
+  position: relative;
+
+  width: 789px;
+  height: 430px;
+
+  margin-top: 25px;
+
+  overflow: visible;
+}
+
+
+/* =========================================================
+   STARS IMAGE
+   TOP / RIGHT
+
+   KEEP THIS VERSION — CONFIRMED CORRECT
+   ========================================================= */
+
+.intro-image-one {
+  position: absolute;
+
+  top: 0;
+  right: 0;
+
+  width: 315px;
+  height: 400px;
+
+  display: block;
+
+  margin: 0;
+  padding: 0;
+
+  border: 0;
+  border-radius: 14px;
+
+  object-fit: cover;
+  object-position: center center;
+
+  z-index: 1;
+
+  transform: none;
+}
+
+
+/* =========================================================
+   PARTY HATS IMAGE
+
+   KEEP THIS VERSION — CONFIRMED CORRECT
+
+   Natural image proportion.
+   Small overlap with the stars image.
+   ========================================================= */
+
+.intro-image-two {
+  position: absolute;
+
+  right: 173px;
+  top: 116px;
+
+  width: 428px;
+  height: 284px;
+
+  display: block;
+
+  margin: 0;
+  padding: 0;
+
+  border: 0;
+  border-radius: 14px;
+
+  object-fit: cover;
+  object-position: center center;
+
+  z-index: 2;
+
+  transform: none;
+}
+
+
+/* =========================================================
+   SECTION HEADING
+   ========================================================= */
+
+.section-heading {
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+  justify-content: flex-start;
+
+  margin: 0;
+
+  text-align: center;
+}
+
+
+/* =========================================================
+   SECTION HEADING TITLE
+   ========================================================= */
+
+.section-heading h2 {
+  margin: 0;
+
+  color: #5D2030;
+
+  font-family:
+    "Blacker Display",
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-size: 64px;
+  line-height: 64px;
+  font-weight: 500;
+
+  letter-spacing: 0;
+}
+
+
+/* =========================================================
+   SECTION HEADING LINE
+   ========================================================= */
+
+.section-heading span {
+  width: 464px;
+  height: 1px;
+
+  margin-top: 25px;
+
+  background: #5D2030;
+}
+
+
+/* =========================================================
+   COLLECTIONS
+   ========================================================= */
+
+.collections {
+  padding-top: 40px;
+}
+
+
+/* =========================================================
+   COLLECTION ROW
+   =========================================================
+
+   CONTENT:
+   670px
+
+   GAP:
+   136px
+
+   IMAGE COLUMN:
+   650px
+
+   TOTAL:
+   1456px
+   ========================================================= */
+
+.collection-row {
+  width: 1456px;
+
+  display: grid;
+
+  grid-template-columns:
+    670px
+    650px;
+
+  column-gap: 136px;
+
+  align-items: center;
+
+  margin-top: 60px;
+}
+
+
+/* =========================================================
+   JEWELLERY ROW
+   ========================================================= */
+
+.jewellery-row {
+  margin-top: 70px;
+}
+
+
+/* =========================================================
+   DECOR ROW
+   ========================================================= */
+
+.decor-row {
+  margin-top: 65px;
+}
+
+
+/* =========================================================
+   COLLECTION CONTENT
+   ========================================================= */
+
+.collection-content {
+  width: 670px;
+
+  min-width: 0;
+}
+
+
+/* =========================================================
+   COLLECTION HEADING
+   ========================================================= */
+
+.collection-content h3 {
+  margin: 0;
+
+  color: #5D2030;
+
+  font-family:
+    "Blacker Display",
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-size: 36px;
+  line-height: 40px;
+  font-weight: 500;
+
+  letter-spacing: 0;
+}
+
+
+/* =========================================================
+   GOLD LINE
+   ========================================================= */
+
+.gold-line {
+  width: 330px;
+  height: 2px;
+
+  margin-top: 10px;
+
+  background: #BB8E43;
+}
+
+
+/* =========================================================
+   COLLECTION LIST
+   ========================================================= */
+
+.collection-content ul {
+  padding: 0;
+
+  margin: 15px 0 25px;
+
+  list-style: none;
+}
+
+
+/* =========================================================
+   COLLECTION ITEM
+   ========================================================= */
+
+.collection-content li {
+  margin: 0;
+  padding: 0;
+
+  color: #5D2030;
+
+  font-family:
+    "Turnkey Lite",
+    Arial,
+    Helvetica,
+    sans-serif;
+
+  font-size: 24px;
+  line-height: 30px;
+  font-weight: 400;
+}
+
+
+/* =========================================================
+   SHOP NOW BUTTON
+   ========================================================= */
+
+.shop-now {
+  min-width: 198px;
+  height: 50px;
+
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  padding: 0 28px;
+
+  border: 0;
+  border-radius: 25px;
+
+  background: #BB8E43;
+
+  color: #FDFAF5;
+
+  font-family:
+    "Blacker Display",
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-size: 16px;
+  font-weight: 400;
+
+  line-height: 1;
+
+  text-decoration: none;
+
+  transition: none;
+}
+
+
+/* =========================================================
+   SHOP NOW HOVER
+   ========================================================= */
+
+.shop-now:hover {
+  background: #BB8E43;
+
+  color: #FDFAF5;
+
+  transform: none;
+}
+
+
+/* =========================================================
+   COLLECTION IMAGE
+   ========================================================= */
+
+.collection-image {
+  width: 600px;
+  height: 600px;
+
+  overflow: hidden;
+
+  border-radius: 14px;
+
+  justify-self: end;
+}
+
+
+/* =========================================================
+   FASHION / DECOR IMAGE
+   ========================================================= */
+
+.collection-row > .collection-image {
+  justify-self: end;
+}
+
+
+/* =========================================================
+   JEWELLERY IMAGE
+   ========================================================= */
+
+.jewellery-row > .collection-image {
+  justify-self: start;
+}
+
+
+/* =========================================================
+   COLLECTION IMAGE
+   ========================================================= */
+
+.collection-image img {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  margin: 0;
+  padding: 0;
+
+  border: 0;
+
+  /*
+    Preserve the Figma composition.
+    The supplied Figma layout uses the complete
+    image area rather than a responsive crop.
+  */
+  object-fit: fill;
+  object-position: center;
+
+  transform: none;
+
+  transition: none;
+}
+
+
+/* =========================================================
+   JEWELLERY CONTENT
+   ========================================================= */
+
+.jewellery-content {
+  text-align: right;
+}
+
+
+/* =========================================================
+   JEWELLERY GOLD LINE
+   ========================================================= */
+
+.jewellery-content .gold-line {
+  margin-left: auto;
+}
+
+
+/* =========================================================
+   JEWELLERY LIST
+   ========================================================= */
+
+.jewellery-content ul {
+  text-align: right;
+}
+
+
+/* =========================================================
+   OUR PROMISE
+   ========================================================= */
+
+.promise {
+  padding-top: 90px;
+
+  /*
+    Large open area from Figma before
+    the common footer.
+  */
+  padding-bottom: 390px;
+}
+
+
+/* =========================================================
+   PROMISE CONTENT
+   ========================================================= */
+
+.promise-content {
+  width: 1300px;
+
+  margin: 55px auto 0;
+
+  text-align: center;
+}
+
+
+/* =========================================================
+   PROMISE PARAGRAPHS
+   ========================================================= */
+
+.promise-content p {
+  margin: 0 0 40px;
+
+  color: #5D2030;
+
+  font-family:
+    "Turnkey Lite",
+    Arial,
+    Helvetica,
+    sans-serif;
+
+  font-size: 24px;
+  line-height: 30px;
+  font-weight: 400;
+
+  text-align: center;
+}
+
+
+/* =========================================================
+   GLOBAL PAGE ELEMENTS
+   ========================================================= */
+
+.about-page img {
+  vertical-align: top;
+}
+
+.about-page a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+
+/* =========================================================
+   REMOVE DEFAULT MARGINS
+   ========================================================= */
+
+.about-page h1,
+.about-page h2,
+.about-page h3,
+.about-page p {
+  box-sizing: border-box;
+}
+
+
+/* =========================================================
+   DOCUMENT RESET
+   ========================================================= */
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+
+/* =========================================================
+   LARGE SCREENS
+   ========================================================= */
+
+@media (min-width: 1729px) {
+  .about-page {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+
+/* =========================================================
+   IMPORTANT RESPONSIVE RULE
+   =========================================================
+
+   DO NOT create separate mobile layouts.
+
+   The entire 1728 × 5200 Figma composition scales
+   through --about-figma-scale.
+
+   Therefore:
+
+   - typography remains proportional
+   - images remain proportional
+   - collection rows remain proportional
+   - spacing remains proportional
+   - promise section remains proportional
+   - no columns are stacked
+   - no font sizes are changed
+   ========================================================= */
