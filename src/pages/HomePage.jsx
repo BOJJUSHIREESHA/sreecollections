@@ -629,11 +629,24 @@ const addFeaturedProductToCart = (item) => {
 
           <span className="hero-button-arrow">
 
-            <span></span>
+  <svg
+    viewBox="0 0 100 20"
+    xmlns="http://www.w3.org/2000/svg"
+    aria-hidden="true"
+  >
+    <line
+      x1="0"
+      y1="10"
+      x2="84"
+      y2="10"
+    />
 
-            <FaArrowRight />
+    <polyline
+      points="76,3 84,10 76,17"
+    />
+  </svg>
 
-          </span>
+</span>
 
         </Link>
 
@@ -827,13 +840,26 @@ const addFeaturedProductToCart = (item) => {
 
     <div className="hero-saree-block hero-row-right">
 
-      <span className="hero-bottom-arrow">
+      <span className="hero-button-arrow">
 
-        <span className="hero-arrow-line"></span>
+  <svg
+    viewBox="0 0 100 20"
+    xmlns="http://www.w3.org/2000/svg"
+    aria-hidden="true"
+  >
+    <line
+      x1="0"
+      y1="10"
+      x2="84"
+      y2="10"
+    />
 
-        <FaArrowRight />
+    <polyline
+      points="76,3 84,10 76,17"
+    />
+  </svg>
 
-      </span>
+</span>
 
     </div>
 

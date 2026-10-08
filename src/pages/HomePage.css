@@ -1305,207 +1305,67 @@ body,
 
 
 /* ============================================================
-
-   SHOP NOW ARROW
-
-
-
-   Figma appearance:
-
-
-
-   SHOP NOW    ─────────────>
-
-
-
-   Thin line directly touching arrow head.
-
+   SHOP NOW ARROW — SINGLE SVG UNIT
+   LINE AND ARROWHEAD ALWAYS STAY TOGETHER
    ============================================================ */
 
-
-
-.hero-button-arrow {
-
+.hero-section .hero-button-arrow {
   position: relative !important;
 
-
-
-  display: flex !important;
-
-
-
-  align-items: center !important;
-
-
+  display: block !important;
 
   width: 3.761574cqw !important;
-
-
-
   height: 0.810185cqw !important;
 
-
-
   margin-left: 0.868056cqw !important;
-
-
-
   padding: 0 !important;
 
-
-
-  gap: 0 !important;
-
-
-
   flex: 0 0 auto !important;
-
-
 
   color: currentColor !important;
 
+  overflow: visible !important;
+
+  box-sizing: border-box !important;
 }
 
 
+/* ============================================================
+   SINGLE SVG
+   ============================================================ */
 
-
-
-/* Arrow line */
-
-
-
-.hero-button-arrow > span {
-
+.hero-section .hero-button-arrow svg {
   display: block !important;
 
-
-
-  width: auto !important;
-
-
-
-  height:
-
-    clamp(
-
-      0.5px,
-
-      0.05787cqw,
-
-      1px
-
-    ) !important;
-
-
-
-  flex: 1 1 auto !important;
-
-
+  width: 100% !important;
+  height: 100% !important;
 
   margin: 0 !important;
-
   padding: 0 !important;
 
+  overflow: visible !important;
 
-
-  background: currentColor !important;
-
+  color: currentColor !important;
 }
 
 
+/* ============================================================
+   LINE + ARROWHEAD
+   ============================================================ */
 
+.hero-section .hero-button-arrow svg line,
+.hero-section .hero-button-arrow svg polyline {
+  fill: none !important;
 
+  stroke: currentColor !important;
 
-/* Hide icon so CSS arrow remains consistent */
+  stroke-width: 1.25 !important;
 
+  vector-effect: non-scaling-stroke;
 
-
-.hero-button-arrow svg {
-
-  display: none !important;
-
+  stroke-linecap: butt !important;
+  stroke-linejoin: miter !important;
 }
-
-
-
-
-
-/* CSS arrow head */
-
-
-
-.hero-button-arrow::after {
-
-  content: "" !important;
-
-
-
-  display: block !important;
-
-
-
-  width: 0.70cqw !important;
-
-  height: 0.70cqw !important;
-
-
-
-  flex: 0 0 auto !important;
-
-
-
-  margin-left: -0.18cqw !important;
-
-
-
-  border-top:
-
-    clamp(
-
-      0.5px,
-
-      0.05787cqw,
-
-      1px
-
-    )
-
-    solid
-
-    currentColor !important;
-
-
-
-  border-right:
-
-    clamp(
-
-      0.5px,
-
-      0.05787cqw,
-
-      1px
-
-    )
-
-    solid
-
-    currentColor !important;
-
-
-
-  transform:
-
-    rotate(45deg)
-
-    scale(.60) !important;
-
-
-
-  transform-origin: center !important;
-
-}
-
 
 
 
@@ -3075,237 +2935,75 @@ body,
 
 
 /* ============================================================
-
    BOTTOM SAREE ARROW
-
-
-
-   The arrow stays centered vertically inside the
-
-   bottom-right saree row.
-
-
-
-   It is NOT positioned against the entire Hero.
-
+   SINGLE SVG UNIT
+   LINE + ARROWHEAD ALWAYS STAY TOGETHER
    ============================================================ */
 
-
-
 .hero-right-composition .hero-bottom-arrow {
-
   position: absolute !important;
 
-
-
   left: 57% !important;
-
   top: 50% !important;
 
-
-
   width: 31% !important;
-
-
-
   height: 0.810185cqw !important;
 
-
-
-  display: flex !important;
-
-
-
-  align-items: center !important;
-
-
+  display: block !important;
 
   margin: 0 !important;
-
   padding: 0 !important;
 
-
-
   visibility: visible !important;
-
   opacity: 1 !important;
-
-
 
   color: #FDFAF5 !important;
 
-
-
   transform: translateY(-50%) !important;
-
-
 
   z-index: 100 !important;
 
-
-
   box-sizing: border-box !important;
 
+  overflow: visible !important;
 }
 
 
-
-
-
 /* ============================================================
-
-   BOTTOM ARROW LINE
-
+   SINGLE SVG
    ============================================================ */
 
-
-
-.hero-right-composition .hero-arrow-line {
-
+.hero-right-composition .hero-bottom-arrow svg {
   display: block !important;
 
-
-
-  width: auto !important;
-
-
-
-  height:
-
-    clamp(
-
-      0.5px,
-
-      0.05787cqw,
-
-      1px
-
-    ) !important;
-
-
-
-  flex: 1 1 auto !important;
-
-
+  width: 100% !important;
+  height: 100% !important;
 
   margin: 0 !important;
-
   padding: 0 !important;
 
-
-
-  background: #FDFAF5 !important;
-
+  overflow: visible !important;
 }
-
-
-
 
 
 /* ============================================================
-
-   HIDE SVG FOR CONSISTENT CSS ARROW
-
+   LINE + ARROWHEAD
+   SAME SVG COORDINATE SYSTEM
    ============================================================ */
 
+.hero-right-composition .hero-bottom-arrow svg line,
+.hero-right-composition .hero-bottom-arrow svg polyline {
+  fill: none !important;
 
+  stroke: currentColor !important;
 
-.hero-right-composition
+  stroke-width: 1.25 !important;
 
-.hero-bottom-arrow
+  vector-effect: non-scaling-stroke !important;
 
-svg {
-
-  display: none !important;
-
+  stroke-linecap: butt !important;
+  stroke-linejoin: miter !important;
 }
-
-
-
-
-
-/* ============================================================
-
-   BOTTOM ARROW HEAD
-
-   ============================================================ */
-
-
-
-.hero-right-composition
-
-.hero-bottom-arrow::after {
-
-  content: "" !important;
-
-
-
-  display: block !important;
-
-
-
-  width: 0.70cqw !important;
-
-  height: 0.70cqw !important;
-
-
-
-  flex: 0 0 auto !important;
-
-
-
-  margin-left: -0.18cqw !important;
-
-
-
-  border-top:
-
-    clamp(
-
-      0.5px,
-
-      0.05787cqw,
-
-      1px
-
-    )
-
-    solid
-
-    #FDFAF5 !important;
-
-
-
-  border-right:
-
-    clamp(
-
-      0.5px,
-
-      0.05787cqw,
-
-      1px
-
-    )
-
-    solid
-
-    #FDFAF5 !important;
-
-
-
-  transform:
-
-    rotate(45deg)
-
-    scale(.60) !important;
-
-
-
-  transform-origin: center !important;
-
-}
-
 
 
 
@@ -4550,172 +4248,6 @@ svg {
 }
 
 
-
-
-
-
-
-
-
-
-
-/* =========================================================
-   SHOP NOW ARROW — RESPONSIVE LINE ALIGNMENT
-   ========================================================= */
-
-
-/* =========================
-   320px
-========================= */
-
-@media (max-width: 340px) {
-
-  .hero-section .hero-button-arrow > span {
-    position: relative !important;
-
-    display: block !important;
-
-    width: auto !important;
-    height: 0.05787cqw !important;
-
-    flex: 1 1 auto !important;
-
-    margin: 0 !important;
-    margin-right: -0.35cqw !important;
-
-    padding: 0 !important;
-
-    background: currentColor !important;
-
-    top: -0.20cqw !important;
-
-    transform: none !important;
-  }
-}
-
-
-/* =========================
-   375px
-========================= */
-
-@media (min-width: 341px) and (max-width: 400px) {
-
-  .hero-section .hero-button-arrow > span {
-    position: relative !important;
-
-    display: block !important;
-
-    width: auto !important;
-    height: 0.05787cqw !important;
-
-    flex: 1 1 auto !important;
-
-    margin: 0 !important;
-    margin-right: -0.35cqw !important;
-
-    padding: 0 !important;
-
-    background: currentColor !important;
-
-    top: -0.25cqw !important;
-
-    transform: none !important;
-  }
-}
-
-
-/* =========================================================
-   SHOP NOW ARROW — 425px ONLY
-========================================================= */
-
-@media (min-width: 401px) and (max-width: 450px) {
-
-  .hero-section .hero-button-arrow {
-    position: relative !important;
-
-    width: 3.761574cqw !important;
-    height: 0.810185cqw !important;
-
-    margin-left: 0.868056cqw !important;
-
-    display: block !important;
-
-    flex: 0 0 auto !important;
-  }
-
-  /* =====================================================
-     HORIZONTAL LINE
-  ===================================================== */
-
-  .hero-section .hero-button-arrow > span {
-    position: absolute !important;
-
-    left: 0 !important;
-    right: 0 !important;
-
-    top: 50% !important;
-
-    width: auto !important;
-    height: clamp(
-      0.5px,
-      0.05787cqw,
-      1px
-    ) !important;
-
-    margin: 0 !important;
-    padding: 0 !important;
-
-    background: currentColor !important;
-
-    transform: translateY(-50%) !important;
-
-    z-index: 1 !important;
-  }
-
-  /* =====================================================
-     ORIGINAL ARROWHEAD
-     SAME SIZE / SAME SHAPE
-  ===================================================== */
-
-  .hero-section .hero-button-arrow::after {
-    content: "" !important;
-
-    position: absolute !important;
-
-    right: 0 !important;
-    top: 50% !important;
-
-    width: 0.70cqw !important;
-    height: 0.70cqw !important;
-
-    margin: 0 !important;
-
-    border-top:
-      clamp(
-        0.5px,
-        0.05787cqw,
-        1px
-      )
-      solid currentColor !important;
-
-    border-right:
-      clamp(
-        0.5px,
-        0.05787cqw,
-        1px
-      )
-      solid currentColor !important;
-
-    transform:
-      translateY(-50%)
-      rotate(45deg)
-      scale(.60) !important;
-
-    transform-origin: center !important;
-
-    z-index: 2 !important;
-  }
-}
 
 
 
