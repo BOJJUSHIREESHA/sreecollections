@@ -15,6 +15,12 @@ const Contact = () => {
   });
 
   /* =====================================================
+     FORM ERRORS
+  ===================================================== */
+
+  const [errors, setErrors] = useState({});
+
+  /* =====================================================
      FIGMA RESPONSIVE SCALE
   ===================================================== */
 
@@ -66,6 +72,12 @@ const Contact = () => {
       ...previous,
       [name]: value,
     }));
+
+    /* Remove error when user starts filling the field */
+    setErrors((previous) => ({
+      ...previous,
+      [name]: "",
+    }));
   };
 
   /* =====================================================
@@ -74,6 +86,42 @@ const Contact = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+
+    const newErrors = {};
+
+    /* ===============================================
+       REQUIRED FIELD VALIDATION
+    =============================================== */
+
+    if (!formData.name.trim()) {
+      newErrors.name = "This field is required";
+    }
+
+    if (!formData.email.trim()) {
+      newErrors.email = "This field is required";
+    }
+
+    if (!formData.topic.trim()) {
+      newErrors.topic = "This field is required";
+    }
+
+    if (!formData.message.trim()) {
+      newErrors.message = "This field is required";
+    }
+
+    setErrors(newErrors);
+
+    /* ===============================================
+       STOP SUBMISSION IF ANY FIELD IS EMPTY
+    =============================================== */
+
+    if (Object.keys(newErrors).length > 0) {
+      return;
+    }
+
+    /* ===============================================
+       EMAIL SUBMISSION
+    =============================================== */
 
     const subject = encodeURIComponent(
       formData.topic || "Contact Inquiry"
@@ -105,8 +153,9 @@ const Contact = () => {
         </h1>
 
         <p>
-         Duis vestibulum elit vel neque pharetra vulputate. Quisque scelerisque nibh urna.
-Duis rutrum non risus in imperdiet.
+          Duis vestibulum elit vel neque pharetra vulputate.
+          Quisque scelerisque nibh urna.
+          Duis rutrum non risus in imperdiet.
         </p>
 
       </section>
@@ -134,7 +183,9 @@ Duis rutrum non risus in imperdiet.
 
           </div>
 
-          <h2>Social Media</h2>
+          <h2>
+            Social Media
+          </h2>
 
           <div className="social-links">
 
@@ -183,7 +234,9 @@ Duis rutrum non risus in imperdiet.
 
           </div>
 
-          <h2>Our Email</h2>
+          <h2>
+            Our Email
+          </h2>
 
           <div className="contact-card-links">
 
@@ -212,7 +265,9 @@ Duis rutrum non risus in imperdiet.
 
           </div>
 
-          <h2>Our Phone Number</h2>
+          <h2>
+            Our Phone Number
+          </h2>
 
           <div className="contact-card-links">
 
@@ -262,7 +317,8 @@ Duis rutrum non risus in imperdiet.
           </h2>
 
           <p className="contact-form-description">
-           Need assistance? We will contact you when you complete the following form!
+            Need assistance? We will contact you when you
+            complete the following form!
           </p>
 
 
@@ -275,7 +331,7 @@ Duis rutrum non risus in imperdiet.
             <div className="form-field form-name">
 
               <label htmlFor="contact-name">
-                Your Name
+                Your Name *
               </label>
 
               <input
@@ -284,8 +340,13 @@ Duis rutrum non risus in imperdiet.
                 name="name"
                 value={formData.name}
                 onChange={handleChange}
-                placeholder="Your Name"
               />
+
+              {errors.name && (
+                <span className="form-error">
+                  {errors.name}
+                </span>
+              )}
 
             </div>
 
@@ -297,7 +358,7 @@ Duis rutrum non risus in imperdiet.
             <div className="form-field form-email">
 
               <label htmlFor="contact-email">
-                Your Email
+                Your Email Address *
               </label>
 
               <input
@@ -306,8 +367,13 @@ Duis rutrum non risus in imperdiet.
                 name="email"
                 value={formData.email}
                 onChange={handleChange}
-                placeholder="Your Email"
               />
+
+              {errors.email && (
+                <span className="form-error">
+                  {errors.email}
+                </span>
+              )}
 
             </div>
 
@@ -319,7 +385,7 @@ Duis rutrum non risus in imperdiet.
             <div className="form-field form-topic">
 
               <label htmlFor="contact-topic">
-                Topic
+                Topic *
               </label>
 
               <input
@@ -328,8 +394,13 @@ Duis rutrum non risus in imperdiet.
                 name="topic"
                 value={formData.topic}
                 onChange={handleChange}
-                placeholder="Topic"
               />
+
+              {errors.topic && (
+                <span className="form-error">
+                  {errors.topic}
+                </span>
+              )}
 
             </div>
 
@@ -341,7 +412,7 @@ Duis rutrum non risus in imperdiet.
             <div className="form-field form-message">
 
               <label htmlFor="contact-message">
-                Your Message
+                Your Message *
               </label>
 
               <textarea
@@ -349,8 +420,13 @@ Duis rutrum non risus in imperdiet.
                 name="message"
                 value={formData.message}
                 onChange={handleChange}
-                placeholder="Your Message"
               />
+
+              {errors.message && (
+                <span className="form-error">
+                  {errors.message}
+                </span>
+              )}
 
             </div>
 
@@ -377,4 +453,3 @@ Duis rutrum non risus in imperdiet.
 };
 
 export default Contact;
-

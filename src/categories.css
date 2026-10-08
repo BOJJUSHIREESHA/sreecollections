@@ -701,14 +701,30 @@
 
   margin: 0;
   padding: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  overflow: visible;
 }
 
-.category-cart-button {
-  width: 1.389vw;
-  height: 1.389vw;
+/* =========================================================
+   SHOPPING BAG ICON
+   FIGMA: NO SQUARE / NO BUTTON BORDER
+========================================================= */
 
-  min-width: 1.389vw;
-  min-height: 1.389vw;
+/* =========================================================
+   SHOPPING BAG ICON
+   FIGMA STYLE — NO SQUARE / NO BACKGROUND
+========================================================= */
+
+.category-cart-button {
+  width: clamp(7px, 1.389vw, 20px);
+  height: clamp(7px, 1.389vw, 20px);
+
+  min-width: clamp(7px, 1.389vw, 20px);
+  min-height: clamp(7px, 1.389vw, 20px);
 
   padding: 0;
   margin: 0;
@@ -717,24 +733,50 @@
   align-items: center;
   justify-content: center;
 
-  border:
-    0.08vw solid
-    #BB8E43;
-
-  border-radius: 0.25vw;
+  border: 0 !important;
+  border-radius: 0 !important;
 
   outline: none;
+  background: transparent !important;
 
-  background: #FDFAF5;
   color: #BB8E43;
 
-  font-size: 0.65vw;
+  font-size: 0;
   line-height: 1;
 
   cursor: pointer;
+
+  box-shadow: none !important;
+
+  overflow: visible !important;
 }
 
 
+/* =========================================================
+   SHOPPING BAG SVG
+========================================================= */
+
+.category-cart-button svg {
+  display: block;
+
+  width: clamp(5px, 0.78vw, 14px);
+  height: clamp(5px, 0.78vw, 14px);
+
+  margin: 0;
+  padding: 0;
+
+  color: #BB8E43;
+
+  stroke: currentColor;
+
+  stroke-width: 1.8;
+
+  fill: none;
+
+  flex: 0 0 auto;
+
+  overflow: visible;
+}
 /* =========================================================
    QUANTITY CONTROL
 ========================================================= */
@@ -1752,4 +1794,152 @@ button.active {
 button.active:hover {
   background: #BB8E43!important;
   color: #FDFAF5 !important;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* =========================================================
+   SIZE FILTER — LARGE SCREENS / 2K / 4K
+========================================================= */
+
+@media (min-width: 1440px) {
+
+  .categories-page
+  .category-sidebar
+  .size-section
+  .size-options {
+
+    gap: 0.69vw !important;
+
+    margin-left: 0 !important;
+  }
+
+
+  .categories-page
+  .category-sidebar
+  .size-section
+  .size-options
+  button {
+
+    height: 2.083vw !important;
+
+    min-height: 2.083vw !important;
+
+    padding: 0 !important;
+
+    margin: 0 !important;
+
+    font-size: 1.389vw !important;
+
+    border-radius: 2.083vw !important;
+  }
+
+
+  /* S */
+  .categories-page
+  .category-sidebar
+  .size-section
+  .size-options
+  button:nth-child(1) {
+
+    width: 3.588vw !important;
+    min-width: 3.588vw !important;
+  }
+
+
+  /* M */
+  .categories-page
+  .category-sidebar
+  .size-section
+  .size-options
+  button:nth-child(2) {
+
+    width: 4.051vw !important;
+    min-width: 4.051vw !important;
+  }
+
+
+  /* L */
+  .categories-page
+  .category-sidebar
+  .size-section
+  .size-options
+  button:nth-child(3) {
+
+    width: 3.588vw !important;
+    min-width: 3.588vw !important;
+  }
+
+
+  /* XL */
+  .categories-page
+  .category-sidebar
+  .size-section
+  .size-options
+  button:nth-child(4) {
+
+    width: 4.572vw !important;
+    min-width: 4.572vw !important;
+  }
+
+
+  /* XXL */
+  .categories-page
+  .category-sidebar
+  .size-section
+  .size-options
+  button:nth-child(5) {
+
+    width: 5.556vw !important;
+    min-width: 5.556vw !important;
+  }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+/* =========================================================
+   SHOPPING BAG — LARGE SCREENS
+   Larger like the Figma reference
+========================================================= */
+
+@media (min-width: 1025px) {
+
+  .category-cart-button {
+    width: 1.389vw !important;
+    height: 1.389vw !important;
+
+    min-width: 1.389vw !important;
+    min-height: 1.389vw !important;
+  }
+
+  .category-cart-button svg {
+    width: 1.0vw !important;
+    height: 1.0vw !important;
+
+    min-width: 0 !important;
+    min-height: 0 !important;
+
+    max-width: none !important;
+    max-height: none !important;
+  }
 }

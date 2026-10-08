@@ -5,6 +5,9 @@ import {
   FaMinus,
   FaPlus,
 } from "react-icons/fa6";
+
+import { FiShoppingBag } from "react-icons/fi";
+
 import products from "../data/products";
 import "./Search.css";
 
@@ -603,7 +606,7 @@ function Search() {
                                   }
                                   aria-label={`Add ${product.name} to cart`}
                                 >
-                                  <FaCartShopping />
+                                 <FiShoppingBag />
                                 </button>
 
                               )}

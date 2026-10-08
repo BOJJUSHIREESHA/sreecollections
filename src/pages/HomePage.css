@@ -54,2082 +54,4668 @@ body,
 }
 
 
-
 /* ============================================================
+
    SREE COLLECTIONS — HERO SECTION
+
    FIGMA RESPONSIVE VERSION
+
    REFERENCE: 1728 × 896
 
+
+
    IMPORTANT
+
    ------------------------------------------------------------
+
    • Same composition on desktop / tablet / mobile
+
    • No mobile stacking
+
    • No horizontal scrolling
+
    • All measurements scale with the Hero itself
+
    • Frame remains visible
+
    • Buttons remain inside the notch
+
    • Arrows remain proportional
+
    ============================================================ */
+
+
+
 
 
 /* ============================================================
+
    HERO ROOT
+
    ============================================================ */
 
+
+
 .hero-section {
+
   --hero-bg: #FDFAF5;
+
   --wine: #5D2030;
+
   --wine-light: #732B3F;
+
   --gold: #BB8E43;
+
+
 
   position: relative !important;
 
+
+
   width: 100% !important;
+
   max-width: 1728px !important;
+
+
 
   aspect-ratio: 1728 / 896 !important;
 
+
+
   height: auto !important;
+
   min-height: 0 !important;
 
+
+
   margin: 0 auto !important;
+
   padding: 0 !important;
+
+
 
   background: var(--hero-bg) !important;
 
+
+
   overflow: hidden !important;
+
+
 
   container-type: inline-size !important;
 
+
+
   box-sizing: border-box !important;
+
 }
 
 
+
+
+
 /* ============================================================
+
    HERO HEADING WRAPPER
+
    ============================================================ */
 
+
+
 .hero-heading {
+
   position: absolute !important;
+
+
 
   inset: 0 !important;
 
+
+
   width: 100% !important;
+
   height: 100% !important;
 
+
+
   margin: 0 !important;
+
   padding: 0 !important;
+
+
 
   pointer-events: none !important;
 
+
+
   z-index: 50 !important;
+
 }
 
 
+
+
+
 /* ============================================================
+
    HERO TITLE CONTAINER
+
    ============================================================ */
+
+
 
 .hero-title {
+
   position: absolute !important;
 
+
+
   left: 15.740741% !important;
+
   top: 5.245536% !important;
 
+
+
   width: 63.946759% !important;
+
   height: 19.196429% !important;
 
+
+
   margin: 0 !important;
+
   padding: 0 !important;
 
+
+
   box-sizing: border-box !important;
+
 }
 
 
+
+
+
 /* ============================================================
+
    MAIN HEADING
+
    ============================================================ */
 
+
+
 .hero-title h1 {
+
   position: relative !important;
 
+
+
   width: 100% !important;
+
   height: 100% !important;
 
+
+
   margin: 0 !important;
+
   padding: 0 !important;
+
+
 
   color: var(--wine) !important;
 
+
+
   font-family:
+
     "Blacker Display",
+
     "Blacker Display Trial",
+
     Georgia,
+
     "Times New Roman",
+
     serif !important;
+
+
 
   font-size: 4.70cqw !important;
 
+
+
   font-weight: 400 !important;
 
+
+
   line-height: 1 !important;
+
+
 
   letter-spacing: -0.141cqw !important;
 
+
+
   text-transform: capitalize !important;
+
+
 
   white-space: nowrap !important;
 
+
+
   box-sizing: border-box !important;
+
 }
 
 
+
+
+
 /* ============================================================
+
    FIRST HEADING LINE
+
    ============================================================ */
 
+
+
 .hero-title-line-one {
+
   position: absolute !important;
 
+
+
   left: 0 !important;
+
   top: 0 !important;
 
+
+
   width: 100% !important;
+
   height: 50% !important;
+
+
 
   display: flex !important;
 
+
+
   align-items: flex-start !important;
+
   justify-content: flex-start !important;
 
+
+
   margin: 0 !important;
+
   padding: 0 !important;
 
+
+
   white-space: nowrap !important;
+
+
 
   line-height: 1 !important;
 
+
+
   box-sizing: border-box !important;
+
 }
 
 
+
+
+
 /* ============================================================
+
    HEADING TEXT BEFORE GOLD SYMBOL
+
    ============================================================ */
 
+
+
 .hero-title-before-symbol {
+
   position: relative !important;
+
+
 
   display: block !important;
 
+
+
   flex: 0 0 auto !important;
 
+
+
   margin: 0 !important;
+
   padding: 0 !important;
+
+
 
   color: var(--wine) !important;
 
+
+
   white-space: nowrap !important;
+
 }
 
 
+
+
+
 /* ============================================================
+
    GOLD SYMBOL
+
    ============================================================ */
 
+
+
 .hero-section .gold-symbol {
+
   position: relative !important;
+
+
 
   display: inline-flex !important;
 
+
+
   align-items: center !important;
+
   justify-content: center !important;
+
+
 
   flex: 0 0 auto !important;
 
+
+
   width: 4.166667cqw !important;
+
   height: 3.703704cqw !important;
 
+
+
   min-width: 0 !important;
+
   min-height: 0 !important;
 
+
+
   max-width: 72px !important;
+
   max-height: 64px !important;
 
+
+
   margin-left: 0.35cqw !important;
+
   margin-right: 0.35cqw !important;
+
+
 
   margin-top: 0 !important;
 
+
+
   padding: 0 !important;
 
+
+
   background: var(--gold) !important;
+
+
 
   border-radius: 1.640046cqw !important;
 
+
+
   box-sizing: border-box !important;
+
+
 
   transform: translateY(0.46cqw) !important;
 
+
+
   z-index: 80 !important;
+
 }
 
 
+
+
+
 /* ============================================================
+
    GOLD SYMBOL VECTOR
+
    ============================================================ */
 
+
+
 .hero-section .gold-symbol-vector {
+
   display: block !important;
 
+
+
   width: 2.557685cqw !important;
+
   height: 2.500931cqw !important;
 
+
+
   min-width: 0 !important;
+
   min-height: 0 !important;
 
+
+
   max-width: 44.2px !important;
+
   max-height: 43.2px !important;
 
+
+
   margin: 0 !important;
+
   padding: 0 !important;
 
+
+
   object-fit: contain !important;
+
   object-position: center !important;
+
+
 
   transform: none !important;
 
+
+
   flex-shrink: 0 !important;
+
 }
 
 
+
+
+
 /* ============================================================
+
    HEADING TEXT AFTER GOLD SYMBOL
+
    ============================================================ */
 
+
+
 .hero-title-after-symbol {
+
   position: relative !important;
+
+
 
   display: block !important;
 
+
+
   flex: 0 0 auto !important;
 
+
+
   margin: 0 !important;
+
   padding: 0 !important;
+
+
 
   color: var(--wine) !important;
 
+
+
   white-space: nowrap !important;
+
 }
 
 
+
+
+
 /* ============================================================
+
    SECOND HEADING LINE
+
    Fashion Possibilities
+
    ============================================================ */
 
+
+
 .hero-title-line-two {
+
   position: absolute !important;
 
+
+
   left: 0 !important;
+
   top: 50% !important;
 
+
+
   width: 100% !important;
+
   height: 50% !important;
 
+
+
   display: flex !important;
+
+
 
   align-items: flex-start !important;
 
+
+
   margin: 0 !important;
+
   padding: 0 !important;
+
+
 
   color: var(--wine) !important;
 
+
+
   white-space: nowrap !important;
+
+
 
   line-height: 1 !important;
 
+
+
   box-sizing: border-box !important;
+
 }
 
 
+
+
+
 /* ============================================================
+
    DESCRIPTION
 
+
+
    IMPORTANT:
+
    This is vertically aligned with the second heading line.
 
+
+
    It is NOT pushed down underneath the heading.
+
    ============================================================ */
 
+
+
 .hero-description {
+
   position: absolute !important;
+
+
 
   left: 59.027778% !important;
 
+
+
   /*
+
      Same vertical zone as:
+
      Fashion Possibilities
+
   */
+
   top: 17.20% !important;
+
+
 
   width: 25.231481% !important;
 
+
+
   /*
+
      Approximately the height of the second heading line.
+
   */
+
   height: 7.10% !important;
 
+
+
   margin: 0 !important;
+
   padding: 0 !important;
+
+
 
   display: flex !important;
 
+
+
   align-items: center !important;
+
   justify-content: flex-start !important;
+
+
 
   box-sizing: border-box !important;
 
+
+
   z-index: 60 !important;
+
 }
 
 
+
+
+
 /* ============================================================
+
    DESCRIPTION TEXT
+
    ============================================================ */
 
+
+
 .hero-description p {
+
   width: 100% !important;
+
   height: auto !important;
 
+
+
   margin: 0 !important;
+
   padding: 0 !important;
+
+
 
   color: var(--wine-light) !important;
 
+
+
   font-family:
+
     "Turnkey Lite",
+
     Arial,
+
     Helvetica,
+
     sans-serif !important;
+
+
 
   font-size: 1.041667cqw !important;
 
+
+
   font-weight: 500 !important;
+
+
 
   line-height: 1.45 !important;
 
+
+
   letter-spacing: -0.03125cqw !important;
+
+
 
   text-transform: capitalize !important;
 
+
+
   white-space: nowrap !important;
 
+
+
   box-sizing: border-box !important;
+
 }
 
 
+
+
+
 /* ============================================================
+
    MAIN HERO FRAME
+
    ============================================================ */
 
+
+
 .hero-grid {
+
   position: absolute !important;
 
+
+
   left: 11.111111% !important;
+
   top: 32.142857% !important;
 
+
+
   width: 77.777778% !important;
+
   height: 62.611607% !important;
 
+
+
   margin: 0 !important;
+
   padding: 0 !important;
+
+
 
   display: block !important;
 
+
+
   box-sizing: border-box !important;
+
+
 
   overflow: visible !important;
 
+
+
   z-index: 5 !important;
+
 }
 
 
+
+
+
 /* ============================================================
+
    OUTER NOTCHED FRAME
 
+
+
    IMPORTANT:
+
    • Clearly visible wine border
+
    • Top notch surrounds button area
+
    • Corners remain visible on small devices
+
    ============================================================ */
 
+
+
 .hero-grid::before {
+
   content: "" !important;
 
+
+
   position: absolute !important;
+
+
 
   inset: 0 !important;
 
+
+
   width: 100% !important;
+
   height: 100% !important;
+
+
 
   pointer-events: none !important;
 
+
+
   z-index: 100 !important;
+
+
 
   background-repeat: no-repeat !important;
 
+
+
   background-position: center !important;
+
+
 
   background-size: 100% 100% !important;
 
+
+
   opacity: 1 !important;
 
+
+
   background-image:
-    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1344 561' preserveAspectRatio='none'%3E%3Cpath d='M32 0H430.25Q462.25 0 462.25 32V157Q462.25 189 494.25 189H846.25Q878.25 189 878.25 157V32Q878.25 0 910.25 0H1312Q1344 0 1344 32V529Q1344 561 1312 561H32Q0 561 0 529V32Q0 0 32 0Z' fill='none' stroke='%23732B3F' stroke-opacity='.78' stroke-width='1.25'/%3E%3C/svg%3E") !important;
+
+    url("data:image/svg+xml,%3Csvg xmlns='http\://www\.w3.org/2000/svg' viewBox='0 0 1344 561' preserveAspectRatio='none'%3E%3Cpath d='M32 0H430.25Q462.25 0 462.25 32V157Q462.25 189 494.25 189H846.25Q878.25 189 878.25 157V32Q878.25 0 910.25 0H1312Q1344 0 1344 32V529Q1344 561 1312 561H32Q0 561 0 529V32Q0 0 32 0Z' fill='none' stroke='%23732B3F' stroke-opacity='.78' stroke-width='1.25'/%3E%3C/svg%3E") !important;
+
 }
 
 
+
+
+
 /* ============================================================
+
    LEFT FASHION CARD
+
    ============================================================ */
 
+
+
 .hero-left-card {
+
   position: absolute !important;
 
+
+
   left: 2.232143% !important;
+
   top: 4.634581% !important;
 
+
+
   width: 29.910714% !important;
+
   height: 90.196078% !important;
+
+
 
   display: block !important;
 
+
+
   margin: 0 !important;
+
   padding: 0 !important;
 
+
+
   overflow: hidden !important;
+
+
 
   border-radius: 1.851852cqw !important;
 
+
+
   box-sizing: border-box !important;
+
+
 
   text-decoration: none !important;
 
+
+
   z-index: 10 !important;
+
 }
+
+
+
 
 
 .hero-left-card img {
+
   display: block !important;
 
+
+
   width: 100% !important;
+
   height: 100% !important;
 
+
+
   margin: 0 !important;
+
   padding: 0 !important;
+
+
 
   object-fit: cover !important;
 
+
+
   object-position: center center !important;
+
+
 
   border-radius: inherit !important;
 
+
+
   transform: none !important;
+
 }
 
 
+
+
+
 /* ============================================================
+
    CENTER COLUMN
+
    ============================================================ */
+
+
 
 .hero-center {
+
   position: absolute !important;
+
+
 
   left: 33.630952% !important;
+
   top: 0 !important;
 
+
+
   width: 32.142857% !important;
+
   height: 100% !important;
 
+
+
   margin: 0 !important;
+
   padding: 0 !important;
 
+
+
   box-sizing: border-box !important;
+
+
 
   z-index: 15 !important;
+
 }
 
 
+
+
+
 /* ============================================================
+
    BUTTON NOTCH AREA
 
+
+
    DO NOT CHANGE TOP TO 5%.
+
    ============================================================ */
 
+
+
 .hero-notch {
+
   position: absolute !important;
 
+
+
   left: 2.372685% !important;
+
   top: 7.308378% !important;
 
+
+
   width: 96.296296% !important;
+
   height: 23.172906% !important;
 
+
+
   margin: 0 !important;
+
   padding: 0 !important;
+
+
 
   box-sizing: border-box !important;
 
+
+
   z-index: 30 !important;
+
 }
 
 
+
+
+
 /* ============================================================
+
    COMMON BUTTON
+
    ============================================================ */
 
+
+
 .hero-shop-button,
+
 .hero-products-button {
+
   position: absolute !important;
+
+
 
   left: 0 !important;
 
+
+
   width: 100% !important;
+
+
 
   height: 41.65% !important;
 
+
+
   min-height: 0 !important;
+
+
 
   display: flex !important;
 
+
+
   align-items: center !important;
+
   justify-content: center !important;
 
+
+
   margin: 0 !important;
+
   padding: 0 !important;
+
+
 
   box-sizing: border-box !important;
 
+
+
   border-radius: 100px !important;
+
+
 
   text-decoration: none !important;
 
+
+
   white-space: nowrap !important;
 
+
+
   font-family:
+
     "Blacker Display",
+
     "Blacker Display Trial",
+
     Georgia,
+
     "Times New Roman",
+
     serif !important;
+
+
 
   font-size: 0.810185cqw !important;
 
+
+
   font-weight: 700 !important;
+
+
 
   line-height: 1 !important;
 
+
+
   letter-spacing: -0.024306cqw !important;
 
+
+
   overflow: hidden !important;
+
 }
 
 
+
+
+
 /* ============================================================
+
    SHOP NOW BUTTON
+
    ============================================================ */
 
+
+
 .hero-shop-button {
+
   top: 0 !important;
+
+
 
   border: 0 !important;
 
+
+
   background: var(--gold) !important;
 
+
+
   color: var(--hero-bg) !important;
+
 }
 
 
+
+
+
 /* ============================================================
+
    EXPLORE MORE PRODUCTS BUTTON
+
    ============================================================ */
 
+
+
 .hero-products-button {
+
   top: 56.923077% !important;
+
+
 
   background: transparent !important;
 
+
+
   color: var(--gold) !important;
 
+
+
   /*
+
      Very thin Figma-style outline.
+
      Minimum keeps it visible on phones without
+
      becoming thick.
+
   */
+
   border:
+
     clamp(
+
       0.5px,
+
       0.05787cqw,
+
       1px
+
     )
+
     solid
+
     var(--gold) !important;
+
 }
+
+
+
 
 
 /* ============================================================
+
    SHOP NOW ARROW
+
+
 
    Figma appearance:
 
+
+
    SHOP NOW    ─────────────>
 
+
+
    Thin line directly touching arrow head.
+
    ============================================================ */
 
+
+
 .hero-button-arrow {
+
   position: relative !important;
+
+
 
   display: flex !important;
 
+
+
   align-items: center !important;
+
+
 
   width: 3.761574cqw !important;
 
+
+
   height: 0.810185cqw !important;
+
+
 
   margin-left: 0.868056cqw !important;
 
+
+
   padding: 0 !important;
+
+
 
   gap: 0 !important;
 
+
+
   flex: 0 0 auto !important;
 
+
+
   color: currentColor !important;
+
 }
+
+
+
 
 
 /* Arrow line */
 
+
+
 .hero-button-arrow > span {
+
   display: block !important;
+
+
 
   width: auto !important;
 
+
+
   height:
+
     clamp(
+
       0.5px,
+
       0.05787cqw,
+
       1px
+
     ) !important;
+
+
 
   flex: 1 1 auto !important;
 
+
+
   margin: 0 !important;
+
   padding: 0 !important;
 
+
+
   background: currentColor !important;
+
 }
+
+
+
 
 
 /* Hide icon so CSS arrow remains consistent */
 
+
+
 .hero-button-arrow svg {
+
   display: none !important;
+
 }
+
+
+
 
 
 /* CSS arrow head */
 
+
+
 .hero-button-arrow::after {
+
   content: "" !important;
+
+
 
   display: block !important;
 
+
+
   width: 0.70cqw !important;
+
   height: 0.70cqw !important;
+
+
 
   flex: 0 0 auto !important;
 
+
+
   margin-left: -0.18cqw !important;
 
+
+
   border-top:
+
     clamp(
+
       0.5px,
+
       0.05787cqw,
+
       1px
+
     )
+
     solid
+
     currentColor !important;
+
+
 
   border-right:
+
     clamp(
+
       0.5px,
+
       0.05787cqw,
+
       1px
+
     )
+
     solid
+
     currentColor !important;
 
+
+
   transform:
+
     rotate(45deg)
+
     scale(.60) !important;
 
+
+
   transform-origin: center !important;
+
 }
+
+
+
 
 
 /* ============================================================
+
    JEWELLERY CARD
+
    ============================================================ */
 
+
+
 .hero-jewellery-card {
+
   position: absolute !important;
 
+
+
   left: 0 !important;
+
   top: 35.828877% !important;
 
+
+
   width: 100% !important;
+
   height: 59.001783% !important;
+
+
 
   display: block !important;
 
+
+
   margin: 0 !important;
+
   padding: 0 !important;
+
+
 
   overflow: hidden !important;
 
+
+
   border-radius: 1.851852cqw !important;
+
+
 
   box-sizing: border-box !important;
 
+
+
   text-decoration: none !important;
 
+
+
   z-index: 10 !important;
+
 }
+
+
+
 
 
 .hero-jewellery-card > img {
+
   display: block !important;
 
+
+
   width: 100% !important;
+
   height: 100% !important;
 
+
+
   margin: 0 !important;
+
   padding: 0 !important;
+
+
 
   object-fit: cover !important;
 
+
+
   object-position: center center !important;
+
+
 
   border-radius: inherit !important;
 
+
+
   transform: none !important;
+
 }
 
 
+
+
+
 /* ============================================================
+
    JEWELLERY TEXT OVERLAY
+
    ============================================================ */
 
+
+
 .jewellery-overlay {
+
   position: absolute !important;
 
+
+
   right: 5.8% !important;
+
   left: auto !important;
+
+
 
   top: 9.063444% !important;
 
+
+
   width: 100% !important;
+
   height: auto !important;
 
+
+
   display: flex !important;
+
+
 
   flex-direction: column !important;
 
+
+
   align-items: flex-end !important;
+
+
 
   justify-content: flex-start !important;
 
+
+
   margin: 0 !important;
+
   padding: 0 !important;
 
+
+
   text-align: right !important;
+
+
 
   pointer-events: none !important;
 
+
+
   box-sizing: border-box !important;
 
+
+
   z-index: 25 !important;
+
 }
 
 
+
+
+
 /* ============================================================
+
    TRENDING PILL
+
    ============================================================ */
 
+
+
 .jewellery-trending-frame {
+
   width: 18.3% !important;
+
+
 
   height: 1.388889cqw !important;
 
+
+
   min-height: 0 !important;
+
+
 
   max-height: 24px !important;
 
+
+
   display: flex !important;
 
+
+
   align-items: center !important;
+
   justify-content: center !important;
 
+
+
   margin: 0 !important;
+
   padding: 0 !important;
 
+
+
   background: var(--hero-bg) !important;
+
+
 
   border: 0 !important;
 
+
+
   border-radius: 100px !important;
+
+
 
   box-sizing: border-box !important;
 
+
+
   overflow: hidden !important;
+
 }
 
 
+
+
+
 /* ============================================================
+
    TRENDING TEXT
+
    ============================================================ */
 
+
+
 .jewellery-trending {
+
   width: auto !important;
+
   height: auto !important;
+
+
 
   display: block !important;
 
+
+
   margin: 0 !important;
+
   padding: 0 !important;
+
+
 
   background: transparent !important;
 
+
+
   color: var(--gold) !important;
 
+
+
   font-family:
+
     Montserrat,
+
     Arial,
+
     Helvetica,
+
     sans-serif !important;
+
+
 
   font-size: 0.579cqw !important;
 
+
+
   font-weight: 600 !important;
+
+
 
   line-height: 1 !important;
 
+
+
   letter-spacing: -0.3px !important;
+
+
 
   text-transform: uppercase !important;
 
+
+
   white-space: nowrap !important;
+
 }
 
 
+
+
+
 /* ============================================================
+
    AWESOME COLLECTION TEXT
+
    ============================================================ */
 
+
+
 .jewellery-overlay p {
+
   width: auto !important;
 
+
+
   margin:
+
     0.90cqw
+
     0
+
     0
+
     auto !important;
+
+
 
   padding: 0 !important;
 
+
+
   color: var(--wine-light) !important;
 
+
+
   font-family:
+
     Montserrat,
+
     Arial,
+
     Helvetica,
+
     sans-serif !important;
+
+
 
   font-size: 0.810185cqw !important;
 
+
+
   font-weight: 500 !important;
 
+
+
   line-height: 1 !important;
+
+
 
   letter-spacing: -0.42px !important;
 
+
+
   text-align: right !important;
 
+
+
   white-space: nowrap !important;
+
 }
 
 
+
+
+
 /* ============================================================
+
    COLLECTION
+
    ============================================================ */
 
+
+
 .jewellery-overlay strong {
+
   display: block !important;
+
+
 
   margin-top: 0.22cqw !important;
 
+
+
   color: var(--wine-light) !important;
+
+
 
   font-size: 1.157407cqw !important;
 
+
+
   font-weight: 600 !important;
 
+
+
   line-height: 1 !important;
+
+
 
   letter-spacing: -0.5px !important;
 
+
+
   white-space: nowrap !important;
+
 }
 
 
+
+
+
 /* ============================================================
+
    VIEW ALL
+
    ============================================================ */
 
+
+
 .jewellery-view-all {
+
   position: absolute !important;
 
+
+
   right: 3.7% !important;
+
   bottom: 4.5% !important;
 
+
+
   width: auto !important;
+
+
 
   height: 6.72% !important;
 
+
+
   display: flex !important;
 
+
+
   align-items: center !important;
+
   justify-content: flex-end !important;
+
+
 
   gap: 0.491cqw !important;
 
+
+
   margin: 0 !important;
+
   padding: 0 !important;
+
+
 
   color: var(--hero-bg) !important;
 
+
+
   font-family:
+
     Montserrat,
+
     Arial,
+
     Helvetica,
+
     sans-serif !important;
+
+
 
   font-size: 0.694444cqw !important;
 
+
+
   font-weight: 500 !important;
+
+
 
   line-height: 1 !important;
 
+
+
   white-space: nowrap !important;
+
+
 
   flex-wrap: nowrap !important;
 
+
+
   box-sizing: border-box !important;
 
+
+
   z-index: 30 !important;
+
 }
+
+
+
 
 
 .jewellery-view-all > span {
+
   display: block !important;
 
+
+
   width: auto !important;
+
   height: auto !important;
+
+
 
   white-space: nowrap !important;
 
+
+
   flex-shrink: 0 !important;
+
 }
+
+
+
 
 
 .jewellery-view-all b {
+
   width: 1.287541cqw !important;
+
   height: 1.287541cqw !important;
+
+
 
   min-width: 0 !important;
 
+
+
   display: flex !important;
 
+
+
   align-items: center !important;
+
   justify-content: center !important;
 
+
+
   margin: 0 !important;
+
   padding: 0 !important;
+
+
 
   border-radius: 50% !important;
 
+
+
   background: var(--hero-bg) !important;
+
+
 
   color: var(--wine) !important;
 
+
+
   font-family: Arial, sans-serif !important;
+
+
 
   font-size: 0.752315cqw !important;
 
+
+
   font-weight: 400 !important;
+
+
 
   line-height: 1 !important;
 
+
+
   box-sizing: border-box !important;
 
+
+
   flex-shrink: 0 !important;
+
 }
 
 
+
+
+
 /* ============================================================
+
    RIGHT SAREE COMPOSITION
+
    ============================================================ */
 
+
+
 .hero-right-composition {
+
   position: absolute !important;
 
+
+
   left: 67.559524% !important;
+
   top: 4.634581% !important;
 
+
+
   width: 29.910714% !important;
+
   height: 90.196078% !important;
 
+
+
   display: block !important;
+
+
 
   overflow: visible !important;
 
+
+
   visibility: visible !important;
+
   opacity: 1 !important;
+
+
 
   box-sizing: border-box !important;
 
+
+
   z-index: 20 !important;
+
 }
 
 
+
+
+
 /* ============================================================
+
    COMMON SAREE BLOCK
+
    ============================================================ */
 
+
+
 .hero-right-composition .hero-saree-block {
+
   position: absolute !important;
+
+
 
   display: block !important;
 
+
+
   visibility: visible !important;
+
   opacity: 1 !important;
 
+
+
   margin: 0 !important;
+
   padding: 0 !important;
+
+
 
   overflow: hidden !important;
 
+
+
   box-sizing: border-box !important;
 
+
+
   background-image:
+
     var(--hero-saree-image) !important;
 
+
+
   background-repeat: no-repeat !important;
+
+
 
   background-color: transparent !important;
 
+
+
   transform: none !important;
+
+
 
   text-decoration: none !important;
 
+
+
   border-radius: 1.736111cqw !important;
+
 }
 
 
+
+
+
 /* ============================================================
+
    TOP SAREE
+
    ============================================================ */
 
+
+
 .hero-right-composition .hero-saree-main {
+
   left: 0 !important;
+
   top: 0 !important;
 
+
+
   width: 100% !important;
+
   height: 44.861660% !important;
 
+
+
   background-size:
+
     100% 222.907489% !important;
 
+
+
   background-position:
+
     0 0 !important;
+
+
 
   border-radius: 1.851852cqw !important;
 
+
+
   z-index: 1 !important;
+
 }
 
 
+
+
+
 /* ============================================================
+
    PRODUCT ROWS
+
    ============================================================ */
 
+
+
 .hero-right-composition .hero-product-row {
+
   position: absolute !important;
+
+
 
   left: 0 !important;
 
+
+
   width: 100% !important;
+
   height: 15.810277% !important;
+
+
 
   display: block !important;
 
+
+
   margin: 0 !important;
+
   padding: 0 !important;
+
+
 
   overflow: visible !important;
 
+
+
   visibility: visible !important;
+
   opacity: 1 !important;
 
+
+
   box-sizing: border-box !important;
+
 }
 
 
+
+
+
 /* ============================================================
+
    PRICE ROW
+
    ============================================================ */
+
+
 
 .hero-right-composition .hero-price-row {
+
   top: 48.221344% !important;
 
+
+
   z-index: 11 !important;
+
 }
 
 
+
+
+
 /* ============================================================
+
    PRICE LEFT
+
    ============================================================ */
 
+
+
 .hero-right-composition
+
 .hero-price-row
+
 .hero-row-left {
+
   position: absolute !important;
 
+
+
   left: 0 !important;
+
   top: 0 !important;
 
+
+
   width: 40.049751% !important;
+
   height: 100% !important;
+
+
 
   display: block !important;
 
+
+
   visibility: visible !important;
+
   opacity: 1 !important;
 
+
+
   background-image:
+
     var(--hero-saree-image) !important;
+
+
 
   background-repeat: no-repeat !important;
 
+
+
   background-size:
+
     249.689441% 632.5% !important;
 
+
+
   background-position:
+
     0 57.276995% !important;
 
+
+
   border-radius: 1.736111cqw !important;
 
+
+
   box-sizing: border-box !important;
+
 }
 
 
+
+
+
 /* ============================================================
+
    PRICE RIGHT
+
    ============================================================ */
 
+
+
 .hero-right-composition
+
 .hero-price-row
+
 .hero-row-right {
+
   position: absolute !important;
 
+
+
   left: 42.786070% !important;
+
   top: 0 !important;
+
+
 
   width: 57.213930% !important;
+
   height: 100% !important;
+
+
 
   display: block !important;
 
+
+
   visibility: visible !important;
+
   opacity: 1 !important;
 
+
+
   background-image:
+
     var(--hero-saree-image) !important;
+
+
 
   background-repeat: no-repeat !important;
 
+
+
   background-size:
+
     174.782609% 632.5% !important;
 
+
+
   background-position:
+
     100% 57.276995% !important;
 
+
+
   border-radius: 1.736111cqw !important;
 
+
+
   box-sizing: border-box !important;
+
 }
 
 
-/* ============================================================
-   PRICE TEXT
 
-   Smaller overall.
-   $ is made smaller separately below.
-   ============================================================ */
+
+
+/* =========================================================
+
+   PRICE — FIGMA MATCH
+
+\========================================================= */
+
+
+
+/* =========================================================
+
+   FIGMA PRICE — $ AND 480
+
+\========================================================= */
+
+
 
 .hero-right-composition .hero-price-text {
+
   position: absolute !important;
+
+
 
   left: 21.118012% !important;
+
   top: 18.75% !important;
 
-  display: block !important;
 
-  color: #FDFAF5 !important;
-
-  font-family:
-    "Turnkey Lite",
-    Arial,
-    Helvetica,
-    sans-serif !important;
-
-  font-size: 1.30cqw !important;
-
-  font-weight: 600 !important;
-
-  line-height: 1 !important;
-
-  letter-spacing: -0.35px !important;
-
-  white-space: nowrap !important;
-
-  z-index: 50 !important;
-}
-
-
-/* ============================================================
-   MAKE $ SMALLER THAN 480
-   ============================================================ */
-
-.hero-right-composition
-.hero-price-text::first-letter {
-  font-size: 0.50em !important;
-
-  vertical-align: 0.08em !important;
-
-  letter-spacing: 0 !important;
-}
-
-
-/* ============================================================
-   GUCCI ROW
-   ============================================================ */
-
-.hero-right-composition .hero-gucci-row {
-  top: 66.205534% !important;
-
-  z-index: 12 !important;
-}
-
-
-/* ============================================================
-   GUCCI LEFT
-   ============================================================ */
-
-.hero-right-composition
-.hero-gucci-row
-.hero-row-left {
-  position: absolute !important;
-
-  left: 0 !important;
-  top: 0 !important;
-
-  width: 68.159204% !important;
-  height: 100% !important;
-
-  display: block !important;
-
-  visibility: visible !important;
-  opacity: 1 !important;
-
-  background-image:
-    var(--hero-saree-image) !important;
-
-  background-repeat: no-repeat !important;
-
-  background-size:
-    146.715328% 632.5% !important;
-
-  background-position:
-    0 78.638498% !important;
-
-  border-radius: 1.736111cqw !important;
-
-  box-sizing: border-box !important;
-}
-
-
-/* ============================================================
-   GUCCI RIGHT
-   ============================================================ */
-
-.hero-right-composition
-.hero-gucci-row
-.hero-row-right {
-  position: absolute !important;
-
-  left: 70.895522% !important;
-  top: 0 !important;
-
-  width: 29.104478% !important;
-  height: 100% !important;
-
-  display: block !important;
-
-  visibility: visible !important;
-  opacity: 1 !important;
-
-  background-image:
-    var(--hero-saree-image) !important;
-
-  background-repeat: no-repeat !important;
-
-  background-size:
-    343.589744% 632.5% !important;
-
-  background-position:
-    100% 78.638498% !important;
-
-  border-radius: 1.736111cqw !important;
-
-  box-sizing: border-box !important;
-}
-
-
-/* ============================================================
-   GUCCI TEXT
-   ============================================================ */
-
-.hero-right-composition .hero-gucci-text {
-  position: absolute !important;
-
-  left: 25.547445% !important;
-  top: 37.5% !important;
-
-  display: block !important;
-
-  color: #FDFAF5 !important;
-
-  font-family:
-    "Turnkey Lite",
-    Arial,
-    Helvetica,
-    sans-serif !important;
-
-  font-size: 0.70cqw !important;
-
-  font-weight: 600 !important;
-
-  line-height: 1 !important;
-
-  letter-spacing: -0.3px !important;
-
-  white-space: nowrap !important;
-
-  z-index: 50 !important;
-}
-
-
-/* ============================================================
-   BOTTOM ROW
-   ============================================================ */
-
-.hero-right-composition .hero-bottom-row {
-  top: 84.189723% !important;
-
-  z-index: 13 !important;
-}
-
-
-/* ============================================================
-   BOTTOM LEFT
-   ============================================================ */
-
-.hero-right-composition
-.hero-bottom-row
-.hero-row-left {
-  position: absolute !important;
-
-  left: 0 !important;
-  top: 0 !important;
-
-  width: 40.049751% !important;
-  height: 100% !important;
-
-  display: block !important;
-
-  visibility: visible !important;
-  opacity: 1 !important;
-
-  background-image:
-    var(--hero-saree-image) !important;
-
-  background-repeat: no-repeat !important;
-
-  background-size:
-    249.689441% 632.5% !important;
-
-  background-position:
-    0 100% !important;
-
-  border-radius: 1.736111cqw !important;
-
-  box-sizing: border-box !important;
-}
-
-
-/* ============================================================
-   BOTTOM RIGHT
-   ============================================================ */
-
-.hero-right-composition
-.hero-bottom-row
-.hero-row-right {
-  position: absolute !important;
-
-  left: 42.786070% !important;
-  top: 0 !important;
-
-  width: 57.960199% !important;
-  height: 100% !important;
-
-  display: block !important;
-
-  visibility: visible !important;
-  opacity: 1 !important;
-
-  background-image:
-    var(--hero-saree-image) !important;
-
-  background-repeat: no-repeat !important;
-
-  background-size:
-    172.532189% 632.5% !important;
-
-  background-position:
-    101.775148% 100% !important;
-
-  border-radius: 1.736111cqw !important;
-
-  box-sizing: border-box !important;
-}
-
-
-/* ============================================================
-   BOTTOM SAREE ARROW
-
-   The arrow stays centered vertically inside the
-   bottom-right saree row.
-
-   It is NOT positioned against the entire Hero.
-   ============================================================ */
-
-.hero-right-composition .hero-bottom-arrow {
-  position: absolute !important;
-
-  left: 57% !important;
-  top: 50% !important;
-
-  width: 31% !important;
-
-  height: 0.810185cqw !important;
 
   display: flex !important;
 
-  align-items: center !important;
+  align-items: flex-start !important;
 
-  margin: 0 !important;
-  padding: 0 !important;
 
-  visibility: visible !important;
-  opacity: 1 !important;
 
   color: #FDFAF5 !important;
 
+
+
+  font-family:
+
+    "Turnkey Lite",
+
+    Arial,
+
+    Helvetica,
+
+    sans-serif !important;
+
+
+
+  font-size: 40px !important;
+
+
+
+  font-weight: 600 !important;
+
+
+
+  line-height: 1 !important;
+
+
+
+  letter-spacing: -0.35px !important;
+
+
+
+  white-space: nowrap !important;
+
+
+
+  z-index: 50 !important;
+
+}
+
+
+
+
+
+/* =========================================================
+
+   $ — SMALLER AND SLIGHTLY HIGHER
+
+\========================================================= */
+
+
+
+.hero-right-composition .hero-price-currency {
+
+  display: block !important;
+
+
+
+  font-size: 0.50em !important;
+
+
+
+  line-height: 1 !important;
+
+
+
+  margin: 0 !important;
+
+  margin-right: 0.08em !important;
+
+
+
+  transform: translateY(-0.08em) !important;
+
+}
+
+
+
+
+
+/* =========================================================
+
+   480 — LARGE
+
+\========================================================= */
+
+
+
+.hero-right-composition .hero-price-number {
+
+  display: block !important;
+
+
+
+  font-size: 1em !important;
+
+
+
+  line-height: 1 !important;
+
+
+
+  margin: 0 !important;
+
+}
+
+/* ============================================================
+
+   GUCCI ROW
+
+   ============================================================ */
+
+
+
+.hero-right-composition .hero-gucci-row {
+
+  top: 66.205534% !important;
+
+
+
+  z-index: 12 !important;
+
+}
+
+
+
+
+
+/* ============================================================
+
+   GUCCI LEFT
+
+   ============================================================ */
+
+
+
+.hero-right-composition
+
+.hero-gucci-row
+
+.hero-row-left {
+
+  position: absolute !important;
+
+
+
+  left: 0 !important;
+
+  top: 0 !important;
+
+
+
+  width: 68.159204% !important;
+
+  height: 100% !important;
+
+
+
+  display: block !important;
+
+
+
+  visibility: visible !important;
+
+  opacity: 1 !important;
+
+
+
+  background-image:
+
+    var(--hero-saree-image) !important;
+
+
+
+  background-repeat: no-repeat !important;
+
+
+
+  background-size:
+
+    146.715328% 632.5% !important;
+
+
+
+  background-position:
+
+    0 78.638498% !important;
+
+
+
+  border-radius: 1.736111cqw !important;
+
+
+
+  box-sizing: border-box !important;
+
+}
+
+
+
+
+
+/* ============================================================
+
+   GUCCI RIGHT
+
+   ============================================================ */
+
+
+
+.hero-right-composition
+
+.hero-gucci-row
+
+.hero-row-right {
+
+  position: absolute !important;
+
+
+
+  left: 70.895522% !important;
+
+  top: 0 !important;
+
+
+
+  width: 29.104478% !important;
+
+  height: 100% !important;
+
+
+
+  display: block !important;
+
+
+
+  visibility: visible !important;
+
+  opacity: 1 !important;
+
+
+
+  background-image:
+
+    var(--hero-saree-image) !important;
+
+
+
+  background-repeat: no-repeat !important;
+
+
+
+  background-size:
+
+    343.589744% 632.5% !important;
+
+
+
+  background-position:
+
+    100% 78.638498% !important;
+
+
+
+  border-radius: 1.736111cqw !important;
+
+
+
+  box-sizing: border-box !important;
+
+}
+
+
+
+
+
+/* ============================================================
+
+   GUCCI TEXT
+
+   ============================================================ */
+
+
+
+/* =========================================================
+
+   GUCCI FORMAL SET — FIGMA MATCH
+
+\========================================================= */
+
+
+
+.hero-right-composition .hero-gucci-text {
+
+  position: absolute !important;
+
+
+
+  left: 39% !important;
+
+  top: 48% !important;
+
+
+
+  display: block !important;
+
+
+
+  color: #FDFAF5 !important;
+
+
+
+  font-family:
+
+    "Turnkey Lite",
+
+    Arial,
+
+    Helvetica,
+
+    sans-serif !important;
+
+
+
+  font-size: 0.82cqw !important;
+
+
+
+  font-weight: 600 !important;
+
+
+
+  line-height: 1 !important;
+
+
+
+  letter-spacing: -0.02cqw !important;
+
+
+
+  white-space: nowrap !important;
+
+
+
+  text-align: center !important;
+
+
+
+  z-index: 50 !important;
+
+}
+
+
+
+/* ============================================================
+
+   BOTTOM ROW
+
+   ============================================================ */
+
+
+
+.hero-right-composition .hero-bottom-row {
+
+  top: 84.189723% !important;
+
+
+
+  z-index: 13 !important;
+
+}
+
+
+
+
+
+/* ============================================================
+
+   BOTTOM LEFT
+
+   ============================================================ */
+
+
+
+.hero-right-composition
+
+.hero-bottom-row
+
+.hero-row-left {
+
+  position: absolute !important;
+
+
+
+  left: 0 !important;
+
+  top: 0 !important;
+
+
+
+  width: 40.049751% !important;
+
+  height: 100% !important;
+
+
+
+  display: block !important;
+
+
+
+  visibility: visible !important;
+
+  opacity: 1 !important;
+
+
+
+  background-image:
+
+    var(--hero-saree-image) !important;
+
+
+
+  background-repeat: no-repeat !important;
+
+
+
+  background-size:
+
+    249.689441% 632.5% !important;
+
+
+
+  background-position:
+
+    0 100% !important;
+
+
+
+  border-radius: 1.736111cqw !important;
+
+
+
+  box-sizing: border-box !important;
+
+}
+
+
+
+
+
+/* ============================================================
+
+   BOTTOM RIGHT
+
+   ============================================================ */
+
+
+
+.hero-right-composition
+
+.hero-bottom-row
+
+.hero-row-right {
+
+  position: absolute !important;
+
+
+
+  left: 42.786070% !important;
+
+  top: 0 !important;
+
+
+
+  width: 57.960199% !important;
+
+  height: 100% !important;
+
+
+
+  display: block !important;
+
+
+
+  visibility: visible !important;
+
+  opacity: 1 !important;
+
+
+
+  background-image:
+
+    var(--hero-saree-image) !important;
+
+
+
+  background-repeat: no-repeat !important;
+
+
+
+  background-size:
+
+    172.532189% 632.5% !important;
+
+
+
+  background-position:
+
+    101.775148% 100% !important;
+
+
+
+  border-radius: 1.736111cqw !important;
+
+
+
+  box-sizing: border-box !important;
+
+}
+
+
+
+
+
+/* ============================================================
+
+   BOTTOM SAREE ARROW
+
+
+
+   The arrow stays centered vertically inside the
+
+   bottom-right saree row.
+
+
+
+   It is NOT positioned against the entire Hero.
+
+   ============================================================ */
+
+
+
+.hero-right-composition .hero-bottom-arrow {
+
+  position: absolute !important;
+
+
+
+  left: 57% !important;
+
+  top: 50% !important;
+
+
+
+  width: 31% !important;
+
+
+
+  height: 0.810185cqw !important;
+
+
+
+  display: flex !important;
+
+
+
+  align-items: center !important;
+
+
+
+  margin: 0 !important;
+
+  padding: 0 !important;
+
+
+
+  visibility: visible !important;
+
+  opacity: 1 !important;
+
+
+
+  color: #FDFAF5 !important;
+
+
+
   transform: translateY(-50%) !important;
+
+
 
   z-index: 100 !important;
 
+
+
   box-sizing: border-box !important;
+
+}
+
+
+
+
+
+/* ============================================================
+
+   BOTTOM ARROW LINE
+
+   ============================================================ */
+
+
+
+.hero-right-composition .hero-arrow-line {
+
+  display: block !important;
+
+
+
+  width: auto !important;
+
+
+
+  height:
+
+    clamp(
+
+      0.5px,
+
+      0.05787cqw,
+
+      1px
+
+    ) !important;
+
+
+
+  flex: 1 1 auto !important;
+
+
+
+  margin: 0 !important;
+
+  padding: 0 !important;
+
+
+
+  background: #FDFAF5 !important;
+
+}
+
+
+
+
+
+/* ============================================================
+
+   HIDE SVG FOR CONSISTENT CSS ARROW
+
+   ============================================================ */
+
+
+
+.hero-right-composition
+
+.hero-bottom-arrow
+
+svg {
+
+  display: none !important;
+
+}
+
+
+
+
+
+/* ============================================================
+
+   BOTTOM ARROW HEAD
+
+   ============================================================ */
+
+
+
+.hero-right-composition
+
+.hero-bottom-arrow::after {
+
+  content: "" !important;
+
+
+
+  display: block !important;
+
+
+
+  width: 0.70cqw !important;
+
+  height: 0.70cqw !important;
+
+
+
+  flex: 0 0 auto !important;
+
+
+
+  margin-left: -0.18cqw !important;
+
+
+
+  border-top:
+
+    clamp(
+
+      0.5px,
+
+      0.05787cqw,
+
+      1px
+
+    )
+
+    solid
+
+    #FDFAF5 !important;
+
+
+
+  border-right:
+
+    clamp(
+
+      0.5px,
+
+      0.05787cqw,
+
+      1px
+
+    )
+
+    solid
+
+    #FDFAF5 !important;
+
+
+
+  transform:
+
+    rotate(45deg)
+
+    scale(.60) !important;
+
+
+
+  transform-origin: center !important;
+
+}
+
+
+
+
+
+/* ============================================================
+
+   DO NOT DISPLAY ORIGINAL RIGHT-SIDE IMG
+
+   ============================================================ */
+
+
+
+.hero-right-composition img {
+
+  display: none !important;
+
+}
+
+
+
+
+
+/* ============================================================
+
+   PREVENT GLOBAL IMAGE RULES
+
+   ============================================================ */
+
+
+
+.hero-section img {
+
+  max-width: none !important;
+
+}
+
+
+
+
+
+/* ============================================================
+
+   LARGE DESKTOP
+
+   ============================================================ */
+
+
+
+@media (min-width: 1500px) {
+
+
+
+  .hero-title h1 {
+
+    font-size: 4.70cqw !important;
+
+  }
+
+
+
+  .hero-description {
+
+    top: 17.20% !important;
+
+    height: 7.10% !important;
+
+  }
+
+
+
+  .hero-description p {
+
+    font-size: 1.041667cqw !important;
+
+  }
+
+
+
+  .hero-right-composition .hero-price-text {
+
+    font-size: 1.30cqw !important;
+
+  }
+
+}
+
+
+
+
+
+/* ============================================================
+
+   TABLET
+
+   ============================================================ */
+
+
+
+@media (max-width: 1200px) {
+
+
+
+  .hero-title h1 {
+
+    font-size: 4.70cqw !important;
+
+  }
+
+
+
+  .hero-description {
+
+    top: 17.20% !important;
+
+    height: 7.10% !important;
+
+  }
+
+
+
+  .hero-description p {
+
+    font-size: 1.041667cqw !important;
+
+  }
+
+
+
+  .hero-products-button {
+
+    border-width:
+
+      clamp(
+
+        0.5px,
+
+        0.05787cqw,
+
+        1px
+
+      ) !important;
+
+  }
+
+
+
+  .hero-right-composition .hero-price-text {
+
+    font-size: 1.30cqw !important;
+
+  }
+
+}
+
+
+
+
+
+/* ============================================================
+
+   SMALL TABLET
+
+   ============================================================ */
+
+
+
+@media (max-width: 900px) {
+
+
+
+  .hero-section {
+
+    width: 100% !important;
+
+
+
+    aspect-ratio: 1728 / 896 !important;
+
+
+
+    overflow: hidden !important;
+
+  }
+
+
+
+
+
+  .hero-title h1 {
+
+    font-size: 4.70cqw !important;
+
+
+
+    letter-spacing:
+
+      -0.141cqw !important;
+
+  }
+
+
+
+
+
+  /*
+
+     Description remains beside the second heading line.
+
+  */
+
+
+
+  .hero-description {
+
+    left: 59.027778% !important;
+
+
+
+    top: 17.20% !important;
+
+
+
+    width: 25.231481% !important;
+
+
+
+    height: 7.10% !important;
+
+
+
+    display: flex !important;
+
+
+
+    align-items: center !important;
+
+  }
+
+
+
+
+
+  .hero-description p {
+
+    font-size: 1.041667cqw !important;
+
+
+
+    line-height: 1.45 !important;
+
+  }
+
+
+
+
+
+  .hero-section .gold-symbol {
+
+    width: 4.166667cqw !important;
+
+
+
+    height: 3.703704cqw !important;
+
+
+
+    transform:
+
+      translateY(0.46cqw) !important;
+
+  }
+
+
+
+
+
+  .hero-section .gold-symbol-vector {
+
+    width: 2.557685cqw !important;
+
+
+
+    height: 2.500931cqw !important;
+
+  }
+
+
+
+
+
+  /*
+
+     Keep Explore border thin.
+
+  */
+
+
+
+  .hero-products-button {
+
+    border:
+
+      clamp(
+
+        0.5px,
+
+        0.05787cqw,
+
+        1px
+
+      )
+
+      solid
+
+      var(--gold) !important;
+
+  }
+
+
+
+
+
+  /*
+
+     Shop arrow stays proportional.
+
+  */
+
+
+
+  .hero-button-arrow {
+
+    width: 3.761574cqw !important;
+
+
+
+    height: 0.810185cqw !important;
+
+
+
+    margin-left:
+
+      0.868056cqw !important;
+
+  }
+
+
+
+
+
+  /*
+
+     Bottom saree arrow stays inside its row.
+
+  */
+
+
+
+  .hero-right-composition .hero-bottom-arrow {
+
+    left: 57% !important;
+
+
+
+    top: 50% !important;
+
+
+
+    width: 31% !important;
+
+  }
+
+}
+
+
+
+
+
+/* ============================================================
+
+   MOBILE
+
+   ============================================================ */
+
+
+
+@media (max-width: 600px) {
+
+
+
+  .hero-section {
+
+    width: 100% !important;
+
+
+
+    aspect-ratio: 1728 / 896 !important;
+
+
+
+    overflow: hidden !important;
+
+  }
+
+
+
+
+
+  /*
+
+     Keep the same Figma composition.
+
+     DO NOT stack the columns.
+
+  */
+
+
+
+  .hero-title h1 {
+
+    font-size: 4.70cqw !important;
+
+
+
+    line-height: 1 !important;
+
+
+
+    letter-spacing:
+
+      -0.141cqw !important;
+
+  }
+
+
+
+
+
+  /*
+
+     Description remains vertically aligned
+
+     with Fashion Possibilities.
+
+  */
+
+
+
+  .hero-description {
+
+    left: 59.027778% !important;
+
+
+
+    top: 17.20% !important;
+
+
+
+    width: 25.231481% !important;
+
+
+
+    height: 7.10% !important;
+
+
+
+    display: flex !important;
+
+
+
+    align-items: center !important;
+
+  }
+
+
+
+
+
+  .hero-description p {
+
+    font-size: 1.041667cqw !important;
+
+
+
+    line-height: 1.45 !important;
+
+  }
+
+
+
+
+
+  /*
+
+     Gold symbol
+
+  */
+
+
+
+  .hero-section .gold-symbol {
+
+    width: 4.166667cqw !important;
+
+
+
+    height: 3.703704cqw !important;
+
+
+
+    margin-left:
+
+      0.35cqw !important;
+
+
+
+    margin-right:
+
+      0.35cqw !important;
+
+
+
+    transform:
+
+      translateY(0.46cqw) !important;
+
+  }
+
+
+
+
+
+  .hero-section .gold-symbol-vector {
+
+    width: 2.557685cqw !important;
+
+
+
+    height: 2.500931cqw !important;
+
+  }
+
+
+
+
+
+  /*
+
+     Buttons
+
+  */
+
+
+
+  .hero-shop-button,
+
+  .hero-products-button {
+
+    height: 41.65% !important;
+
+
+
+    border-radius: 100px !important;
+
+
+
+    font-size: 0.810185cqw !important;
+
+  }
+
+
+
+
+
+  /*
+
+     Explore border stays delicate.
+
+  */
+
+
+
+  .hero-products-button {
+
+    border:
+
+      clamp(
+
+        0.5px,
+
+        0.05787cqw,
+
+        1px
+
+      )
+
+      solid
+
+      var(--gold) !important;
+
+  }
+
+
+
+
+
+  /*
+
+     Shop arrow
+
+  */
+
+
+
+  .hero-button-arrow {
+
+    width: 3.761574cqw !important;
+
+
+
+    height: 0.810185cqw !important;
+
+
+
+    margin-left:
+
+      0.868056cqw !important;
+
+  }
+
+
+
+
+
+  /*
+
+     Trending
+
+  */
+
+
+
+  .jewellery-trending-frame {
+
+    width: 18.3% !important;
+
+
+
+    height: 1.388889cqw !important;
+
+  }
+
+
+
+
+
+  /*
+
+     Trending → Awesome spacing
+
+  */
+
+
+
+  .jewellery-overlay p {
+
+    margin:
+
+      0.90cqw
+
+      0
+
+      0
+
+      auto !important;
+
+  }
+
+
+
+
+
+  .jewellery-overlay strong {
+
+    margin-top:
+
+      0.22cqw !important;
+
+  }
+
+
+
+
+
+  /*
+
+     Price remains smaller.
+
+  */
+
+
+
+  .hero-right-composition
+
+  .hero-price-text {
+
+    font-size: 1.30cqw !important;
+
+  }
+
+
+
+
+
+  /*
+
+     Bottom saree arrow
+
+  */
+
+
+
+  .hero-right-composition
+
+  .hero-bottom-arrow {
+
+    left: 57% !important;
+
+
+
+    top: 50% !important;
+
+
+
+    width: 31% !important;
+
+
+
+    height: 0.810185cqw !important;
+
+  }
+
+}
+
+
+
+
+
+/* ============================================================
+
+   VERY SMALL PHONES
+
+   ============================================================ */
+
+
+
+@media (max-width: 400px) {
+
+
+
+  .hero-section {
+
+    width: 100% !important;
+
+
+
+    aspect-ratio: 1728 / 896 !important;
+
+
+
+    overflow: hidden !important;
+
+  }
+
+
+
+
+
+  .hero-title h1 {
+
+    font-size: 4.70cqw !important;
+
+  }
+
+
+
+
+
+  .hero-description {
+
+    top: 17.20% !important;
+
+
+
+    height: 7.10% !important;
+
+  }
+
+
+
+
+
+  .hero-description p {
+
+    font-size: 1.041667cqw !important;
+
+
+
+    line-height: 1.45 !important;
+
+  }
+
+
+
+
+
+  /*
+
+     Keep Explore border visible but thin.
+
+  */
+
+
+
+  .hero-products-button {
+
+    border:
+
+      clamp(
+
+        0.5px,
+
+        0.05787cqw,
+
+        1px
+
+      )
+
+      solid
+
+      var(--gold) !important;
+
+  }
+
+
+
+
+
+  /*
+
+     Keep Shop arrow exactly proportional.
+
+  */
+
+
+
+  .hero-button-arrow {
+
+    width: 3.761574cqw !important;
+
+
+
+    height: 0.810185cqw !important;
+
+
+
+    margin-left:
+
+      0.868056cqw !important;
+
+  }
+
+
+
+
+
+
+
+
+
+  /*
+
+     Bottom saree arrow
+
+  */
+
+
+
+  .hero-right-composition
+
+  .hero-bottom-arrow {
+
+    left: 57% !important;
+
+
+
+    top: 50% !important;
+
+
+
+    width: 31% !important;
+
+  }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* =========================================================
+
+   HERO BUTTONS — FIGMA NOTCH MATCH
+
+\========================================================= */
+
+
+
+.hero-notch {
+
+  left: 2.372685% !important;
+
+
+
+  top: 7.308378% !important;
+
+
+
+  width: 96.296296% !important;
+
+
+
+  height: 23.172906% !important;
+
+
+
+  padding: 0 !important;
+
+
+
+  box-sizing: border-box !important;
+
+
+
+  z-index: 30 !important;
+
+}
+
+
+
+
+
+/* =========================================================
+
+   SHOP NOW
+
+\========================================================= */
+
+
+
+.hero-shop-button {
+
+  left: 0 !important;
+
+
+
+  top: 0 !important;
+
+
+
+  width: 100% !important;
+
+
+
+  height: 43.05% !important;
+
+
+
+  margin: 0 !important;
+
+
+
+  padding: 0 !important;
+
+
+
+  border: 0 !important;
+
+
+
+  border-radius: 100px !important;
+
+
+
+  background: var(--gold) !important;
+
+
+
+  color: var(--hero-bg) !important;
+
+
+
+  box-sizing: border-box !important;
+
+
+
+  display: flex !important;
+
+
+
+  align-items: center !important;
+
+
+
+  justify-content: center !important;
+
+
+
+  z-index: 31 !important;
+
+}
+
+
+
+
+
+/* =========================================================
+
+   EXPLORE MORE PRODUCTS
+
+\========================================================= */
+
+
+
+.hero-products-button {
+
+  left: 0 !important;
+
+
+
+  top: 56.923077% !important;
+
+
+
+  width: 100% !important;
+
+
+
+  height: 43.05% !important;
+
+
+
+  margin: 0 !important;
+
+
+
+  padding: 0 !important;
+
+
+
+  border:
+
+    clamp(
+
+      0.5px,
+
+      0.05787cqw,
+
+      1px
+
+    )
+
+    solid
+
+    var(--gold) !important;
+
+
+
+  border-radius: 100px !important;
+
+
+
+  background: transparent !important;
+
+
+
+  color: var(--gold) !important;
+
+
+
+  box-sizing: border-box !important;
+
+
+
+  display: flex !important;
+
+
+
+  align-items: center !important;
+
+
+
+  justify-content: center !important;
+
+
+
+  z-index: 31 !important;
+
 }
 
 
 /* ============================================================
-   BOTTOM ARROW LINE
+   FINAL FIGMA CORRECTIONS
    ============================================================ */
 
-.hero-right-composition .hero-arrow-line {
-  display: block !important;
+/* Keep both CTA buttons safely inside the notch/frame. */
+.hero-section .hero-shop-button,
+.hero-section .hero-products-button {
+  left: 1.90% !important;
+  width: 96.20% !important;
+  overflow: visible !important;
+  box-sizing: border-box !important;
+}
 
-  width: auto !important;
+/* Keep the arrow completely visible inside the Shop Now button. */
+.hero-section .hero-button-arrow {
+  overflow: visible !important;
+  flex: 0 0 auto !important;
+}
 
-  height:
-    clamp(
+/* Keep the arrow line and head proportional and visible. */
+.hero-section .hero-button-arrow span {
+  overflow: visible !important;
+  flex: 1 1 auto !important;
+}
+
+.hero-section .hero-button-arrow::after {
+  flex: 0 0 auto !important;
+}
+
+/* Trending frame/text centered inside its white area. */
+.hero-section .jewellery-trending-frame {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  text-align: center !important;
+}
+
+.hero-section .jewellery-trending {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  width: 100% !important;
+  height: 100% !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  text-align: center !important;
+}
+
+/* Price: center $480 as one unit, with a smaller raised $. */
+.hero-section .hero-price-text {
+  left: 50% !important;
+  top: 50% !important;
+  transform: translate(-50%, -50%) !important;
+  display: inline-flex !important;
+  align-items: flex-start !important;
+  justify-content: center !important;
+  width: max-content !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  white-space: nowrap !important;
+  text-align: center !important;
+  font-size: 2.50cqw !important;
+}
+
+.hero-section .hero-price-currency {
+  font-size: 0.56em !important;
+  line-height: 1 !important;
+  transform: translateY(-0.12em) !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+.hero-section .hero-price-number {
+  font-size: 1em !important;
+  line-height: 1 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+/* Gucci Formal Set centered inside its box. */
+.hero-section .hero-gucci-text {
+  left: 50% !important;
+  top: 50% !important;
+  transform: translate(-50%, -50%) !important;
+  width: max-content !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  text-align: center !important;
+  white-space: nowrap !important;
+}
+
+/* Small screens: never allow the CTA arrow to be clipped. */
+@media (max-width: 600px) {
+  .hero-section .hero-shop-button,
+  .hero-section .hero-products-button {
+    left: 1.90% !important;
+    width: 96.20% !important;
+  }
+
+  .hero-section .hero-button-arrow {
+    overflow: visible !important;
+  }
+
+  .hero-section .hero-price-text {
+    font-size: 2.50cqw !important;
+  }
+}
+
+@media (max-width: 400px) {
+  .hero-section .hero-shop-button,
+  .hero-section .hero-products-button {
+    left: 1.90% !important;
+    width: 96.20% !important;
+  }
+
+  .hero-section .hero-button-arrow {
+    overflow: visible !important;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+/* =========================================================
+   SHOP NOW ARROW — RESPONSIVE LINE ALIGNMENT
+   ========================================================= */
+
+
+/* =========================
+   320px
+========================= */
+
+@media (max-width: 340px) {
+
+  .hero-section .hero-button-arrow > span {
+    position: relative !important;
+
+    display: block !important;
+
+    width: auto !important;
+    height: 0.05787cqw !important;
+
+    flex: 1 1 auto !important;
+
+    margin: 0 !important;
+    margin-right: -0.35cqw !important;
+
+    padding: 0 !important;
+
+    background: currentColor !important;
+
+    top: -0.20cqw !important;
+
+    transform: none !important;
+  }
+}
+
+
+/* =========================
+   375px
+========================= */
+
+@media (min-width: 341px) and (max-width: 400px) {
+
+  .hero-section .hero-button-arrow > span {
+    position: relative !important;
+
+    display: block !important;
+
+    width: auto !important;
+    height: 0.05787cqw !important;
+
+    flex: 1 1 auto !important;
+
+    margin: 0 !important;
+    margin-right: -0.35cqw !important;
+
+    padding: 0 !important;
+
+    background: currentColor !important;
+
+    top: -0.25cqw !important;
+
+    transform: none !important;
+  }
+}
+
+
+/* =========================================================
+   SHOP NOW ARROW — 425px ONLY
+========================================================= */
+
+@media (min-width: 401px) and (max-width: 450px) {
+
+  .hero-section .hero-button-arrow {
+    position: relative !important;
+
+    width: 3.761574cqw !important;
+    height: 0.810185cqw !important;
+
+    margin-left: 0.868056cqw !important;
+
+    display: block !important;
+
+    flex: 0 0 auto !important;
+  }
+
+  /* =====================================================
+     HORIZONTAL LINE
+  ===================================================== */
+
+  .hero-section .hero-button-arrow > span {
+    position: absolute !important;
+
+    left: 0 !important;
+    right: 0 !important;
+
+    top: 50% !important;
+
+    width: auto !important;
+    height: clamp(
       0.5px,
       0.05787cqw,
       1px
     ) !important;
 
-  flex: 1 1 auto !important;
+    margin: 0 !important;
+    padding: 0 !important;
 
-  margin: 0 !important;
-  padding: 0 !important;
+    background: currentColor !important;
 
-  background: #FDFAF5 !important;
-}
+    transform: translateY(-50%) !important;
 
-
-/* ============================================================
-   HIDE SVG FOR CONSISTENT CSS ARROW
-   ============================================================ */
-
-.hero-right-composition
-.hero-bottom-arrow
-svg {
-  display: none !important;
-}
-
-
-/* ============================================================
-   BOTTOM ARROW HEAD
-   ============================================================ */
-
-.hero-right-composition
-.hero-bottom-arrow::after {
-  content: "" !important;
-
-  display: block !important;
-
-  width: 0.70cqw !important;
-  height: 0.70cqw !important;
-
-  flex: 0 0 auto !important;
-
-  margin-left: -0.18cqw !important;
-
-  border-top:
-    clamp(
-      0.5px,
-      0.05787cqw,
-      1px
-    )
-    solid
-    #FDFAF5 !important;
-
-  border-right:
-    clamp(
-      0.5px,
-      0.05787cqw,
-      1px
-    )
-    solid
-    #FDFAF5 !important;
-
-  transform:
-    rotate(45deg)
-    scale(.60) !important;
-
-  transform-origin: center !important;
-}
-
-
-/* ============================================================
-   DO NOT DISPLAY ORIGINAL RIGHT-SIDE IMG
-   ============================================================ */
-
-.hero-right-composition img {
-  display: none !important;
-}
-
-
-/* ============================================================
-   PREVENT GLOBAL IMAGE RULES
-   ============================================================ */
-
-.hero-section img {
-  max-width: none !important;
-}
-
-
-/* ============================================================
-   LARGE DESKTOP
-   ============================================================ */
-
-@media (min-width: 1500px) {
-
-  .hero-title h1 {
-    font-size: 4.70cqw !important;
+    z-index: 1 !important;
   }
 
-  .hero-description {
-    top: 17.20% !important;
-    height: 7.10% !important;
-  }
+  /* =====================================================
+     ORIGINAL ARROWHEAD
+     SAME SIZE / SAME SHAPE
+  ===================================================== */
 
-  .hero-description p {
-    font-size: 1.041667cqw !important;
-  }
+  .hero-section .hero-button-arrow::after {
+    content: "" !important;
 
-  .hero-right-composition .hero-price-text {
-    font-size: 1.30cqw !important;
-  }
-}
+    position: absolute !important;
 
+    right: 0 !important;
+    top: 50% !important;
 
-/* ============================================================
-   TABLET
-   ============================================================ */
+    width: 0.70cqw !important;
+    height: 0.70cqw !important;
 
-@media (max-width: 1200px) {
+    margin: 0 !important;
 
-  .hero-title h1 {
-    font-size: 4.70cqw !important;
-  }
-
-  .hero-description {
-    top: 17.20% !important;
-    height: 7.10% !important;
-  }
-
-  .hero-description p {
-    font-size: 1.041667cqw !important;
-  }
-
-  .hero-products-button {
-    border-width:
+    border-top:
       clamp(
         0.5px,
         0.05787cqw,
         1px
-      ) !important;
-  }
+      )
+      solid currentColor !important;
 
-  .hero-right-composition .hero-price-text {
-    font-size: 1.30cqw !important;
-  }
-}
-
-
-/* ============================================================
-   SMALL TABLET
-   ============================================================ */
-
-@media (max-width: 900px) {
-
-  .hero-section {
-    width: 100% !important;
-
-    aspect-ratio: 1728 / 896 !important;
-
-    overflow: hidden !important;
-  }
-
-
-  .hero-title h1 {
-    font-size: 4.70cqw !important;
-
-    letter-spacing:
-      -0.141cqw !important;
-  }
-
-
-  /*
-     Description remains beside the second heading line.
-  */
-
-  .hero-description {
-    left: 59.027778% !important;
-
-    top: 17.20% !important;
-
-    width: 25.231481% !important;
-
-    height: 7.10% !important;
-
-    display: flex !important;
-
-    align-items: center !important;
-  }
-
-
-  .hero-description p {
-    font-size: 1.041667cqw !important;
-
-    line-height: 1.45 !important;
-  }
-
-
-  .hero-section .gold-symbol {
-    width: 4.166667cqw !important;
-
-    height: 3.703704cqw !important;
+    border-right:
+      clamp(
+        0.5px,
+        0.05787cqw,
+        1px
+      )
+      solid currentColor !important;
 
     transform:
-      translateY(0.46cqw) !important;
-  }
+      translateY(-50%)
+      rotate(45deg)
+      scale(.60) !important;
 
+    transform-origin: center !important;
 
-  .hero-section .gold-symbol-vector {
-    width: 2.557685cqw !important;
-
-    height: 2.500931cqw !important;
-  }
-
-
-  /*
-     Keep Explore border thin.
-  */
-
-  .hero-products-button {
-    border:
-      clamp(
-        0.5px,
-        0.05787cqw,
-        1px
-      )
-      solid
-      var(--gold) !important;
-  }
-
-
-  /*
-     Shop arrow stays proportional.
-  */
-
-  .hero-button-arrow {
-    width: 3.761574cqw !important;
-
-    height: 0.810185cqw !important;
-
-    margin-left:
-      0.868056cqw !important;
-  }
-
-
-  /*
-     Bottom saree arrow stays inside its row.
-  */
-
-  .hero-right-composition .hero-bottom-arrow {
-    left: 57% !important;
-
-    top: 50% !important;
-
-    width: 31% !important;
+    z-index: 2 !important;
   }
 }
-
-
-/* ============================================================
-   MOBILE
-   ============================================================ */
-
-@media (max-width: 600px) {
-
-  .hero-section {
-    width: 100% !important;
-
-    aspect-ratio: 1728 / 896 !important;
-
-    overflow: hidden !important;
-  }
-
-
-  /*
-     Keep the same Figma composition.
-     DO NOT stack the columns.
-  */
-
-  .hero-title h1 {
-    font-size: 4.70cqw !important;
-
-    line-height: 1 !important;
-
-    letter-spacing:
-      -0.141cqw !important;
-  }
-
-
-  /*
-     Description remains vertically aligned
-     with Fashion Possibilities.
-  */
-
-  .hero-description {
-    left: 59.027778% !important;
-
-    top: 17.20% !important;
-
-    width: 25.231481% !important;
-
-    height: 7.10% !important;
-
-    display: flex !important;
-
-    align-items: center !important;
-  }
-
-
-  .hero-description p {
-    font-size: 1.041667cqw !important;
-
-    line-height: 1.45 !important;
-  }
-
-
-  /*
-     Gold symbol
-  */
-
-  .hero-section .gold-symbol {
-    width: 4.166667cqw !important;
-
-    height: 3.703704cqw !important;
-
-    margin-left:
-      0.35cqw !important;
-
-    margin-right:
-      0.35cqw !important;
-
-    transform:
-      translateY(0.46cqw) !important;
-  }
-
-
-  .hero-section .gold-symbol-vector {
-    width: 2.557685cqw !important;
-
-    height: 2.500931cqw !important;
-  }
-
-
-  /*
-     Buttons
-  */
-
-  .hero-shop-button,
-  .hero-products-button {
-    height: 41.65% !important;
-
-    border-radius: 100px !important;
-
-    font-size: 0.810185cqw !important;
-  }
-
-
-  /*
-     Explore border stays delicate.
-  */
-
-  .hero-products-button {
-    border:
-      clamp(
-        0.5px,
-        0.05787cqw,
-        1px
-      )
-      solid
-      var(--gold) !important;
-  }
-
-
-  /*
-     Shop arrow
-  */
-
-  .hero-button-arrow {
-    width: 3.761574cqw !important;
-
-    height: 0.810185cqw !important;
-
-    margin-left:
-      0.868056cqw !important;
-  }
-
-
-  /*
-     Trending
-  */
-
-  .jewellery-trending-frame {
-    width: 18.3% !important;
-
-    height: 1.388889cqw !important;
-  }
-
-
-  /*
-     Trending → Awesome spacing
-  */
-
-  .jewellery-overlay p {
-    margin:
-      0.90cqw
-      0
-      0
-      auto !important;
-  }
-
-
-  .jewellery-overlay strong {
-    margin-top:
-      0.22cqw !important;
-  }
-
-
-  /*
-     Price remains smaller.
-  */
-
-  .hero-right-composition
-  .hero-price-text {
-    font-size: 1.30cqw !important;
-  }
-
-
-  /*
-     Bottom saree arrow
-  */
-
-  .hero-right-composition
-  .hero-bottom-arrow {
-    left: 57% !important;
-
-    top: 50% !important;
-
-    width: 31% !important;
-
-    height: 0.810185cqw !important;
-  }
-}
-
-
-/* ============================================================
-   VERY SMALL PHONES
-   ============================================================ */
-
-@media (max-width: 400px) {
-
-  .hero-section {
-    width: 100% !important;
-
-    aspect-ratio: 1728 / 896 !important;
-
-    overflow: hidden !important;
-  }
-
-
-  .hero-title h1 {
-    font-size: 4.70cqw !important;
-  }
-
-
-  .hero-description {
-    top: 17.20% !important;
-
-    height: 7.10% !important;
-  }
-
-
-  .hero-description p {
-    font-size: 1.041667cqw !important;
-
-    line-height: 1.45 !important;
-  }
-
-
-  /*
-     Keep Explore border visible but thin.
-  */
-
-  .hero-products-button {
-    border:
-      clamp(
-        0.5px,
-        0.05787cqw,
-        1px
-      )
-      solid
-      var(--gold) !important;
-  }
-
-
-  /*
-     Keep Shop arrow exactly proportional.
-  */
-
-  .hero-button-arrow {
-    width: 3.761574cqw !important;
-
-    height: 0.810185cqw !important;
-
-    margin-left:
-      0.868056cqw !important;
-  }
-
-
-  /*
-     Small $480
-  */
-
-  .hero-right-composition
-  .hero-price-text {
-    font-size: 1.30cqw !important;
-  }
-
-
-  .hero-right-composition
-  .hero-price-text::first-letter {
-    font-size: 0.50em !important;
-  }
-
-
-  /*
-     Bottom saree arrow
-  */
-
-  .hero-right-composition
-  .hero-bottom-arrow {
-    left: 57% !important;
-
-    top: 50% !important;
-
-    width: 31% !important;
-  }
-}
-
-
-
-
-
-
 
 
 
@@ -14659,53 +17245,96 @@ svg {
 
 
 
-/* =====================================================
-   SINGLE HOME PAGE WATERMARK
-   ===================================================== */
+
+
+
+
+/* ============================================================
+   HOME PAGE — SINGLE FIXED WATERMARK LOGO
+   ============================================================ */
 
 .home-page {
   position: relative;
-  overflow-x: hidden;
-  overflow-y: visible;
 }
 
-/* One watermark only */
-.home-logo-bg {
-  position: absolute;
-  top: 0;
-  left: 0;
 
-  width: 100%;
-  height: 100%;
+/* ============================================================
+   WATERMARK — SAME POSITION BELOW NAVBAR
+   ============================================================ */
 
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.home-watermark {
+  position: fixed;
+
+  left: 50%;
+
+  top: clamp(180px, 18vh, 300px);
+
+  width: 650px;
+  height: auto;
+
+  transform: translateX(-50%);
+
+  margin: 0;
+  padding: 0;
 
   pointer-events: none;
+  user-select: none;
 
-  z-index: 0;
+  z-index: 1;
 }
 
-/* Watermark logo */
-.home-logo-bg img {
+
+.home-watermark img {
+  display: block;
+
   width: 650px;
-  max-width: 65vw;
   height: auto;
+
+  max-width: none;
+
+  margin: 0;
+  padding: 0;
+
+  object-fit: contain;
 
   opacity: 0.08;
 
-  object-fit: contain;
   pointer-events: none;
+  user-select: none;
 }
 
-/*
-   Keep every existing Home section above
-   the single watermark.
-*/
-.home-page > section,
-.home-page > main,
-.home-page > div:not(.home-logo-bg) {
-  position: relative;
-  z-index: 1;
+
+/* ============================================================
+   TABLET
+   ============================================================ */
+
+@media (min-width: 601px) and (max-width: 1024px) {
+
+  .home-watermark {
+    width: 42vw;
+    top: 18vh;
+  }
+
+  .home-watermark img {
+    width: 42vw;
+  }
+
+}
+
+
+/* ============================================================
+   MOBILE
+   ============================================================ */
+
+@media (max-width: 600px) {
+
+  .home-watermark {
+    width: 55vw;
+    top: 18vh;
+  }
+
+  .home-watermark img {
+    width: 55vw;
+  }
+
 }

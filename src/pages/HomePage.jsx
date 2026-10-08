@@ -14,7 +14,7 @@ import sareeImage from "../assets/home/hero-saree-1.png";
 import heroGoldVector from "../assets/home/Vector.png";
 
 
-import logoImage from "../assets/logo-1.png";
+
 
 
 import featured1 from "../assets/home/featured-1.png";
@@ -494,18 +494,17 @@ const addFeaturedProductToCart = (item) => {
   return (
     <main className="home-page">
 
-     {/* SINGLE HOME PAGE WATERMARK */}
-  <div className="home-logo-bg" aria-hidden="true">
-    <img src={logoImage} alt="" />
-  </div>
-
-  {/* YOUR EXISTING HOME CONTENT */}
+      
      {/* =========================================================
     HERO SECTION
 ========================================================= */}
 
 <section className="hero-section">
 
+
+ 
+
+    
   {/* =======================================================
       HERO HEADING
   ======================================================= */}
@@ -780,8 +779,9 @@ const addFeaturedProductToCart = (item) => {
     <div className="hero-saree-block hero-row-left">
 
       <span className="hero-price-text">
-        $480
-      </span>
+  <span className="hero-price-currency">$</span>
+  <span className="hero-price-number">480</span>
+</span>
 
     </div>
 

@@ -1749,16 +1749,20 @@ body {
 }
 
 
+/* =========================================================
+   RETURN POLICY LIST
+   KEEP FIGMA BULLET POINTS
+========================================================= */
+
 .return-box ul {
   width: 684px;
-
   min-height: 160px;
 
   margin: 24px 0 0 0;
+  padding: 0 16px 16px 24px;
 
-  padding: 0;
-
-  list-style: none;
+  list-style-type: disc;
+  list-style-position: outside;
 
   color: var(--maroon);
 
@@ -1768,29 +1772,26 @@ body {
     sans-serif;
 
   font-size: 18px;
-
   font-weight: 400;
-
   line-height: 180%;
 
   text-transform: capitalize;
 }
 
-
 .return-box li {
   margin: 0 0 4px 0;
-
   padding: 0;
 
-  list-style: none;
+  list-style-type: disc;
 }
-
 
 .return-box li::before {
   display: none;
-
   content: none;
 }
+
+
+
 
 
 /* =========================================================
@@ -2023,32 +2024,57 @@ body {
    RELATED CART ICON
 ========================================================= */
 
+/* =========================================================
+   RELATED SHOPPING BAG
+   FIGMA: 24 × 24
+   NO SQUARE / NO BACKGROUND
+========================================================= */
+
 .related-cart-icon {
   width: 24px;
   height: 24px;
 
   display: flex;
-
   align-items: center;
-
   justify-content: center;
 
   margin: 0;
-
   padding: 0;
 
-  border: 0;
+  border: 0 !important;
+  border-radius: 0 !important;
 
-  background: transparent;
+  background: transparent !important;
 
   color: var(--gold);
 
-  font-size: 24px;
+  font-size: 0;
+  line-height: 1;
 
   cursor: pointer;
+
+  box-shadow: none !important;
+
+  overflow: visible;
 }
 
+.related-cart-icon svg {
+  width: 20px;
+  height: 20px;
 
+  display: block;
+
+  flex: 0 0 20px;
+
+  color: var(--gold);
+
+  stroke: currentColor;
+  stroke-width: 1.8;
+
+  fill: none;
+
+  overflow: visible;
+}
 /* =========================================================
    RELATED CART QUANTITY
 ========================================================= */
@@ -2199,203 +2225,34 @@ body {
 }
 
 
-/* =========================================================
-   FOOTER
-   Existing footer styles retained
-========================================================= */
 
-.product-footer {
-  width: 1477px;
 
-  margin: 0 auto;
 
-  padding-bottom: 30px;
 
-  color: var(--maroon);
-}
 
 
-.footer-divider {
-  width: 82%;
 
-  height: 1px;
 
-  margin: 0 auto 70px;
-
-  background: #8c4350;
-}
-
-
-.footer-main {
-  display: flex;
-
-  align-items: center;
-
-  justify-content: space-between;
-
-  gap: 50px;
-
-  padding: 0 30px 55px;
-}
-
-
-.footer-logo {
-  display: flex;
-
-  align-items: center;
-
-  gap: 12px;
-}
-
-
-.footer-logo img:first-child {
-  width: 90px;
-  height: 90px;
-
-  object-fit: contain;
-}
-
-
-.footer-logo img:last-child {
-  width: 190px;
-  height: auto;
-}
-
-
-.footer-contact {
-  display: flex;
-
-  flex-direction: column;
-
-  gap: 13px;
-
-  font-family: Arial, sans-serif;
-
-  font-size: 8px;
-}
-
-
-.footer-contact p {
-  display: flex;
-
-  align-items: center;
-
-  gap: 8px;
-
-  margin: 0;
-}
-
-
-.footer-contact svg {
-  flex-shrink: 0;
-
-  color: var(--maroon);
-}
-
-
-.footer-contact-row {
-  display: flex;
-
-  align-items: center;
-
-  gap: 25px;
-}
-
-
-.footer-contact-row span {
-  display: flex;
-
-  align-items: center;
-
-  gap: 5px;
-}
-
-
-.social-row {
-  display: flex;
-
-  align-items: center;
-
-  gap: 8px;
-}
-
-
-.social-row a {
-  width: 17px;
-  height: 17px;
-
-  display: flex;
-
-  align-items: center;
-
-  justify-content: center;
-
-  color: var(--maroon);
-
-  text-decoration: none;
-}
-
-
-.footer-bottom {
-  display: flex;
-
-  align-items: center;
-
-  justify-content: space-between;
-
-  padding: 19px 30px 0;
-
-  border-top: 1px solid #eadfd7;
-
-  font-family: Arial, sans-serif;
-
-  font-size: 7px;
-}
-
-
-.footer-links {
-  display: flex;
-
-  align-items: center;
-
-  gap: 36px;
-}
-
-
-.footer-links a,
-.copyright {
-  color: var(--maroon);
-
-  text-decoration: none;
-}
 
 
 /* =========================================================
-   IMPORTANT — NO MOBILE MEDIA QUERIES
-
-   Do NOT add:
-
-   @media (max-width: ...)
-   grid-template-columns: 1fr
-   flex-direction: column
-   width: 100vw
-   transform: scale(...)
-
-   The JSX scaling effect handles the complete Figma
-   composition on smaller screens.
+   MOBILE QUANTITY ICON ALIGNMENT
+   Move only + and − upward inside their cells
 ========================================================= */
 
+@media (max-width: 600px) {
 
+  .quantity-control button svg {
+    display: block !important;
+    width: 14.4px !important;
+    height: 14.4px !important;
+    flex-shrink: 0 !important;
 
+    position: relative !important;
+    top: -2px !important;
+  }
 
-
-
-
-
-
-
-
-
+}
 
 
 

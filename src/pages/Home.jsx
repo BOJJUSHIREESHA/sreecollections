@@ -7,6 +7,12 @@ import {
   FaCheck
 } from "react-icons/fa6";
 
+
+
+import logoImage from "../assets/logo-1.png";
+
+
+
 import fashionImage from "../assets/home/hero-fashion.png";
 import jewelleryImage from "../assets/home/hero-jewellery.png";
 import sareeImage from "../assets/home/hero-saree-1.png";
@@ -489,6 +495,16 @@ const addFeaturedProductToCart = (item) => {
 
   return (
     <main className="home-page">
+
+
+{/* =========================================================
+        BACKGROUND WATERMARK LOGO
+    ========================================================= */}
+    <div className="home-watermark" aria-hidden="true">
+      <img src={logoImage} alt="" />
+    </div>
+
+
      {/* =========================================================
     HERO SECTION
 ========================================================= */}
@@ -769,8 +785,9 @@ const addFeaturedProductToCart = (item) => {
     <div className="hero-saree-block hero-row-left">
 
       <span className="hero-price-text">
-        $480
-      </span>
+  <span className="hero-price-currency">$</span>
+  <span className="hero-price-number">480</span>
+</span>
 
     </div>
 

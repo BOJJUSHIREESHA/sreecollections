@@ -1,6 +1,6 @@
 import { useEffect, useMemo, useRef, useState } from "react";
 import { Link, useSearchParams } from "react-router-dom";
-import { FaCartShopping } from "react-icons/fa6";
+import { FiShoppingBag } from "react-icons/fi";
 import products from "../data/products";
 
 
@@ -442,7 +442,7 @@ function Categories() {
               }
               aria-label={`Add ${product.name} to cart`}
             >
-              <FaCartShopping />
+              <FiShoppingBag />
             </button>
           )}
         </div>

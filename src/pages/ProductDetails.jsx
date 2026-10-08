@@ -7,9 +7,10 @@ import {
   FaStar,
   FaMinus,
   FaPlus,
-  FaCartShopping,
   FaTruckFast,
 } from "react-icons/fa6";
+
+import { FiShoppingBag } from "react-icons/fi";
 
 import products from "../data/products";
 import CartDrawer from "../components/CartDrawer";
@@ -2181,7 +2182,7 @@ function ProductDetails() {
                                   }}
                                 >
 
-                                  <FaCartShopping />
+                                  <FiShoppingBag />
 
                                 </button>
 

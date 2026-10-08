@@ -656,16 +656,7 @@
 }
 
 
-/* =========================================================
-   PLACEHOLDER
-========================================================= */
 
-.form-field input::placeholder,
-.form-field textarea::placeholder {
-  color: var(--contact-burgundy);
-
-  opacity: 0.5;
-}
 
 
 /* =========================================================
@@ -893,4 +884,170 @@
     min-height: 2500px;
   }
 
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* =========================================================
+   CONTACT FORM — FIGMA SIZE
+========================================================= */
+
+.contact-form-wrapper {
+  width: 633px !important;
+}
+
+.contact-form-wrapper h2 {
+  font-size: 25px !important;
+  line-height: 28px !important;
+}
+
+.contact-form-description {
+  font-size: 17px !important;
+  line-height: 21px !important;
+}
+
+
+/* =========================================================
+   LABELS
+========================================================= */
+
+.form-field label {
+  font-family: "Turnkey Lite", sans-serif !important;
+
+  font-size: 18px !important;
+  font-weight: 500 !important;
+
+  line-height: 22px !important;
+
+  color: #5D2030 !important;
+
+  white-space: nowrap !important;
+}
+
+
+/* =========================================================
+   INPUT BOXES
+========================================================= */
+
+.form-field input {
+  width: 632px !important;
+  height: 48px !important;
+
+  padding: 0 16px !important;
+
+  border: 2px solid #BB8E43 !important;
+  border-radius: 0 !important;
+
+  background: rgba(253, 250, 245, 0.5) !important;
+
+  font-family: "Turnkey Lite", sans-serif !important;
+  font-size: 17px !important;
+  line-height: 100% !important;
+
+  color: #5D2030 !important;
+
+  outline: none !important;
+
+  box-sizing: border-box !important;
+}
+
+
+/* =========================================================
+   MESSAGE BOX
+========================================================= */
+
+.form-message textarea {
+  width: 632px !important;
+  height: 119px !important;
+
+  padding: 12px 16px !important;
+
+  border: 2px solid #BB8E43 !important;
+  border-radius: 0 !important;
+
+  background: rgba(253, 250, 245, 0.5) !important;
+
+  font-family: "Turnkey Lite", sans-serif !important;
+  font-size: 17px !important;
+  line-height: 1.4 !important;
+
+  color: #5D2030 !important;
+
+  resize: none !important;
+
+  outline: none !important;
+
+  box-sizing: border-box !important;
+}
+
+
+/* =========================================================
+   REMOVE ALL PLACEHOLDER TEXT
+========================================================= */
+
+.form-field input::placeholder,
+.form-field textarea::placeholder {
+  color: transparent !important;
+  opacity: 0 !important;
+}
+
+
+/* =========================================================
+   REQUIRED ERROR
+========================================================= */
+
+.form-error {
+  position: absolute !important;
+
+  left: 0 !important;
+
+  color: #D32F2F !important;
+
+  font-family: "Turnkey Lite", sans-serif !important;
+
+  font-size: 15px !important;
+  font-weight: 500 !important;
+
+  line-height: 18px !important;
+
+  white-space: nowrap !important;
+}
+
+
+/* Error positions */
+
+.form-name .form-error,
+.form-email .form-error,
+.form-topic .form-error {
+  top: 82px !important;
+}
+
+.form-message .form-error {
+  top: 151px !important;
+}
+
+
+
+/* =========================================================
+   EMAIL + PHONE
+   NO UNDERLINES — MATCH FIGMA
+========================================================= */
+
+.contact-card-links a {
+  text-decoration: none !important;
 }
