@@ -1,1000 +1,1761 @@
 /* =========================================================
-   SREE COLLECTIONS
-   FOOTER
-   REFERENCE BASE: 1728 × 543
+   SREE COLLECTIONS — COMPLETE RESPONSIVE FOOTER
+   Figma reference: 1728px
+   Colors: Cream #FDFAF5 | Burgundy #5D2030 | Gold #BB8E43
 ========================================================= */
 
-.site-footer {
-  width: 100%;
-  margin: 0;
-  padding: 0;
-  background: #FDFAF5;
-  color: #5D2030;
-  overflow: hidden;
-  box-sizing: border-box;
+/* 1. COLORS AND BASE */
+
+:root {
+  --footer-cream: #FDFAF5;
+  --footer-burgundy: #5D2030;
+  --footer-gold: #BB8E43;
+  --footer-divider: rgba(93, 32, 48, 0.3);
 }
 
+.site-footer,
 .site-footer *,
 .site-footer *::before,
 .site-footer *::after {
   box-sizing: border-box;
 }
 
-
-/* =========================================================
-   FOOTER CANVAS
-   ALWAYS SCALES FROM THE REFERENCE
-========================================================= */
+.site-footer {
+  position: relative;
+  width: 100%;
+  max-width: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background: var(--footer-cream);
+  color: var(--footer-burgundy);
+  font-family: "Turnkey Lite", Arial, sans-serif;
+}
 
 .site-footer-container {
   position: relative;
-
   width: 100%;
   max-width: 1728px;
-
+  min-height: 543px;
   margin: 0 auto;
   padding: 0;
-
-  aspect-ratio: 1728 / 543;
-
-  background: #FDFAF5;
-
-  overflow: hidden;
+  background: var(--footer-cream);
 }
 
+.site-footer a {
+  color: var(--footer-burgundy);
+  text-decoration: none;
+  transition: opacity 160ms ease;
+}
 
-/* =========================================================
-   TOP LINE
-   Reference: y ≈ 100 / 543
-========================================================= */
+.site-footer a:hover {
+  opacity: 0.72;
+}
 
-.site-footer-container::before {
-  content: "";
+.site-footer img,
+.site-footer svg {
+  flex-shrink: 0;
+}
 
+/* 2. DIVIDER LINES */
+
+.site-footer-top-line,
+.site-footer-bottom-line {
   position: absolute;
-
   left: 12.6736%;
-  top: 18.4162%;
-
   width: 74.5833%;
-  height: 0.18%;
-
   height: 1px;
-background: rgba(93, 32, 48, 0.35);
+  background: var(--footer-divider);
 }
 
+.site-footer-top-line {
+  top: 100px;
+}
 
-/* =========================================================
-   MAIN FOOTER
-========================================================= */
+.site-footer-bottom-line {
+  top: 400px;
+}
+
+/* 3. MAIN FOOTER ROW */
 
 .site-footer-main {
   position: absolute;
-
+  top: 198px;
   left: 13.4838%;
-  top: 36.4641%;
-
+  display: flex;
   width: 73.7847%;
-  height: 26.8877%;
-
+  height: 146px;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
   margin: 0;
   padding: 0;
 }
 
-
-/* =========================================================
-   LEFT BRAND
-========================================================= */
+/* 4. FOOTER LOGO */
 
 .site-footer-brand {
-  position: absolute;
-
-  left: 0;
-  top: 0;
-
-  width: 45.8824%;
-  height: 100%;
-
-  display: flex;
-  align-items: center;
-
+  position: relative;
+  display: block;
+  flex: 0 1 585px;
+  width: 585px;
+  max-width: 585px;
+  min-width: 0;
+  height: 146px;
   margin: 0;
   padding: 0;
-
-  text-decoration: none;
-
-  overflow: visible;
+  overflow: hidden;
+  background: transparent;
 }
-
-
-/* =========================================================
-   LOGO
-========================================================= */
 
 .site-footer-logo-icon {
+  position: absolute;
+  top: 0;
+  left: 0;
   display: block;
-
-  width: 33.3333%;
-  height: 100%;
-
-  margin: 0;
-  padding: 0;
-
-  object-fit: contain;
-
-  flex: 0 0 33.3333%;
+  width: 195px;
+  height: 146px;
+  overflow: hidden;
+  background: var(--footer-cream);
 }
 
-
-/* =========================================================
-   WORDMARK
-========================================================= */
+.site-footer-logo-icon img {
+  position: absolute;
+  top: 0;
+  left: -17.5px;
+  display: block;
+  width: 230px;
+  height: 230px;
+  max-width: none;
+  margin: 0;
+  padding: 0;
+  object-fit: fill;
+}
 
 .site-footer-logo-wordmark {
+  position: absolute;
+  top: 37px;
+  left: 195px;
   display: block;
-
-  width: 50.5983%;
-  height: 50%;
-
-  margin: 0;
-  padding: 0;
-
-  object-fit: contain;
-
-  flex: 0 0 50.5983%;
+  width: 296px;
+  height: 73px;
+  overflow: hidden;
+  background: var(--footer-cream);
 }
 
+.site-footer-logo-wordmark img {
+  position: absolute;
+  top: -214px;
+  left: 0;
+  display: block;
+  width: 320px;
+  height: 320px;
+  max-width: none;
+  margin: 0;
+  padding: 0;
+  object-fit: fill;
+}
 
-/* =========================================================
-   RIGHT INFORMATION AREA
-
-   IMPORTANT:
-   Keep this at the same position as the reference.
-========================================================= */
+/* 5. CONTACT INFORMATION */
 
 .site-footer-info {
-  position: absolute;
-
-  left: 70.3529%;
-  top: 8.9041%;
-
-  width: 29.6471%;
-  height: 82.1918%;
-
+  display: flex;
+  flex: 0 1 378px;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 378px;
+  max-width: 378px;
+  min-width: 0;
+  height: 120px;
   margin: 0;
   padding: 0;
+  color: var(--footer-burgundy);
 }
 
-
-/* =========================================================
-   LOCATION
-========================================================= */
-
-.site-footer-info-row:first-child {
-  position: absolute;
-
-  left: 0;
-  top: 0;
-
-  width: 100%;
-  height: 20%;
-
+.site-footer-info-row {
   display: flex;
+  min-width: 0;
   align-items: center;
-
   margin: 0;
   padding: 0;
+  color: var(--footer-burgundy);
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.35;
+}
 
-  color: #5D2030;
+/* Address */
 
-  font-family: "Turnkey Lite", Arial, sans-serif;
+.site-footer-location {
+  gap: 12px;
+}
 
-  font-size: clamp(4px, 0.810185vw, 14px);
+.footer-location-icon {
+  display: block;
+  flex: 0 0 24px;
+  width: 24px;
+  height: 24px;
+  color: var(--footer-burgundy);
+}
 
-  line-height: 1;
-
+.site-footer-location span {
+  flex: 1 1 auto;
+  min-width: 0;
   white-space: nowrap;
 }
 
-.site-footer-info-row:first-child > svg {
-  width: 0.810185vw;
-  height: 1.126736vw;
+/* Phone and email */
 
-  min-width: 5px;
-  min-height: 7px;
-
-  max-width: 14px;
-  max-height: 19px;
-
-  flex: 0 0 auto;
-
-  margin-left: 1.3228%;
-  margin-right: 5.8201%;
-
-  color: #5D2030;
-}
-
-.site-footer-info-row:first-child > span {
-  white-space: nowrap;
-}
-
-
-/* =========================================================
-   PHONE + EMAIL
-========================================================= */
-
-.site-footer-info-row:nth-child(2) {
-  position: absolute;
-
-  left: 0;
-  top: 40%;
-
-  width: 100%;
-  height: 20%;
-
+.site-footer-contact-row {
   display: flex;
+  flex-wrap: nowrap;
   align-items: center;
-
-  margin: 0;
-  padding: 0;
-
+  gap: 8px;
+  min-width: 0;
   white-space: nowrap;
 }
 
-.site-footer-info-row:nth-child(2) > a:first-child {
-  width: 1.388889vw;
-  height: 1.388889vw;
-
-  min-width: 6px;
-  min-height: 6px;
-
-  max-width: 24px;
-  max-height: 24px;
-
-  flex: 0 0 auto;
-
-  display: flex;
+.footer-contact-icon {
+  display: inline-flex;
+  flex: 0 0 24px;
   align-items: center;
   justify-content: center;
-
-  margin-right: 3.1746%;
-
-  color: #5D2030;
-
-  text-decoration: none;
+  width: 24px;
+  height: 24px;
+  color: var(--footer-burgundy);
 }
 
-.site-footer-info-row:nth-child(2) > a:first-child svg {
-  width: 100%;
-  height: 100%;
+.footer-contact-icon svg {
+  display: block;
+  width: 20px;
+  height: 20px;
 }
 
-
-/* PHONE TEXT */
-
-.site-footer-info-row:nth-child(2) > a:nth-child(2) {
-  flex: 0 0 auto;
-
-  margin-right: 5.0265%;
-
-  color: #5D2030;
-
-  font-family: "Turnkey Lite", Arial, sans-serif;
-
-  font-size: clamp(4px, 0.810185vw, 14px);
-
-  line-height: 1;
-
+.footer-phone,
+.footer-email {
+  flex: 0 1 auto;
+  min-width: 0;
+  color: var(--footer-burgundy);
+  font-size: 14px;
+  line-height: 1.35;
   text-decoration: none;
-
   white-space: nowrap;
 }
 
-
-/* EMAIL ICON */
-
-.site-footer-info-row:nth-child(2) > a:nth-child(3) {
-  width: 1.157407vw;
-  height: 0.925926vw;
-
-  min-width: 5px;
-  min-height: 4px;
-
-  max-width: 20px;
-  max-height: 16px;
-
-  flex: 0 0 auto;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  margin-right: 3.7037%;
-
-  color: #5D2030;
-
-  text-decoration: none;
+.footer-email-icon {
+  margin-left: 2px;
 }
 
-.site-footer-info-row:nth-child(2) > a:nth-child(3) svg {
-  width: 100%;
-  height: 100%;
-}
-
-
-/* EMAIL TEXT */
-
-.site-footer-info-row:nth-child(2) > a:last-child {
-  flex: 0 0 auto;
-
-  color: #5D2030;
-
-  font-family: "Turnkey Lite", Arial, sans-serif;
-
-  font-size: clamp(4px, 0.810185vw, 14px);
-
-  line-height: 1;
-
-  text-decoration: none;
-
-  white-space: nowrap;
-}
-
-
-/* =========================================================
-   SOCIAL MEDIA
-========================================================= */
+/* 6. SOCIAL MEDIA */
 
 .site-footer-social {
-  position: absolute;
-
-  left: 0;
-  top: 80%;
-
-  width: 100%;
-  height: 20%;
-
   display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
   align-items: center;
-
+  gap: 12px;
+  min-width: 0;
+  min-height: 24px;
   margin: 0;
   padding: 0;
-
   white-space: nowrap;
 }
 
-.site-footer-social > span {
+.site-footer-social-label {
+  display: inline-block;
   flex: 0 0 auto;
-
-  margin-right: 3.8961%;
-
-  color: #5D2030;
-
-  font-family: "Turnkey Lite", Arial, sans-serif;
-
-  font-size: clamp(4px, 0.810185vw, 14px);
-
+  margin: 0;
+  padding: 0;
+  color: var(--footer-burgundy);
+  font-size: 14px;
+  font-weight: 400;
   line-height: 1;
-
   white-space: nowrap;
 }
 
-
-/* SOCIAL ICONS */
-
-.site-footer-social a {
-  width: 1.388889vw;
-  height: 1.388889vw;
-
-  min-width: 6px;
-  min-height: 6px;
-
-  max-width: 24px;
-  max-height: 24px;
-
-  flex: 0 0 auto;
-
+.site-footer-social-icons {
   display: flex;
+  flex: 1 1 auto;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  min-width: 0;
+  margin: 0;
+  padding: 0;
+}
+
+.site-footer-social-icons a {
+  display: inline-flex;
+  flex: 0 0 24px;
   align-items: center;
   justify-content: center;
-
-  margin-right: 1.388889vw;
-
-  color: #5D2030;
-
-  text-decoration: none;
+  width: 24px;
+  height: 24px;
+  margin: 0;
+  padding: 0;
+  color: var(--footer-burgundy);
 }
 
-.site-footer-social a:last-child {
-  margin-right: 0;
+.site-footer-social-icons a svg {
+  display: block;
+  width: 20px;
+  height: 20px;
 }
 
-.site-footer-social a svg {
-  width: 100%;
-  height: 100%;
-}
-
-
-/* =========================================================
-   BOTTOM SECTION
-   THIS MUST STAY AT THE SAME POSITION
-   AS THE REFERENCE
-========================================================= */
+/* 7. BOTTOM LINKS AND COPYRIGHT */
 
 .site-footer-bottom {
   position: absolute;
-
+  top: 425px;
   left: 12.7083%;
-  top: 73.6648%;
-
+  display: flex;
   width: 74.5833%;
-  height: 9.2%;
-
+  min-width: 0;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 24px;
   margin: 0;
   padding: 0;
-
-  /*
-    Same thin line on every device.
-  */
-  border-top: 1px solid rgba(93, 32, 48, 0.30);
-
-  display: flex;
-  align-items: flex-start;
-
-  overflow: visible;
 }
-
-
-/* =========================================================
-   BOTTOM LEFT NAVIGATION
-
-   The complete navigation stays on the LEFT.
-========================================================= */
 
 .site-footer-links {
-  width: 68%;
-
-  height: 100%;
-
   display: flex;
-  align-items: flex-start;
-
+  flex: 1 1 auto;
+  flex-wrap: nowrap;
+  align-items: center;
   justify-content: flex-start;
-
+  gap: 0;
+  min-width: 0;
   margin: 0;
-  padding-top: 5.7%;
-  padding-right: 0;
-
+  padding: 0;
   white-space: nowrap;
-
-  overflow: visible;
 }
-
-
-/* =========================================================
-   BOTTOM LINKS
-========================================================= */
 
 .site-footer-links a,
 .site-footer-links span {
-  position: static;
-
+  display: inline-block;
   flex: 0 0 auto;
-
   margin: 0;
   padding: 0;
-
-  color: #5D2030;
-
-  font-family: "Turnkey Lite", Arial, sans-serif;
-
-  /*
-    All bottom text uses exactly the same
-    scaling rule.
-  */
-  font-size: clamp(4px, 0.810185vw, 14px);
-
+  color: var(--footer-burgundy);
+  font-size: 14px;
   font-weight: 400;
-
-  line-height: 1;
-
+  line-height: 1.4;
   text-decoration: none;
-
   text-transform: uppercase;
-
   white-space: nowrap;
 }
 
-
-/* =========================================================
-   GAP BETWEEN BOTTOM LINKS
-========================================================= */
-
 .site-footer-links a:nth-child(1) {
-  margin-right: 5.2%;
+  margin-right: 47px;
 }
 
 .site-footer-links a:nth-child(2) {
-  margin-right: 5.35%;
+  margin-right: 64px;
 }
 
 .site-footer-links a:nth-child(3) {
-  margin-right: 5.3%;
+  margin-right: 64px;
 }
 
 .site-footer-links span:nth-child(4) {
-  margin-right: 5.45%;
+  margin-right: 67px;
 }
 
-
-/* =========================================================
-   COPYRIGHT
-
-   IMPORTANT:
-   Same font size as Terms & Conditions.
-   Positioned separately on RIGHT.
-========================================================= */
-
-.site-footer-bottom > p {
-  width: 32%;
-
-  height: 100%;
-
-  flex: 0 0 32%;
-
+.site-footer-copyright {
+  flex: 0 0 auto;
+  max-width: 100%;
   margin: 0;
-
-  /*
-    SAME vertical position as bottom links.
-  */
-  padding-top: 5.7%;
-
-  /*
-    This creates the visual gap after
-    TERMS & CONDITIONS.
-  */
-  padding-left: 8%;
-
-  color: #5D2030;
-
-  font-family: "Turnkey Lite", Arial, sans-serif;
-
-  /*
-    EXACTLY SAME SIZE AS BOTTOM LINKS.
-  */
-  font-size: clamp(4px, 0.810185vw, 14px);
-
+  padding: 0;
+  color: var(--footer-burgundy);
+  font-size: 14px;
   font-weight: 400;
-
-  line-height: 1;
-
+  line-height: 1.4;
   text-align: right;
-
   white-space: nowrap;
-
-  overflow: visible;
 }
 
+/* 8. LAPTOP: 1025px–1440px */
 
-/* =========================================================
-   HOVER
-========================================================= */
-
-.site-footer a:hover {
-  opacity: 0.7;
-}
-
-
-/* =========================================================
-   DESKTOP REFERENCE — 1728px
-========================================================= */
-
-@media (min-width: 1728px) {
-
+@media (min-width: 1025px) and (max-width: 1440px) {
   .site-footer-container {
-    width: 1728px;
-    height: 543px;
+    min-height: 460px;
   }
 
-
-  /* TOP LINE */
-
-  .site-footer-container::before {
-    left: 219px;
-    top: 100px;
-
-    width: 1288px;
-    height: 2px;
+  .site-footer-top-line {
+    top: 55px;
+    left: 5%;
+    width: 90%;
   }
 
-
-  /* MAIN */
+  .site-footer-bottom-line {
+    top: 315px;
+    left: 5%;
+    width: 90%;
+  }
 
   .site-footer-main {
-    left: 233px;
-    top: 198px;
-
-    width: 1275px;
-    height: 146px;
+    top: 105px;
+    left: 5%;
+    width: 90%;
+    height: 155px;
+    gap: clamp(16px, 2vw, 24px);
   }
 
-
-  /* LOGO */
+  .site-footer-brand {
+    flex: 0 1 48%;
+    width: 48%;
+    max-width: 520px;
+    height: 120px;
+  }
 
   .site-footer-logo-icon {
-    width: 195px;
-    height: 146px;
+    transform: scale(0.62);
+    transform-origin: top left;
   }
 
   .site-footer-logo-wordmark {
-    width: 296px;
-    height: 73px;
+    top: 22.94px;
+    left: 120.9px;
+    transform: scale(0.62);
+    transform-origin: top left;
   }
-
-
-  /* RIGHT INFORMATION */
 
   .site-footer-info {
-    left: 70.3529%;
-    top: 8.9041%;
-
-    width: 29.6471%;
-    height: 82.1918%;
+    flex: 0 1 390px;
+    width: 46%;
+    max-width: 390px;
+    height: 120px;
   }
 
-
-  /* INFORMATION TEXT */
-
-  .site-footer-info-row:first-child {
-    font-size: 14px;
+  .site-footer-info-row,
+  .footer-phone,
+  .footer-email,
+  .site-footer-social-label {
+    font-size: clamp(11px, 0.84vw, 12px);
   }
 
-  .site-footer-info-row:first-child > svg {
-    width: 14px;
-    height: 19.47px;
+  .site-footer-location {
+    gap: 8px;
   }
 
-  .site-footer-info-row:nth-child(2) > a:first-child {
-    width: 24px;
-    height: 24px;
+  .site-footer-location span {
+    white-space: normal;
+    overflow-wrap: anywhere;
   }
 
-  .site-footer-info-row:nth-child(2) > a:nth-child(2),
-  .site-footer-info-row:nth-child(2) > a:last-child {
-    font-size: 14px;
-  }
-
-  .site-footer-info-row:nth-child(2) > a:nth-child(3) {
+  .footer-location-icon,
+  .footer-contact-icon {
+    flex-basis: 20px;
     width: 20px;
+    height: 20px;
+  }
+
+  .footer-contact-icon svg {
+    width: 17px;
+    height: 17px;
+  }
+
+  .site-footer-contact-row {
+    flex-wrap: wrap;
+    gap: 6px;
+  }
+
+  .site-footer-social {
+    gap: 8px;
+  }
+
+  .site-footer-social-icons {
+    justify-content: flex-start;
+    gap: 8px;
+  }
+
+  .site-footer-social-icons a {
+    flex-basis: 20px;
+    width: 20px;
+    height: 20px;
+  }
+
+  .site-footer-social-icons a svg {
+    width: 17px;
+    height: 17px;
+  }
+
+  .site-footer-bottom {
+    top: 340px;
+    left: 5%;
+    width: 90%;
+    gap: 16px;
+  }
+
+  .site-footer-links {
+    flex-wrap: wrap;
+    gap: 12px 20px;
+    white-space: normal;
+  }
+
+  .site-footer-links a,
+  .site-footer-links span,
+  .site-footer-copyright {
+    font-size: clamp(10px, 0.77vw, 11px);
+  }
+
+  .site-footer-links a:nth-child(n),
+  .site-footer-links span:nth-child(n) {
+    margin-right: 0;
+  }
+
+  .site-footer-copyright {
+    white-space: normal;
+    overflow-wrap: anywhere;
+  }
+}
+/* =========================================================
+   9. FIGMA DESKTOP: 1441px–1728px
+========================================================= */
+
+@media (min-width: 1441px) and (max-width: 1728px) {
+  .site-footer-container {
+    width: 100%;
+    max-width: 1728px;
+    min-height: 543px;
+  }
+
+  .site-footer-top-line,
+  .site-footer-bottom-line {
+    left: 12.6736%;
+    width: 74.5833%;
+  }
+
+  .site-footer-top-line {
+    top: 100px;
+  }
+
+  .site-footer-bottom-line {
+    top: 400px;
+  }
+
+  .site-footer-main {
+    top: 198px;
+    left: 13.4838%;
+    width: 73.7847%;
+    height: 146px;
+    gap: clamp(18px, 1.4vw, 24px);
+  }
+
+  .site-footer-brand {
+    flex: 0 1 585px;
+    width: 585px;
+    max-width: 585px;
+    height: 146px;
+    overflow: hidden;
+  }
+
+  .site-footer-logo-icon {
+    transform: none;
+  }
+
+  .site-footer-logo-wordmark {
+    top: 37px;
+    left: 195px;
+    transform: none;
+  }
+
+  .site-footer-info {
+    flex: 0 1 378px;
+    width: 378px;
+    max-width: 378px;
+    height: 120px;
+  }
+
+  .site-footer-bottom {
+    top: 425px;
+    left: 12.7083%;
+    width: 74.5833%;
+    gap: 24px;
+  }
+}
+
+/* =========================================================
+   10. TABLET: 601px–1024px
+========================================================= */
+
+@media (min-width: 601px) and (max-width: 1024px) {
+  .site-footer-container {
+    display: flex;
+    min-height: 0;
+    flex-direction: column;
+    gap: clamp(18px, 2.4vw, 24px);
+    padding: 32px 5% 26px;
+  }
+
+  .site-footer-top-line,
+  .site-footer-bottom-line {
+    position: static;
+    display: block;
+    flex: 0 0 1px;
+    width: 100%;
+    height: 1px;
+  }
+
+  .site-footer-main {
+    position: static;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    align-items: center;
+    width: 100%;
+    height: auto;
+    gap: clamp(16px, 2.4vw, 24px);
+  }
+
+  .site-footer-brand {
+    justify-self: center;
+    flex: none;
+    width: 100%;
+    max-width: 280px;
+    height: 70px;
+    overflow: hidden;
+  }
+
+  .site-footer-logo-icon {
+    transform: scale(0.48);
+    transform-origin: top left;
+  }
+
+  .site-footer-logo-wordmark {
+    top: 17.76px;
+    left: 93.6px;
+    transform: scale(0.48);
+    transform-origin: top left;
+  }
+
+  .site-footer-info {
+    width: 100%;
+    max-width: none;
+    height: auto;
+    gap: 16px;
+  }
+
+  .site-footer-info-row,
+  .footer-phone,
+  .footer-email,
+  .site-footer-social-label {
+    font-size: clamp(11px, 1.2vw, 12px);
+  }
+
+  .site-footer-location {
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  .site-footer-location span {
+    white-space: normal;
+    overflow-wrap: anywhere;
+  }
+
+  .footer-location-icon {
+    flex: 0 0 20px;
+    width: 20px;
+    height: 20px;
+  }
+
+  .site-footer-contact-row {
+    display: grid;
+    grid-template-columns: 22px minmax(0, 1fr);
+    gap: 8px;
+    white-space: normal;
+  }
+
+  .footer-contact-icon {
+    flex-basis: 22px;
+    width: 22px;
+    height: 22px;
+  }
+
+  .footer-contact-icon svg {
+    width: 17px;
+    height: 17px;
+  }
+
+  .footer-phone {
+    grid-column: 2;
+    grid-row: 1;
+    min-width: 0;
+    white-space: normal;
+    overflow-wrap: anywhere;
+  }
+
+  .footer-email-icon {
+    grid-column: 1;
+    grid-row: 2;
+    margin: 0;
+  }
+
+  .footer-email {
+    grid-column: 2;
+    grid-row: 2;
+    min-width: 0;
+    white-space: normal;
+    overflow-wrap: anywhere;
+  }
+
+  .site-footer-social {
+    flex-wrap: wrap;
+    gap: 8px;
+    white-space: normal;
+  }
+
+  .site-footer-social-icons {
+    flex: 0 1 auto;
+    justify-content: flex-start;
+    gap: 10px;
+  }
+
+  .site-footer-social-icons a {
+    flex-basis: 20px;
+    width: 20px;
+    height: 20px;
+  }
+
+  .site-footer-social-icons a svg {
+    width: 16px;
     height: 16px;
   }
 
-
-  /* SOCIAL */
-
-  .site-footer-social > span {
-    font-size: 14px;
-  }
-
-  .site-footer-social a {
-    width: 24px;
-    height: 24px;
-
-    margin-right: 24px;
-  }
-
-
-  /* BOTTOM */
-
   .site-footer-bottom {
-    left: 219px;
-    top: 400px;
-
-    width: 1289px;
-
-    height: 50px;
-
-    border-top-width: 1px;
+    position: static;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    min-height: 0;
+    gap: 18px;
   }
 
   .site-footer-links {
-    width: 68%;
-
-    padding-top: 12px;
+    flex-wrap: wrap;
+    gap: 14px 22px;
+    white-space: normal;
   }
 
-  .site-footer-bottom > p {
-    width: 32%;
+  .site-footer-links a,
+  .site-footer-links span,
+  .site-footer-copyright {
+    font-size: 12px;
+  }
 
-    flex-basis: 32%;
+  .site-footer-links a:nth-child(n),
+  .site-footer-links span:nth-child(n) {
+    margin-right: 0;
+  }
 
-    padding-top: 12px;
-    padding-left: 8%;
-
-    font-size: 14px;
+  .site-footer-copyright {
+    text-align: left;
+    white-space: normal;
+    overflow-wrap: anywhere;
   }
 }
 
-
 /* =========================================================
-   ALL SMALLER SCREENS
-
-   NO MOBILE HEIGHT.
-   NO MOBILE REPOSITIONING.
-   EVERYTHING SCALES FROM THE SAME REFERENCE.
+   11. MOBILE: 361px–600px
 ========================================================= */
 
-@media (max-width: 1727px) {
-
+@media (min-width: 361px) and (max-width: 600px) {
   .site-footer-container {
-    width: 100%;
-    aspect-ratio: 1728 / 543;
+    display: flex;
+    min-height: 0;
+    flex-direction: column;
+    gap: 10px;
+    padding: 16px 16px 18px;
   }
-}
 
-
-/* =========================================================
-   SMALL SCREENS
-========================================================= */
-
-@media (max-width: 700px) {
-
-  /*
-    Keep the exact reference coordinates.
-    Do NOT move the bottom section downward.
-  */
+  .site-footer-top-line,
+  .site-footer-bottom-line {
+    position: static;
+    display: block;
+    flex: 0 0 1px;
+    width: 100%;
+    height: 1px;
+  }
 
   .site-footer-main {
-    left: 13.4838%;
-    top: 36.4641%;
-
-    width: 73.7847%;
-    height: 26.8877%;
+    position: static;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    width: 100%;
+    height: auto;
+    gap: 8px;
   }
 
+  /* Logo */
+
+  .site-footer-brand {
+    position: relative;
+    display: block;
+    flex: 0 0 88px;
+    width: 294.6px;
+    max-width: 100%;
+    height: 88px;
+    align-self: center;
+    margin: 0 auto;
+    overflow: hidden;
+  }
+
+  .site-footer-logo-icon {
+    top: 0;
+    left: 0;
+    width: 195px;
+    height: 146px;
+    transform: scale(0.60);
+    transform-origin: top left;
+  }
+
+  .site-footer-logo-icon img {
+    top: 0;
+    left: -17.5px;
+    width: 230px;
+    height: 230px;
+  }
+
+  .site-footer-logo-wordmark {
+    top: 22.2px;
+    left: 117px;
+    width: 296px;
+    height: 73px;
+    transform: scale(0.60);
+    transform-origin: top left;
+  }
+
+  .site-footer-logo-wordmark img {
+    top: -214px;
+    left: 0;
+    width: 320px;
+    height: 320px;
+  }
+
+  /* Contact information */
 
   .site-footer-info {
-    left: 70.3529%;
-    top: 8.9041%;
-
-    width: 29.6471%;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 420px;
+    height: auto;
+    align-self: center;
+    gap: 10px;
   }
 
-
-  /*
-    TOP LINE:
-    exactly same thickness as bottom line.
-  */
-
-  .site-footer-container::before {
-    height: 1px;
-    min-height: 1px;
-    max-height: 1px;
+  .site-footer-info-row,
+  .site-footer-location span,
+  .footer-phone,
+  .footer-email {
+    font-size: 12px;
+    line-height: 1.4;
   }
 
+  .site-footer-location {
+    display: flex;
+    align-items: flex-start;
+    gap: 6px;
+    width: 100%;
+    min-width: 0;
+  }
 
-  /*
-    BOTTOM LINE:
-    always visible.
-  */
+  .footer-location-icon {
+    flex: 0 0 14px;
+    width: 14px;
+    height: 14px;
+    margin-top: 2px;
+  }
+
+  .site-footer-location span {
+    display: block;
+    flex: 1 1 auto;
+    min-width: 0;
+    white-space: normal;
+    overflow-wrap: anywhere;
+  }
+
+  /* Phone and email */
+
+  .site-footer-contact-row {
+    display: grid;
+    grid-template-columns: 14px minmax(0, 1fr);
+    align-items: start;
+    column-gap: 8px;
+    row-gap: 6px;
+    width: 100%;
+    min-width: 0;
+    white-space: normal;
+  }
+
+  .footer-contact-icon {
+    display: inline-flex;
+    flex: 0 0 14px;
+    align-items: center;
+    justify-content: center;
+    width: 14px;
+    height: 14px;
+    margin: 0;
+  }
+
+  .footer-contact-icon svg {
+    width: 12px;
+    height: 12px;
+  }
+
+  .footer-phone {
+    grid-column: 2;
+    grid-row: 1;
+    min-width: 0;
+    white-space: normal;
+    overflow-wrap: anywhere;
+  }
+
+  .footer-email-icon {
+    grid-column: 1;
+    grid-row: 2;
+    margin: 0;
+  }
+
+  .footer-email {
+    display: block;
+    grid-column: 2;
+    grid-row: 2;
+    min-width: 0;
+    max-width: 100%;
+    white-space: normal;
+    overflow-wrap: anywhere;
+  }
+
+  /* Social icons */
+
+  .site-footer .site-footer-info .site-footer-social {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 10px;
+    width: 100%;
+    min-width: 0;
+    min-height: 0;
+    margin: 0;
+    padding: 0;
+    white-space: normal;
+  }
+
+  .site-footer .site-footer-info .site-footer-social-label {
+    display: inline-block;
+    flex: 0 0 auto;
+    width: auto;
+    margin: 0;
+    padding: 0;
+    font-size: 12px;
+    line-height: 1;
+    white-space: nowrap;
+  }
+
+  .site-footer .site-footer-info .site-footer-social-icons {
+    display: flex;
+    flex: 0 1 auto;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 12px;
+    width: auto;
+    min-width: 0;
+    margin: 0;
+    padding: 0;
+  }
+
+  .site-footer .site-footer-info .site-footer-social-icons a {
+    display: inline-flex;
+    flex: 0 0 18px;
+    align-items: center;
+    justify-content: center;
+    width: 18px;
+    height: 18px;
+    margin: 0;
+    padding: 0;
+  }
+
+  .site-footer .site-footer-info .site-footer-social-icons a svg {
+    display: block;
+    width: 16px;
+    height: 16px;
+  }
+
+  /* Footer links */
 
   .site-footer-bottom {
-    left: 12.7083%;
-    top: 73.6648%;
+    position: static;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    min-height: 0;
+    gap: 10px;
+    margin: 0;
+    padding: 0;
+  }
 
+  .site-footer-links {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    width: 100%;
+    gap: 10px 16px;
+    margin: 0;
+    padding: 0;
+    white-space: normal;
+  }
+
+  .site-footer-links a,
+  .site-footer-links span {
+    margin: 0;
+    font-size: 11px;
+    line-height: 1.4;
+    white-space: normal;
+    overflow-wrap: anywhere;
+  }
+
+  .site-footer-links a:nth-child(n),
+  .site-footer-links span:nth-child(n) {
+    margin-right: 0;
+  }
+
+  .site-footer-copyright {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    font-size: 11px;
+    line-height: 1.4;
+    text-align: left;
+    white-space: normal;
+    overflow-wrap: anywhere;
+  }
+}
+
+/* =========================================================
+   12. SMALL MOBILE: 360px AND BELOW
+========================================================= */
+
+@media (max-width: 360px) {
+  .site-footer-container {
+    display: flex;
+    min-height: 0;
+    flex-direction: column;
+    gap: 8px;
+    padding: 14px 10px 16px;
+  }
+
+  .site-footer-top-line,
+  .site-footer-bottom-line {
+    position: static;
+    display: block;
+    flex: 0 0 1px;
+    width: 100%;
+    height: 1px;
+  }
+
+  .site-footer-main {
+    position: static;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    width: 100%;
+    height: auto;
+    gap: 6px;
+  }
+
+  /* Logo */
+
+  .site-footer-brand {
+    position: relative;
+    display: block;
+    flex: 0 0 74px;
+    width: 235.68px;
+    max-width: 100%;
+    height: 74px;
+    align-self: center;
+    margin: 0 auto;
+    overflow: hidden;
+  }
+
+  .site-footer-logo-icon {
+    top: 0;
+    left: 0;
+    width: 195px;
+    height: 146px;
+    transform: scale(0.48);
+    transform-origin: top left;
+  }
+
+  .site-footer-logo-icon img {
+    top: 0;
+    left: -17.5px;
+    width: 230px;
+    height: 230px;
+  }
+
+  .site-footer-logo-wordmark {
+    top: 17.76px;
+    left: 93.6px;
+    width: 296px;
+    height: 73px;
+    transform: scale(0.48);
+    transform-origin: top left;
+  }
+
+  .site-footer-logo-wordmark img {
+    top: -214px;
+    left: 0;
+    width: 320px;
+    height: 320px;
+  }
+
+  /* Contact information */
+
+  .site-footer-info {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 328px;
+    height: auto;
+    align-self: center;
+    gap: 8px;
+  }
+
+  .site-footer-info-row,
+  .site-footer-location span,
+  .footer-phone,
+  .footer-email {
+    font-size: 12px;
+    line-height: 1.4;
+  }
+
+  .site-footer-location {
+    display: flex;
+    align-items: flex-start;
+    gap: 6px;
+    width: 100%;
+    min-width: 0;
+  }
+
+  .footer-location-icon {
+    flex: 0 0 12px;
+    width: 12px;
+    height: 12px;
+    margin-top: 2px;
+  }
+
+  .site-footer-location span {
+    display: block;
+    flex: 1 1 auto;
+    min-width: 0;
+    white-space: normal;
+    overflow-wrap: anywhere;
+  }
+
+  /* Phone and email */
+
+  .site-footer-contact-row {
+    display: grid;
+    grid-template-columns: 12px minmax(0, 1fr);
+    align-items: start;
+    column-gap: 6px;
+    row-gap: 6px;
+    width: 100%;
+    min-width: 0;
+    white-space: normal;
+  }
+
+  .footer-contact-icon {
+    display: inline-flex;
+    flex: 0 0 12px;
+    align-items: center;
+    justify-content: center;
+    width: 12px;
+    height: 12px;
+    margin: 0;
+  }
+
+  .footer-contact-icon svg {
+    width: 10px;
+    height: 10px;
+  }
+
+  .footer-phone {
+    grid-column: 2;
+    grid-row: 1;
+    min-width: 0;
+    white-space: normal;
+    overflow-wrap: anywhere;
+  }
+
+  .footer-email-icon {
+    grid-column: 1;
+    grid-row: 2;
+    margin: 0;
+  }
+
+  .footer-email {
+    display: block;
+    grid-column: 2;
+    grid-row: 2;
+    min-width: 0;
+    max-width: 100%;
+    white-space: normal;
+    overflow-wrap: anywhere;
+  }
+
+  /* Social icons */
+
+  .site-footer .site-footer-info .site-footer-social {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 6px;
+    width: 100%;
+    min-width: 0;
+    min-height: 0;
+    margin: 0;
+    padding: 0;
+    white-space: normal;
+  }
+
+  .site-footer .site-footer-info .site-footer-social-label {
+    display: inline-block;
+    flex: 0 0 auto;
+    width: auto;
+    margin: 0;
+    padding: 0;
+    font-size: 11px;
+    line-height: 1;
+    white-space: nowrap;
+  }
+
+  .site-footer .site-footer-info .site-footer-social-icons {
+    display: flex;
+    flex: 0 1 auto;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 10px;
+    width: auto;
+    min-width: 0;
+    margin: 0;
+    padding: 0;
+  }
+
+  .site-footer .site-footer-info .site-footer-social-icons a {
+    display: inline-flex;
+    flex: 0 0 17px;
+    align-items: center;
+    justify-content: center;
+    width: 17px;
+    height: 17px;
+    margin: 0;
+    padding: 0;
+  }
+
+  .site-footer .site-footer-info .site-footer-social-icons a svg {
+    display: block;
+    width: 14px;
+    height: 14px;
+  }
+
+  /* Footer links */
+
+  .site-footer-bottom {
+    position: static;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    min-height: 0;
+    gap: 8px;
+    margin: 0;
+    padding: 0;
+  }
+
+  .site-footer-links {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    width: 100%;
+    gap: 8px 12px;
+    margin: 0;
+    padding: 0;
+    white-space: normal;
+  }
+
+  .site-footer-links a,
+  .site-footer-links span {
+    margin: 0;
+    font-size: 10px;
+    line-height: 1.4;
+    white-space: normal;
+    overflow-wrap: anywhere;
+  }
+
+  .site-footer-links a:nth-child(n),
+  .site-footer-links span:nth-child(n) {
+    margin-right: 0;
+  }
+
+  .site-footer-copyright {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    font-size: 10px;
+    line-height: 1.4;
+    text-align: left;
+    white-space: normal;
+    overflow-wrap: anywhere;
+  }
+}
+
+/* =========================================================
+   13. LARGE DESKTOP: 1729px AND ABOVE
+========================================================= */
+
+@media (min-width: 1729px) {
+  .site-footer-container {
+    width: 100%;
+    max-width: none;
+    min-height: 31.4236vw;
+  }
+
+  .site-footer-top-line,
+  .site-footer-bottom-line {
+    left: 12.6736%;
     width: 74.5833%;
-
-    height: 9.2%;
-
-    border-top: 1px solid rgba(93, 32, 48, 0.30);
+    height: max(1px, 0.05787vw);
   }
 
-
-  /*
-    Keep navigation LEFT.
-  */
-
-  .site-footer-links {
-    width: 68%;
-
-    padding-top: 5.7%;
+  .site-footer-top-line {
+    top: 5.787vw;
   }
 
-
-  /*
-    Keep copyright RIGHT.
-  */
-
-  .site-footer-bottom > p {
-    width: 32%;
-    flex-basis: 32%;
-
-    padding-top: 5.7%;
-    padding-left: 8%;
-  }
-}
-
-
-/* =========================================================
-   500px AND BELOW
-========================================================= */
-
-@media (max-width: 500px) {
-
-  /*
-    DO NOT alter footer height.
-    DO NOT alter line position.
-    DO NOT move bottom section.
-  */
-
-  .site-footer-container {
-    aspect-ratio: 1728 / 543;
+  .site-footer-bottom-line {
+    top: 23.1481vw;
   }
 
-
-  /*
-    Both lines remain exactly 1px.
-  */
-
-  .site-footer-container::before,
-  .site-footer-bottom {
-    border-top-width: 1px;
+  .site-footer-main {
+    top: 11.4583vw;
+    left: 13.4838%;
+    width: 73.7847%;
+    height: 8.4491vw;
+    gap: 1.3889vw;
   }
 
-
-  /*
-    Right information becomes smaller
-    with the screen.
-  */
-
-  .site-footer-info-row:first-child,
-  .site-footer-info-row:nth-child(2) > a:nth-child(2),
-  .site-footer-info-row:nth-child(2) > a:last-child,
-  .site-footer-social > span {
-    font-size: clamp(3.5px, 1.1vw, 6px);
+  .site-footer-brand {
+    flex: 0 1 33.8542vw;
+    width: 33.8542vw;
+    max-width: 33.8542vw;
+    height: 8.4491vw;
   }
 
-
-  /*
-    Bottom text remains equal.
-  */
-
-  .site-footer-links a,
-  .site-footer-links span,
-  .site-footer-bottom > p {
-    font-size: clamp(3.5px, 1.1vw, 6px);
-  }
-}
-
-
-/* =========================================================
-   375px AND BELOW
-========================================================= */
-
-@media (max-width: 375px) {
-
-  /*
-    Same reference.
-    No new footer height.
-    No new vertical position.
-  */
-
-  .site-footer-container {
-    aspect-ratio: 1728 / 543;
+  .site-footer-logo-icon {
+    width: 11.2847vw;
+    height: 8.4491vw;
   }
 
-
-  /*
-    Lines stay visible and equally thin.
-  */
-
-  .site-footer-container::before {
-    height: 1px;
+  .site-footer-logo-icon img {
+    left: -1.0127vw;
+    width: 13.3102vw;
+    height: 13.3102vw;
   }
 
-  .site-footer-bottom {
-    border-top: 1px solid rgba(93, 32, 48, 0.30);
+  .site-footer-logo-wordmark {
+    top: 2.1412vw;
+    left: 11.2847vw;
+    width: 17.1296vw;
+    height: 4.2245vw;
   }
 
-
-  /*
-    SAME FONT SIZE for:
-    TERMS & CONDITIONS
-    COPYRIGHT
-  */
-
-  .site-footer-links a,
-  .site-footer-links span,
-  .site-footer-bottom > p {
-    font-size: 4px;
+  .site-footer-logo-wordmark img {
+    top: -12.3843vw;
+    width: 18.5185vw;
+    height: 18.5185vw;
   }
 
-
-  /*
-    Keep a visible horizontal gap.
-  */
-
-  .site-footer-links {
-    width: 67%;
-  }
-
-  .site-footer-bottom > p {
-    width: 33%;
-    flex-basis: 33%;
-
-    padding-left: 8%;
-  }
-}
-
-
-/* =========================================================
-   320px AND BELOW
-========================================================= */
-
-@media (max-width: 320px) {
-
-  .site-footer-links {
-    width: 66%;
-  }
-
-  .site-footer-bottom > p {
-    width: 34%;
-    flex-basis: 34%;
-
-    padding-left: 7%;
-  }
-
-
-  .site-footer-links a,
-  .site-footer-links span,
-  .site-footer-bottom > p {
-    font-size: 3.5px;
-  }
-}
-
-
-
-
-
-
-
-
-
-
-/* =========================================================
-   SMALL-SCREEN ICON CLIPPING FIX
-   Do not change the existing footer layout.
-   ========================================================= */
-
-@media (max-width: 700px) {
-
-  /* Keep the right information visible */
   .site-footer-info {
+    flex: 0 1 21.875vw;
+    width: 21.875vw;
+    max-width: 21.875vw;
+    height: 6.9444vw;
+  }
+
+  .site-footer-info-row,
+  .footer-phone,
+  .footer-email,
+  .site-footer-social-label,
+  .site-footer-links a,
+  .site-footer-links span,
+  .site-footer-copyright {
+    font-size: 0.8102vw;
+  }
+
+  .site-footer-location {
+    gap: 0.6944vw;
+  }
+
+  .footer-location-icon,
+  .footer-contact-icon,
+  .site-footer-social-icons a {
+    flex-basis: 1.3889vw;
+    width: 1.3889vw;
+    height: 1.3889vw;
+  }
+
+  .footer-contact-icon svg,
+  .site-footer-social-icons a svg {
+    width: 1.1574vw;
+    height: 1.1574vw;
+  }
+
+  .site-footer-social,
+  .site-footer-contact-row {
+    gap: 0.6944vw;
+  }
+
+  .site-footer-bottom {
+    top: 24.5949vw;
+    left: 12.7083%;
+    width: 74.5833%;
+    gap: 1.3889vw;
+  }
+
+  .site-footer-links a:nth-child(1) {
+    margin-right: 2.72vw;
+  }
+
+  .site-footer-links a:nth-child(2) {
+    margin-right: 3.70vw;
+  }
+
+  .site-footer-links a:nth-child(3) {
+    margin-right: 3.70vw;
+  }
+
+  .site-footer-links span:nth-child(4) {
+    margin-right: 3.88vw;
+  }
+}
+
+
+
+
+
+/* =====================================================
+   MOBILE FOOTER GAP FIX
+   Append this at the VERY END of Footer.css
+===================================================== */
+
+@media (max-width: 600px) {
+  .site-footer {
+    height: auto !important;
+    min-height: 0 !important;
+    padding: 0 !important;
+    margin: 0 !important;
     overflow: visible !important;
   }
 
-  /* Keep every information row vertically centered */
-  .site-footer-info-row:first-child,
-  .site-footer-info-row:nth-child(2),
+  .site-footer-container {
+    display: flex !important;
+    position: relative !important;
+    flex-direction: column !important;
+    justify-content: flex-start !important;
+    align-items: stretch !important;
+    height: auto !important;
+    min-height: 0 !important;
+    padding: 12px 11px 18px !important;
+    margin: 0 !important;
+    gap: 12px !important;
+  }
+
+  .site-footer-top-line,
+  .site-footer-bottom-line {
+    position: static !important;
+    display: block !important;
+    flex: 0 0 1px !important;
+    width: 100% !important;
+    height: 1px !important;
+    margin: 0 !important;
+  }
+
+  .site-footer-main {
+    position: static !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: flex-start !important;
+    align-items: stretch !important;
+    width: 100% !important;
+    height: auto !important;
+    min-height: 0 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    gap: 8px !important;
+  }
+
+  .site-footer-brand {
+    position: relative !important;
+    flex: 0 0 88px !important;
+    align-self: center !important;
+    height: 88px !important;
+    min-height: 0 !important;
+    margin: 0 auto !important;
+  }
+
+  .site-footer-info {
+    position: static !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: flex-start !important;
+    align-items: stretch !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    height: auto !important;
+    min-height: 0 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    gap: 10px !important;
+  }
+
+  .site-footer-info > *,
+  .site-footer-info-row,
+  .site-footer-location,
+  .site-footer-contact-row,
   .site-footer-social {
-    overflow: visible !important;
+    position: static !important;
+    top: auto !important;
+    bottom: auto !important;
+    height: auto !important;
+    min-height: 0 !important;
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+  }
+
+  .site-footer-location {
+    display: flex !important;
+    align-items: flex-start !important;
+    width: 100% !important;
+    gap: 8px !important;
+  }
+
+  .site-footer-location span {
+    white-space: normal !important;
+    overflow-wrap: anywhere !important;
+  }
+
+  .site-footer-contact-row {
+    display: grid !important;
+    grid-template-columns: 14px minmax(0, 1fr) !important;
+    align-items: start !important;
+    width: 100% !important;
+    gap: 6px 8px !important;
+  }
+
+  .site-footer-social {
+    display: flex !important;
+    flex-direction: row !important;
+    flex-wrap: wrap !important;
     align-items: center !important;
+    justify-content: flex-start !important;
+    width: 100% !important;
+    gap: 10px !important;
   }
 
-  /* Prevent icons from being clipped by their row */
-  .site-footer-info-row svg,
-  .site-footer-social a,
-  .site-footer-social a svg {
-    overflow: visible !important;
+  .site-footer-bottom {
+    position: static !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: flex-start !important;
+    align-items: flex-start !important;
+    width: 100% !important;
+    height: auto !important;
+    min-height: 0 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    gap: 10px !important;
   }
 
-  /* Keep icon and text on the same vertical center */
-  .site-footer-info-row:first-child svg,
-  .site-footer-info-row:nth-child(2) > svg,
-  .site-footer-info-row:nth-child(2) > a,
-  .site-footer-social > span,
-  .site-footer-social a {
-    vertical-align: middle;
+  .site-footer-links {
+    position: static !important;
+    display: flex !important;
+    flex-direction: row !important;
+    flex-wrap: wrap !important;
+    align-items: center !important;
+    width: 100% !important;
+    height: auto !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    gap: 8px 14px !important;
+  }
+
+  .site-footer-links a,
+  .site-footer-links span {
+    margin: 0 !important;
+  }
+
+  .site-footer-copyright {
+    position: static !important;
+    width: 100% !important;
+    height: auto !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    text-align: left !important;
+    white-space: normal !important;
+  }
+}
+
+@media (max-width: 360px) {
+  .site-footer-container {
+    padding-right: 10px !important;
+    padding-left: 10px !important;
+    gap: 10px !important;
+  }
+
+  .site-footer-brand {
+    flex-basis: 74px !important;
+    height: 74px !important;
+  }
+
+  .site-footer-info {
+    gap: 8px !important;
+  }
+
+  .site-footer-links {
+    gap: 8px 12px !important;
+  }
+}
+
+
+
+/* FINAL FIX: REMOVE EXCESS MOBILE FOOTER SPACE */
+
+@media (max-width: 600px) {
+  .site-footer-container {
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: flex-start !important;
+    align-items: stretch !important;
+    height: auto !important;
+    min-height: 0 !important;
+    padding: 12px 11px 18px !important;
+    gap: 10px !important;
+  }
+
+  .site-footer-main {
+    display: flex !important;
+    flex: 0 0 auto !important;
+    flex-direction: column !important;
+    justify-content: flex-start !important;
+    align-items: stretch !important;
+    height: auto !important;
+    min-height: 0 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    gap: 8px !important;
+  }
+
+  .site-footer-info {
+    display: flex !important;
+    flex: 0 0 auto !important;
+    flex-direction: column !important;
+    justify-content: flex-start !important;
+    height: auto !important;
+    min-height: 0 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    gap: 10px !important;
+  }
+
+  .site-footer-info > * {
+    flex: 0 0 auto !important;
+    position: static !important;
+    height: auto !important;
+    min-height: 0 !important;
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+  }
+
+  .site-footer-bottom-line {
+    position: static !important;
+    flex: 0 0 1px !important;
+    width: 100% !important;
+    height: 1px !important;
+    margin: 0 !important;
+  }
+
+  .site-footer-bottom {
+    position: static !important;
+    display: flex !important;
+    flex: 0 0 auto !important;
+    flex-direction: column !important;
+    justify-content: flex-start !important;
+    align-items: flex-start !important;
+    height: auto !important;
+    min-height: 0 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    gap: 10px !important;
+  }
+
+  .site-footer-links {
+    display: flex !important;
+    flex: 0 0 auto !important;
+    flex-wrap: wrap !important;
+    width: 100% !important;
+    height: auto !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    gap: 8px 14px !important;
+  }
+
+  .site-footer-links a,
+  .site-footer-links span {
+    margin: 0 !important;
+  }
+
+  .site-footer-copyright {
+    flex: 0 0 auto !important;
+    height: auto !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    text-align: left !important;
+    white-space: normal !important;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Move only the logo to the footer bottom section's left starting point */
+@media (max-width: 1024px) {
+  .site-footer .site-footer-brand {
+    align-self: start !important;
+    margin-left: 0 !important;
+    margin-right: auto !important;
   }
 }
 

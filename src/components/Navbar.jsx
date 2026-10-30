@@ -1,20 +1,29 @@
+
 import { useEffect, useState } from "react";
 import { NavLink, Link } from "react-router-dom";
-import { FaMagnifyingGlass, FaCartShopping } from "react-icons/fa6";
+import {
+  FaMagnifyingGlass,
+  FaCartShopping,
+  FaBars,
+  FaXmark,
+} from "react-icons/fa6";
 
 import logoImage from "../assets/logo-1.png";
-import sreecollectionsImage from "../assets/sreecollections.png";
 import CartDrawer from "./CartDrawer";
 
 const CART_KEY = "sreecollections-cart";
 
 function readCartCount() {
   try {
-    const cart = JSON.parse(localStorage.getItem(CART_KEY));
+    const cart = JSON.parse(
+      localStorage.getItem(CART_KEY) || "[]"
+    );
+
     if (!Array.isArray(cart)) return 0;
 
     return cart.reduce(
-      (total, item) => total + Number(item.quantity || 0),
+      (total, item) =>
+        total + Math.max(0, Number(item.quantity) || 0),
       0
     );
   } catch {
@@ -25,73 +34,120 @@ function readCartCount() {
 function Navbar() {
   const [cartOpen, setCartOpen] = useState(false);
   const [cartCount, setCartCount] = useState(readCartCount);
+  const [menuOpen, setMenuOpen] = useState(false);
 
   useEffect(() => {
     const syncCart = () => setCartCount(readCartCount());
-    const openCartDrawer = () => setCartOpen(true);
+    const openCart = () => {
+      setMenuOpen(false);
+      setCartOpen(true);
+    };
 
-    window.addEventListener("sreecollections-cart-updated", syncCart);
     window.addEventListener("storage", syncCart);
-    window.addEventListener("open-sreecollections-cart", openCartDrawer);
+    window.addEventListener(
+      "sreecollections-cart-updated",
+      syncCart
+    );
+    window.addEventListener(
+      "open-sreecollections-cart",
+      openCart
+    );
 
     return () => {
-      window.removeEventListener("sreecollections-cart-updated", syncCart);
       window.removeEventListener("storage", syncCart);
       window.removeEventListener(
+        "sreecollections-cart-updated",
+        syncCart
+      );
+      window.removeEventListener(
         "open-sreecollections-cart",
-        openCartDrawer
+        openCart
       );
     };
   }, []);
 
+  useEffect(() => {
+    if (!menuOpen) return;
+
+    const closeOnEscape = (event) => {
+      if (event.key === "Escape") setMenuOpen(false);
+    };
+
+    window.addEventListener("keydown", closeOnEscape);
+
+    return () =>
+      window.removeEventListener("keydown", closeOnEscape);
+  }, [menuOpen]);
+
+  const closeMenu = () => setMenuOpen(false);
+
+  const linkClass = ({ isActive }) =>
+    `navbar-link${isActive ? " navbar-link-active" : ""}`;
+
   return (
     <>
       <header className="site-header">
-        <nav className="navbar">
-          <div className="navbar-logo-area">
-            <div 
-  className="navbar-brand" 
-  aria-label="Sreecollections"
-> 
-  <img 
-    src={logoImage} 
-    alt="Sreecollections logo" 
-    className="navbar-logo" 
-  /> 
- 
-  <img 
-    src={sreecollectionsImage} 
-    alt="Sreecollections" 
-    className="navbar-wordmark" 
-  /> 
-</div>
-          </div>
+        <nav className="navbar" aria-label="Main navigation">
+          {/* BRAND */}
+          <Link
+            to="/home"
+            className="navbar-brand"
+            aria-label="Sree Collections home"
+            onClick={closeMenu}
+          >
+            <span className="navbar-logo-symbol" aria-hidden="true">
+              <img src={logoImage} alt="" />
+            </span>
 
-          <div className="navbar-right">
+            <span
+              className="navbar-logo-wordmark"
+              aria-hidden="true"
+            >
+              <img src={logoImage} alt="" />
+            </span>
+          </Link>
+
+          {/* MOBILE MENU BUTTON */}
+          <button
+            type="button"
+            className="navbar-menu-toggle"
+            onClick={() => setMenuOpen((open) => !open)}
+            aria-label={menuOpen ? "Close menu" : "Open menu"}
+            aria-expanded={menuOpen}
+            aria-controls="navbar-navigation"
+          >
+            {menuOpen ? <FaXmark /> : <FaBars />}
+          </button>
+
+          {/* NAVIGATION */}
+          <div
+            id="navbar-navigation"
+            className={`navbar-right ${
+              menuOpen ? "navbar-right-open" : ""
+            }`}
+          >
             <div className="navbar-links">
               <NavLink
                 to="/home"
-                className={({ isActive }) =>
-                  `navbar-link ${isActive ? "navbar-link-active" : ""}`
-                }
+                end
+                className={linkClass}
+                onClick={closeMenu}
               >
                 Home
               </NavLink>
 
               <NavLink
                 to="/about"
-                className={({ isActive }) =>
-                  `navbar-link ${isActive ? "navbar-link-active" : ""}`
-                }
+                className={linkClass}
+                onClick={closeMenu}
               >
                 About
               </NavLink>
 
               <NavLink
                 to="/categories"
-                className={({ isActive }) =>
-                  `navbar-link ${isActive ? "navbar-link-active" : ""}`
-                }
+                className={linkClass}
+                onClick={closeMenu}
               >
                 Categories
               </NavLink>
@@ -99,36 +155,44 @@ function Navbar() {
               <NavLink
                 to="/contact"
                 className={({ isActive }) =>
-                  `navbar-contact ${
-                    isActive ? "navbar-contact-active" : ""
+                  `navbar-contact${
+                    isActive ? " navbar-contact-active" : ""
                   }`
                 }
+                onClick={closeMenu}
               >
                 CONTACT US
               </NavLink>
             </div>
 
+            {/* SEARCH AND CART */}
             <div className="navbar-actions">
               <Link
                 to="/search"
                 className="navbar-action-icon"
-                aria-label="Search"
+                aria-label="Search products"
+                onClick={closeMenu}
               >
-                <FaMagnifyingGlass />
+                <FaMagnifyingGlass aria-hidden="true" />
               </Link>
 
               <div className="navbar-cart-wrapper">
                 <button
                   type="button"
                   className="navbar-action-icon navbar-cart-button"
-                  onClick={() => setCartOpen(true)}
-                  aria-label="Open cart"
+                  onClick={() => {
+                    closeMenu();
+                    setCartOpen(true);
+                  }}
+                  aria-label={`Open cart, ${cartCount} items`}
                 >
-                  <FaCartShopping />
+                  <FaCartShopping aria-hidden="true" />
                 </button>
 
                 {cartCount > 0 && (
-                  <span className="navbar-cart-count">{cartCount}</span>
+                  <span className="navbar-cart-count">
+                    {cartCount}
+                  </span>
                 )}
               </div>
             </div>
@@ -145,3 +209,5 @@ function Navbar() {
 }
 
 export default Navbar;
+
+

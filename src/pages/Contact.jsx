@@ -1,12 +1,11 @@
-import { useEffect, useState } from "react";
-import { FaEnvelope, FaPhone } from "react-icons/fa6";
+import { useState } from "react";
+import {
+  FaEnvelope,
+  FaPhone,
+} from "react-icons/fa6";
 import "./Contact.css";
 
 const Contact = () => {
-  /* =====================================================
-     FORM STATE
-  ===================================================== */
-
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -14,84 +13,28 @@ const Contact = () => {
     message: "",
   });
 
-  /* =====================================================
-     FORM ERRORS
-  ===================================================== */
-
   const [errors, setErrors] = useState({});
 
-  /* =====================================================
-     FIGMA RESPONSIVE SCALE
-  ===================================================== */
-
-  useEffect(() => {
-    const updateContactScale = () => {
-      const FIGMA_WIDTH = 1728;
-
-      const viewportWidth =
-        document.documentElement.clientWidth;
-
-      const scale = Math.min(
-        1,
-        viewportWidth / FIGMA_WIDTH
-      );
-
-      document.documentElement.style.setProperty(
-        "--contact-figma-scale",
-        scale.toString()
-      );
-    };
-
-    updateContactScale();
-
-    window.addEventListener(
-      "resize",
-      updateContactScale
-    );
-
-    return () => {
-      window.removeEventListener(
-        "resize",
-        updateContactScale
-      );
-
-      document.documentElement.style.removeProperty(
-        "--contact-figma-scale"
-      );
-    };
-  }, []);
-
-  /* =====================================================
-     HANDLE INPUT
-  ===================================================== */
-
-  const handleChange = (e) => {
-    const { name, value } = e.target;
+  /* HANDLE INPUT CHANGES */
+  const handleChange = (event) => {
+    const { name, value } = event.target;
 
     setFormData((previous) => ({
       ...previous,
       [name]: value,
     }));
 
-    /* Remove error when user starts filling the field */
     setErrors((previous) => ({
       ...previous,
       [name]: "",
     }));
   };
 
-  /* =====================================================
-     HANDLE SUBMIT
-  ===================================================== */
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
+  /* FORM VALIDATION AND SUBMISSION */
+  const handleSubmit = (event) => {
+    event.preventDefault();
 
     const newErrors = {};
-
-    /* ===============================================
-       REQUIRED FIELD VALIDATION
-    =============================================== */
 
     if (!formData.name.trim()) {
       newErrors.name = "This field is required";
@@ -99,6 +42,12 @@ const Contact = () => {
 
     if (!formData.email.trim()) {
       newErrors.email = "This field is required";
+    } else if (
+      !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(
+        formData.email.trim()
+      )
+    ) {
+      newErrors.email = "Please enter a valid email address";
     }
 
     if (!formData.topic.trim()) {
@@ -111,27 +60,17 @@ const Contact = () => {
 
     setErrors(newErrors);
 
-    /* ===============================================
-       STOP SUBMISSION IF ANY FIELD IS EMPTY
-    =============================================== */
-
     if (Object.keys(newErrors).length > 0) {
       return;
     }
 
-    /* ===============================================
-       EMAIL SUBMISSION
-    =============================================== */
-
-    const subject = encodeURIComponent(
-      formData.topic || "Contact Inquiry"
-    );
+    const subject = encodeURIComponent(formData.topic.trim());
 
     const body = encodeURIComponent(
-      `Name: ${formData.name}\n\n` +
-        `Email: ${formData.email}\n\n` +
-        `Topic: ${formData.topic}\n\n` +
-        `Message:\n${formData.message}`
+      `Name: ${formData.name.trim()}\n\n` +
+        `Email: ${formData.email.trim()}\n\n` +
+        `Topic: ${formData.topic.trim()}\n\n` +
+        `Message:\n${formData.message.trim()}`
     );
 
     window.location.href =
@@ -140,106 +79,79 @@ const Contact = () => {
 
   return (
     <main className="contact-page">
-
-      {/* =====================================================
-          INTRO
-      ===================================================== */}
-
+      {/* INTRODUCTION */}
       <section className="contact-intro">
-
         <h1>
-          For Any Inquiries, Our Team Is Completely At Your
-          Disposal.
+          For Any Inquiries, Our Team Is Completely At Your Disposal.
         </h1>
 
         <p>
           Duis vestibulum elit vel neque pharetra vulputate.
-          Quisque scelerisque nibh urna.
-          Duis rutrum non risus in imperdiet.
+          Quisque scelerisque nisi
+          <br className="contact-intro-desktop-break" />
+          <span>
+            urna. Duis rutrum non risus in imperdiet.
+          </span>
         </p>
-
       </section>
 
-
-      {/* =====================================================
-          CONTACT CARDS
-      ===================================================== */}
-
-      <section className="contact-cards">
-
-        {/* ===================================================
-            SOCIAL MEDIA CARD
-        =================================================== */}
-
-        <div className="contact-card social-media-card">
-
-          <div className="social-media-logo">
-
+      {/* CONTACT CARDS */}
+      <section
+        className="contact-cards"
+        aria-label="Contact information"
+      >
+        {/* SOCIAL MEDIA */}
+        <article className="contact-card social-media-card">
+          <div className="contact-card-icon social-media-logo">
             <img
               src="/contact-social-icon.png"
-              alt="Social Media"
+              alt=""
               className="social-media-image"
             />
-
           </div>
 
-          <h2>
-            Social Media
-          </h2>
+          <h2>Social Media</h2>
 
           <div className="social-links">
-
             <a
               href="#"
-              onClick={(e) => e.preventDefault()}
+              onClick={(event) => event.preventDefault()}
             >
               WhatsApp
             </a>
 
             <a
               href="#"
-              onClick={(e) => e.preventDefault()}
+              onClick={(event) => event.preventDefault()}
             >
               Instagram
             </a>
 
             <a
               href="#"
-              onClick={(e) => e.preventDefault()}
+              onClick={(event) => event.preventDefault()}
             >
               Facebook
             </a>
 
             <a
               href="#"
-              onClick={(e) => e.preventDefault()}
+              onClick={(event) => event.preventDefault()}
             >
               You Tube
             </a>
-
           </div>
+        </article>
 
-        </div>
-
-
-        {/* ===================================================
-            EMAIL CARD
-        =================================================== */}
-
-        <div className="contact-card">
-
+        {/* EMAIL */}
+        <article className="contact-card">
           <div className="contact-card-icon">
-
-            <FaEnvelope />
-
+            <FaEnvelope aria-hidden="true" />
           </div>
 
-          <h2>
-            Our Email
-          </h2>
+          <h2>Our Email</h2>
 
           <div className="contact-card-links">
-
             <a href="mailto:public@news.com">
               public@news.com
             </a>
@@ -247,30 +159,18 @@ const Contact = () => {
             <a href="mailto:info@publicnews.com">
               info@publicnews.com
             </a>
-
           </div>
+        </article>
 
-        </div>
-
-
-        {/* ===================================================
-            PHONE CARD
-        =================================================== */}
-
-        <div className="contact-card">
-
+        {/* PHONE */}
+        <article className="contact-card">
           <div className="contact-card-icon">
-
-            <FaPhone />
-
+            <FaPhone aria-hidden="true" />
           </div>
 
-          <h2>
-            Our Phone Number
-          </h2>
+          <h2>Our Phone Number</h2>
 
           <div className="contact-card-links">
-
             <a href="tel:+2681428413">
               (268)142-8413
             </a>
@@ -278,58 +178,37 @@ const Contact = () => {
             <a href="tel:+7602652917">
               (760)265-2917
             </a>
-
           </div>
-
-        </div>
-
+        </article>
       </section>
 
-
-      {/* =====================================================
-          FORM SECTION
-      ===================================================== */}
-
+      {/* CONTACT FORM SECTION */}
       <section className="contact-form-section">
-
-        {/* ===================================================
-            LEFT IMAGE
-        =================================================== */}
-
+        {/* LEFT IMAGE */}
         <div className="contact-form-image">
-
           <img
             src="/contact-woman.png"
-            alt="Contact"
+            alt="Woman speaking through a megaphone"
           />
-
         </div>
 
-
-        {/* ===================================================
-            RIGHT FORM
-        =================================================== */}
-
+        {/* RIGHT FORM */}
         <div className="contact-form-wrapper">
-
           <h2>
             We Are Available For You At Any Time
           </h2>
 
           <p className="contact-form-description">
-            Need assistance? We will contact you when you
-            complete the following form!
+            Need assistance? We will contact you when you complete the following form!
           </p>
 
-
-          <form onSubmit={handleSubmit}>
-
-            {/* ===============================================
-                NAME
-            =============================================== */}
-
+          <form
+            className="contact-form"
+            onSubmit={handleSubmit}
+            noValidate
+          >
+            {/* NAME */}
             <div className="form-field form-name">
-
               <label htmlFor="contact-name">
                 Your Name *
               </label>
@@ -338,25 +217,27 @@ const Contact = () => {
                 id="contact-name"
                 type="text"
                 name="name"
+                autoComplete="name"
                 value={formData.name}
                 onChange={handleChange}
+                aria-invalid={Boolean(errors.name)}
+                aria-describedby={
+                  errors.name ? "contact-name-error" : undefined
+                }
               />
 
               {errors.name && (
-                <span className="form-error">
+                <span
+                  id="contact-name-error"
+                  className="form-error"
+                >
                   {errors.name}
                 </span>
               )}
-
             </div>
 
-
-            {/* ===============================================
-                EMAIL
-            =============================================== */}
-
+            {/* EMAIL */}
             <div className="form-field form-email">
-
               <label htmlFor="contact-email">
                 Your Email Address *
               </label>
@@ -365,25 +246,27 @@ const Contact = () => {
                 id="contact-email"
                 type="email"
                 name="email"
+                autoComplete="email"
                 value={formData.email}
                 onChange={handleChange}
+                aria-invalid={Boolean(errors.email)}
+                aria-describedby={
+                  errors.email ? "contact-email-error" : undefined
+                }
               />
 
               {errors.email && (
-                <span className="form-error">
+                <span
+                  id="contact-email-error"
+                  className="form-error"
+                >
                   {errors.email}
                 </span>
               )}
-
             </div>
 
-
-            {/* ===============================================
-                TOPIC
-            =============================================== */}
-
+            {/* TOPIC */}
             <div className="form-field form-topic">
-
               <label htmlFor="contact-topic">
                 Topic *
               </label>
@@ -394,23 +277,24 @@ const Contact = () => {
                 name="topic"
                 value={formData.topic}
                 onChange={handleChange}
+                aria-invalid={Boolean(errors.topic)}
+                aria-describedby={
+                  errors.topic ? "contact-topic-error" : undefined
+                }
               />
 
               {errors.topic && (
-                <span className="form-error">
+                <span
+                  id="contact-topic-error"
+                  className="form-error"
+                >
                   {errors.topic}
                 </span>
               )}
-
             </div>
 
-
-            {/* ===============================================
-                MESSAGE
-            =============================================== */}
-
+            {/* MESSAGE */}
             <div className="form-field form-message">
-
               <label htmlFor="contact-message">
                 Your Message *
               </label>
@@ -420,34 +304,32 @@ const Contact = () => {
                 name="message"
                 value={formData.message}
                 onChange={handleChange}
+                aria-invalid={Boolean(errors.message)}
+                aria-describedby={
+                  errors.message ? "contact-message-error" : undefined
+                }
               />
 
               {errors.message && (
-                <span className="form-error">
+                <span
+                  id="contact-message-error"
+                  className="form-error"
+                >
                   {errors.message}
                 </span>
               )}
-
             </div>
 
-
-            {/* ===============================================
-                SUBMIT
-            =============================================== */}
-
+            {/* SUBMIT */}
             <button
               type="submit"
               className="contact-submit-button"
             >
               CONTACT US
             </button>
-
           </form>
-
         </div>
-
       </section>
-
     </main>
   );
 };

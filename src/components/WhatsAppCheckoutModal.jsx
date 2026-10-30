@@ -7,10 +7,7 @@ const CART_KEY = "sreecollections-cart";
 
 function readCart() {
   try {
-    const value = JSON.parse(
-      localStorage.getItem(CART_KEY)
-    );
-
+    const value = JSON.parse(localStorage.getItem(CART_KEY));
     return Array.isArray(value) ? value : [];
   } catch {
     return [];
@@ -23,56 +20,24 @@ function WhatsAppCheckoutModal({
   onConfirmed,
   cart: cartProp,
 }) {
-  /* =====================================================
-     WHATSAPP NUMBER
-  ===================================================== */
-
-  const [whatsappNumber, setWhatsappNumber] =
-    useState("");
-
-  /* =====================================================
-     ERROR
-  ===================================================== */
-
+  const [whatsappNumber, setWhatsappNumber] = useState("");
   const [error, setError] = useState("");
+  const [submitting, setSubmitting] = useState(false);
 
-  /* =====================================================
-     SUBMITTING
-  ===================================================== */
-
-  const [submitting, setSubmitting] =
-    useState(false);
-
-  /* =====================================================
-     CART
-  ===================================================== */
-
-  const cart = Array.isArray(cartProp)
-    ? cartProp
-    : readCart();
-
-  /* =====================================================
-     TOTAL
-  ===================================================== */
+  const cart = Array.isArray(cartProp) ? cartProp : readCart();
 
   const total = useMemo(() => {
     return cart.reduce(
       (sum, item) =>
         sum +
-        Number(item.price || 0) *
-          Number(item.quantity || 0),
+        Number(item.price || 0) * Number(item.quantity || 0),
       0
     );
   }, [cart]);
 
   /* =====================================================
-     FIGMA RESPONSIVE SCALING
-
-     Figma master canvas:
-     1728px wide
-
-     The complete checkout modal scales
-     proportionally from the Figma canvas.
+     FIGMA PROPORTIONAL SCALING
+     Reference width: 1728px
   ===================================================== */
 
   useEffect(() => {
@@ -80,56 +45,31 @@ function WhatsAppCheckoutModal({
 
     const updateFigmaScale = () => {
       const FIGMA_WIDTH = 1728;
+      const viewportWidth = document.documentElement.clientWidth;
 
-      const viewportWidth =
-        document.documentElement.clientWidth;
-
-      /*
-        Figma reference width:
-        1728px
-
-        At 1728px:
-        scale = 1
-
-        At smaller widths:
-        scale = viewportWidth / 1728
-
-        Never allow the design to become
-        larger than the original Figma.
-      */
-
-      const scale = Math.min(
-        1,
-        viewportWidth / FIGMA_WIDTH
-      );
+      const scale = viewportWidth / FIGMA_WIDTH;
 
       document.documentElement.style.setProperty(
-        "--whatsapp-figma-scale",
-        scale.toString()
+        "--whatsapp-checkout-figma-scale",
+        String(scale)
       );
     };
 
     updateFigmaScale();
 
-    window.addEventListener(
-      "resize",
-      updateFigmaScale
-    );
+    window.addEventListener("resize", updateFigmaScale);
 
     return () => {
-      window.removeEventListener(
-        "resize",
-        updateFigmaScale
-      );
+      window.removeEventListener("resize", updateFigmaScale);
 
       document.documentElement.style.removeProperty(
-        "--whatsapp-figma-scale"
+        "--whatsapp-checkout-figma-scale"
       );
     };
   }, [isOpen]);
 
   /* =====================================================
-     RESET WHEN MODAL CLOSES
+     RESET FORM WHEN MODAL CLOSES
   ===================================================== */
 
   useEffect(() => {
@@ -141,51 +81,28 @@ function WhatsAppCheckoutModal({
   }, [isOpen]);
 
   /* =====================================================
-     ESCAPE KEY
+     ESCAPE KEY AND BODY SCROLL LOCK
   ===================================================== */
 
   useEffect(() => {
     if (!isOpen) return;
 
     const handleEscape = (event) => {
-      if (event.key === "Escape") {
-        onClose();
+      if (event.key === "Escape" && !submitting) {
+        onClose?.();
       }
     };
 
-    document.addEventListener(
-      "keydown",
-      handleEscape
-    );
-
-    /*
-      Prevent background page scrolling
-      while checkout popup is open.
-    */
-
-    document.body.classList.add(
-      "whatsapp-modal-open"
-    );
+    document.addEventListener("keydown", handleEscape);
+    document.body.classList.add("whatsapp-modal-open");
 
     return () => {
-      document.removeEventListener(
-        "keydown",
-        handleEscape
-      );
-
-      document.body.classList.remove(
-        "whatsapp-modal-open"
-      );
+      document.removeEventListener("keydown", handleEscape);
+      document.body.classList.remove("whatsapp-modal-open");
     };
-  }, [isOpen, onClose]);
+  }, [isOpen, onClose, submitting]);
 
-  /* =====================================================
-     DO NOT RENDER WHEN CLOSED
-  ===================================================== */
-
-  if (!isOpen) {
-    return null;
-  }
+  if (!isOpen) return null;
 
   /* =====================================================
      PROCEED / CONFIRM ORDER
@@ -194,160 +111,106 @@ function WhatsAppCheckoutModal({
   const handleProceed = (event) => {
     event.preventDefault();
 
-    /* -----------------------------------------------
-       CLEAN NUMBER
-    ------------------------------------------------ */
+    if (submitting) return;
 
-    const digits =
-      whatsappNumber.replace(/\D/g, "");
+    const digits = whatsappNumber.replace(/\D/g, "");
 
-    /* -----------------------------------------------
-       VALIDATE NUMBER
-    ------------------------------------------------ */
+    /* Validate WhatsApp number */
 
-    if (
-      digits.length < 8 ||
-      digits.length > 15
-    ) {
-      setError(
-        "Please enter a valid WhatsApp number."
-      );
-
+    if (digits.length < 8 || digits.length > 15) {
+      setError("Please enter a valid WhatsApp number.");
       return;
     }
 
-    /* -----------------------------------------------
-       VALIDATE CART
-    ------------------------------------------------ */
+    /* Validate cart */
 
     if (!cart.length) {
       setError("Your cart is empty.");
-
       return;
     }
 
-    /* -----------------------------------------------
-       SUBMITTING STATE
-    ------------------------------------------------ */
-
     setSubmitting(true);
+    setError("");
 
-    /* =================================================
-       SAVE ORDER
-    ================================================= */
+    try {
+      /* Save order */
 
-    const order = {
-      customer: {
-        whatsappNumber:
-          whatsappNumber.trim(),
-      },
+      const order = {
+        customer: {
+          whatsappNumber: whatsappNumber.trim(),
+        },
+        cart,
+        total,
+        createdAt: new Date().toISOString(),
+      };
 
-      cart,
+      localStorage.setItem(
+        "sreecollections-order",
+        JSON.stringify(order)
+      );
 
-      total,
+      /* Build order lines */
 
-      createdAt:
-        new Date().toISOString(),
-    };
-
-    localStorage.setItem(
-      "sreecollections-order",
-      JSON.stringify(order)
-    );
-
-    /* =================================================
-       BUILD ORDER LINES
-    ================================================= */
-
-    const orderLines = cart.map(
-      (item) => {
+      const orderLines = cart.map((item) => {
         const lineTotal =
           Number(item.price || 0) *
           Number(item.quantity || 0);
 
         return [
           `Product: ${item.name}`,
-
           `Size: ${item.size || "M"}`,
-
-          `Colour: ${
-            item.colour || "Black"
-          }`,
-
+          `Colour: ${item.colour || "Black"}`,
           `Quantity: ${item.quantity}`,
-
-          `Price: $${lineTotal.toFixed(
-            2
-          )}`,
+          `Price: $${lineTotal.toFixed(2)}`,
         ].join("\n");
-      }
-    );
+      });
 
-    /* =================================================
-       WHATSAPP MESSAGE
-    ================================================= */
+      /* Build WhatsApp message */
 
-    const message = [
-      "Hello Sreecollections, I would like to confirm my order.",
-
-      "",
-
-      `Customer WhatsApp Number: ${whatsappNumber.trim()}`,
-
-      "",
-
-      ...orderLines.flatMap(
-        (line, index) => [
+      const message = [
+        "Hello Sreecollections, I would like to confirm my order.",
+        "",
+        `Customer WhatsApp Number: ${whatsappNumber.trim()}`,
+        "",
+        ...orderLines.flatMap((line, index) => [
           line,
+          ...(index < orderLines.length - 1 ? [""] : []),
+        ]),
+        "",
+        `Total: $${total.toFixed(2)}`,
+      ].join("\n");
 
-          ...(index <
-          orderLines.length - 1
-            ? [""]
-            : []),
-        ]
-      ),
+      /* Create WhatsApp URL */
 
-      "",
+      const whatsappUrl =
+        `https://wa.me/${BUSINESS_WHATSAPP}?text=` +
+        encodeURIComponent(message);
 
-      `Total: $${total.toFixed(2)}`,
-    ].join("\n");
+      /* Open WhatsApp */
 
-    /* =================================================
-       WHATSAPP URL
-    ================================================= */
+      window.open(
+        whatsappUrl,
+        "_blank",
+        "noopener,noreferrer"
+      );
 
-    const whatsappUrl =
-      `https://wa.me/${BUSINESS_WHATSAPP}?text=` +
-      encodeURIComponent(message);
+      /* Close modal */
 
-    /* =================================================
-       OPEN WHATSAPP
-    ================================================= */
+      onClose?.();
 
-    window.open(
-      whatsappUrl,
-      "_blank",
-      "noopener,noreferrer"
-    );
+      /* Trigger confirmation callback */
 
-    /* =================================================
-       RESET SUBMITTING
-    ================================================= */
+      if (onConfirmed) {
+        onConfirmed();
+      }
+    } catch (err) {
+      console.error("Unable to process checkout:", err);
 
-    setSubmitting(false);
-
-    /* =================================================
-       CLOSE NUMBER POPUP
-    ================================================= */
-
-    onClose();
-
-    /* =================================================
-       SHOW CONFIRMATION
-    ================================================= */
-
-    if (onConfirmed) {
-      onConfirmed();
+      setError(
+        "Unable to process your order. Please try again."
+      );
+    } finally {
+      setSubmitting(false);
     }
   };
 
@@ -358,27 +221,26 @@ function WhatsAppCheckoutModal({
   return (
     <div
       className="whatsapp-checkout-overlay"
-      onMouseDown={onClose}
+      onMouseDown={(event) => {
+        if (
+          event.target === event.currentTarget &&
+          !submitting
+        ) {
+          onClose?.();
+        }
+      }}
     >
       <section
         className="whatsapp-checkout-modal"
         role="dialog"
         aria-modal="true"
         aria-labelledby="whatsapp-checkout-title"
-        onMouseDown={(event) =>
-          event.stopPropagation()
-        }
+        onMouseDown={(event) => event.stopPropagation()}
       >
+        {/* HEADER */}
 
-        {/* =================================================
-            HEADER
-        ================================================= */}
-
-        <div className="whatsapp-checkout-header">
-
-          <h2
-            id="whatsapp-checkout-title"
-          >
+        <header className="whatsapp-checkout-header">
+          <h2 id="whatsapp-checkout-title">
             Checkout
           </h2>
 
@@ -387,46 +249,24 @@ function WhatsAppCheckoutModal({
             className="whatsapp-checkout-close"
             onClick={onClose}
             aria-label="Close checkout"
+            disabled={submitting}
           >
-            <FaXmark />
+            <FaXmark aria-hidden="true" />
           </button>
-
-        </div>
-
-
-        {/* =================================================
-            DIVIDER
-
-            Kept in JSX for compatibility,
-            hidden by CSS because the header itself
-            contains the exact Figma divider.
-        ================================================= */}
+        </header>
 
         <div className="whatsapp-checkout-divider" />
 
-
-        {/* =================================================
-            FORM
-        ================================================= */}
+        {/* CHECKOUT FORM */}
 
         <form
           className="whatsapp-checkout-form"
           onSubmit={handleProceed}
         >
-
-          {/* =================================================
-              QUESTION
-          ================================================= */}
-
           <p className="whatsapp-checkout-question">
             Enter your WhatsApp number to confirm
             your order.
           </p>
-
-
-          {/* =================================================
-              ACCESSIBILITY LABEL
-          ================================================= */}
 
           <label
             htmlFor="whatsapp-number"
@@ -435,73 +275,49 @@ function WhatsAppCheckoutModal({
             WhatsApp Number
           </label>
 
-
-          {/* =================================================
-              WHATSAPP NUMBER INPUT
-          ================================================= */}
-
           <input
             id="whatsapp-number"
-
             type="tel"
-
             inputMode="tel"
-
             autoComplete="tel"
-
             value={whatsappNumber}
-
             onChange={(event) => {
-              setWhatsappNumber(
-                event.target.value
-              );
+              setWhatsappNumber(event.target.value);
 
               if (error) {
                 setError("");
               }
             }}
-
             placeholder="WhatsApp Number"
-
             className={`whatsapp-number-input ${
               error ? "has-error" : ""
             }`}
-
             aria-invalid={Boolean(error)}
-
+            aria-describedby={
+              error ? "whatsapp-checkout-error" : undefined
+            }
             autoFocus
+            required
           />
 
-
-          {/* =================================================
-              ERROR
-          ================================================= */}
-
           {error && (
-            <p className="whatsapp-checkout-error">
+            <p
+              id="whatsapp-checkout-error"
+              className="whatsapp-checkout-error"
+              role="alert"
+            >
               {error}
             </p>
           )}
 
-
-          {/* =================================================
-              PROCEED BUTTON
-          ================================================= */}
-
           <button
             type="submit"
-
             className="whatsapp-proceed-button"
-
             disabled={submitting}
           >
-            {submitting
-              ? "Opening WhatsApp..."
-              : "Proceed"}
+            {submitting ? "Opening WhatsApp..." : "Proceed"}
           </button>
-
         </form>
-
       </section>
     </div>
   );

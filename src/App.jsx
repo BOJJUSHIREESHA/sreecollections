@@ -61,83 +61,35 @@ function RefreshToLanding() {
 }
 
 
-// =====================================================
-// APP
-// =====================================================
-
 function App() {
   return (
     <BrowserRouter>
-
-      {/* Check browser refresh once */}
       <RefreshToLanding />
 
-      <Navbar />
+      <div className="app-layout">
+        <Navbar />
 
-      <Routes>
+        <main className="app-main">
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/home" element={<HomePage />} />
+            <Route path="/categories" element={<Categories />} />
+            <Route path="/products" element={<Products />} />
+            <Route path="/product/:productId" element={<ProductDetails />} />
+            <Route path="/search" element={<Search />} />
+            <Route path="/cart" element={<Cart />} />
+            <Route path="/checkout" element={<Checkout />} />
+            <Route
+              path="/order-confirmation"
+              element={<OrderConfirmation />}
+            />
+            <Route path="/about" element={<About />} />
+            <Route path="/contact" element={<Contact />} />
+          </Routes>
+        </main>
 
-        {/* LANDING PAGE */}
-        <Route
-          path="/"
-          element={<Home />}
-        />
-
-        {/* MAIN HOME PAGE */}
-        <Route
-          path="/home"
-          element={<HomePage />}
-        />
-
-        {/* OTHER PAGES */}
-        <Route
-          path="/categories"
-          element={<Categories />}
-        />
-
-        <Route
-          path="/products"
-          element={<Products />}
-        />
-
-        <Route
-          path="/product/:productId"
-          element={<ProductDetails />}
-        />
-
-        <Route
-          path="/search"
-          element={<Search />}
-        />
-
-        <Route
-          path="/cart"
-          element={<Cart />}
-        />
-
-        <Route
-          path="/checkout"
-          element={<Checkout />}
-        />
-
-        <Route
-          path="/order-confirmation"
-          element={<OrderConfirmation />}
-        />
-
-        <Route
-          path="/about"
-          element={<About />}
-        />
-
-        <Route
-          path="/contact"
-          element={<Contact />}
-        />
-
-      </Routes>
-
-      <Footer />
-
+        <Footer />
+      </div>
     </BrowserRouter>
   );
 }

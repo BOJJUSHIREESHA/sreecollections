@@ -432,65 +432,6 @@ function ProductDetails() {
 
   /*
   =======================================================
-  FIGMA SCALE
-
-  IMPORTANT:
-  The Figma design is 1728px wide.
-
-  We keep the whole Product Details page as one
-  fixed Figma composition and uniformly scale it
-  according to the viewport width.
-  =======================================================
-  */
-
-  useEffect(() => {
-
-    const updateFigmaScale = () => {
-
-      const designWidth = 1728;
-
-      const viewportWidth =
-        document.documentElement.clientWidth;
-
-
-      const scale = Math.min(
-        1,
-        viewportWidth /
-          designWidth
-      );
-
-
-      document.documentElement.style.setProperty(
-        "--figma-scale",
-        scale.toString()
-      );
-
-    };
-
-
-    updateFigmaScale();
-
-
-    window.addEventListener(
-      "resize",
-      updateFigmaScale
-    );
-
-
-    return () => {
-
-      window.removeEventListener(
-        "resize",
-        updateFigmaScale
-      );
-
-    };
-
-  }, []);
-
-
-  /*
-  =======================================================
   READ CART
   =======================================================
   */

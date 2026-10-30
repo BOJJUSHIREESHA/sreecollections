@@ -1,595 +1,977 @@
+
 /* =========================================================
-   SREE COLLECTIONS NAVBAR
-   SAME LAPTOP DESIGN ON ALL DEVICES
-   ONE ROW — NO HAMBURGER
+   SREE COLLECTIONS — COMPLETE RESPONSIVE NAVBAR
+   Figma reference: 1728px
+
+   1025px–1440px   Fixed logo scale, compact desktop nav
+   1441px–1728px   Original Figma desktop layout
+   601px–1024px    Tablet dropdown
+   361px–600px     Mobile dropdown
+   360px and below Small mobile dropdown
+   1729px+         Large desktop
 ========================================================= */
+
+/* =========================================================
+   1. COLORS AND BASE
+========================================================= */
+
+:root {
+  --navbar-cream: #FDFAF5;
+  --navbar-burgundy: #5D2030;
+  --navbar-gold: #BB8E43;
+  --navbar-red: #e00000;
+  --navbar-border: rgba(93, 32, 48, 0.15);
+  --navbar-shadow: 0 12px 28px rgba(55, 25, 30, 0.09);
+}
+
+.site-header,
+.site-header *,
+.site-header *::before,
+.site-header *::after {
+  box-sizing: border-box;
+}
 
 .site-header {
-  width: 100%;
-  margin-top: 24px;
-
-  background: #FDFAF5;
-
   position: relative;
   z-index: 1000;
-
-  box-sizing: border-box;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  background: var(--navbar-cream);
+  color: var(--navbar-burgundy);
 }
-
-
-/* =========================================================
-   NAVBAR
-========================================================= */
 
 .navbar {
-  width: min(1535px, calc(100% - 80px));
-
-  height: clamp(60px, 9.8vw, 150px);
-  min-height: 60px;
-
-  margin: 0 auto;
-
+  position: relative;
   display: flex;
+  width: min(1535px, calc(100% - 48px));
+  min-height: 150px;
   align-items: center;
-
-  background: #FDFAF5;
-
-  box-sizing: border-box;
+  justify-content: space-between;
+  margin: 24px auto 0;
+  padding: 0;
+  gap: 0;
+  overflow: visible;
+  background: var(--navbar-cream);
 }
-
 
 /* =========================================================
-   LEFT LOGO AREA
+   2. LOGO — ORIGINAL FIGMA CROP
 ========================================================= */
-
-.navbar-logo-area {
-  flex: 0 1 auto;
-
-  width: auto;
-  min-width: 0;
-
-  height: 100%;
-
-  display: flex;
-  align-items: center;
-
-  box-sizing: border-box;
-}
-
 
 .navbar-brand {
-  width: auto;
+  position: relative;
+  display: block;
+  flex: 0 0 40.847%;
+  width: 40.847%;
+  height: 150px;
   min-width: 0;
-
-  height: 100%;
-
-  display: flex;
-  align-items: center;
-
-  gap: 0;
-
-  flex: 0 1 auto;
-
+  overflow: visible;
+  background: var(--navbar-cream);
   text-decoration: none;
-
-  box-sizing: border-box;
 }
 
-
-/* =========================================================
-   LOGO
-========================================================= */
-
-.navbar-logo {
-  width: clamp(42px, 9vw, 150px);
-  height: clamp(42px, 9vw, 150px);
-
-  min-width: 42px;
-  max-width: 150px;
-
-  flex: 0 1 auto;
-
+.navbar-logo-symbol {
+  position: absolute;
+  top: 2px;
+  left: 0;
   display: block;
-
-  object-fit: contain;
-
-  box-sizing: border-box;
+  width: 195px;
+  height: 146px;
+  overflow: hidden;
+  border-radius: 5.2px;
+  background: var(--navbar-cream);
 }
 
-
-/* =========================================================
-   WORDMARK
-========================================================= */
-
-.navbar-wordmark {
-  width: clamp(70px, 14vw, 245px);
-
-  min-width: 70px;
-  max-width: 245px;
-
-  height: auto;
-
-  flex: 0 1 auto;
-
+.navbar-logo-symbol img {
+  position: absolute;
+  top: 0;
+  left: -17.5px;
   display: block;
-
-  object-fit: contain;
-
-  box-sizing: border-box;
+  width: 230px;
+  height: 230px;
+  max-width: none;
+  object-fit: fill;
 }
 
+.navbar-logo-wordmark {
+  position: absolute;
+  top: 39px;
+  left: 180px;
+  display: block;
+  width: 292.5px;
+  height: 72px;
+  overflow: hidden;
+  background: var(--navbar-cream);
+}
+
+.navbar-logo-wordmark img {
+  position: absolute;
+  top: -214px;
+  left: 0;
+  display: block;
+  width: 320px;
+  height: 320px;
+  max-width: none;
+  object-fit: fill;
+}
 
 /* =========================================================
-   RIGHT SIDE
-   THIS CREATES THE LAPTOP-STYLE GAP
+   3. DESKTOP NAVIGATION
 ========================================================= */
 
 .navbar-right {
-  flex: 1 1 auto;
-
-  width: auto;
-  min-width: 0;
-
-  margin-left: auto;
-
+  position: absolute;
+  top: 50%;
+  right: 0;
+  left: 28.7296%;
   display: flex;
+  min-width: 0;
+  height: 61px;
   align-items: center;
   justify-content: flex-end;
-
-  box-sizing: border-box;
+  gap: clamp(16px, 2.2vw, 38px);
+  padding-left: clamp(28px, 3vw, 48px);
+  transform: translateY(-50%);
 }
-
-
-/* =========================================================
-   NAVIGATION LINKS
-========================================================= */
 
 .navbar-links {
-  flex: 0 1 auto;
-
-  width: auto;
-  min-width: 0;
-
   display: flex;
+  flex: 0 1 auto;
+  min-width: 0;
+  height: 61px;
   align-items: center;
-
-  gap: clamp(6px, 2.1vw, 32px);
-
-  box-sizing: border-box;
+  justify-content: flex-end;
+  gap: clamp(14px, 2.1vw, 36px);
 }
-
 
 .navbar-link {
   position: relative;
-
-  flex: 0 1 auto;
-
-  width: auto;
-  min-width: 0;
-
-  height: clamp(30px, 4vw, 61px);
-
-  display: flex;
+  display: inline-flex;
+  flex: 0 0 auto;
+  height: 61px;
   align-items: center;
   justify-content: center;
-
   padding: 0;
-
-  color: #5D2030;
-
-  font-family:
-    "Blacker Display",
-    Georgia,
-    "Times New Roman",
-    serif;
-
-  font-size: clamp(8px, 1.05vw, 19px);
-
+  color: var(--navbar-burgundy);
+  font-family: "Blacker Display", Georgia, "Times New Roman", serif;
+  font-size: 20px;
   font-weight: 700;
-
   line-height: 1;
-
-  letter-spacing: 0.1px;
-
-  white-space: nowrap;
-
+  letter-spacing: 0.15px;
   text-decoration: none;
-
-  box-sizing: border-box;
+  white-space: nowrap;
 }
 
+.navbar-link:nth-child(1) {
+  width: 62px;
+}
 
-/* =========================================================
-   ACTIVE UNDERLINE
-   SAME STYLE ON ALL DEVICES
-========================================================= */
+.navbar-link:nth-child(2) {
+  width: 65px;
+}
+
+.navbar-link:nth-child(3) {
+  width: 110px;
+}
+
+.navbar-link::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  height: 4px;
+  border-radius: 2px 2px 0 0;
+  background: var(--navbar-burgundy);
+  transform: scaleX(0);
+  transform-origin: center;
+  transition: transform 160ms ease;
+}
 
 .navbar-link-active::after {
-  content: "";
-
-  position: absolute;
-
-  left: 0;
-  right: 0;
-
-  bottom: clamp(-7px, -0.6vw, -10px);
-
-  width: 100%;
-
-  height: clamp(1.5px, 0.22vw, 4px);
-
-  background: #5D2030;
-
-  border-radius: 999px;
+  transform: scaleX(1);
 }
 
-
 /* =========================================================
-   CONTACT BUTTON
+   4. CONTACT BUTTON
 ========================================================= */
 
 .navbar-contact {
-  flex: 0 1 auto;
-
-  width: clamp(58px, 9vw, 155px);
-
-  min-width: 58px;
-  max-width: 155px;
-
-  height: clamp(25px, 3.2vw, 52px);
-
-  margin-left: clamp(7px, 2vw, 30px);
-
-  display: flex;
+  display: inline-flex;
+  flex: 0 0 164px;
+  width: 164px;
+  height: 54px;
   align-items: center;
   justify-content: center;
-
-  padding: 0 clamp(2px, 0.7vw, 10px);
-
+  padding: 0 12px;
   border: 0;
-
-  border-radius: 999px;
-
-  background: #BB8E43;
-
-  color: #FDFAF5;
-
-  font-family:
-    "Blacker Display",
-    Georgia,
-    "Times New Roman",
-    serif;
-
-  font-size: clamp(5.5px, 0.9vw, 15px);
-
+  border-radius: 72px;
+  background: var(--navbar-gold);
+  color: var(--navbar-cream);
+  font-family: "Blacker Display", Georgia, "Times New Roman", serif;
+  font-size: 16px;
   font-weight: 700;
-
   line-height: 1;
-
-  text-transform: uppercase;
-
-  white-space: nowrap;
-
+  text-align: center;
   text-decoration: none;
-
-  box-sizing: border-box;
+  white-space: nowrap;
 }
 
+.navbar-contact:hover,
+.navbar-contact-active {
+  background: var(--navbar-gold);
+  color: var(--navbar-cream);
+}
 
 /* =========================================================
-   SEARCH + CART
+   5. SEARCH AND CART
 ========================================================= */
 
 .navbar-actions {
-  flex: 0 1 auto;
-
-  width: auto;
-  min-width: 0;
-
   display: flex;
+  flex: 0 0 auto;
   align-items: center;
-
-  gap: clamp(6px, 2vw, 32px);
-
-  margin-left: clamp(7px, 2vw, 32px);
-
-  white-space: nowrap;
-
-  box-sizing: border-box;
+  justify-content: flex-end;
+  gap: clamp(12px, 1.389vw, 24px);
 }
-
 
 .navbar-action-icon {
-  width: clamp(17px, 2.3vw, 36px);
-  height: clamp(17px, 2.3vw, 36px);
-
-  min-width: 17px;
-  max-width: 36px;
-
-  flex: 0 1 auto;
-
-  display: flex;
+  display: inline-flex;
+  flex: 0 0 36px;
+  width: 36px;
+  height: 36px;
   align-items: center;
   justify-content: center;
-
   padding: 0;
-
   border: 0;
-
   background: transparent;
-
-  color: #5D2030;
-
-  line-height: 1;
-
+  color: var(--navbar-burgundy);
   text-decoration: none;
-
   cursor: pointer;
-
-  box-sizing: border-box;
 }
-
 
 .navbar-action-icon svg {
-  width: clamp(10px, 1.7vw, 25px);
-  height: clamp(10px, 1.7vw, 25px);
-
   display: block;
-
-  flex-shrink: 0;
+  width: 26px;
+  height: 26px;
+  color: inherit;
+  stroke-width: 1.8;
 }
 
-
-/* =========================================================
-   CART
-========================================================= */
+.navbar-cart-button svg {
+  width: 30px;
+  height: 30px;
+  stroke-width: 1.5;
+}
 
 .navbar-cart-wrapper {
   position: relative;
-
-  width: clamp(17px, 2.3vw, 36px);
-  height: clamp(17px, 2.3vw, 36px);
-
-  min-width: 17px;
-  max-width: 36px;
-
-  flex: 0 1 auto;
-
   display: flex;
+  flex: 0 0 36px;
   align-items: center;
   justify-content: center;
 }
 
-
-.navbar-cart-button {
-  width: 100%;
-  height: 100%;
-}
-
-
-.navbar-cart-button svg {
-  width: clamp(13px, 2vw, 30px);
-  height: clamp(11px, 1.8vw, 25px);
-}
-
-
-/* =========================================================
-   CART COUNT
-========================================================= */
+/* Red cart quantity badge */
 
 .navbar-cart-count {
   position: absolute;
-
-  top: clamp(-5px, -0.5vw, -8px);
-  right: clamp(-5px, -0.5vw, -8px);
-
-  min-width: clamp(8px, 1.1vw, 18px);
-  height: clamp(8px, 1.1vw, 18px);
-
+  top: -5px;
+  right: -7px;
+  z-index: 5;
   display: flex;
+  min-width: 19px;
+  height: 19px;
   align-items: center;
   justify-content: center;
-
-  padding: 0 3px;
-
-  border-radius: 999px;
-
-  background: #D10303;
-
-  color: #fff;
-
-  font-family: Arial, sans-serif;
-
-  font-size: clamp(4px, 0.55vw, 9px);
-
-  font-weight: 700;
-
-  line-height: 1;
-
-  z-index: 20;
-
-  box-sizing: border-box;
+  padding: 0 4px;
+  border: 0;
+  border-radius: 50%;
+  background: var(--navbar-red);
+  color: #ffffff;
+  font: 700 11px Arial, sans-serif;
 }
 
-
 /* =========================================================
-   SMALL DEVICES
-   ONLY REMOVE OUTER MARGIN.
-   DO NOT CREATE A DIFFERENT NAVBAR.
+   6. HAMBURGER
 ========================================================= */
 
-@media (max-width: 700px) {
+.navbar-menu-toggle {
+  display: none;
+  position: relative;
+  z-index: 1002;
+  width: 44px;
+  height: 44px;
+  flex: 0 0 44px;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  border: 1px solid var(--navbar-border);
+  border-radius: 50%;
+  background: transparent;
+  color: var(--navbar-burgundy);
+  font-size: 21px;
+  cursor: pointer;
+}
 
-  .site-header {
-    margin-top: 0;
+.navbar-link:focus-visible,
+.navbar-contact:focus-visible,
+.navbar-action-icon:focus-visible,
+.navbar-menu-toggle:focus-visible {
+  outline: 2px solid var(--navbar-gold);
+  outline-offset: 3px;
+}
+
+/* =========================================================
+   7. LAPTOP AND MID-SIZE DESKTOP: 1025px–1440px
+   Fixed logo scale prevents size changes across this range
+========================================================= */
+
+@media (min-width: 1025px) and (max-width: 1440px) {
+  .navbar {
+    width: calc(100% - 40px);
+    min-height: 120px;
+    height: 120px;
+    margin: 0 auto;
+    overflow: visible;
   }
 
-  .navbar {
-    width: 100%;
-    max-width: 100%;
+  .navbar-brand {
+    position: relative;
+    flex: 0 0 330px;
+    width: 330px;
+    height: 120px;
+    min-width: 0;
+    overflow: visible;
+  }
 
+  /* Fixed logo scale throughout this entire range */
+  .navbar-logo-symbol {
+    top: 0;
+    left: 0;
+    width: 195px;
+    height: 146px;
+    transform: scale(0.68);
+    transform-origin: top left;
+  }
+
+  .navbar-logo-symbol img {
+    top: 0;
+    left: -17.5px;
+    width: 230px;
+    height: 230px;
+  }
+
+  .navbar-logo-wordmark {
+    top: 26.52px;
+    left: 122.4px;
+    width: 292.5px;
+    height: 72px;
+    transform: scale(0.68);
+    transform-origin: top left;
+  }
+
+  .navbar-logo-wordmark img {
+    top: -214px;
+    left: 0;
+    width: 320px;
+    height: 320px;
+  }
+
+  /* Keep the desktop menu in one row */
+  .navbar-right {
+    top: 50%;
+    left: 320px;
+    right: 0;
+    height: 61px;
+    gap: clamp(10px, 1.4vw, 20px);
+    padding-left: 14px;
+    transform: translateY(-50%);
+  }
+
+  .navbar-links {
+    flex-shrink: 1;
+    gap: clamp(10px, 1.25vw, 18px);
+  }
+
+  .navbar-link {
+    height: 50px;
+    font-size: clamp(15px, 1.25vw, 18px);
+  }
+
+  .navbar-link:nth-child(1),
+  .navbar-link:nth-child(2),
+  .navbar-link:nth-child(3) {
+    width: auto;
+  }
+
+  .navbar-contact {
+    flex: 0 0 clamp(125px, 10vw, 145px);
+    width: clamp(125px, 10vw, 145px);
+    height: 46px;
+    padding: 0 8px;
+    font-size: clamp(12px, 0.97vw, 14px);
+  }
+
+  .navbar-actions {
+    flex-shrink: 0;
+    gap: clamp(8px, 0.9vw, 13px);
+  }
+
+  .navbar-action-icon {
+    flex-basis: 32px;
+    width: 32px;
+    height: 32px;
+  }
+
+  .navbar-action-icon svg {
+    width: 24px;
+    height: 24px;
+  }
+
+  .navbar-cart-button svg {
+    width: 27px;
+    height: 27px;
+  }
+
+  .navbar-cart-wrapper {
+    flex-basis: 32px;
+  }
+
+  .navbar-menu-toggle {
+    display: none;
+  }
+}
+
+/* =========================================================
+   8. ORIGINAL FIGMA DESKTOP: 1441px–1728px
+========================================================= */
+
+@media (min-width: 1441px) and (max-width: 1728px) {
+  .navbar {
+    width: min(1535px, calc(100% - 48px));
+    min-height: 150px;
+    height: 150px;
+    margin: 0 auto;
+  }
+
+  .navbar-brand {
+    flex: 0 0 40.847%;
+    width: 40.847%;
+    height: 150px;
+    overflow: visible;
+  }
+
+  .navbar-logo-symbol {
+    top: 2px;
+    left: 0;
+    width: 195px;
+    height: 146px;
+    transform: none;
+  }
+
+  .navbar-logo-symbol img {
+    top: 0;
+    left: -17.5px;
+    width: 230px;
+    height: 230px;
+  }
+
+  .navbar-logo-wordmark {
+    top: 39px;
+    left: 180px;
+    width: 292.5px;
+    height: 72px;
+    transform: none;
+  }
+
+  .navbar-logo-wordmark img {
+    top: -214px;
+    left: 0;
+    width: 320px;
+    height: 320px;
+  }
+
+  .navbar-right {
+    left: 28.7296%;
+    right: 0;
+    height: 61px;
+    padding-left: clamp(30px, 2.8935vw, 50px);
+    gap: clamp(14px, 1.8vw, 31px);
+  }
+
+  .navbar-links {
+    flex-shrink: 1;
+    gap: clamp(14px, 1.8vw, 31px);
+  }
+
+  .navbar-link {
+    height: 61px;
+    font-size: clamp(16px, 1.1574vw, 20px);
+  }
+
+  .navbar-contact {
+    flex: 0 0 clamp(140px, 9.4907vw, 164px);
+    width: clamp(140px, 9.4907vw, 164px);
+    height: 54px;
+  }
+
+  .navbar-actions {
+    flex-shrink: 0;
+    gap: clamp(12px, 1.389vw, 24px);
+  }
+
+  .navbar-menu-toggle {
+    display: none;
+  }
+}
+
+/* =========================================================
+   9. TABLET + MOBILE DROPDOWN
+   Content-width panel anchored to the top-right
+========================================================= */
+
+@media (max-width: 1024px) {
+  .navbar-right {
+    position: absolute;
+    top: calc(100% - 1px);
+    right: 0;
+    left: auto;
+    z-index: 1001;
+
+    display: none;
+    flex: 0 0 auto;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+
+    width: max-content;
+    min-width: 0;
+    max-width: calc(100vw - 24px);
+    height: auto;
+    min-height: 0;
+    max-height: calc(100dvh - 100px);
+    overflow-x: hidden;
+    overflow-y: auto;
+
+    gap: 10px;
     margin: 0;
+    padding: 14px 16px;
 
-    padding-left: 4px;
-    padding-right: 4px;
+    border: 1px solid var(--navbar-border);
+    border-radius: 16px;
+    background: var(--navbar-cream);
+    box-shadow: var(--navbar-shadow);
+
+    transform: none;
   }
-}
 
+  .navbar-right.navbar-right-open {
+    display: flex;
+  }
 
-/* =========================================================
-   VERY SMALL DEVICES
-   KEEP SAME DESIGN, JUST SCALE SLIGHTLY
-========================================================= */
-
-@media (max-width: 375px) {
-
-  .navbar {
-    width: 100%;
+  .navbar-links {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    width: auto;
+    min-width: 0;
     max-width: 100%;
-
-    padding-left: 3px;
-    padding-right: 3px;
+    height: auto;
+    gap: 4px;
   }
 
-  .navbar-logo {
-    width: 38px;
-    height: 38px;
+  .navbar-link,
+  .navbar-link:nth-child(1),
+  .navbar-link:nth-child(2),
+  .navbar-link:nth-child(3) {
+    width: auto;
+    max-width: 100%;
+    flex: 0 0 auto;
+    min-height: 36px;
+    height: 36px;
+    justify-content: flex-start;
+    font-size: 17px;
   }
 
-  .navbar-wordmark {
-    width: 62px;
-  }
-
-  .navbar-links {
-    gap: 3px;
-  }
-
-  .navbar-link {
-    font-size: 6px;
-    height: 30px;
-  }
-
-  .navbar-contact {
-    width: 43px;
-    min-width: 43px;
-
-    height: 20px;
-
-    margin-left: 3px;
-
-    font-size: 4px;
-  }
-
-  .navbar-actions {
-    gap: 3px;
-    margin-left: 4px;
-  }
-
-  .navbar-action-icon {
-    width: 14px;
-    height: 14px;
-  }
-
-  .navbar-action-icon svg {
-    width: 9px;
-    height: 9px;
-  }
-
-  .navbar-cart-wrapper {
-    width: 14px;
-    height: 14px;
-  }
-
-  .navbar-cart-button svg {
-    width: 12px;
-    height: 9px;
-  }
-
-  .navbar-link-active::after {
-    bottom: -3px;
-    height: 1.5px;
-  }
-}
-
-
-/* =========================================================
-   320px AND BELOW
-   SAME LAPTOP-STYLE UNDERLINE
-========================================================= */
-
-@media (max-width: 320px) {
-
-  .navbar-logo {
-    width: 34px;
-    height: 34px;
-  }
-
-  .navbar-wordmark {
-    width: 55px;
-  }
-
-  .navbar-links {
-    gap: 2px;
-  }
-
-  .navbar-link {
-    font-size: 5px;
-    height: 28px;
+  .navbar-link::after {
+    right: auto;
+    left: 0;
+    width: 65px;
   }
 
   .navbar-contact {
-    width: 39px;
-    min-width: 39px;
-
-    height: 18px;
-
-    margin-left: 2px;
-
-    font-size: 3.6px;
+    align-self: flex-start;
+    flex: 0 0 auto;
+    width: auto;
+    min-width: 145px;
+    height: 44px;
+    padding: 0 16px;
+    font-size: 15px;
   }
 
   .navbar-actions {
-    gap: 2px;
-    margin-left: 3px;
+    align-self: flex-start;
+    display: flex;
+    width: auto;
+    flex: 0 0 auto;
+    justify-content: flex-start;
+    gap: 16px;
+    padding-top: 10px;
+    border-top: 1px solid var(--navbar-border);
+  }
+}
+
+/* =========================================================
+   10. TABLETS: 601px–1024px
+========================================================= */
+
+@media (min-width: 601px) and (max-width: 1024px) {
+  .navbar {
+    display: flex;
+    flex-wrap: wrap;
+    width: 95%;
+    min-height: 108px;
+    height: auto;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 auto;
+    padding: 0;
+    gap: 0 12px;
+  }
+
+  .navbar-brand {
+    flex: 0 1 390px;
+    width: 390px;
+    max-width: calc(100% - 56px);
+    height: 108px;
+    min-width: 0;
+    overflow: visible;
+  }
+
+  .navbar-logo-symbol {
+    top: 1.44px;
+    left: 0;
+    transform: scale(0.60);
+    transform-origin: top left;
+  }
+
+  .navbar-logo-wordmark {
+    top: 23.4px;
+    left: 108px;
+    transform: scale(0.60);
+    transform-origin: top left;
+  }
+
+  .navbar-menu-toggle {
+    display: inline-flex;
+    margin-left: auto;
+  }
+}
+
+/* =========================================================
+   11. MOBILE: 361px–600px
+========================================================= */
+
+@media (min-width: 361px) and (max-width: 600px) {
+  .navbar {
+    display: flex;
+    flex-wrap: wrap;
+    width: calc(100% - 24px);
+    min-height: 84px;
+    height: auto;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 auto;
+    padding: 0;
+    gap: 0 8px;
+  }
+
+  .navbar-brand {
+    flex: 1 1 auto;
+    width: auto;
+    height: 80px;
+    min-width: 0;
+    overflow: visible;
+  }
+
+  .navbar-logo-symbol {
+    top: 1px;
+    left: 0;
+    transform: scale(0.43);
+    transform-origin: top left;
+  }
+
+  .navbar-logo-wordmark {
+    top: 16.77px;
+    left: 77.4px;
+    transform: scale(0.43);
+    transform-origin: top left;
+  }
+
+  .navbar-menu-toggle {
+    display: inline-flex;
+    flex: 0 0 40px;
+    width: 40px;
+    height: 40px;
+    margin-left: auto;
+    font-size: 19px;
+  }
+
+  .navbar-right {
+    max-width: calc(100vw - 24px);
+    padding: 14px 16px;
+    gap: 8px;
+  }
+
+  .navbar-link,
+  .navbar-link:nth-child(1),
+  .navbar-link:nth-child(2),
+  .navbar-link:nth-child(3) {
+    height: 36px;
+    min-height: 36px;
+    flex-basis: auto;
+    font-size: 16px;
+  }
+
+  .navbar-contact {
+    min-width: 145px;
+    height: 42px;
+    font-size: 14px;
+  }
+
+  .navbar-actions {
+    gap: 14px;
+    padding-top: 8px;
+  }
+}
+
+/* =========================================================
+   12. VERY SMALL PHONES: 360px AND BELOW
+========================================================= */
+
+@media (max-width: 360px) {
+  .navbar {
+    display: flex;
+    flex-wrap: wrap;
+    width: calc(100% - 16px);
+    min-height: 76px;
+    height: auto;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 auto;
+    padding: 0;
+    gap: 0 4px;
+  }
+
+  .navbar-brand {
+    flex: 1 1 auto;
+    width: auto;
+    height: 76px;
+    min-width: 0;
+    overflow: visible;
+  }
+
+  .navbar-logo-symbol {
+    top: 1px;
+    left: 0;
+    transform: scale(0.38);
+    transform-origin: top left;
+  }
+
+  .navbar-logo-wordmark {
+    top: 14.82px;
+    left: 68.4px;
+    transform: scale(0.38);
+    transform-origin: top left;
+  }
+
+  .navbar-menu-toggle {
+    display: inline-flex;
+    flex: 0 0 36px;
+    width: 36px;
+    height: 36px;
+    margin-left: auto;
+    font-size: 18px;
+  }
+
+  .navbar-right {
+    max-width: calc(100vw - 16px);
+    padding: 12px;
+    gap: 8px;
+  }
+
+  .navbar-link,
+  .navbar-link:nth-child(1),
+  .navbar-link:nth-child(2),
+  .navbar-link:nth-child(3) {
+    height: 35px;
+    min-height: 35px;
+    flex-basis: auto;
+    font-size: 15px;
+  }
+
+  .navbar-link::after {
+    width: 52px;
+  }
+
+  .navbar-contact {
+    min-width: 135px;
+    height: 40px;
+    font-size: 13px;
+  }
+
+  .navbar-actions {
+    gap: 12px;
+    padding-top: 8px;
+  }
+}
+
+/* =========================================================
+   13. LARGE DESKTOP: 1729px AND ABOVE
+   Proportionally scale the Figma dimensions
+========================================================= */
+
+@media (min-width: 1729px) {
+  .navbar {
+    width: 88.773148%;
+    max-width: none;
+    min-height: 8.680556vw;
+    height: 8.680556vw;
+    margin: 1.388889vw auto 0;
+    padding: 0;
+    gap: 0;
+  }
+
+  .navbar-brand {
+    flex: 0 0 40.847%;
+    width: 40.847%;
+    height: 8.680556vw;
+    min-width: 0;
+    overflow: visible;
+  }
+
+  .navbar-logo-symbol {
+    top: 0.115741vw;
+    left: 0;
+    width: 11.284722vw;
+    height: 8.449074vw;
+    border-radius: 0.300926vw;
+    transform: none;
+  }
+
+  .navbar-logo-symbol img {
+    top: 0;
+    left: -1.012731vw;
+    width: 13.310185vw;
+    height: 13.310185vw;
+  }
+
+  .navbar-logo-wordmark {
+    top: 2.256944vw;
+    left: 10.416667vw;
+    width: 16.927083vw;
+    height: 4.166667vw;
+    transform: none;
+  }
+
+  .navbar-logo-wordmark img {
+    top: -12.384259vw;
+    left: 0;
+    width: 18.518519vw;
+    height: 18.518519vw;
+  }
+
+  .navbar-right {
+    top: 50%;
+    right: 0;
+    left: 28.7296%;
+    height: 3.530093vw;
+    gap: 2.893519vw;
+    padding-left: 2.893519vw;
+    transform: translateY(-50%);
+  }
+
+  .navbar-links {
+    height: 3.530093vw;
+    gap: 2.314815vw;
+  }
+
+  .navbar-link {
+    height: 3.530093vw;
+    font-size: 1.157407vw;
+  }
+
+  .navbar-link:nth-child(1) {
+    width: 3.587963vw;
+  }
+
+  .navbar-link:nth-child(2) {
+    width: 3.761574vw;
+  }
+
+  .navbar-link:nth-child(3) {
+    width: 6.365741vw;
+  }
+
+  .navbar-link::after {
+    height: 0.231481vw;
+    border-radius: 0.115741vw 0.115741vw 0 0;
+  }
+
+  .navbar-contact {
+    flex: 0 0 9.490741vw;
+    width: 9.490741vw;
+    height: 3.125vw;
+    padding: 0 0.694444vw;
+    font-size: 0.925926vw;
+  }
+
+  .navbar-actions {
+    gap: 1.388889vw;
   }
 
   .navbar-action-icon {
-    width: 13px;
-    height: 13px;
+    flex: 0 0 2.083333vw;
+    width: 2.083333vw;
+    height: 2.083333vw;
   }
 
   .navbar-action-icon svg {
-    width: 8px;
-    height: 8px;
-  }
-
-  .navbar-cart-wrapper {
-    width: 13px;
-    height: 13px;
+    width: 1.504630vw;
+    height: 1.504630vw;
   }
 
   .navbar-cart-button svg {
-    width: 11px;
-    height: 8px;
+    width: 1.736111vw;
+    height: 1.736111vw;
   }
 
-  .navbar-link-active::after {
-    bottom: -3px;
-    height: 1.5px;
+  .navbar-cart-wrapper {
+    flex-basis: 2.083333vw;
+  }
+
+  .navbar-cart-count {
+    top: -0.289352vw;
+    right: -0.405093vw;
+    min-width: 1.099537vw;
+    height: 1.099537vw;
+    font-size: 0.636574vw;
+  }
+
+  .navbar-menu-toggle {
+    display: none;
   }
 }
-
 
 /* =========================================================
-   PREVENT PAGE HORIZONTAL SCROLL
+   14. ACCESSIBILITY
 ========================================================= */
 
-html,
-body {
-  max-width: 100%;
-  overflow-x: hidden;
-}
-
-.navbar img {
-  max-width: 100%;
+@media (prefers-reduced-motion: reduce) {
+  .navbar-link::after {
+    transition: none;
+  }
 }

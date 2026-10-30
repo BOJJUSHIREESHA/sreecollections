@@ -1,944 +1,1670 @@
 /* =========================================================
    SREE COLLECTIONS — ABOUT PAGE
-   =========================================================
+   Figma desktop canvas: 1728 × 5200
+   Desktop measurements preserved; smaller screens reflow.
+========================================================= */
 
-   FIGMA MASTER:
-   1728px × 5200px
-
-   BACKGROUND:
-   #FDFAF5
-
-   The complete desktop Figma composition is maintained
-   at 1728px and proportionally scaled on smaller screens.
-
-   No independent mobile redesign.
-   No typography shrinking.
-   No stacked mobile redesign.
-   ========================================================= */
-
-
-/* =========================================================
-   PAGE
-   ========================================================= */
-
-.about-page {
-  position: relative;
-
-  width: 1728px;
-  min-height: auto;
-
-  margin: 0 auto;
-  padding: 0;
-
-  box-sizing: border-box;
-
-  background: #FDFAF5;
-  color: #5D2030;
-
-  overflow: visible;
-
-  /*
-    IMPORTANT:
-    Use zoom instead of transform so the scaled
-    composition remains part of the document flow.
-  */
-  zoom: var(--about-figma-scale, 1);
+:root {
+  --about-cream: #FDFAF5;
+  --about-burgundy: #5D2030;
+  --about-gold: #BB8E43;
+  --about-display-font: "Blacker Display", Georgia, "Times New Roman", serif;
+  --about-body-font: "Turnkey Lite", Arial, Helvetica, sans-serif;
 }
 
+/* ========================= BASE ========================= */
 
-/* =========================================================
-   GLOBAL BOX SIZING
-   ========================================================= */
-
+.about-page,
 .about-page *,
 .about-page *::before,
 .about-page *::after {
   box-sizing: border-box;
 }
 
-
-/* =========================================================
-   ABOUT CONTENT CONTAINER
-
-   FIGMA:
-   X = 136px
-   WIDTH = 1456px
-   RIGHT = 136px
-   ========================================================= */
-
-.about-container {
-  width: 1456px;
-
-  margin-left: 136px;
-  margin-right: 136px;
-
-  box-sizing: border-box;
-}
-
-
-/* =========================================================
-   ABOUT INTRO
-   ========================================================= */
-
-.about-intro {
-  padding-top: 70px;
-}
-
-
-/* =========================================================
-   ABOUT TITLE
-   ========================================================= */
-
-.about-title {
-  width: 464px;
-
-  margin: 0;
-
-  color: #5D2030;
-}
-
-
-/* =========================================================
-   MAIN TITLE
-   ========================================================= */
-
-.about-title h1 {
-  width: 464px;
-  height: 72px;
-
-  margin: 0;
-  padding: 0;
-
-  display: flex;
-  align-items: baseline;
-
-  white-space: nowrap;
-
-  color: #5D2030;
-
-  font-family:
-    "Blacker Display",
-    Georgia,
-    "Times New Roman",
-    serif;
-
-  font-size: 64px;
-  line-height: 64px;
-  font-weight: 500;
-  font-style: normal;
-
-  letter-spacing: 0;
-}
-
-
-/* =========================================================
-   SREE COLLECTIONS TITLE
-   ========================================================= */
-
-.about-title h1 span {
-  margin-left: 10px;
-
-  font-family:
-    "Blacker Display",
-    Georgia,
-    "Times New Roman",
-    serif;
-
-  font-size: 36px;
-  line-height: 36px;
-  font-weight: 500;
-
-  color: #5D2030;
-
-  white-space: nowrap;
-}
-
-
-/* =========================================================
-   TITLE LINE
-   ========================================================= */
-
-.about-title-line {
-  width: 439px;
-  height: 1px;
-
-  margin-top: 27px;
-
-  background: #5D2030;
-}
-
-
-/* =========================================================
-   SUBTITLE
-   ========================================================= */
-
-.about-title p {
-  width: 439px;
-  height: 25px;
-
-  margin: 17px 0 0;
-  padding: 0;
-
-  color: #5D2030;
-
-  font-family:
-    "Turnkey Lite",
-    Arial,
-    Helvetica,
-    sans-serif;
-
-  font-size: 24px;
-  line-height: 25px;
-  font-weight: 400;
-
-  text-align: left;
-
-  white-space: nowrap;
-}
-
-
-/* =========================================================
-   INTRO LAYOUT
-
-   LEFT:
-   600px
-
-   RIGHT:
-   789px
-
-   GAP:
-   67px
-   ========================================================= */
-
-.intro-layout {
-  width: 1456px;
-
-  margin-top: 40px;
-
-  display: grid;
-
-  grid-template-columns:
-    600px
-    789px;
-
-  column-gap: 67px;
-
-  align-items: start;
-}
-
-
-/* =========================================================
-   LEFT INTRO COLUMN
-   ========================================================= */
-
-.intro-left {
-  width: 600px;
-
-  min-width: 0;
-
-  display: flex;
-
-  flex-direction: column;
-
-  align-items: flex-start;
-
-  padding-top: 276px;
-}
-
-
-/* =========================================================
-   RIGHT INTRO COLUMN
-   ========================================================= */
-
-.intro-right {
-  width: 789px;
-
-  min-width: 0;
-
+.about-page {
   position: relative;
-}
-
-
-/* =========================================================
-   WELCOME TEXT
-   ========================================================= */
-
-.welcome-text {
-  width: 789px;
-  height: 195px;
-
-  margin: 0;
-  padding: 0;
-
-  color: #5D2030;
-
-  font-family:
-    "Turnkey Lite",
-    Arial,
-    Helvetica,
-    sans-serif;
-
-  font-size: 32px;
-  line-height: 32px;
-  font-weight: 400;
-
-  letter-spacing: 0;
-}
-
-
-/* =========================================================
-   CONTACT BUTTON
-   ========================================================= */
-
-.contact-button {
-  width: 243px;
-  height: 60px;
-
-  display: flex;
-
-  align-items: center;
-  justify-content: flex-start;
-
-  position: relative;
-
-  padding: 0;
-
-  border: 2px solid #BB8E43;
-  border-radius: 16px;
-
-  background: transparent;
-
-  color: #BB8E43;
-
-  font-family:
-    "Blacker Display",
-    Georgia,
-    "Times New Roman",
-    serif;
-
-  font-size: 24px;
-  line-height: 24px;
-  font-weight: 400;
-
-  text-decoration: none;
-
-  box-sizing: border-box;
-
-  overflow: visible;
-
-  transition: none;
-}
-
-
-/* =========================================================
-   CONTACT BUTTON TEXT
-   ========================================================= */
-
-.contact-button span {
-  margin-left: 40px;
-
-  white-space: nowrap;
-}
-
-
-/* =========================================================
-   CONTACT ARROW
-   ========================================================= */
-
-.contact-button svg {
-  position: absolute;
-
-  width: 34px;
-  height: 14px;
-
-  left: 170px;
-  top: 21px;
-
-  color: #BB8E43;
-
-  stroke: #BB8E43;
-  stroke-width: 2px;
-
-  fill: none;
-}
-
-
-/* =========================================================
-   CONTACT HOVER
-   ========================================================= */
-
-.contact-button:hover {
-  background: transparent;
-  color: #BB8E43;
-
-  transform: none;
-}
-
-
-/* =========================================================
-   INTRO DESCRIPTION
-   ========================================================= */
-
-.intro-description {
-  width: 600px;
-
-  margin: 60px 0 0;
-  padding: 0;
-
-  color: #5D2030;
-
-  font-family:
-    "Turnkey Lite",
-    Arial,
-    Helvetica,
-    sans-serif;
-
-  font-size: 24px;
-  line-height: 25px;
-  font-weight: 400;
-}
-
-
-/* =========================================================
-   INTRO IMAGE AREA
-   ========================================================= */
-
-.intro-image-area {
-  position: relative;
-
-  width: 789px;
-  height: 430px;
-
-  margin-top: 25px;
-
-  overflow: visible;
-}
-
-
-/* =========================================================
-   STARS IMAGE
-   TOP / RIGHT
-
-   KEEP THIS VERSION — CONFIRMED CORRECT
-   ========================================================= */
-
-.intro-image-one {
-  position: absolute;
-
-  top: 0;
-  right: 0;
-
-  width: 315px;
-  height: 400px;
-
-  display: block;
-
-  margin: 0;
-  padding: 0;
-
-  border: 0;
-  border-radius: 14px;
-
-  object-fit: cover;
-  object-position: center center;
-
-  z-index: 1;
-
-  transform: none;
-}
-
-
-/* =========================================================
-   PARTY HATS IMAGE
-
-   KEEP THIS VERSION — CONFIRMED CORRECT
-
-   Natural image proportion.
-   Small overlap with the stars image.
-   ========================================================= */
-
-.intro-image-two {
-  position: absolute;
-
-  right: 173px;
-  top: 116px;
-
-  width: 428px;
-  height: 284px;
-
-  display: block;
-
-  margin: 0;
-  padding: 0;
-
-  border: 0;
-  border-radius: 14px;
-
-  object-fit: cover;
-  object-position: center center;
-
-  z-index: 2;
-
-  transform: none;
-}
-
-
-/* =========================================================
-   SECTION HEADING
-   ========================================================= */
-
-.section-heading {
-  display: flex;
-
-  flex-direction: column;
-
-  align-items: center;
-  justify-content: flex-start;
-
-  margin: 0;
-
-  text-align: center;
-}
-
-
-/* =========================================================
-   SECTION HEADING TITLE
-   ========================================================= */
-
-.section-heading h2 {
-  margin: 0;
-
-  color: #5D2030;
-
-  font-family:
-    "Blacker Display",
-    Georgia,
-    "Times New Roman",
-    serif;
-
-  font-size: 64px;
-  line-height: 64px;
-  font-weight: 500;
-
-  letter-spacing: 0;
-}
-
-
-/* =========================================================
-   SECTION HEADING LINE
-   ========================================================= */
-
-.section-heading span {
-  width: 464px;
-  height: 1px;
-
-  margin-top: 25px;
-
-  background: #5D2030;
-}
-
-
-/* =========================================================
-   COLLECTIONS
-   ========================================================= */
-
-.collections {
-  padding-top: 40px;
-}
-
-
-/* =========================================================
-   COLLECTION ROW
-   =========================================================
-
-   CONTENT:
-   670px
-
-   GAP:
-   136px
-
-   IMAGE COLUMN:
-   650px
-
-   TOTAL:
-   1456px
-   ========================================================= */
-
-.collection-row {
-  width: 1456px;
-
-  display: grid;
-
-  grid-template-columns:
-    670px
-    650px;
-
-  column-gap: 136px;
-
-  align-items: center;
-
-  margin-top: 60px;
-}
-
-
-/* =========================================================
-   JEWELLERY ROW
-   ========================================================= */
-
-.jewellery-row {
-  margin-top: 70px;
-}
-
-
-/* =========================================================
-   DECOR ROW
-   ========================================================= */
-
-.decor-row {
-  margin-top: 65px;
-}
-
-
-/* =========================================================
-   COLLECTION CONTENT
-   ========================================================= */
-
-.collection-content {
-  width: 670px;
-
-  min-width: 0;
-}
-
-
-/* =========================================================
-   COLLECTION HEADING
-   ========================================================= */
-
-.collection-content h3 {
-  margin: 0;
-
-  color: #5D2030;
-
-  font-family:
-    "Blacker Display",
-    Georgia,
-    "Times New Roman",
-    serif;
-
-  font-size: 36px;
-  line-height: 40px;
-  font-weight: 500;
-
-  letter-spacing: 0;
-}
-
-
-/* =========================================================
-   GOLD LINE
-   ========================================================= */
-
-.gold-line {
-  width: 330px;
-  height: 2px;
-
-  margin-top: 10px;
-
-  background: #BB8E43;
-}
-
-
-/* =========================================================
-   COLLECTION LIST
-   ========================================================= */
-
-.collection-content ul {
-  padding: 0;
-
-  margin: 15px 0 25px;
-
-  list-style: none;
-}
-
-
-/* =========================================================
-   COLLECTION ITEM
-   ========================================================= */
-
-.collection-content li {
-  margin: 0;
-  padding: 0;
-
-  color: #5D2030;
-
-  font-family:
-    "Turnkey Lite",
-    Arial,
-    Helvetica,
-    sans-serif;
-
-  font-size: 24px;
-  line-height: 30px;
-  font-weight: 400;
-}
-
-
-/* =========================================================
-   SHOP NOW BUTTON
-   ========================================================= */
-
-.shop-now {
-  min-width: 198px;
-  height: 50px;
-
-  display: inline-flex;
-
-  align-items: center;
-  justify-content: center;
-
-  padding: 0 28px;
-
-  border: 0;
-  border-radius: 25px;
-
-  background: #BB8E43;
-
-  color: #FDFAF5;
-
-  font-family:
-    "Blacker Display",
-    Georgia,
-    "Times New Roman",
-    serif;
-
-  font-size: 16px;
-  font-weight: 400;
-
-  line-height: 1;
-
-  text-decoration: none;
-
-  transition: none;
-}
-
-
-/* =========================================================
-   SHOP NOW HOVER
-   ========================================================= */
-
-.shop-now:hover {
-  background: #BB8E43;
-
-  color: #FDFAF5;
-
-  transform: none;
-}
-
-
-/* =========================================================
-   COLLECTION IMAGE
-   ========================================================= */
-
-.collection-image {
-  width: 600px;
-  height: 600px;
-
-  overflow: hidden;
-
-  border-radius: 14px;
-
-  justify-self: end;
-}
-
-
-/* =========================================================
-   FASHION / DECOR IMAGE
-   ========================================================= */
-
-.collection-row > .collection-image {
-  justify-self: end;
-}
-
-
-/* =========================================================
-   JEWELLERY IMAGE
-   ========================================================= */
-
-.jewellery-row > .collection-image {
-  justify-self: start;
-}
-
-
-/* =========================================================
-   COLLECTION IMAGE
-   ========================================================= */
-
-.collection-image img {
   width: 100%;
-  height: 100%;
-
-  display: block;
-
   margin: 0;
   padding: 0;
-
-  border: 0;
-
-  /*
-    Preserve the Figma composition.
-    The supplied Figma layout uses the complete
-    image area rather than a responsive crop.
-  */
-  object-fit: fill;
-  object-position: center;
-
-  transform: none;
-
-  transition: none;
+  overflow: visible;
+  background: var(--about-cream);
+  color: var(--about-burgundy);
+  font-family: var(--about-body-font);
 }
-
-
-/* =========================================================
-   JEWELLERY CONTENT
-   ========================================================= */
-
-.jewellery-content {
-  text-align: right;
-}
-
-
-/* =========================================================
-   JEWELLERY GOLD LINE
-   ========================================================= */
-
-.jewellery-content .gold-line {
-  margin-left: auto;
-}
-
-
-/* =========================================================
-   JEWELLERY LIST
-   ========================================================= */
-
-.jewellery-content ul {
-  text-align: right;
-}
-
-
-/* =========================================================
-   OUR PROMISE
-   ========================================================= */
-
-.promise {
-  padding-top: 90px;
-
-  /*
-    Large open area from Figma before
-    the common footer.
-  */
-  padding-bottom: 390px;
-}
-
-
-/* =========================================================
-   PROMISE CONTENT
-   ========================================================= */
-
-.promise-content {
-  width: 1300px;
-
-  margin: 55px auto 0;
-
-  text-align: center;
-}
-
-
-/* =========================================================
-   PROMISE PARAGRAPHS
-   ========================================================= */
-
-.promise-content p {
-  margin: 0 0 40px;
-
-  color: #5D2030;
-
-  font-family:
-    "Turnkey Lite",
-    Arial,
-    Helvetica,
-    sans-serif;
-
-  font-size: 24px;
-  line-height: 30px;
-  font-weight: 400;
-
-  text-align: center;
-}
-
-
-/* =========================================================
-   GLOBAL PAGE ELEMENTS
-   ========================================================= */
-
-.about-page img {
-  vertical-align: top;
-}
-
-.about-page a {
-  -webkit-tap-highlight-color: transparent;
-}
-
-
-/* =========================================================
-   REMOVE DEFAULT MARGINS
-   ========================================================= */
 
 .about-page h1,
 .about-page h2,
 .about-page h3,
-.about-page p {
-  box-sizing: border-box;
+.about-page p,
+.about-page ul {
+  margin-top: 0;
 }
 
+.about-page img {
+  display: block;
+  max-width: 100%;
+}
 
-/* =========================================================
-   DOCUMENT RESET
-   ========================================================= */
+.about-container {
+  position: relative;
+  width: 1728px;
+  height: 5200px;
+  min-height: 5200px;
+  margin: 0 auto;
+  padding: 0;
+  background: var(--about-cream);
+}
 
-html,
-body {
+/* ========================= INTRO ========================= */
+
+.about-intro {
+  position: absolute;
+  top: 286px;
+  left: 136px;
+  width: 1456px;
+  height: 810px;
   margin: 0;
   padding: 0;
 }
 
+.about-title {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 464px;
+  height: 142px;
+  margin: 0;
+  padding: 0;
+}
+
+.about-title h1 {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  width: 464px;
+  height: 72px;
+  margin: 0;
+  padding: 0;
+  color: #692536;
+  font-family: var(--about-display-font);
+  font-size: 64px;
+  font-weight: 500;
+  line-height: 1;
+  letter-spacing: 0;
+  white-space: nowrap;
+}
+
+.about-title-main {
+  margin: 0;
+  padding: 0;
+  color: #692536;
+  font-family: var(--about-display-font);
+  font-size: 56px;
+  font-weight: 400;
+  line-height: 1;
+  letter-spacing: 0;
+}
+
+.about-title-brand {
+  color: #692536;
+  font-family: var(--about-display-font);
+  font-size: 32px;
+  font-weight: 400;
+  line-height: 1;
+  letter-spacing: 0;
+}
+
+.about-title-line {
+  display: block;
+  width: 396px;
+  height: 1px;
+  margin: 32px 0 12px;
+  padding: 0;
+  border: 0;
+  background: #A77C7D;
+}
+
+.about-subtitle {
+  margin: 0;
+  padding: 0;
+  color: #692536;
+  font-family: var(--about-body-font);
+  font-size: 22px;
+  font-weight: 400;
+  line-height: 1.25;
+  letter-spacing: 0;
+}
+
+.intro-layout {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1456px;
+  height: 810px;
+}
+
+.intro-left {
+  position: static;
+  margin: 0;
+  padding: 0;
+}
+
+.intro-right {
+  position: absolute;
+  top: 178px;
+  left: 667px;
+  width: 789px;
+  margin: 0;
+  padding: 0;
+}
+
+.welcome-text {
+  width: 789px;
+  height: 195px;
+  margin: 0;
+  padding: 0;
+  color: var(--about-burgundy);
+  font-family: var(--about-body-font);
+  font-size: 32px;
+  font-weight: 400;
+  line-height: 1;
+  letter-spacing: 0;
+}
+
+.about-contact-button {
+  position: absolute;
+  top: 276px;
+  left: -667px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: 243px;
+  height: 60px;
+  margin: 0;
+  padding: 0 0 0 34px;
+  border: 1.5px solid var(--about-gold);
+  border-radius: 16px;
+  background: transparent;
+  color: var(--about-gold);
+  font-family: var(--about-display-font);
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 1;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: background-color 0.2s ease;
+}
+
+.about-contact-button span {
+  display: block;
+  margin: 0;
+  padding: 0;
+  line-height: 1;
+}
+
+.about-contact-button .about-contact-arrow {
+  position: absolute;
+  top: 50%;
+  left: 160px;
+  display: block;
+  width: 34px;
+  height: 14px;
+  color: var(--about-gold);
+  transform: translateY(-50%);
+  overflow: visible;
+  flex-shrink: 0;
+}
+
+.about-contact-button:hover,
+.about-contact-button:focus-visible {
+  background-color: rgba(187, 142, 67, 0.06);
+}
+
+.intro-image-area {
+  position: absolute;
+  top: 405px;
+  left: 854px;
+  width: 598px;
+  height: 405px;
+  margin: 0;
+  padding: 0;
+  overflow: visible;
+  z-index: 2;
+}
+
+.intro-image-one {
+  position: absolute;
+  top: 0;
+  left: 283px;
+  width: 319px;
+  height: 405px;
+  max-width: none;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  border-radius: 36px;
+  object-fit: cover;
+  object-position: center;
+  z-index: 1;
+}
+
+.intro-image-two {
+  position: absolute;
+  top: 120px;
+  left: 0;
+  width: 428px;
+  height: 284px;
+  max-width: none;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  border-radius: 36px;
+  object-fit: cover;
+  object-position: center;
+  z-index: 2;
+}
+
+.intro-description {
+  position: absolute;
+  top: 570px;
+  left: 0;
+  width: 738px;
+  height: 195px;
+  margin: 0;
+  padding: 0;
+  color: var(--about-burgundy);
+  font-family: var(--about-body-font);
+  font-size: 32px;
+  font-weight: 400;
+  line-height: 1;
+  letter-spacing: 0;
+  z-index: 1;
+}
+
+/* ======================= COLLECTIONS ====================== */
+
+.about-collections {
+  position: absolute;
+  top: 1160px;
+  left: 136px;
+  width: 1456px;
+  height: 2165px;
+  margin: 0;
+  padding: 0;
+  background: transparent;
+}
+
+.about-section-heading {
+  position: absolute;
+  top: 0;
+  left: 498px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 461px;
+  height: 99px;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+.about-section-heading h2 {
+  width: 461px;
+  height: 72px;
+  margin: 0;
+  padding: 0;
+  color: var(--about-burgundy);
+  font-family: var(--about-display-font);
+  font-size: 48px;
+  font-weight: 500;
+  line-height: 1;
+  letter-spacing: 0;
+  white-space: nowrap;
+}
+
+.about-section-heading > span {
+  display: block;
+  width: 320px;
+  height: 0;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  border-top: 1px solid var(--about-burgundy);
+}
+
+/* Collection rows */
+
+.collection-row {
+  position: absolute;
+  left: 0;
+  display: grid;
+  margin: 0;
+  padding: 0;
+}
+
+/* Fashion */
+
+.fashion-row {
+  top: 163px;
+  grid-template-columns: 599px 600px;
+  column-gap: 257px;
+  width: 1456px;
+  height: 632px;
+}
+
+.fashion-content {
+  grid-column: 1;
+  grid-row: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  width: 599px;
+  height: 632px;
+  margin: 0;
+  padding: 0;
+}
+
+.fashion-image {
+  grid-column: 2;
+  grid-row: 1;
+  width: 600px;
+  height: 600px;
+  border-radius: 36px;
+}
+
+/* Jewellery */
+
+.jewellery-row {
+  top: 859px;
+  grid-template-columns: 600px 618px;
+  column-gap: 238px;
+  width: 1456px;
+  height: 642px;
+}
+
+.jewellery-image {
+  grid-column: 1;
+  grid-row: 1;
+  width: 600px;
+  height: 600px;
+}
+
+.jewellery-content {
+  grid-column: 2;
+  grid-row: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  width: 618px;
+  height: 642px;
+  margin: 0;
+  padding: 0;
+  text-align: right;
+}
+
+/* Decor */
+
+.decor-row {
+  top: 1565px;
+  grid-template-columns: 604px 600px;
+  column-gap: 252px;
+  width: 1456px;
+  height: 600px;
+}
+
+.decor-content {
+  grid-column: 1;
+  grid-row: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 0;
+  width: 604px;
+  height: 580px;
+  margin: 0;
+  padding: 0;
+}
+
+.decor-image {
+  grid-column: 2;
+  grid-row: 1;
+  width: 600px;
+  height: 600px;
+}
+
+/* Collection headings */
+
+.collection-content {
+  min-width: 0;
+  margin: 0;
+  padding: 0;
+  color: var(--about-burgundy);
+  font-family: var(--about-body-font);
+}
+
+.collection-content h3 {
+  display: block;
+  width: 100%;
+  height: 70px;
+  min-height: 70px;
+  margin: 0;
+  padding: 0 0 16px;
+  border: 0;
+  border-bottom: 4px solid var(--about-gold);
+  color: var(--about-burgundy);
+  font-family: var(--about-display-font);
+  font-size: 48px;
+  font-weight: 500;
+  line-height: 1;
+  letter-spacing: 0;
+}
+
+/* Fashion heading */
+
+.fashion-content h3 {
+  width: 327px;
+  height: 70px;
+  min-height: 70px;
+  margin: 0;
+  padding: 0 0 16px;
+  border: 0;
+  border-bottom: 4px solid var(--about-gold);
+  color: var(--about-burgundy);
+  font-family: var(--about-display-font);
+  font-size: 48px;
+  font-weight: 500;
+  line-height: 1;
+  letter-spacing: 0;
+  white-space: nowrap;
+}
+
+/* Jewellery heading */
+
+.jewellery-content h3 {
+  width: 618px;
+  height: 124px;
+  min-height: 124px;
+  text-align: right;
+  white-space: normal;
+}
+
+/* Decor heading */
+
+.decor-content h3 {
+  flex: 0 0 70px;
+  width: 604px;
+  height: 70px;
+  min-height: 70px;
+  white-space: nowrap;
+}
+
+/* Lists */
+
+.collection-content ul {
+  width: 100%;
+  margin: 25px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.collection-content li {
+  position: relative;
+  margin: 0;
+  padding: 0 0 0 24px;
+  color: var(--about-burgundy);
+  font-family: var(--about-body-font);
+  font-size: 36px;
+  font-weight: 400;
+  line-height: 1;
+  letter-spacing: 0;
+}
+
+.collection-content li::before {
+  content: "*";
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: var(--about-burgundy);
+}
+
+/* Decor list and button spacing */
+
+.decor-content ul {
+  flex: 0 0 auto;
+  width: 528px;
+  margin: 25px 0 0;
+  padding: 0;
+}
+
+.decor-content .about-shop-button {
+  flex: 0 0 54px;
+  align-self: flex-start;
+  width: 164px;
+  min-width: 164px;
+  height: 54px;
+  margin: 32px 0 0;
+  padding: 0;
+  border-radius: 72px;
+  font-family: var(--about-display-font);
+  font-size: 16px;
+  line-height: 1;
+}
+
+/* Jewellery list alignment */
+
+.jewellery-content ul {
+  width: 585px;
+  align-self: flex-end;
+  margin-top: 25px;
+  text-align: right;
+}
+
+.jewellery-content li {
+  padding-right: 24px;
+  padding-left: 0;
+  text-align: right;
+}
+
+.jewellery-content li::before {
+  right: 0;
+  left: auto;
+}
+
+/* Collection images */
+
+.collection-image {
+  position: relative;
+  display: block;
+  width: 600px;
+  height: 600px;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  border: 0;
+  border-radius: 36px;
+}
+
+.jewellery-image,
+.decor-image {
+  border-radius: 24px;
+}
+
+.collection-image img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  max-width: none;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  border-radius: inherit;
+  object-fit: cover;
+  object-position: center;
+}
+
+/* Shop buttons */
+
+.about-shop-button {
+  display: inline-flex;
+  flex: 0 0 auto;
+  align-items: center;
+  justify-content: center;
+  align-self: flex-start;
+  box-sizing: border-box;
+  width: 196.8px;
+  min-width: 196.8px;
+  height: 64.8px;
+  margin: auto 0 0;
+  padding: 0;
+  border: 0;
+  border-radius: 86.4px;
+  background: var(--about-gold);
+  color: var(--about-cream);
+  font-family: var(--about-display-font);
+  font-size: 19.2px;
+  font-weight: 700;
+  line-height: 1;
+  text-decoration: none;
+  text-transform: uppercase;
+  white-space: nowrap;
+  transition: opacity 0.2s ease;
+}
+
+.about-shop-button span {
+  display: block;
+}
+
+.about-shop-button:hover,
+.about-shop-button:focus-visible {
+  background: var(--about-gold);
+  color: var(--about-cream);
+  opacity: 0.88;
+}
+
+.jewellery-content .about-shop-button {
+  align-self: flex-end;
+}
+
+/* ========================= PROMISE ======================== */
+
+.promise {
+  position: absolute;
+  top: 3389px;
+  left: 152px;
+  width: 1425px;
+  height: 471px;
+  margin: 0;
+  padding: 0;
+}
+
+.promise-heading {
+  position: absolute;
+  top: 0;
+  left: 525px;
+  width: 374px;
+  height: 99px;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+.promise-heading h2 {
+  width: 374px;
+  height: 72px;
+  margin: 0;
+  padding: 0;
+  color: var(--about-burgundy);
+  font-family: var(--about-display-font);
+  font-size: 64px;
+  font-weight: 500;
+  line-height: 1;
+  letter-spacing: 0;
+  white-space: nowrap;
+}
+
+.promise-heading > span {
+  display: block;
+  width: 374px;
+  height: 0;
+  margin: 27px 0 0;
+  border: 0;
+  border-top: 1px solid var(--about-burgundy);
+}
+
+.promise-content {
+  position: absolute;
+  top: 163px;
+  left: 0;
+  width: 1425px;
+  height: 308px;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+.promise-content p {
+  width: 100%;
+  margin: 0 0 40px;
+  padding: 0;
+  color: var(--about-burgundy);
+  font-family: var(--about-body-font);
+  font-size: 36px;
+  font-weight: 400;
+  line-height: 1;
+  text-align: center;
+}
 
 /* =========================================================
-   LARGE SCREENS
-   ========================================================= */
+   RESPONSIVE LAYOUT
+   Do not scale the entire desktop canvas.
+========================================================= */
 
-@media (min-width: 1729px) {
-  .about-page {
-    margin-left: auto;
-    margin-right: auto;
+@media (max-width: 1727px) {
+  .about-container {
+    width: 100%;
+    height: auto;
+    min-height: 0;
+    margin: 0 auto;
+    padding: 0 clamp(24px, 4vw, 48px) 64px;
+  }
+
+  .about-intro,
+  .about-collections,
+  .promise {
+    position: relative;
+    top: auto;
+    left: auto;
+    width: 100%;
+    height: auto;
+    margin: 64px auto 0;
+  }
+
+  /* Introduction */
+
+  .about-intro {
+    margin-top: 64px;
+  }
+
+  .about-title {
+    position: relative;
+    top: auto;
+    left: auto;
+    width: 100%;
+    height: auto;
+    margin-bottom: 32px;
+  }
+
+  .about-title h1 {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    gap: 8px;
+    width: 100%;
+    height: auto;
+    font-size: clamp(38px, 5vw, 64px);
+    white-space: normal;
+  }
+
+  .about-title-main {
+    font-size: inherit;
+  }
+
+  .about-title-brand {
+    font-size: clamp(24px, 3vw, 32px);
+  }
+
+  .about-title-line {
+    width: min(396px, 100%);
+  }
+
+  .about-subtitle {
+    font-size: clamp(17px, 2vw, 22px);
+  }
+
+  .intro-layout {
+    position: relative;
+    top: auto;
+    left: auto;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    align-items: start;
+    gap: 32px;
+    width: 100%;
+    height: auto;
+  }
+
+  .intro-left {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+  }
+
+  .intro-right {
+    position: relative;
+    top: auto;
+    left: auto;
+    width: 100%;
+    min-width: 0;
+  }
+
+  .welcome-text {
+    width: 100%;
+    height: auto;
+    font-size: clamp(18px, 2.2vw, 28px);
+    line-height: 1.4;
+  }
+
+  .about-contact-button {
+    position: relative;
+    top: auto;
+    left: auto;
+    width: 220px;
+    max-width: 100%;
+    height: 54px;
+    margin-top: 24px;
+    padding-left: 24px;
+    font-size: 20px;
+  }
+
+  .about-contact-button .about-contact-arrow {
+    top: 50%;
+    right: 14px;
+    left: auto;
+    width: 28px;
+    transform: translateY(-50%);
+  }
+
+  .intro-image-area {
+    position: relative;
+    top: auto;
+    left: auto;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 598 / 405;
+    margin-top: 24px;
+    overflow: hidden;
+  }
+
+  .intro-image-one {
+    top: 0;
+    right: 0;
+    left: auto;
+    width: 53.34%;
+    height: 100%;
+    max-width: none;
+    border-radius: 20px;
+  }
+
+  .intro-image-two {
+    top: 30%;
+    left: 0;
+    width: 71.57%;
+    height: 70%;
+    max-width: none;
+    border-radius: 20px;
+  }
+
+  .intro-description {
+    position: relative;
+    top: auto;
+    left: auto;
+    width: 100%;
+    height: auto;
+    margin-top: 28px;
+    font-size: clamp(17px, 2vw, 24px);
+    line-height: 1.5;
+  }
+
+  /* Collections */
+
+  .about-collections {
+    margin-top: 80px;
+  }
+
+  .about-section-heading {
+    position: relative;
+    top: auto;
+    left: auto;
+    width: 100%;
+    height: auto;
+    margin: 0 auto 48px;
+  }
+
+  .about-section-heading h2 {
+    width: 100%;
+    height: auto;
+    font-size: clamp(34px, 4.5vw, 48px);
+    white-space: normal;
+  }
+
+  .about-section-heading > span {
+    width: min(320px, 75%);
+    margin-top: 14px;
+  }
+
+  .collection-row,
+  .fashion-row,
+  .jewellery-row,
+  .decor-row {
+    position: relative;
+    top: auto;
+    left: auto;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    align-items: start;
+    column-gap: clamp(24px, 4vw, 48px);
+    width: 100%;
+    height: auto;
+    margin: 0 0 64px;
+  }
+
+  .fashion-content,
+  .jewellery-content,
+  .decor-content {
+    grid-column: auto;
+    grid-row: auto;
+    width: 100%;
+    height: auto;
+    min-width: 0;
+  }
+
+  .fashion-image,
+  .jewellery-image,
+  .decor-image {
+    grid-column: auto;
+    grid-row: auto;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1 / 1;
+  }
+
+  .collection-content h3,
+  .fashion-content h3,
+  .jewellery-content h3,
+  .decor-content h3 {
+    width: 100%;
+    height: auto;
+    min-height: 0;
+    padding-bottom: 12px;
+    font-size: clamp(24px, 2.8vw, 36px);
+    line-height: 1.15;
+    white-space: normal;
+  }
+
+  .collection-content ul,
+  .decor-content ul,
+  .jewellery-content ul {
+    width: 100%;
+    margin-top: 20px;
+  }
+
+  .collection-content li {
+    padding-left: 18px;
+    font-size: clamp(17px, 1.8vw, 23px);
+    line-height: 1.4;
+    overflow-wrap: anywhere;
+  }
+
+  .jewellery-content ul {
+    align-self: stretch;
+  }
+
+  .jewellery-content li {
+    padding-right: 18px;
+    padding-left: 0;
+  }
+
+  .collection-image {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1 / 1;
+    border-radius: 24px;
+  }
+
+  .collection-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .about-shop-button,
+  .decor-content .about-shop-button {
+    flex: 0 0 auto;
+    align-self: flex-start;
+    width: 150px;
+    min-width: 150px;
+    height: 46px;
+    margin: 24px 0 0;
+    font-size: 14px;
+  }
+
+  .decor-content .about-shop-button {
+    margin-top: 24px;
+  }
+
+  .jewellery-content .about-shop-button {
+    align-self: flex-end;
+  }
+
+  /* Promise */
+
+  .promise {
+    margin-top: 80px;
+    padding-bottom: 40px;
+  }
+
+  .promise-heading {
+    position: relative;
+    top: auto;
+    left: auto;
+    width: 100%;
+    height: auto;
+  }
+
+  .promise-heading h2 {
+    width: 100%;
+    height: auto;
+    font-size: clamp(34px, 4.5vw, 48px);
+    white-space: normal;
+  }
+
+  .promise-heading > span {
+    width: min(374px, 75%);
+    margin: 16px auto 0;
+  }
+
+  .promise-content {
+    position: relative;
+    top: auto;
+    left: auto;
+    width: 100%;
+    height: auto;
+    margin-top: 32px;
+  }
+
+  .promise-content p {
+    font-size: clamp(17px, 2vw, 24px);
+    line-height: 1.5;
+    margin-bottom: 24px;
   }
 }
 
+/* ========================= MOBILE ========================= */
+
+@media (max-width: 700px) {
+  .about-container {
+    padding: 0 20px 48px;
+  }
+
+  .about-intro {
+    margin-top: 36px;
+  }
+
+  .about-title {
+    margin-bottom: 24px;
+  }
+
+  .about-title h1 {
+    gap: 6px;
+    font-size: clamp(30px, 8vw, 42px);
+    line-height: 1.1;
+  }
+
+  .about-title-brand {
+    font-size: clamp(20px, 5vw, 28px);
+  }
+
+  .about-title-line {
+    width: min(100%, 396px);
+    margin-top: 20px;
+  }
+
+  .about-subtitle {
+    font-size: clamp(14px, 4vw, 17px);
+    line-height: 1.45;
+  }
+
+  .intro-layout {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    margin-top: 20px;
+  }
+
+  .intro-right {
+    order: 0;
+  }
+
+  .intro-left {
+    order: 1;
+    width: 100%;
+  }
+
+  .welcome-text {
+    font-size: clamp(16px, 4.2vw, 20px);
+    line-height: 1.5;
+  }
+
+  .about-contact-button {
+    width: 190px;
+    height: 48px;
+    margin-top: 20px;
+    border-radius: 12px;
+    font-size: 18px;
+  }
+
+  .intro-image-area {
+    margin-top: 0;
+  }
+
+  .intro-image-one,
+  .intro-image-two {
+    border-radius: 14px;
+  }
+
+  .intro-description {
+    margin-top: 22px;
+    font-size: clamp(15px, 4vw, 18px);
+    line-height: 1.55;
+  }
+
+  .about-collections {
+    margin-top: 56px;
+  }
+
+  .about-section-heading {
+    margin-bottom: 32px;
+  }
+
+  .about-section-heading h2 {
+    font-size: clamp(29px, 7.5vw, 40px);
+    line-height: 1.15;
+  }
+
+  .about-section-heading > span {
+    width: min(260px, 78%);
+    margin-top: 12px;
+  }
+
+  .collection-row,
+  .fashion-row,
+  .jewellery-row,
+  .decor-row {
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+    margin-bottom: 48px;
+  }
+
+  .fashion-content,
+  .jewellery-content,
+  .decor-content {
+    width: 100%;
+    height: auto;
+  }
+
+  .fashion-row .collection-content,
+  .decor-row .collection-content {
+    order: 0;
+  }
+
+  .fashion-row .collection-image,
+  .decor-row .collection-image {
+    order: 1;
+  }
+
+  .jewellery-row .collection-image {
+    order: 0;
+  }
+
+  .jewellery-row .collection-content {
+    order: 1;
+  }
+
+  .collection-content h3,
+  .fashion-content h3,
+  .jewellery-content h3,
+  .decor-content h3 {
+    width: 100%;
+    height: auto;
+    min-height: 0;
+    padding-bottom: 10px;
+    font-size: clamp(24px, 6.5vw, 32px);
+    line-height: 1.2;
+    border-bottom-width: 2px;
+    white-space: normal;
+  }
+
+  .collection-content ul,
+  .decor-content ul,
+  .jewellery-content ul {
+    width: 100%;
+    margin: 16px 0 18px;
+  }
+
+  .collection-content li {
+    padding-left: 16px;
+    font-size: clamp(15px, 4vw, 18px);
+    line-height: 1.5;
+    overflow-wrap: anywhere;
+  }
+
+  .jewellery-content {
+    text-align: right;
+  }
+
+  .jewellery-content h3,
+  .jewellery-content ul {
+    text-align: right;
+  }
+
+  .jewellery-content li {
+    padding-right: 16px;
+    padding-left: 0;
+  }
+
+  .collection-image,
+  .fashion-image,
+  .jewellery-image,
+  .decor-image {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1 / 1;
+    border-radius: 16px;
+  }
+
+  .collection-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .about-shop-button,
+  .decor-content .about-shop-button {
+    flex: 0 0 auto;
+    align-self: flex-start;
+    width: 140px;
+    min-width: 140px;
+    height: 42px;
+    margin: 4px 0 0;
+    padding: 0 14px;
+    font-size: 12px;
+  }
+
+  .decor-content .about-shop-button {
+    margin-top: 4px;
+  }
+
+  .jewellery-content .about-shop-button {
+    align-self: flex-end;
+  }
+
+  .promise {
+    margin-top: 48px;
+    padding-bottom: 24px;
+  }
+
+  .promise-heading h2 {
+    font-size: clamp(29px, 7.5vw, 40px);
+  }
+
+  .promise-heading > span {
+    width: min(260px, 75%);
+    margin-top: 12px;
+  }
+
+  .promise-content {
+    margin-top: 24px;
+  }
+
+  .promise-content p {
+    font-size: clamp(15px, 4vw, 18px);
+    line-height: 1.55;
+    margin-bottom: 20px;
+  }
+}
+
+/* ====================== SMALL PHONES ====================== */
+
+@media (max-width: 380px) {
+  .about-container {
+    padding-right: 14px;
+    padding-left: 14px;
+  }
+
+  .about-title h1 {
+    font-size: 29px;
+  }
+
+  .about-title-brand {
+    font-size: 20px;
+  }
+
+  .welcome-text {
+    font-size: 15px;
+  }
+
+  .collection-content h3,
+  .fashion-content h3,
+  .jewellery-content h3,
+  .decor-content h3 {
+    font-size: 23px;
+  }
+
+  .collection-content li {
+    font-size: 14px;
+    line-height: 1.5;
+  }
+
+  .promise-content p {
+    font-size: 14px;
+  }
+}
+
+/* ===================== ACCESSIBILITY ====================== */
+
+@media (prefers-reduced-motion: reduce) {
+  .about-page *,
+  .about-page *::before,
+  .about-page *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
 
 /* =========================================================
-   IMPORTANT RESPONSIVE RULE
-   =========================================================
+   FIGMA MATCH — COLLECTIONS AT 1728px
+   Keep this block at the VERY BOTTOM of About.css.
+========================================================= */
 
-   DO NOT create separate mobile layouts.
+@media (min-width: 1728px) {
+  .about-page {
+    overflow: visible;
+    background: #FDFAF5;
+  }
 
-   The entire 1728 × 5200 Figma composition scales
-   through --about-figma-scale.
+  .about-container {
+    width: 1728px;
+    min-width: 1728px;
+    height: 5200px;
+    min-height: 5200px;
+    margin: 0 auto;
+    padding: 0;
+    transform: none;
+  }
 
-   Therefore:
+  .about-collections {
+    position: absolute;
+    top: 1160px;
+    left: 136px;
+    width: 1456px;
+    height: 2165px;
+    margin: 0;
+    padding: 0;
+  }
 
-   - typography remains proportional
-   - images remain proportional
-   - collection rows remain proportional
-   - spacing remains proportional
-   - promise section remains proportional
-   - no columns are stacked
-   - no font sizes are changed
-   ========================================================= */
+  /* Our Collections heading */
+  .about-collections > .about-section-heading {
+    position: absolute;
+    top: 0;
+    left: 498px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 461px;
+    height: 99px;
+    margin: 0;
+    text-align: center;
+  }
+
+  .about-collections > .about-section-heading h2 {
+    width: 461px;
+    height: 72px;
+    margin: 0;
+    padding: 0;
+    color: #5D2030;
+    font-family: var(--about-display-font);
+    font-size: 48px;
+    font-weight: 500;
+    line-height: 1;
+    white-space: nowrap;
+  }
+
+  .about-collections > .about-section-heading > span {
+    width: 320px;
+    height: 0;
+    margin: 0;
+    border: 0;
+    border-top: 1px solid #5D2030;
+  }
+
+  /* Shared row settings */
+  .about-collections .collection-row {
+    position: absolute;
+    left: 0;
+    display: grid;
+    align-items: start;
+    margin: 0;
+    padding: 0;
+  }
+
+  /* Fashion: content left, image right */
+  .about-collections .fashion-row {
+    top: 163px;
+    grid-template-columns: 599px 600px;
+    column-gap: 257px;
+    width: 1456px;
+    height: 632px;
+  }
+
+  .about-collections .fashion-content {
+    grid-column: 1;
+    grid-row: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    width: 599px;
+    height: 632px;
+    margin: 0;
+    padding: 0;
+  }
+
+  .about-collections .fashion-content h3 {
+    width: 327px;
+    height: 70px;
+    min-height: 70px;
+    margin: 0;
+    padding: 0 0 16px;
+    border: 0;
+    border-bottom: 4px solid #BB8E43;
+    color: #5D2030;
+    font-family: var(--about-display-font);
+    font-size: 48px;
+    font-weight: 500;
+    line-height: 1;
+    white-space: nowrap;
+  }
+
+  /* Jewellery: image left, content right */
+  .about-collections .jewellery-row {
+    top: 859px;
+    grid-template-columns: 600px 618px;
+    column-gap: 238px;
+    width: 1456px;
+    height: 642px;
+  }
+
+  .about-collections .jewellery-content {
+    grid-column: 2;
+    grid-row: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    width: 618px;
+    height: 642px;
+    margin: 0;
+    padding: 0;
+    text-align: right;
+  }
+
+  .about-collections .jewellery-content h3 {
+    width: 618px;
+    height: 124px;
+    min-height: 124px;
+    margin: 0;
+    padding: 0 0 16px;
+    border: 0;
+    border-bottom: 4px solid #BB8E43;
+    font-family: var(--about-display-font);
+    font-size: 48px;
+    font-weight: 500;
+    line-height: 1;
+    text-align: right;
+    white-space: normal;
+  }
+
+  .about-collections .jewellery-content ul {
+    align-self: flex-end;
+    width: 585px;
+    margin: 25px 0 0;
+    padding: 0;
+    text-align: right;
+  }
+
+  .about-collections .jewellery-content li {
+    padding-right: 24px;
+    padding-left: 0;
+    text-align: right;
+  }
+
+  .about-collections .jewellery-content li::before {
+    right: 0;
+    left: auto;
+  }
+
+  /* Decor: content left, image right */
+  .about-collections .decor-row {
+    top: 1565px;
+    grid-template-columns: 604px 600px;
+    column-gap: 252px;
+    width: 1456px;
+    height: 600px;
+  }
+
+  .about-collections .decor-content {
+    grid-column: 1;
+    grid-row: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+    width: 604px;
+    height: 580px;
+    margin: 0;
+    padding: 0;
+  }
+
+  .about-collections .decor-content h3 {
+    flex: 0 0 70px;
+    width: 604px;
+    height: 70px;
+    min-height: 70px;
+    margin: 0;
+    padding: 0 0 16px;
+    border: 0;
+    border-bottom: 4px solid #BB8E43;
+    font-family: var(--about-display-font);
+    font-size: 48px;
+    font-weight: 500;
+    line-height: 1;
+    white-space: nowrap;
+  }
+
+  .about-collections .decor-content ul {
+    flex: 0 0 auto;
+    width: 528px;
+    margin: 25px 0 0;
+    padding: 0;
+  }
+
+  .about-collections .decor-content li {
+    padding-left: 24px;
+    font-size: 36px;
+    line-height: 1;
+  }
+
+  /* Collection images */
+  .about-collections .collection-image {
+    position: relative;
+    display: block;
+    width: 600px;
+    height: 600px;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    box-sizing: border-box;
+  }
+
+  .about-collections .fashion-image {
+    grid-column: 2;
+    grid-row: 1;
+    border-radius: 36px;
+  }
+
+  .about-collections .jewellery-image {
+    grid-column: 1;
+    grid-row: 1;
+    border-radius: 24px;
+  }
+
+  .about-collections .decor-image {
+    grid-column: 2;
+    grid-row: 1;
+    border-radius: 24px;
+  }
+
+  .about-collections .collection-image img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    max-width: none;
+    margin: 0;
+    padding: 0;
+    border-radius: inherit;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  /* Collection list typography */
+  .about-collections .collection-content ul {
+    list-style: none;
+  }
+
+  .about-collections .collection-content li {
+    position: relative;
+    margin: 0;
+    color: #5D2030;
+    font-family: var(--about-body-font);
+    font-size: 36px;
+    font-weight: 400;
+    line-height: 1;
+    letter-spacing: 0;
+  }
+
+  .about-collections .collection-content li::before {
+    content: "*";
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: #5D2030;
+  }
+
+  /* Shop Now buttons */
+  .about-collections .about-shop-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    align-self: flex-start;
+    width: 196.8px;
+    min-width: 196.8px;
+    height: 64.8px;
+    margin: auto 0 0;
+    padding: 0;
+    border: 0;
+    border-radius: 86.4px;
+    background: #BB8E43;
+    color: #FDFAF5;
+    font-family: var(--about-display-font);
+    font-size: 19.2px;
+    font-weight: 700;
+    line-height: 1;
+    text-decoration: none;
+    text-transform: uppercase;
+  }
+
+  .about-collections .jewellery-content .about-shop-button {
+    align-self: flex-end;
+  }
+
+  
+  .about-collections .decor-content .about-shop-button {
+    flex: 0 0 auto;
+    align-self: flex-start;
+    width: 196.8px;
+    min-width: 196.8px;
+    height: 64.8px;
+    margin: 32px 0 0;
+    padding: 0;
+    border: 0;
+    border-radius: 86.4px;
+    background: #BB8E43;
+    color: #FDFAF5;
+    font-family: var(--about-display-font);
+    font-size: 19.2px;
+    font-weight: 700;
+    line-height: 1;
+    text-decoration: none;
+    text-transform: uppercase;
+  }
+}

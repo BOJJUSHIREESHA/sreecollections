@@ -1,93 +1,50 @@
 /* =========================================================
    ORDER CONFIRMATION MODAL
+   Figma reference: 1728px canvas
+   Modal: 987px × 489px
+   Figma position: left 371px, top 419px
+   ========================================================= */
 
-   EXACT FIGMA RESPONSIVE IMPLEMENTATION
+:root {
+  --order-confirm-figma-scale: 1;
 
-   FIGMA CANVAS:
-   1728 × 3481
-
-   MODAL:
-   987 × 489
-
-   POSITION:
-   left = 371px
-   top  = 419px
-
-   BACKGROUND:
-   #FDFAF5
-========================================================= */
-
-
-/* =========================================================
-   PAGE SCROLL LOCK
-========================================================= */
-
-.whatsapp-modal-open,
-.order-confirmation-modal-open {
-  overflow: hidden;
+  --order-confirm-cream: #FDFAF5;
+  --order-confirm-burgundy: #5D2030;
+  --order-confirm-border: #5D20300F;
 }
 
 
 /* =========================================================
    OVERLAY
-========================================================= */
+   ========================================================= */
 
 .order-confirmation-overlay {
   position: fixed;
-
   inset: 0;
 
   z-index: 2100;
 
   box-sizing: border-box;
 
-  /*
-    Figma itself does not specify a particular overlay
-    color. This keeps the page visible behind the modal
-    like the supplied reference image.
-  */
-
   background: rgba(93, 32, 48, 0.18);
 
-  overflow: hidden;
+  overflow: auto;
+
+  overscroll-behavior: contain;
 }
 
 
 /* =========================================================
-   MODAL
-
-   FIGMA:
-   width  = 987px
-   height = 489px
-
-   left = 371px
-   top  = 419px
-========================================================= */
+   MAIN MODAL
+   Figma dimensions are retained.
+   Position and scale are controlled by the JSX scale variable.
+   ========================================================= */
 
 .order-confirmation-modal {
   position: absolute;
 
-  /*
-    Figma X position
-  */
-
-  left: calc(
-    371px *
-    var(--order-confirm-figma-scale, 1)
-  );
-
-  /*
-    Figma Y position
-  */
-
-  top: calc(
-    419px *
-    var(--order-confirm-figma-scale, 1)
-  );
-
-  /*
-    Exact Figma dimensions
-  */
+  left: calc(371px * var(--order-confirm-figma-scale, 1));
+  top: calc(419px * var(--order-confirm-figma-scale, 1));
 
   width: 987px;
   height: 489px;
@@ -95,35 +52,18 @@
   min-width: 987px;
   min-height: 489px;
 
-  box-sizing: border-box;
-
-  /*
-    Figma frame padding
-  */
-
   padding: 10px;
 
-  /*
-    Scale the complete Figma frame together.
-  */
+  box-sizing: border-box;
 
-  transform:
-    scale(
-      var(--order-confirm-figma-scale, 1)
-    );
-
+  transform: scale(var(--order-confirm-figma-scale, 1));
   transform-origin: top left;
 
-  /*
-    Figma background
-  */
-
-  background: #FDFAF5;
-
-  color: #5D2030;
+  background: var(--order-confirm-cream);
+  color: var(--order-confirm-burgundy);
 
   border: none;
-
+  border-radius: 0;
   box-shadow: none;
 
   overflow: hidden;
@@ -132,84 +72,46 @@
 
 /* =========================================================
    HEADER
-
-   FIGMA:
-   967 × 75
-
-   padding:
-   20px 24px
-
-   border-bottom:
-   1px solid #5D20300F
-========================================================= */
+   Figma dimensions: 967px × 75px
+   Padding: 20px 24px
+   ========================================================= */
 
 .order-confirmation-header {
-  width: 967px;
+  width: 100%;
   height: 75px;
 
-  min-width: 967px;
-  min-height: 75px;
+  padding: 20px 24px;
 
   box-sizing: border-box;
 
-  padding:
-    20px 24px;
-
   display: flex;
-
   align-items: center;
-
   justify-content: space-between;
 
-  flex-shrink: 0;
+  background: var(--order-confirm-cream);
 
-  background: #FDFAF5;
-
-  border-bottom:
-    1px solid #5D20300F;
+  border-bottom: 1px solid var(--order-confirm-border);
 }
 
 
-/* =========================================================
-   CHECKOUT HEADING
+/* Checkout heading */
 
-   FIGMA:
-   width  = 82px
-   height = 28px
-
-   Blacker Display
-   Weight 700
-   Size 18px
-   Line-height 28px
-   Color #5D2030
-========================================================= */
-
-.order-confirmation-header h2 {
+.order-confirmation-heading {
   width: 82px;
   height: 28px;
 
   margin: 0;
   padding: 0;
 
-  box-sizing: border-box;
+  display: flex;
+  align-items: center;
 
-  font-family:
-    "Blacker Display",
-    Georgia,
-    "Times New Roman",
-    serif;
-
+  font-family: "Blacker Display", Georgia, serif;
   font-size: 18px;
-
+  font-weight: 700;
   line-height: 28px;
 
-  font-weight: 700;
-
-  font-style: normal;
-
-  letter-spacing: 0;
-
-  color: #5D2030;
+  color: var(--order-confirm-burgundy);
 
   white-space: nowrap;
 }
@@ -217,89 +119,56 @@
 
 /* =========================================================
    CLOSE BUTTON
-
-   FIGMA:
-   34 × 34
-   padding: 8px
-========================================================= */
+   Figma dimensions: 34px × 34px
+   ========================================================= */
 
 .order-confirmation-close {
   width: 34px;
   height: 34px;
 
-  min-width: 34px;
-  min-height: 34px;
+  flex: 0 0 34px;
 
   padding: 8px;
-
-  margin: 0;
 
   box-sizing: border-box;
 
   display: flex;
-
   align-items: center;
-
   justify-content: center;
 
-  border: none;
-
-  border-radius: 16777200px;
-
   background: transparent;
+  color: var(--order-confirm-burgundy);
 
-  color: #5D2030;
+  border: none;
+  border-radius: 0;
 
   cursor: pointer;
 
-  appearance: none;
-
-  outline: none;
+  transition:
+    background-color 0.2s ease,
+    opacity 0.2s ease;
 }
-
-
-/* =========================================================
-   CLOSE ICON
-
-   Figma:
-   18 × 18 icon
-   9 × 9 vector
-   1.5px stroke
-========================================================= */
 
 .order-confirmation-close svg {
   width: 18px;
   height: 18px;
 
   display: block;
-
-  color: #5D2030;
-
-  stroke: #5D2030;
-
-  stroke-width: 1.5px;
 }
-
-
-/* =========================================================
-   CLOSE HOVER
-
-   Do not change the Figma design.
-========================================================= */
 
 .order-confirmation-close:hover {
-  background: transparent;
+  background: rgba(93, 32, 48, 0.06);
+}
 
-  transform: none;
+.order-confirmation-close:focus-visible {
+  outline: 2px solid var(--order-confirm-burgundy);
+  outline-offset: 2px;
 }
 
 
 /* =========================================================
-   EXTRA DIVIDER
-
-   The header already contains the exact Figma
-   bottom border.
-========================================================= */
+   HEADER DIVIDER
+   ========================================================= */
 
 .order-confirmation-divider {
   display: none;
@@ -307,289 +176,385 @@
 
 
 /* =========================================================
-   CONTENT AREA
-
-   FIGMA MAIN AREA:
-   width  = 967px
-   height = 384px
-
-   padding:
-   top    = 16px
-   right  = 24px
-   bottom = 16px
-   left   = 24px
-========================================================= */
+   CONTENT
+   Figma dimensions: 967px × 384px
+   Padding: 16px 24px
+   ========================================================= */
 
 .order-confirmation-content {
   position: relative;
 
-  width: 967px;
+  width: 100%;
   height: 384px;
 
-  min-width: 967px;
-  min-height: 384px;
-
-  box-sizing: border-box;
-
-  padding:
-    16px 24px;
-
-  margin: 0;
-
-  background: #FDFAF5;
-
-  flex-shrink: 0;
-}
-
-
-/* =========================================================
-   WHATSAPP ICON CONTAINER
-
-   FIGMA:
-   width  = 96px
-   height = 96px
-
-   top  = 54px
-   left = 436px
-
-   The Figma WhatsApp artwork itself has:
-
-   vector:
-   78.7315 × 78.6938
-
-   positioned inside the 96 × 96 frame.
-========================================================= */
-
-.whatsapp-confirmation-icon {
-  position: absolute;
-
-  width: 96px;
-  height: 96px;
-
-  left: 436px;
-  top: 54px;
+  padding: 16px 24px;
 
   box-sizing: border-box;
 
   display: flex;
-
+  flex-direction: column;
   align-items: center;
 
-  justify-content: center;
+  background: var(--order-confirm-cream);
 
-  background: #FDFAF5;
-
-  border-radius: 50%;
-
-  flex-shrink: 0;
-}
-
-
-/* =========================================================
-   WHATSAPP GREEN CIRCLE
-
-   Figma green artwork:
-   approximately 78.73 × 78.69
-
-   Gradient:
-   #57D163 → #23B33A
-========================================================= */
-
-.whatsapp-confirmation-green {
-  width: 79px;
-  height: 79px;
-
-  box-sizing: border-box;
-
-  display: flex;
-
-  align-items: center;
-
-  justify-content: center;
-
-  border-radius: 50%;
-
-  background:
-    linear-gradient(
-      179.66deg,
-      #57D163 6.27%,
-      #23B33A 91.23%
-    );
-
-  color: #FFFFFF;
-
-  box-shadow:
-    0 0 0 3px #FFFFFF;
-
-  overflow: hidden;
+  text-align: center;
 }
 
 
 /* =========================================================
    WHATSAPP ICON
+   Container: 96px × 96px
+   ========================================================= */
 
-   Figma white vector:
-   approximately 48.10 × 44.57
-========================================================= */
+.whatsapp-confirmation-icon {
+  position: absolute;
+
+  top: 54px;
+  left: 50%;
+
+  width: 96px;
+  height: 96px;
+
+  transform: translateX(-50%);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  box-sizing: border-box;
+}
+
+.whatsapp-confirmation-green {
+  width: 78.73px;
+  height: 78.69px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: linear-gradient(
+    135deg,
+    #57D163 0%,
+    #23B33A 100%
+  );
+
+  border-radius: 50%;
+}
 
 .whatsapp-confirmation-green svg {
-  width: 48px;
-  height: 45px;
+  width: 48.1px;
+  height: 44.57px;
 
   display: block;
 
   color: #FFFFFF;
-
-  fill: #FFFFFF;
-
-  flex-shrink: 0;
 }
 
 
 /* =========================================================
-   ORDER CONFIRMATION TITLE
+   TITLE
+   Figma:
+   Width: 842px
+   Height: 72px
+   Left: 63px
+   Top: 174px
+   Font size: 64px
+   ========================================================= */
 
-   FIGMA:
-   width  = 842px
-   height = 72px
-
-   top  = 174px
-   left = 63px
-
-   Blacker Display
-   Weight 400
-   Size 64px
-   Line-height 100%
-   Color #5D2030
-========================================================= */
-
-.order-confirmation-content h1 {
+.order-confirmation-title {
   position: absolute;
+
+  top: 174px;
+  left: 50%;
 
   width: 842px;
   height: 72px;
 
-  left: 63px;
-  top: 174px;
-
-  box-sizing: border-box;
-
   margin: 0;
   padding: 0;
 
-  font-family:
-    "Blacker Display",
-    Georgia,
-    "Times New Roman",
-    serif;
+  transform: translateX(-50%);
 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  box-sizing: border-box;
+
+  font-family: "Blacker Display", Georgia, serif;
   font-size: 64px;
-
-  line-height: 64px;
-
   font-weight: 400;
+  line-height: 1;
 
-  font-style: normal;
-
-  letter-spacing: 0;
-
-  color: #5D2030;
+  color: var(--order-confirm-burgundy);
 
   text-align: center;
-
   white-space: nowrap;
 }
 
 
 /* =========================================================
    DESCRIPTION
+   Figma:
+   Width: 919px
+   Height: 60px
+   Top: 270px
+   Font size: 24px
+   ========================================================= */
 
-   FIGMA:
-   width  = 919px
-   height = 60px
-
-   top  = 270px
-   left = 24px
-
-   Turnkey Lite
-   Weight 500
-   Size 24px
-   Line-height 100%
-   Center aligned
-   Color #5D2030
-========================================================= */
-
-.order-confirmation-content p {
+.order-confirmation-description {
   position: absolute;
+
+  top: 270px;
+  left: 50%;
 
   width: 919px;
   height: 60px;
 
-  left: 24px;
-  top: 270px;
-
-  box-sizing: border-box;
-
   margin: 0;
   padding: 0;
 
-  font-family:
-    "Turnkey Lite",
-    Arial,
-    Helvetica,
-    sans-serif;
+  transform: translateX(-50%);
 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  box-sizing: border-box;
+
+  font-family: "Turnkey Lite", Arial, sans-serif;
   font-size: 24px;
-
-  line-height: 24px;
-
   font-weight: 500;
+  line-height: 1;
 
-  font-style: normal;
-
-  letter-spacing: 0;
-
-  color: #5D2030;
+  color: var(--order-confirm-burgundy);
 
   text-align: center;
 }
 
 
 /* =========================================================
-   ACCESSIBILITY
-========================================================= */
+   LAPTOPS AND TABLETS
+   Keep the same Figma composition and scale it proportionally.
+   Do not reset the modal to position: relative or transform: none.
+   ========================================================= */
 
-.order-confirmation-modal button:focus-visible {
-  outline:
-    2px solid #5D2030;
+@media (min-width: 701px) and (max-width: 1727px) {
+  .order-confirmation-overlay {
+    overflow: auto;
+  }
 
-  outline-offset: 2px;
+  .order-confirmation-modal {
+    position: absolute;
+
+    left: calc(371px * var(--order-confirm-figma-scale, 1));
+    top: calc(419px * var(--order-confirm-figma-scale, 1));
+
+    width: 987px;
+    height: 489px;
+
+    min-width: 987px;
+    min-height: 489px;
+
+    transform: scale(var(--order-confirm-figma-scale, 1));
+    transform-origin: top left;
+  }
 }
 
 
 /* =========================================================
-   RESPONSIVE SCALING
-   ---------------------------------------------------------
-   IMPORTANT:
+   SMALL MOBILE SCREENS
+   Use a fluid layout when the complete Figma composition
+   would be too wide to read comfortably.
+   ========================================================= */
 
-   There are intentionally NO mobile redesigns here.
+@media (max-width: 700px) {
+  .order-confirmation-overlay {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
 
-   The complete Figma composition is scaled as one unit.
+    padding: 100px 12px 24px;
 
-   Desktop:
-   1728px → scale 1
+    overflow-x: hidden;
+    overflow-y: auto;
+  }
 
-   Tablet/mobile:
-   viewport width / 1728
+  .order-confirmation-modal {
+    position: relative;
 
-   Therefore:
-   - heading
-   - icon
-   - paragraph
-   - header
-   - close button
-   - spacing
-   - borders
+    top: auto;
+    left: auto;
 
-   all maintain the same Figma proportions.
-========================================================= */
+    width: 100%;
+    max-width: 480px;
+
+    height: auto;
+    min-width: 0;
+    min-height: 0;
+
+    padding: 8px;
+
+    transform: none;
+    transform-origin: top center;
+
+    box-sizing: border-box;
+
+    overflow: hidden;
+  }
+
+  .order-confirmation-header {
+    height: 60px;
+
+    padding: 12px 14px;
+  }
+
+  .order-confirmation-heading {
+    width: auto;
+    height: auto;
+
+    font-size: 17px;
+    line-height: 24px;
+  }
+
+  .order-confirmation-close {
+    width: 34px;
+    height: 34px;
+
+    flex-basis: 34px;
+  }
+
+  .order-confirmation-content {
+    height: auto;
+    min-height: 290px;
+
+    padding: 24px 14px 28px;
+  }
+
+  .whatsapp-confirmation-icon {
+    position: relative;
+
+    top: auto;
+    left: auto;
+
+    width: 76px;
+    height: 76px;
+
+    margin: 4px auto 20px;
+
+    transform: none;
+  }
+
+  .whatsapp-confirmation-green {
+    width: 64px;
+    height: 64px;
+  }
+
+  .whatsapp-confirmation-green svg {
+    width: 39px;
+    height: 39px;
+  }
+
+  .order-confirmation-title {
+    position: relative;
+
+    top: auto;
+    left: auto;
+
+    width: 100%;
+    height: auto;
+
+    margin: 0 auto 18px;
+
+    transform: none;
+
+    display: block;
+
+    font-size: clamp(25px, 6vw, 36px);
+    line-height: 1.15;
+
+    white-space: normal;
+    overflow-wrap: anywhere;
+  }
+
+  .order-confirmation-description {
+    position: relative;
+
+    top: auto;
+    left: auto;
+
+    width: 100%;
+    height: auto;
+
+    margin: 0 auto;
+
+    transform: none;
+
+    display: block;
+
+    font-size: clamp(14px, 3.7vw, 17px);
+    line-height: 1.5;
+
+    overflow-wrap: anywhere;
+  }
+}
+
+
+/* =========================================================
+   VERY SMALL MOBILE SCREENS
+   ========================================================= */
+
+@media (max-width: 380px) {
+  .order-confirmation-overlay {
+    padding: 88px 10px 20px;
+  }
+
+  .order-confirmation-modal {
+    padding: 6px;
+  }
+
+  .order-confirmation-header {
+    padding: 10px 12px;
+  }
+
+  .order-confirmation-content {
+    padding: 20px 10px 24px;
+    min-height: 280px;
+  }
+
+  .whatsapp-confirmation-icon {
+    width: 68px;
+    height: 68px;
+
+    margin-bottom: 18px;
+  }
+
+  .whatsapp-confirmation-green {
+    width: 58px;
+    height: 58px;
+  }
+
+  .whatsapp-confirmation-green svg {
+    width: 35px;
+    height: 35px;
+  }
+
+  .order-confirmation-title {
+    font-size: 25px;
+  }
+
+  .order-confirmation-description {
+    font-size: 14px;
+  }
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  .order-confirmation-close {
+    transition: none;
+  }
+}
