@@ -495,366 +495,247 @@ const addFeaturedProductToCart = (item) => {
     <main className="home-page">
 
       
-     {/* =========================================================
-    HERO SECTION
-========================================================= */}
-
-<section className="hero-section">
-
-
- 
-
-    
-  {/* =======================================================
-      HERO HEADING
-  ======================================================= */}
-
-  <div className="hero-heading">
-
-    <div className="hero-title">
-
-      <h1>
-
-        <span className="hero-title-line-one">
-
-          <span className="hero-title-before-symbol">
-            Dive Into A W
-          </span>
-
-          {/* =================================================
-              EXACT GOLD FIGMA VECTOR
-          ================================================= */}
-
-          <span className="gold-symbol">
-
-            <img
-              src={heroGoldVector}
-              alt=""
-              className="gold-symbol-vector"
-            />
-
-          </span>
-
-          <span className="hero-title-after-symbol">
-            rld Of Endless
-          </span>
-
-        </span>
-
-
-        <span className="hero-title-line-two">
-          Fashion Possibilities
-        </span>
-
-      </h1>
-
-    </div>
-
-
-    {/* =====================================================
-        HERO DESCRIPTION
-    ===================================================== */}
-
-    <div className="hero-description">
-
-      <p>
-        Elevate your wardrobe with our fashion finds. Discover
-        <br />
-        Your Signature Style At Fashion Avenue.
-      </p>
-
-    </div>
-
-  </div>
-
-
-  {/* =======================================================
-      HERO MAIN FRAME
-  ======================================================= */}
-
-  <div className="hero-grid">
-
-
-    {/* =====================================================
-        LEFT FASHION CARD
-
-        Figma:
-        402 × 506
-        X = 222
-        Y = 314
-    ===================================================== */}
-
-    <Link
-      to="/categories?category=casual-wear"
-      className="hero-left-card"
-    >
-
-      <img
-        src={fashionImage}
-        alt="Fashion collection"
-      />
-
-    </Link>
-
-
-    {/* =====================================================
-        CENTER COLUMN
-    ===================================================== */}
-
-    <div className="hero-center">
-
-
-      {/* ===================================================
-          CENTER NOTCHED BUTTON AREA
-      =================================================== */}
-
-      <div className="hero-notch">
-
-
-        {/* ================================================
-            SHOP NOW
-
-            Figma:
-            416 × 56
-        ================================================ */}
-
-        <Link
-          to="/categories"
-          className="hero-shop-button"
-        >
-
-          <span>
-            SHOP NOW
-          </span>
-
-          <span className="hero-button-arrow">
-
-  <svg
-    viewBox="0 0 100 20"
-    xmlns="http://www.w3.org/2000/svg"
-    aria-hidden="true"
-  >
-    <line
-      x1="0"
-      y1="10"
-      x2="84"
-      y2="10"
-    />
-
-    <polyline
-      points="76,3 84,10 76,17"
-    />
-  </svg>
-
-</span>
-
-        </Link>
-
-
-        {/* ================================================
-            EXPLORE MORE PRODUCTS
-
-            Figma:
-            416 × 56
-            Gap = 18px
-        ================================================ */}
-
-        <Link
-          to="/categories"
-          className="hero-products-button"
-        >
-          EXPLORE MORE PRODUCTS
-        </Link>
-
-      </div>
-
-
-      {/* ===================================================
-          JEWELLERY CARD
-
-          Figma:
-          Width  = 432
-          Height = 331
-          X      = 644
-          Y      = 489
-      =================================================== */}
-
-      <Link
-        to="/categories?category=one-gram-jewellery"
-        className="hero-jewellery-card"
-      >
-
-        <img
-          src={jewelleryImage}
-          alt="One gram jewellery collection"
-        />
-
-
-        {/* ================================================
-            JEWELLERY INFORMATION
-        ================================================ */}
-
-        <div className="jewellery-overlay">
-
-
-          {/* ==============================================
-              TRENDING
-
-              Figma:
-              78 × 24
-          ============================================== */}
-
-          <div className="jewellery-trending-frame">
-
-            <span className="jewellery-trending">
-              TRENDING
+    <section className="hero-section">
+      {/* ===================== HERO HEADING ===================== */}
+
+      <div className="hero-heading">
+        <div className="hero-title">
+          <h1>
+            <span className="hero-title-line-one">
+              <span className="hero-title-before-symbol">
+                Dive Into A W
+              </span>
+
+              {/* Exact Figma gold symbol */}
+              <span className="gold-symbol" aria-hidden="true">
+                <svg
+                  className="gold-symbol-vector"
+                  width="72"
+                  height="64"
+                  viewBox="0 0 72 64"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <rect
+                    width="72"
+                    height="64"
+                    rx="28.3443"
+                    fill="#BB8E43"
+                  />
+
+                  <path
+                    d="M46.7148 18.8983C47.4613 18.3011 47.4613 17.1657 46.7148 16.5685L39.4061 10.7216C38.4293 9.94022 36.9824 10.6357 36.9824 11.8865V23.5804C36.9824 24.8313 38.4293 25.5267 39.4061 24.7453L46.7148 18.8983Z"
+                    fill="#FDFAF5"
+                  />
+
+                  <path
+                    d="M44.5059 31.2864C43.2684 31.2864 42.569 32.7063 43.3232 33.6874L49.3722 41.5557C49.9694 42.3325 51.1404 42.3325 51.7376 41.5557L57.7866 33.6874C58.5408 32.7063 57.8414 31.2864 56.6039 31.2864H44.5059Z"
+                    fill="#FDFAF5"
+                  />
+
+                  <path
+                    d="M35.5968 38.9432C35.5968 37.6582 34.0805 36.9744 33.1174 37.8251L25.1452 44.8666C24.4421 45.4876 24.4799 46.5957 25.2236 47.1674L33.1957 53.2962C34.1768 54.0505 35.5968 53.351 35.5968 52.1135L35.5968 38.9432Z"
+                    fill="#FDFAF5"
+                  />
+
+                  <path
+                    d="M28.5665 30.52C29.8515 30.52 30.5353 29.0037 29.6846 28.0406L22.6431 20.0685C22.0221 19.3654 20.914 19.4031 20.3423 20.1468L14.2135 28.119C13.4592 29.1001 14.1586 30.52 15.3962 30.52L28.5665 30.52Z"
+                    fill="#FDFAF5"
+                  />
+
+                  <path
+                    d="M52.1002 22.4907C52.1002 21.2126 50.5979 20.5263 49.6318 21.363L45.2284 25.1764C44.1843 26.0807 44.8238 27.7959 46.205 27.7959H50.6084C51.4323 27.7959 52.1002 27.128 52.1002 26.3041V22.4907Z"
+                    fill="#FDFAF5"
+                  />
+
+                  <path
+                    d="M31.124 23.2073C32.0169 24.2757 33.757 23.6469 33.7606 22.2545L33.7796 14.7537C33.7817 13.9284 33.1132 13.2581 32.2878 13.2581L26.0009 13.2581C24.7352 13.2581 24.0445 14.7353 24.8562 15.7065L31.124 23.2073Z"
+                    fill="#FDFAF5"
+                  />
+
+                  <path
+                    d="M40.8417 39.6943C39.9143 38.7448 38.3018 39.3882 38.2828 40.7153L38.1898 47.2128C38.1779 48.045 38.8492 48.7259 39.6815 48.7259L46.1204 48.7259C47.441 48.7259 48.1104 47.1365 47.1876 46.1918L40.8417 39.6943Z"
+                    fill="#FDFAF5"
+                  />
+
+                  <path
+                    d="M26.8269 36.2341C27.7131 35.2461 26.9647 33.6796 25.6392 33.7482L19.1498 34.0843C18.3186 34.1273 17.6834 34.8421 17.7384 35.6725L18.1634 42.0974C18.2505 43.4151 19.8806 43.9781 20.7624 42.9951L26.8269 36.2341Z"
+                    fill="#FDFAF5"
+                  />
+                </svg>
+              </span>
+
+              <span className="hero-title-after-symbol">
+                Rld Of Endless
+              </span>
             </span>
 
-          </div>
-
-
-          {/* ==============================================
-              AWESOME COLLECTION
-
-              Figma:
-              99 × 77
-          ============================================== */}
-
-          <p>
-            Awesome
-            <br />
-            <strong>
-              Collection
-            </strong>
-          </p>
-
+            <span className="hero-title-line-two">
+              Fashion Possibilities
+            </span>
+          </h1>
         </div>
 
+        <div className="hero-description">
+          <p>
+            Elevate Your Wardrobe With Our Fashion Finds. Discover
+            <br />
+            Your Signature Style At Fashion Avenue.
+          </p>
+        </div>
+      </div>
 
-        {/* ================================================
-            VIEW ALL
+      {/* ===================== HERO MAIN FRAME ===================== */}
 
-            Figma:
-            Text 46 × 15
-            Circle 22.25 × 22.25
-        ================================================ */}
+      <div className="hero-grid">
+        {/* Left fashion image */}
 
-        <span className="jewellery-view-all">
+        <Link
+          to="/categories?category=casual-wear"
+          className="hero-left-card"
+          aria-label="Shop casual wear"
+        >
+          <img
+            src={fashionImage}
+            alt="Fashion collection"
+          />
+        </Link>
 
-          <span>
-            View All
-          </span>
+        {/* Center column */}
 
-          <b>
-            ↗
-          </b>
+        <div className="hero-center">
+          <div className="hero-notch">
+            <Link
+              to="/categories"
+              className="hero-shop-button"
+            >
+              <span>SHOP NOW</span>
 
-        </span>
+              <span className="hero-button-arrow" aria-hidden="true">
+                <svg
+                  viewBox="0 0 100 20"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <line
+                    x1="0"
+                    y1="10"
+                    x2="92"
+                    y2="10"
+                  />
 
-      </Link>
+                  <polyline points="84,3 92,10 84,17" />
+                </svg>
+              </span>
+            </Link>
 
-    </div>
+            <Link
+              to="/categories"
+              className="hero-products-button"
+            >
+              EXPLORE MORE PRODUCTS
+            </Link>
+          </div>
 
+          {/* Jewellery card */}
 
-   {/* =====================================================
-    RIGHT SAREE COMPOSITION
-===================================================== */}
+          <Link
+            to="/categories?category=one-gram-jewellery"
+            className="hero-jewellery-card"
+            aria-label="Shop one gram jewellery"
+          >
+            <img
+              src={jewelleryImage}
+              alt="One gram jewellery collection"
+            />
 
-<div
-  className="hero-right-composition"
-  style={{
-    "--hero-saree-image": `url(${sareeImage})`,
-  }}
->
+            <div className="jewellery-overlay">
+              <div className="jewellery-trending-frame">
+                <span className="jewellery-trending">
+                  TRENDING
+                </span>
+              </div>
 
-  {/* ===================================================
-      MAIN SAREE BLOCK
-      Figma: 402 × 227
-  =================================================== */}
+              <p>
+                Awesome
+                <br />
+                <strong>Collection</strong>
+              </p>
+            </div>
 
-  <Link
-    to="/categories?category=sarees"
-    className="hero-saree-block hero-saree-main"
-    aria-label="Saree collection"
-  />
+            <span className="jewellery-view-all">
+              <span>View All</span>
+              <b aria-hidden="true">↗</b>
+            </span>
+          </Link>
+        </div>
 
+        {/* Right saree composition */}
 
-  {/* ===================================================
-      PRICE ROW
-      Figma:
-      161 × 80
-      11px gap
-      230 × 80
-  =================================================== */}
+        <div
+          className="hero-right-composition"
+          style={{
+            "--hero-saree-image": `url("${sareeImage}")`,
+          }}
+        >
+          {/* Main saree image */}
 
-  <div className="hero-product-row hero-price-row">
+          <Link
+            to="/categories?category=sarees"
+            className="hero-saree-block hero-saree-main"
+            aria-label="Shop sarees"
+          />
 
-    <div className="hero-saree-block hero-row-left">
+          {/* Price row */}
 
-      <span className="hero-price-text">
-  <span className="hero-price-currency">$</span>
-  <span className="hero-price-number">480</span>
-</span>
+          <div className="hero-product-row hero-price-row">
+            <div className="hero-saree-block hero-row-left">
+              <span className="hero-price-text">
+                <span className="hero-price-currency">$</span>
+                <span className="hero-price-number">480</span>
+              </span>
+            </div>
 
-    </div>
+            <div className="hero-saree-block hero-row-right" />
+          </div>
 
-    <div className="hero-saree-block hero-row-right" />
+          {/* Gucci row */}
 
-  </div>
+          <div className="hero-product-row hero-gucci-row">
+            <div className="hero-saree-block hero-row-left hero-gucci-left">
+              <span className="hero-gucci-text">
+                Gucci Formal Set
+              </span>
+            </div>
 
+            <div className="hero-saree-block hero-row-right" />
+          </div>
 
-  {/* ===================================================
-      GUCCI ROW
-      Figma:
-      274 × 80
-      11px gap
-      117 × 80
-  =================================================== */}
+          {/* Bottom row */}
 
-  <div className="hero-product-row hero-gucci-row">
+          <div className="hero-product-row hero-bottom-row">
+            <div className="hero-saree-block hero-row-left" />
 
-    <div className="hero-saree-block hero-row-left hero-gucci-left">
+            <div className="hero-saree-block hero-row-right">
+              <span className="hero-bottom-arrow" aria-hidden="true">
+                <svg
+                  viewBox="0 0 100 20"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <line
+                    x1="0"
+                    y1="10"
+                    x2="92"
+                    y2="10"
+                  />
 
-      <span className="hero-gucci-text">
-        Gucci Formal Set
-      </span>
-
-    </div>
-
-    <div className="hero-saree-block hero-row-right" />
-
-  </div>
-
-
-  {/* ===================================================
-      BOTTOM ROW
-      Figma:
-      161 × 80
-      11px gap
-      233 × 80
-  =================================================== */}
-
-  <div className="hero-product-row hero-bottom-row">
-
-    <div className="hero-saree-block hero-row-left" />
-
-    <div className="hero-saree-block hero-row-right">
-
-     
-  <span className="hero-bottom-arrow">
-  <span className="hero-arrow-line"></span>
-  <FaArrowRight />
-</span>
-
-
-    </div>
-
-  </div>
-
-</div>
-</div>
-
-</section>
+                  <polyline points="84,3 92,10 84,17" />
+                </svg>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
 
 
@@ -1068,27 +949,23 @@ const addFeaturedProductToCart = (item) => {
   </div>
 
 </section>
+
 {/* ============================================================
     STYLE COLLECTION
 ============================================================ */}
 
 <section className="style-collection">
 
-  {/* ==========================================================
-      TOP SECTION
-  ========================================================== */}
+  {/* TOP LEFT — JEANS AND SHIRTS */}
 
   <div className="style-top-section">
 
-    {/* ========================================================
-        LEFT — JEANS
-    ======================================================== */}
+    {/* JEANS */}
 
     <Link
       to="/categories?category=casual-wear"
       className="style-top-split-card style-jeans-card"
     >
-
       <div className="style-top-text">
         <span>MOST WANTED</span>
         <strong>Jeans</strong>
@@ -1098,158 +975,109 @@ const addFeaturedProductToCart = (item) => {
         <img
           src={jeansImage}
           alt="Most Wanted Jeans"
+          loading="lazy"
         />
       </div>
-
     </Link>
 
-
-    {/* ========================================================
-        LEFT — SAREE / SHIRTS
-    ======================================================== */}
+    {/* SHIRTS */}
 
     <Link
-  to="/categories?category=casual-wear"
-  className="style-top-split-card style-shirts-card"
->
+      to="/categories?category=casual-wear"
+      className="style-top-split-card style-shirts-card"
+    >
       <div className="style-top-image">
         <img
           src={sareeStyleImage}
-          alt="Saree collection"
+          alt="Shirts collection"
+          loading="lazy"
         />
       </div>
 
-      
       <div className="style-top-text">
         <span>BRAND NEW</span>
         <strong>Shirts</strong>
       </div>
-
     </Link>
 
   </div>
 
-
-  {/* ==========================================================
-      RIGHT — ONE GRAM GOLD JEWELLERY
-  ========================================================== */}
+  {/* RIGHT — ONE GRAM GOLD JEWELLERY */}
 
   <Link
     to="/categories?category=one-gram-jewellery"
     className="style-jewellery-card"
   >
-
     <img
       src={collectionJewelleryImage}
       alt="One gram gold jewellery"
       className="style-jewellery-image"
+      loading="lazy"
     />
 
     <div className="style-jewellery-content">
-
-      <h2>
-        one gram gold jewellery
-      </h2>
-
-      <span>
-        JUST FOR WOMEN
-      </span>
-
+      <h2>one gram gold jewellery</h2>
+      <span>JUST FOR WOMEN</span>
     </div>
-
   </Link>
 
-
-  {/* ==========================================================
-      BOTTOM SECTION
-  ========================================================== */}
+  {/* BOTTOM ROW */}
 
   <div className="style-bottom-section">
 
-    {/* ========================================================
-        WILL + BEAR JACKET
-    ======================================================== */}
+    {/* JACKET */}
 
     <Link
       to="/categories?category=casual-wear"
       className="style-product-card style-jacket"
     >
-
       <div className="style-product-text">
-
-        <span>
-          Will+Bear Andy
-        </span>
-
-        <strong>
-          blue jacket
-        </strong>
-
+        <span>Will+Bear Andy</span>
+        <strong>blue jacket</strong>
       </div>
 
       <div className="style-product-image">
-
         <img
           src={willBearImage}
           alt="Will+Bear Andy blue jacket"
+          loading="lazy"
         />
-
       </div>
-
     </Link>
 
-
-    {/* ========================================================
-        MIDI JOGGER
-    ======================================================== */}
+    {/* MIDI JOGGER */}
 
     <Link
       to="/categories?category=casual-wear"
       className="style-product-card style-jogger"
     >
-
       <div className="style-product-text">
-
-        <span>
-          Midi jogger
-        </span>
-
-        <strong>
-          with buckle
-        </strong>
-
-        <small>
-          JUST 39.99$
-        </small>
-
+        <span>Midi jogger</span>
+        <strong>with buckle</strong>
+        <small>JUST 39.99$</small>
       </div>
 
       <div className="style-product-image">
-
         <img
           src={joggerImage}
           alt="Midi jogger with buckle"
+          loading="lazy"
         />
-
       </div>
-
     </Link>
-    {/* ========================================================
-        DECORATIVE ITEMS
-    ======================================================== */}
+
+    {/* DECORATIVE ITEMS */}
 
     <Link
       to="/categories?category=decorative-items"
       className="style-product-card style-decorative"
     >
-
       <div className="style-decorative-image">
-
         <img
           src={decorativeStyleImage}
           alt="Decorative items"
+          loading="lazy"
         />
-
       </div>
 
       <div className="style-decorative-text">
@@ -1257,12 +1085,12 @@ const addFeaturedProductToCart = (item) => {
         <br />
         Items
       </div>
-
     </Link>
 
   </div>
 
 </section>
+
 
 
 

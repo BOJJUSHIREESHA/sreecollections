@@ -1,29 +1,41 @@
 
 import { useEffect, useState } from "react";
-import { NavLink, Link } from "react-router-dom";
+import { Link, NavLink, useLocation, useNavigate } from "react-router-dom";
 import {
   FaMagnifyingGlass,
   FaCartShopping,
-  FaBars,
-  FaXmark,
 } from "react-icons/fa6";
 
 import logoImage from "../assets/logo-1.png";
 import CartDrawer from "./CartDrawer";
+import "../style.css";
 
 const CART_KEY = "sreecollections-cart";
 
-function readCartCount() {
+const mainLinks = [
+  { label: "Home", to: "/home", end: true },
+  { label: "About", to: "/about" },
+  { label: "Categories", to: "/categories" },
+];
+
+const categoryLinks = [
+  { label: "Home", to: "/home", end: true },
+  { label: "Categories", to: "/categories" },
+  { label: "Sarees", to: "/categories?category=sarees" },
+  { label: "Fashion", to: "/categories?category=fashion" },
+  { label: "Jewellery", to: "/categories?category=jewellery" },
+  { label: "Decor", to: "/categories?category=decor" },
+  { label: "Contact", to: "/contact" },
+];
+
+function getCartCount() {
   try {
-    const cart = JSON.parse(
-      localStorage.getItem(CART_KEY) || "[]"
-    );
+    const cart = JSON.parse(localStorage.getItem(CART_KEY) || "[]");
 
     if (!Array.isArray(cart)) return 0;
 
     return cart.reduce(
-      (total, item) =>
-        total + Math.max(0, Number(item.quantity) || 0),
+      (total, item) => total + Number(item.quantity || 0),
       0
     );
   } catch {
@@ -32,170 +44,118 @@ function readCartCount() {
 }
 
 function Navbar() {
+  const [cartCount, setCartCount] = useState(getCartCount);
   const [cartOpen, setCartOpen] = useState(false);
-  const [cartCount, setCartCount] = useState(readCartCount);
-  const [menuOpen, setMenuOpen] = useState(false);
+
+  const location = useLocation();
+  const navigate = useNavigate();
 
   useEffect(() => {
-    const syncCart = () => setCartCount(readCartCount());
-    const openCart = () => {
-      setMenuOpen(false);
-      setCartOpen(true);
-    };
+    const updateCart = () => setCartCount(getCartCount());
 
-    window.addEventListener("storage", syncCart);
-    window.addEventListener(
-      "sreecollections-cart-updated",
-      syncCart
-    );
-    window.addEventListener(
-      "open-sreecollections-cart",
-      openCart
-    );
+    window.addEventListener("storage", updateCart);
+    window.addEventListener("sreecollections-cart-updated", updateCart);
 
     return () => {
-      window.removeEventListener("storage", syncCart);
-      window.removeEventListener(
-        "sreecollections-cart-updated",
-        syncCart
-      );
-      window.removeEventListener(
-        "open-sreecollections-cart",
-        openCart
-      );
+      window.removeEventListener("storage", updateCart);
+      window.removeEventListener("sreecollections-cart-updated", updateCart);
     };
   }, []);
 
-  useEffect(() => {
-    if (!menuOpen) return;
+  const isActiveLink = (to, end = false) => {
+    const [pathname, search] = to.split("?");
+    const currentPath = location.pathname;
 
-    const closeOnEscape = (event) => {
-      if (event.key === "Escape") setMenuOpen(false);
-    };
+    if (end && currentPath === pathname) {
+      return !search || location.search === `?${search}`;
+    }
 
-    window.addEventListener("keydown", closeOnEscape);
+    if (search) {
+      return currentPath === pathname && location.search === `?${search}`;
+    }
 
-    return () =>
-      window.removeEventListener("keydown", closeOnEscape);
-  }, [menuOpen]);
+    return currentPath === pathname;
+  };
 
-  const closeMenu = () => setMenuOpen(false);
+  const renderLinks = (links, className) =>
+    links.map((item) => (
+      <NavLink
+        key={`${className}-${item.label}`}
+        to={item.to}
+        end={item.end}
+        className={() => {
+          const active = isActiveLink(item.to, item.end);
 
-  const linkClass = ({ isActive }) =>
-    `navbar-link${isActive ? " navbar-link-active" : ""}`;
+          return `${className}${active ? " is-active" : ""}`;
+        }}
+      >
+        {item.label}
+      </NavLink>
+    ));
+
+  const openSearch = () => navigate("/search");
 
   return (
     <>
       <header className="site-header">
-        <nav className="navbar" aria-label="Main navigation">
-          {/* BRAND */}
+        <div className="navbar">
+          {/* LOGO */}
           <Link
             to="/home"
             className="navbar-brand"
             aria-label="Sree Collections home"
-            onClick={closeMenu}
           >
-            <span className="navbar-logo-symbol" aria-hidden="true">
+            <span className="navbar-logo-symbol">
               <img src={logoImage} alt="" />
             </span>
 
-            <span
-              className="navbar-logo-wordmark"
-              aria-hidden="true"
-            >
-              <img src={logoImage} alt="" />
+            <span className="navbar-logo-wordmark">
+              <img src={logoImage} alt="Sree Collections" />
             </span>
           </Link>
 
-          {/* MOBILE MENU BUTTON */}
-          <button
-            type="button"
-            className="navbar-menu-toggle"
-            onClick={() => setMenuOpen((open) => !open)}
-            aria-label={menuOpen ? "Close menu" : "Open menu"}
-            aria-expanded={menuOpen}
-            aria-controls="navbar-navigation"
-          >
-            {menuOpen ? <FaXmark /> : <FaBars />}
-          </button>
+          {/* DESKTOP NAVIGATION */}
+          <nav className="navbar-links" aria-label="Main navigation">
+            {renderLinks(mainLinks, "navbar-link")}
+          </nav>
 
-          {/* NAVIGATION */}
-          <div
-            id="navbar-navigation"
-            className={`navbar-right ${
-              menuOpen ? "navbar-right-open" : ""
-            }`}
-          >
-            <div className="navbar-links">
-              <NavLink
-                to="/home"
-                end
-                className={linkClass}
-                onClick={closeMenu}
-              >
-                Home
-              </NavLink>
+          {/* DESKTOP CONTACT BUTTON */}
+          <Link to="/contact" className="navbar-contact">
+            CONTACT US
+          </Link>
 
-              <NavLink
-                to="/about"
-                className={linkClass}
-                onClick={closeMenu}
-              >
-                About
-              </NavLink>
+          {/* SEARCH AND CART */}
+          <div className="navbar-actions">
+            <button
+              type="button"
+              className="navbar-action-icon"
+              aria-label="Search products"
+              onClick={openSearch}
+            >
+              <FaMagnifyingGlass />
+            </button>
 
-              <NavLink
-                to="/categories"
-                className={linkClass}
-                onClick={closeMenu}
-              >
-                Categories
-              </NavLink>
+            <button
+              type="button"
+              className="navbar-action-icon navbar-cart-button"
+              aria-label={`Shopping cart, ${cartCount} items`}
+              onClick={() => setCartOpen(true)}
+            >
+              <FaCartShopping />
 
-              <NavLink
-                to="/contact"
-                className={({ isActive }) =>
-                  `navbar-contact${
-                    isActive ? " navbar-contact-active" : ""
-                  }`
-                }
-                onClick={closeMenu}
-              >
-                CONTACT US
-              </NavLink>
-            </div>
+              {cartCount > 0 && (
+                <span className="navbar-cart-count">
+                  {cartCount > 99 ? "99+" : cartCount}
+                </span>
+              )}
+            </button>
+          </div>
+        </div>
 
-            {/* SEARCH AND CART */}
-            <div className="navbar-actions">
-              <Link
-                to="/search"
-                className="navbar-action-icon"
-                aria-label="Search products"
-                onClick={closeMenu}
-              >
-                <FaMagnifyingGlass aria-hidden="true" />
-              </Link>
-
-              <div className="navbar-cart-wrapper">
-                <button
-                  type="button"
-                  className="navbar-action-icon navbar-cart-button"
-                  onClick={() => {
-                    closeMenu();
-                    setCartOpen(true);
-                  }}
-                  aria-label={`Open cart, ${cartCount} items`}
-                >
-                  <FaCartShopping aria-hidden="true" />
-                </button>
-
-                {cartCount > 0 && (
-                  <span className="navbar-cart-count">
-                    {cartCount}
-                  </span>
-                )}
-              </div>
-            </div>
+        {/* SECOND ROW: TABLET AND MOBILE NAVIGATION */}
+        <nav className="mobile-category-nav" aria-label="Shop navigation">
+          <div className="mobile-category-track">
+            {renderLinks(categoryLinks, "mobile-category-link")}
           </div>
         </nav>
       </header>
@@ -209,5 +169,3 @@ function Navbar() {
 }
 
 export default Navbar;
-
-

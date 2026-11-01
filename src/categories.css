@@ -501,10 +501,14 @@
   color: var(--categories-burgundy);
 
   font-family: "Blacker Display", Georgia, serif;
-  font-size: 16px;
+  font-size: 24px;
   font-weight: 500;
-  line-height: 1.25;
-  overflow-wrap: anywhere;
+  line-height: 27px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: clip;
+  overflow-wrap: normal;
+  word-break: normal;
 }
 
 /* Price and shopping bag */
@@ -529,10 +533,13 @@
 
   color: var(--categories-burgundy);
   font-family: "Turnkey Lite", Georgia, serif;
-  font-size: 12px;
+  font-size: 14px;
   font-weight: 400;
   line-height: 1.25;
-  overflow-wrap: anywhere;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: clip;
+  overflow-wrap: normal;
 }
 
 .category-product-price span {
@@ -766,9 +773,14 @@
     height: 27.3438vw;
   }
 
-  .category-product-info h3 {
+  .category-product-info h3,
+  .category-product-card--featured .category-product-info h3 {
     margin-top: 0.6944vw;
-    font-size: 0.9259vw;
+    font-size: clamp(24px, 1.3889vw, 36px);
+    line-height: 1.125;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: clip;
   }
 
   .category-product-bottom {
@@ -776,8 +788,9 @@
     padding-top: 0.4167vw;
   }
 
-  .category-product-price {
-    font-size: 0.5208vw;
+  .category-product-price,
+  .category-product-price span {
+    font-size: clamp(14px, 0.8102vw, 20px);
   }
 
   .category-cart-button {
@@ -802,7 +815,7 @@
   }
 
   .category-quantity-control span {
-    font-size: 0.5208vw;
+    font-size: clamp(12px, 0.6944vw, 17px);
   }
 }
 
@@ -928,9 +941,14 @@
     border-radius: 0.8333vw;
   }
 
-  .category-product-info h3 {
+  .category-product-info h3,
+  .category-product-card--featured .category-product-info h3 {
     margin-top: 0.6944vw;
-    font-size: clamp(12px, 0.9259vw, 15px);
+    font-size: clamp(16px, 1.3889vw, 22px);
+    line-height: 1.2;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: clip;
   }
 
   .category-product-bottom {
@@ -939,8 +957,10 @@
     gap: 4px;
   }
 
-  .category-product-price {
-    font-size: clamp(9px, 0.5208vw, 11px);
+  .category-product-price,
+  .category-product-price span {
+    font-size: clamp(12px, 0.8102vw, 14px);
+    white-space: nowrap;
   }
 
   .category-cart-button {
@@ -1059,11 +1079,14 @@
   }
 
   .size-options button {
-    width: 32px;
-    height: 32px;
-    min-width: 32px;
-    min-height: 32px;
-    font-size: 13px;
+    flex: 0 0 42px;
+    align-self: flex-start;
+    width: 42px;
+    height: 42px;
+    min-width: 42px;
+    min-height: 42px;
+    padding: 0;
+    font-size: 15px;
   }
 
   .category-product-columns {
@@ -1106,8 +1129,11 @@
   .category-product-info h3,
   .category-product-card--featured .category-product-info h3 {
     margin-top: clamp(7px, 1.2vw, 11px);
-    font-size: clamp(12px, 1.7vw, 15px);
-    line-height: 1.25;
+    font-size: clamp(16px, 2.25vw, 21px);
+    line-height: 1.2;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: clip;
   }
 
   .category-product-bottom {
@@ -1116,8 +1142,10 @@
     gap: 4px;
   }
 
-  .category-product-price {
-    font-size: clamp(9px, 1.25vw, 12px);
+  .category-product-price,
+  .category-product-price span {
+    font-size: clamp(12px, 1.55vw, 14px);
+    white-space: nowrap;
   }
 
   .category-cart-button {
@@ -1284,11 +1312,14 @@
   }
 
   .size-options button {
-    width: clamp(25px, 7vw, 32px);
-    height: clamp(25px, 7vw, 32px);
-    min-width: clamp(25px, 7vw, 32px);
-    min-height: clamp(25px, 7vw, 32px);
-    font-size: clamp(10px, 2.8vw, 12px);
+    flex: 0 0 clamp(28px, 7vw, 36px);
+    align-self: flex-start;
+    width: clamp(28px, 7vw, 36px);
+    height: clamp(28px, 7vw, 36px);
+    min-width: clamp(28px, 7vw, 36px);
+    min-height: clamp(28px, 7vw, 36px);
+    padding: 0;
+    font-size: clamp(11px, 2.8vw, 13px);
   }
 
   .category-product-columns {
@@ -1468,6 +1499,10 @@
   .category-product-info h3,
   .category-product-card--featured .category-product-info h3 {
     font-size: 9px;
+    line-height: 1.2;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
 
   .category-product-price {
@@ -1497,8 +1532,331 @@
   }
 }
 
+/* =========================================================
+   16. FINAL FIGMA CARD-TYPE GUARDRAILS
+   Desktop/tablet: single-line titles; mobile: compact ellipsis.
+   Size filter remains a vertical stack of compact controls.
+========================================================= */
+
+.categories-page .size-options {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  width: 100%;
+}
+
+.categories-page .size-options button {
+  flex: 0 0 auto;
+  align-self: flex-start;
+}
+
+.categories-page .category-product-info h3,
+.categories-page .category-product-card--featured .category-product-info h3 {
+  display: block;
+  width: 100%;
+  min-width: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: clip;
+  overflow-wrap: normal;
+  word-break: normal;
+}
+
+.categories-page .category-product-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.categories-page .category-product-price {
+  flex: 0 1 auto;
+  min-width: 0;
+  white-space: nowrap;
+}
+
+.categories-page .category-card-action {
+  flex: 0 0 auto;
+  margin-left: auto;
+}
+
+@media (min-width: 1729px) {
+  .categories-page .category-product-info h3,
+  .categories-page .category-product-card--featured .category-product-info h3 {
+    font-size: clamp(24px, 1.3889vw, 36px);
+    line-height: 1.125;
+  }
+  .categories-page .category-product-price,
+  .categories-page .category-product-price span {
+    font-size: clamp(14px, 0.8102vw, 20px);
+  }
+}
+
+@media (min-width: 1024px) and (max-width: 1728px) {
+  .categories-page .category-product-info h3,
+  .categories-page .category-product-card--featured .category-product-info h3 {
+    font-size: clamp(16px, 1.3889vw, 24px);
+    line-height: 1.2;
+  }
+  .categories-page .category-product-price,
+  .categories-page .category-product-price span {
+    font-size: clamp(12px, 0.8102vw, 14px);
+  }
+}
+
+@media (min-width: 600px) and (max-width: 1023px) {
+  .categories-page .category-product-info h3,
+  .categories-page .category-product-card--featured .category-product-info h3 {
+    font-size: clamp(15px, 2.25vw, 21px);
+    line-height: 1.2;
+  }
+  .categories-page .category-product-price,
+  .categories-page .category-product-price span {
+    font-size: clamp(11px, 1.55vw, 14px);
+  }
+}
+
+@media (max-width: 599px) {
+  .categories-page .category-product-info h3,
+  .categories-page .category-product-card--featured .category-product-info h3 {
+    font-size: clamp(10px, 2.8vw, 13px);
+    line-height: 1.22;
+    text-overflow: ellipsis;
+  }
+  .categories-page .category-product-price,
+  .categories-page .category-product-price span {
+    font-size: clamp(8px, 2.15vw, 10px);
+  }
+}
 
 
+/* =========================================================
+   FIGMA CORRECTION — FINAL OVERRIDES
+   Target: 1728px Figma canvas and larger screens.
+   Standard and featured product information share one layout.
+========================================================= */
+
+/* Keep the size filter as individual vertical pills, not full-width bars. */
+.categories-page .size-options {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  width: auto;
+  gap: 5px;
+}
+
+.categories-page .size-options button {
+  flex: 0 0 auto;
+  align-self: flex-start;
+  width: 44px;
+  min-width: 44px;
+  max-width: 44px;
+  height: 44px;
+  min-height: 44px;
+}
+
+/* Standard and featured cards: title, then price/action row at the bottom. */
+.categories-page .category-product-card {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.categories-page .category-product-link {
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 auto;
+  min-width: 0;
+}
+
+.categories-page .category-product-info {
+  flex: 0 0 auto;
+  min-width: 0;
+  width: 100%;
+}
+
+.categories-page .category-product-info h3,
+.categories-page .category-product-card--featured .category-product-info h3 {
+  display: block;
+  width: 100%;
+  min-width: 0;
+  margin-top: 12px;
+  font-family: "Blacker Display", Georgia, "Times New Roman", serif;
+  font-weight: 500;
+  line-height: 1.2;
+  white-space: nowrap;
+  overflow: hidden;
+  overflow-wrap: normal;
+  word-break: normal;
+  text-overflow: clip;
+}
+
+.categories-page .category-product-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex: 0 0 auto;
+  width: 100%;
+  min-width: 0;
+  margin-top: auto;
+  padding-top: 10px;
+  gap: 8px;
+}
+
+.categories-page .category-product-price,
+.categories-page .category-product-price span {
+  flex: 0 1 auto;
+  min-width: 0;
+  margin: 0;
+  white-space: nowrap;
+}
+
+.categories-page .category-card-action {
+  flex: 0 0 auto;
+  margin-left: auto;
+}
+
+/* Figma desktop and large desktop: readable typography, no viewport shrinking. */
+@media (min-width: 1600px) {
+  .categories-page .categories-heading-left h1 {
+    font-size: 36px;
+    line-height: 1.15;
+  }
+
+  .categories-page .categories-heading-left > span {
+    font-size: 18px;
+    line-height: 25px;
+  }
+
+  .categories-page .category-product-info h3,
+  .categories-page .category-product-card--featured .category-product-info h3 {
+    font-size: 24px;
+    letter-spacing: -0.35px;
+    line-height: 1.2;
+    margin-top: 12px;
+  }
+
+  .categories-page .category-product-price,
+  .categories-page .category-product-price span {
+    font-size: 14px;
+    line-height: 1.3;
+  }
+
+  .categories-page .size-options button {
+    width: 44px;
+    min-width: 44px;
+    max-width: 44px;
+    height: 44px;
+    min-height: 44px;
+  }
+}
+
+/* Above 1728px, scale the type gently but keep a readable minimum. */
+@media (min-width: 1729px) {
+  .categories-page .categories-heading-left h1 {
+    font-size: clamp(36px, 2.0833vw, 48px);
+  }
+
+  .categories-page .categories-heading-left > span {
+    font-size: clamp(18px, 1.0417vw, 22px);
+  }
+
+  .categories-page .category-product-info h3,
+  .categories-page .category-product-card--featured .category-product-info h3 {
+    font-size: clamp(24px, 1.3889vw, 30px);
+    letter-spacing: -0.35px;
+    line-height: 1.2;
+  }
+
+  .categories-page .category-product-price,
+  .categories-page .category-product-price span {
+    font-size: clamp(14px, 0.8102vw, 18px);
+  }
+
+  .categories-page .size-options button {
+    width: clamp(44px, 2.55vw, 54px);
+    min-width: clamp(44px, 2.55vw, 54px);
+    max-width: clamp(44px, 2.55vw, 54px);
+    height: clamp(44px, 2.55vw, 54px);
+    min-height: clamp(44px, 2.55vw, 54px);
+  }
+}
+
+/* Laptop: maintain three-column desktop card structure and readable text. */
+@media (min-width: 1024px) and (max-width: 1599px) {
+  .categories-page .category-product-info h3,
+  .categories-page .category-product-card--featured .category-product-info h3 {
+    font-size: clamp(18px, 1.35vw, 22px);
+    line-height: 1.2;
+    white-space: nowrap;
+    text-overflow: clip;
+  }
+
+  .categories-page .category-product-price,
+  .categories-page .category-product-price span {
+    font-size: clamp(12px, 0.9vw, 14px);
+  }
+
+  .categories-page .size-options button {
+    width: 36px;
+    min-width: 36px;
+    max-width: 36px;
+    height: 36px;
+    min-height: 36px;
+  }
+}
+
+/* Tablet: preserve two columns, titles on one line, compact vertical size pills. */
+@media (min-width: 600px) and (max-width: 1023px) {
+  .categories-page .category-product-info h3,
+  .categories-page .category-product-card--featured .category-product-info h3 {
+    font-size: clamp(16px, 2.35vw, 20px);
+    line-height: 1.2;
+    white-space: nowrap;
+    text-overflow: clip;
+  }
+
+  .categories-page .category-product-price,
+  .categories-page .category-product-price span {
+    font-size: clamp(11px, 1.55vw, 14px);
+  }
+
+  .categories-page .size-options button {
+    width: 36px;
+    min-width: 36px;
+    max-width: 36px;
+    height: 36px;
+    min-height: 36px;
+  }
+}
+
+/* Mobile only: keep the compact single-line title with ellipsis. */
+@media (max-width: 599px) {
+  .categories-page .category-product-info h3,
+  .categories-page .category-product-card--featured .category-product-info h3 {
+    margin-top: 8px;
+    font-size: clamp(12px, 3.4vw, 16px);
+    line-height: 1.22;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .categories-page .category-product-price,
+  .categories-page .category-product-price span {
+    font-size: clamp(10px, 2.7vw, 13px);
+  }
+
+  .categories-page .size-options button {
+    width: 32px;
+    min-width: 32px;
+    max-width: 32px;
+    height: 32px;
+    min-height: 32px;
+  }
+}
 
 
 
